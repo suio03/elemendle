@@ -79,7 +79,7 @@ const VictoryScreen = ({
         const calculateTimeRemaining = () => {
             const now = new Date()
             const midnight = new Date()
-            midnight.setHours(24, 0, 0, 0)
+            midnight.setUTCHours(24, 0, 0, 0)
             const diff = Math.max(0, midnight.getTime() - now.getTime())
 
             const hours = Math.floor(diff / (1000 * 60 * 60))
