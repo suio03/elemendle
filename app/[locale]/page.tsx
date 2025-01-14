@@ -5,6 +5,7 @@ import HowToPlay from '@/components/how-to-play'
 import Features from '@/components/features'
 import Tips from '@/components/tips'
 import Faq from '@/components/faq'
+import Footer from '@/components/footer'
 export const runtime = 'edge';
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
             <Features />
             <Tips />
             <Faq />
+            <Footer />
         </main>
     )
 }
