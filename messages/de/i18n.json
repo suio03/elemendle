@@ -1,0 +1,259 @@
+{
+    "metaData": {
+        "title": "Elemendle - Tägliches Periodensystem-Rätsel, Teste dein Wissen",
+        "description": "Fordere dich mit einem täglichen Periodensystem-Rätsel heraus. Errate das Element und teste dein Wissen.",
+        "keywords": [
+            "Elemendle",
+            "Element-Ratespiel",
+            "Tägliches Element-Spiel"
+        ]
+    },
+    "header": {
+        "stats": {
+            "tooltip": "Statistiken",
+            "play": "Gespielte Spiele",
+            "win-rate": "Gewinnrate",
+            "current-streak": "Aktuelle Serie",
+            "max-streak": "Maximale Serie",
+            "time-stats": "Zeitstatistiken",
+            "best-time": "Beste Zeit",
+            "average-time": "Durchschnittliche Zeit",
+            "game-distribution": "Spielverteilung"
+        },
+        "streak": "Aktuelle Serie (Tägliche aufeinanderfolgende Siege)",
+        "data-control": {
+            "tooltip": "Importiere/Exportiere deine Daten",
+            "name": "Übertrage deine Daten",
+            "btn01": "Daten exportieren",
+            "btn02": "Daten importieren",
+            "description": "Exportiere deine Spielstatistiken, um sie auf ein anderes Gerät zu übertragen."
+        },
+        "how-to": "Wie spielt man?",
+        "language": "Ändere die Sprache des Spiels."
+    },
+    "game-board": {
+        "title": "ERRATE DAS HEUTIGE ELEMENT!",
+        "remaining-guesses": "verbleibende Versuche",
+        "input-placeholder": "Elementname oder -symbol eingeben...",
+        "solved-count": "Personen haben dieses Element bereits erraten!",
+        "yesterday-character": "Das Element von gestern war ",
+        "grid": {
+            "headers": {
+                "element": {
+                    "label": "Element",
+                    "description": "Der Name (Symbol) des Elements"
+                },
+                "period": {
+                    "label": "Periode",
+                    "description": "Die Periode des Elements"
+                },
+                "group": {
+                    "label": "Gruppe",
+                    "description": "Die Gruppe des Elements"
+                },
+                "type": {
+                    "label": "Typ",
+                    "description": "Der Typ des Elements"
+                },
+                "phase": {
+                    "label": "Phase (STP)",
+                    "description": "Die Phase des Elements bei STP"
+                },
+                "block": {
+                    "label": "Block",
+                    "description": "Der Block des Elements"
+                },
+                "mass": {
+                    "label": "Masse",
+                    "description": "Die Atommasse des Elements"
+                },
+                "atomic": {
+                    "label": "Atomzahl",
+                    "description": "Die Ordnungszahl des Elements"
+                }
+            }
+        },
+        "color-indicators": {
+            "title": "Farbanzeigen",
+            "correct": {
+                "label": "Korrekt",
+                "description": "Die Vermutung stimmt genau überein"
+            },
+            "incorrect": {
+                "label": "Falsch",
+                "description": "Die Vermutung stimmt nicht überein"
+            },
+            "higher": {
+                "label": "Höher",
+                "description": "Der richtige Wert ist höher als die Vermutung"
+            },
+            "lower": {
+                "label": "Niedriger",
+                "description": "Der richtige Wert ist niedriger als die Vermutung"
+            }
+        },
+        "game-over": "Spiel vorbei!",
+        "correct-answer": "Die richtige Antwort ist"
+    },
+    "victory": {
+        "title": "Sieg!",
+        "time-taken": "Benötigte Zeit",
+        "next-element": "Nächstes Element in",
+        "attempts": "Versuche",
+        "your-guess": "Du hast erraten"
+    },
+    "how-to-play": {
+        "h1": "Elemendle - Errate das tägliche Periodensystem-Element",
+        "title": "Wie spielt man?",
+        "description": "Errate das heutige Element des Periodensystems – Jeden Tag ein neues Element",
+        "notes": "Gib einen beliebigen Elementnamen oder ein Symbol ein. Das Spiel zeigt die Eigenschaften des Elements an und wie nah deine Vermutung dran war.",
+        "color-indicators": "Farbanzeigen",
+        "correct": "Die Vermutung stimmt genau überein",
+        "incorrect": "Die Vermutung stimmt nicht überein",
+        "higher": "Höher/Niedriger-Anzeige (für numerische Werte)",
+        "properties": "Eigenschaften",
+        "period": {
+            "label": "Periode",
+            "value": "1, 2, 3",
+            "description": "Die Periode eines Elements im Periodensystem ist die horizontale Zeile, zu der es gehört"
+        },
+        "group": {
+            "label": "Gruppe",
+            "value": "1, 2, 3",
+            "description": "Die Gruppe eines Elements im Periodensystem ist die vertikale Spalte, zu der es gehört"
+        },
+        "block": {
+            "label": "Block",
+            "value": "s, p, d, f",
+            "description": "Der Block eines Elements im Periodensystem ist die Art der Elektronenschale, zu der es gehört"
+        },
+        "phase": {
+            "label": "Phase (STP)",
+            "value": "Fest, Flüssig, Gasförmig",
+            "description": "Die Phase eines Elements im Periodensystem ist der Aggregatzustand, zu dem es bei Standardtemperatur und -druck gehört"
+        },
+        "mass": {
+            "label": "Atommasse",
+            "value": "1, 2, 3",
+            "description": "Die Atommasse eines Elements ist die Gesamtmasse aller seiner Protonen und Neutronen"
+        },
+        "atomic": {
+            "label": "Ordnungszahl",
+            "value": "1, 2, 3",
+            "description": "Die Ordnungszahl eines Elements ist die Anzahl der Protonen in seinem Atomkern"
+        },
+        "type": {
+            "label": "Typ",
+            "value": "Metall, Nichtmetall, Halbmetall",
+            "description": "Der Typ eines Elements im Periodensystem ist die Kategorie, zu der es gehört"
+        }
+    },
+    "faq": {
+        "title": "Häufig gestellte Fragen zu Elemendle",
+        "questions": [
+            {
+                "question": "Muss ich ein Konto erstellen, um Elemendle zu spielen?",
+                "answer": "Nein, Elemendle ist völlig kostenlos spielbar, ohne dass du dich anmelden musst. Dein Fortschritt wird lokal auf deinem Gerät gespeichert."
+            },
+            {
+                "question": "Wie oft ändern sich die Elemente bei Elemendle?",
+                "answer": "Alle 24 Stunden gibt es ein neues Element zum Erraten. Komm täglich zurück für eine neue Herausforderung!"
+            },
+            {
+                "question": "Wie übertrage ich meinen Fortschritt auf ein anderes Gerät?",
+                "answer": "Verwende die Exportfunktion, um deine Daten zu speichern, und importiere sie dann auf dein neues Gerät. Kein Konto erforderlich!"
+            },
+            {
+                "question": "Was bedeuten die Farbanzeigen bei Elemendle?",
+                "answer": "Grün zeigt eine genaue Übereinstimmung an, Rot zeigt keine Übereinstimmung an, und Pfeile zeigen an, ob numerische Werte (wie die Höhe) höher oder niedriger sein sollten."
+            },
+            {
+                "question": "Wie hole ich das Beste aus Elemendle heraus?",
+                "answer": "Verwende das Hinweissystem nach mehreren Versuchen, um dir beim Erraten des Elements zu helfen. Die Hinweise sollen dir helfen, nicht dich behindern."
+            },
+            {
+                "question": "Was ist der Zweck von Elemendle?",
+                "answer": "Elemendle ist ein Spiel für Chemieliebhaber, von Chemieliebhabern. Es ist eine Möglichkeit, die Periodensystem-Community zusammenzuhalten und das Periodensystem zu feiern."
+            },
+            {
+                "question": "Gibt es in Zukunft weitere Spielmodi?",
+                "answer": "Ja, wir arbeiten daran, weitere Spielmodi zu Elemendle hinzuzufügen."
+            },
+            {
+                "question": "Hat Elemendle eine mobile Version?",
+                "answer": "Derzeit funktioniert Elemendle auf allen Geräten mit einem Browser. Du musst also nichts herunterladen."
+            },
+            {
+                "question": "Wie werden meine Daten gespeichert?",
+                "answer": "Deine Daten werden lokal auf deinem Gerät gespeichert. Wir sammeln keine Daten von dir."
+            },
+            {
+                "question": "Ist das Elemendle-Spiel kostenlos?",
+                "answer": "Ja, Elemendle ist völlig kostenlos spielbar."
+            },
+            {
+                "question": "Ist dieses Elemendle-Spiel mit dem Periodensystem verbunden?",
+                "answer": "Nein, Elemendle ist nicht mit dem Periodensystem verbunden. Es ist ein von Fans erstelltes Spiel."
+            },
+            {
+                "question": "Kann ich Feedback zu Elemendle geben?",
+                "answer": "Du kannst uns unter support@elemendle.app kontaktieren."
+            }
+        ]
+    },
+    "game-tips": {
+        "title": "Tipps zum Spielen von Elemendle",
+        "content": [
+            {
+                "title": "Beginne mit bekannten Elementen",
+                "description": "Beginne mit bekannten Elementen wie Wasserstoff oder Sauerstoff, um mehrere Eigenschaften gleichzeitig zu verstehen."
+            },
+            {
+                "title": "Verwende Informationen aus dem Periodensystem",
+                "description": "Achte auf die Eigenschaften des Elements, um die Möglichkeiten einzugrenzen."
+            },
+            {
+                "title": "Gruppeneigenschaften",
+                "description": "Konzentriere dich auf Hinweise zu Phase und Typ, da diese oft verwandte Elemente gruppieren."
+            },
+            {
+                "title": "Achte auf Muster",
+                "description": "Achte auf Muster in den Element-Eigenschaften, um fundiertere Vermutungen zu treffen. Wenn ein Element beispielsweise ein Metall ist, ist es wahrscheinlich ein Metall."
+            },
+            {
+                "title": "Verwende die Hinweise",
+                "description": "Zögere nicht, das Hinweissystem nach mehreren Versuchen zu verwenden – es ist dazu da, dir zu helfen!"
+            }
+        ]
+    },
+    "game-features": {
+        "title": "Elemendle-Funktionen",
+        "content": [
+            {
+                "title": "Eigenschaftsbasiertes Abgleichen",
+                "description": "Anstatt Namen zu erraten, gleiche Elementeigenschaften wie Periode, Gruppe, Block, Typ, Phase, Masse und Ordnungszahl ab."
+            },
+            {
+                "title": "Umfassende Datenbank",
+                "description": "Greife auf Elemente aus dem gesamten Periodensystem zu"
+            },
+            {
+                "title": "Keine Zeitlimits",
+                "description": "Spiele in deinem eigenen Tempo – nimm so viele Versuche in Anspruch, wie du brauchst, um das richtige Element zu finden. Elemendle ist ein Spiel für Chemieliebhaber, von Chemieliebhabern."
+            },
+            {
+                "title": "Hilfreiche Hinweise",
+                "description": "Erhalte strategische Hinweise nach mehreren Versuchen, um dir bei herausfordernden Elementen zu helfen."
+            },
+            {
+                "title": "Fortschrittsverfolgung",
+                "description": "Überwache deine Statistiken und exportiere deine Daten, um auf anderen Geräten weiterspielen zu können."
+            }
+        ]
+    },
+    "share": {
+        "title": "Elemendle teilen",
+        "description": "Ich habe das #Elemendle-Element in {attempts} Versuchen innerhalb von {timeTaken} Sekunden gefunden",
+        "btn": "Auf Twitter teilen"
+    }
+}

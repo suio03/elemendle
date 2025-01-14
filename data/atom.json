@@ -1,0 +1,746 @@
+{
+    "Hydrogen": {
+        "name": "Hydrogen",
+        "symbol": "H",
+        "classic": {
+            "atomic_number": "1",
+            "atomic_mass": "1.008",
+            "period": "1",
+            "group": "1",
+            "phase-at-stp": "Gas",
+            "block": "s-block",
+            "element_type": "Nonmetal"
+        },
+        "melting-point": "-259.16°C (14.00K)",
+        "boiling-point": "-252.87°C (20.28 K)",
+        "discovery-date": "1766",
+        "wiki": "https://en.wikipedia.org/wiki/Hydrogen",
+        "hints": {
+            "properties": [
+                "Most abundant element in the universe",
+                "Highly flammable",
+                "Used in the Haber process to produce ammonia"
+            ]
+        }
+    },
+    "Helium": {
+        "name": "Helium",
+        "symbol": "He",
+        "classic": {
+            "atomic_number": "2",
+            "atomic_mass": "4.0026",
+            "period": "1",
+            "group": "18",
+            "phase-at-stp": "Gas",
+            "block": "s-block",
+            "element_type": "Noble Gas"
+        },
+        "melting-point": "-272.20°C (0.95 K)",
+        "boiling-point": "-268.93°C (4.22 K)",
+        "discovery-date": "1868",
+        "wiki": "https://en.wikipedia.org/wiki/Helium",
+        "hints": {
+            "properties": [
+                "Second lightest element",
+                "Used in balloons and airships",
+                "Lowest boiling point of any element"
+            ]
+        }
+    },
+    "Lithium": {
+        "name": "Lithium",
+        "symbol": "Li",
+        "classic": {
+            "atomic_number": "3",
+            "atomic_mass": "6.94",
+            "period": "2",
+            "group": "1",
+            "phase-at-stp": "Solid",
+            "block": "s-block",
+            "element_type": "Alkali Metal"
+        },
+        "melting-point": "180.50°C (453.65 K)",
+        "boiling-point": "1342°C (1615 K)",
+        "discovery-date": "1817",
+        "wiki": "https://en.wikipedia.org/wiki/Lithium",
+        "hints": {
+            "properties": [
+                "Lightest metal",
+                "Used in batteries",
+                "Highly reactive"
+            ]
+        }
+    },
+    "Beryllium": {
+        "name": "Beryllium",
+        "symbol": "Be",
+        "classic": {
+            "atomic_number": "4",
+            "atomic_mass": "9.0122",
+            "period": "2",
+            "group": "2",
+            "phase-at-stp": "Solid",
+            "block": "s-block",
+            "element_type": "Alkaline Earth Metal"
+        },
+        "melting-point": "1278°C (1551 K)",
+        "boiling-point": "2970°C (3243 K)",
+        "discovery-date": "1798",
+        "wiki": "https://en.wikipedia.org/wiki/Beryllium",
+        "hints": {
+            "properties": [
+                "Lightweight and strong",
+                "Toxic in dust form",
+                "Used in aerospace applications"
+            ]
+        }
+    },
+    "Boron": {
+        "name": "Boron",
+        "symbol": "B",
+        "classic": {
+            "atomic_number": "5",
+            "atomic_mass": "10.81",
+            "period": "2",
+            "group": "13",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Metalloid"
+        },
+        "melting-point": "2076°C (2349 K)",
+        "boiling-point": "4000°C (4273 K)",
+        "discovery-date": "1808",
+        "wiki": "https://en.wikipedia.org/wiki/Boron",
+        "hints": {
+            "properties": [
+                "Used in detergents and borosilicate glass",
+                "Essential trace nutrient for plants",
+                "Hard and heat resistant"
+            ]
+        }
+    },
+    "Carbon": {
+        "name": "Carbon",
+        "symbol": "C",
+        "classic": {
+            "atomic_number": "6",
+            "atomic_mass": "12.011",
+            "period": "2",
+            "group": "14",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Nonmetal"
+        },
+        "melting-point": "3550°C (3823 K)",
+        "boiling-point": "4000°C (4273 K)",
+        "discovery-date": "Prehistoric",
+        "wiki": "https://en.wikipedia.org/wiki/Carbon",
+        "hints": {
+            "properties": [
+                "Basis of organic chemistry",
+                "Forms diamond and graphite",
+                "Essential for all known life"
+            ]
+        }
+    },
+    "Nitrogen": {
+        "name": "Nitrogen",
+        "symbol": "N",
+        "classic": {
+            "atomic_number": "7",
+            "atomic_mass": "14.007",
+            "period": "2",
+            "group": "15",
+            "phase-at-stp": "Gas",
+            "block": "p-block",
+            "element_type": "Nonmetal"
+        },
+        "melting-point": "-210.01°C (63.14 K)",
+        "boiling-point": "-195.79°C (77.36 K)",
+        "discovery-date": "1772",
+        "wiki": "https://en.wikipedia.org/wiki/Nitrogen",
+        "hints": {
+            "properties": [
+                "Most abundant gas in Earth's atmosphere",
+                "Essential for plant growth",
+                "Used in ammonia production"
+            ]
+        }
+    },
+    "Oxygen": {
+        "name": "Oxygen",
+        "symbol": "O",
+        "classic": {
+            "atomic_number": "8",
+            "atomic_mass": "15.999",
+            "period": "2",
+            "group": "16",
+            "phase-at-stp": "Gas",
+            "block": "p-block",
+            "element_type": "Nonmetal"
+        },
+        "melting-point": "-218.79°C (54.36 K)",
+        "boiling-point": "-182.96°C (90.19 K)",
+        "discovery-date": "1771",
+        "wiki": "https://en.wikipedia.org/wiki/Oxygen",
+        "hints": {
+            "properties": [
+                "Essential for respiration",
+                "Highly reactive",
+                "Third most abundant element in the universe"
+            ]
+        }
+    },
+    "Fluorine": {
+        "name": "Fluorine",
+        "symbol": "F",
+        "classic": {
+            "atomic_number": "9",
+            "atomic_mass": "18.998",
+            "period": "2",
+            "group": "17",
+            "phase-at-stp": "Gas",
+            "block": "p-block",
+            "element_type": "Halogen"
+        },
+        "melting-point": "-219.67°C (53.48 K)",
+        "boiling-point": "-188.11°C (85.04 K)",
+        "discovery-date": "1886",
+        "wiki": "https://en.wikipedia.org/wiki/Fluorine",
+        "hints": {
+            "properties": [
+                "Most reactive element",
+                "Used in toothpaste to prevent cavities",
+                "Highly corrosive and toxic"
+            ]
+        }
+    },
+    "Neon": {
+        "name": "Neon",
+        "symbol": "Ne",
+        "classic": {
+            "atomic_number": "10",
+            "atomic_mass": "20.180",
+            "period": "2",
+            "group": "18",
+            "phase-at-stp": "Gas",
+            "block": "p-block",
+            "element_type": "Noble Gas"
+        },
+        "melting-point": "-248.59°C (24.56 K)",
+        "boiling-point": "-246.05°C (27.10 K)",
+        "discovery-date": "1898",
+        "wiki": "https://en.wikipedia.org/wiki/Neon",
+        "hints": {
+            "properties": [
+                "Inert and non-toxic",
+                "Used in neon lights",
+                "Emits a reddish-orange light when excited"
+            ]
+        }
+    },
+    "Sodium": {
+        "name": "Sodium",
+        "symbol": "Na",
+        "classic": {
+            "atomic_number": "11",
+            "atomic_mass": "22.990",
+            "period": "3",
+            "group": "1",
+            "phase-at-stp": "Solid",
+            "block": "s-block",
+            "element_type": "Alkali Metal"
+        },
+        "melting-point": "97.72°C (370.87 K)",
+        "boiling-point": "882.9°C (1156.1 K)",
+        "discovery-date": "1807",
+        "wiki": "https://en.wikipedia.org/wiki/Sodium",
+        "hints": {
+            "properties": [
+                "Highly reactive",
+                "Major component of salt",
+                "Essential for nerve function"
+            ]
+        }
+    },
+    "Magnesium": {
+        "name": "Magnesium",
+        "symbol": "Mg",
+        "classic": {
+            "atomic_number": "12",
+            "atomic_mass": "24.305",
+            "period": "3",
+            "group": "2",
+            "phase-at-stp": "Solid",
+            "block": "s-block",
+            "element_type": "Alkaline Earth Metal"
+        },
+        "melting-point": "650°C (923 K)",
+        "boiling-point": "1090°C (1363 K)",
+        "discovery-date": "1808",
+        "wiki": "https://en.wikipedia.org/wiki/Magnesium",
+        "hints": {
+            "properties": [
+                "Lightweight and strong",
+                "Used in fireworks",
+                "Essential for photosynthesis"
+            ]
+        }
+    },
+    "Aluminum": {
+        "name": "Aluminum",
+        "symbol": "Al",
+        "classic": {
+            "atomic_number": "13",
+            "atomic_mass": "26.982",
+            "period": "3",
+            "group": "13",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Post-transition Metal"
+        },
+        "melting-point": "660.32°C (933.47 K)",
+        "boiling-point": "2519°C (2792 K)",
+        "discovery-date": "1825",
+        "wiki": "https://en.wikipedia.org/wiki/Aluminium",
+        "hints": {
+            "properties": [
+                "Lightweight and corrosion-resistant",
+                "Used in packaging and construction",
+                "Most abundant metal in the Earth's crust"
+            ]
+        }
+    },
+    "Silicon": {
+        "name": "Silicon",
+        "symbol": "Si",
+        "classic": {
+            "atomic_number": "14",
+            "atomic_mass": "28.085",
+            "period": "3",
+            "group": "14",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Metalloid"
+        },
+        "melting-point": "1414°C (1687 K)",
+        "boiling-point": "3265°C (3538 K)",
+        "discovery-date": "1823",
+        "wiki": "https://en.wikipedia.org/wiki/Silicon",
+        "hints": {
+            "properties": [
+                "Key component in electronics",
+                "Second most abundant element in the Earth's crust",
+                "Used in solar cells"
+            ]
+        }
+    },
+    "Phosphorus": {
+        "name": "Phosphorus",
+        "symbol": "P",
+        "classic": {
+            "atomic_number": "15",
+            "atomic_mass": "30.974",
+            "period": "3",
+            "group": "15",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Nonmetal"
+        },
+        "melting-point": "44.15°C (317.30 K)",
+        "boiling-point": "280.5°C (553.6 K)",
+        "discovery-date": "1669",
+        "wiki": "https://en.wikipedia.org/wiki/Phosphorus",
+        "hints": {
+            "properties": [
+                "Essential for DNA and RNA",
+                "Used in fertilizers and detergents",
+                "Exists in various allotropes"
+            ]
+        }
+    },
+    "Sulfur": {
+        "name": "Sulfur",
+        "symbol": "S",
+        "classic": {
+            "atomic_number": "16",
+            "atomic_mass": "32.06",
+            "period": "3",
+            "group": "16",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Nonmetal"
+        },
+        "melting-point": "115.21°C (388.36 K)",
+        "boiling-point": "444.6°C (717.7 K)",
+        "discovery-date": "Prehistoric",
+        "wiki": "https://en.wikipedia.org/wiki/Sulfur",
+        "hints": {
+            "properties": [
+                "Found in volcanic regions",
+                "Used in the production of sulfuric acid",
+                "Component of amino acids"
+            ]
+        }
+    },
+    "Chlorine": {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "classic": {
+            "atomic_number": "17",
+            "atomic_mass": "35.45",
+            "period": "3",
+            "group": "17",
+            "phase-at-stp": "Gas",
+            "block": "p-block",
+            "element_type": "Halogen"
+        },
+        "melting-point": "-101.5°C (171.7 K)",
+        "boiling-point": "-34.04°C (239.11 K)",
+        "discovery-date": "1774",
+        "wiki": "https://en.wikipedia.org/wiki/Chlorine",
+        "hints": {
+            "properties": [
+                "Used as a disinfectant",
+                "Highly toxic and irritating",
+                "Found in table salt"
+            ]
+        }
+    },
+    "Argon": {
+        "name": "Argon",
+        "symbol": "Ar",
+        "classic": {
+            "atomic_number": "18",
+            "atomic_mass": "39.948",
+            "period": "3",
+            "group": "18",
+            "phase-at-stp": "Gas",
+            "block": "p-block",
+            "element_type": "Noble Gas"
+        },
+        "melting-point": "-189.3°C (83.8 K)",
+        "boiling-point": "-185.8°C (87.3 K)",
+        "discovery-date": "1894",
+        "wiki": "https://en.wikipedia.org/wiki/Argon",
+        "hints": {
+            "properties": [
+                "Most abundant noble gas in Earth's atmosphere",
+                "Inert and non-toxic",
+                "Used in welding and lighting"
+            ]
+        }
+    },
+    "Potassium": {
+        "name": "Potassium",
+        "symbol": "K",
+        "classic": {
+            "atomic_number": "19",
+            "atomic_mass": "39.098",
+            "period": "4",
+            "group": "1",
+            "phase-at-stp": "Solid",
+            "block": "s-block",
+            "element_type": "Alkali Metal"
+        },
+        "melting-point": "63.5°C (336.7 K)",
+        "boiling-point": "759°C (1032 K)",
+        "discovery-date": "1807",
+        "wiki": "https://en.wikipedia.org/wiki/Potassium",
+        "hints": {
+            "properties": [
+                "Highly reactive",
+                "Essential for nerve function",
+                "Found in bananas and potatoes"
+            ]
+        }
+    },
+    "Calcium": {
+        "name": "Calcium",
+        "symbol": "Ca",
+        "classic": {
+            "atomic_number": "20",
+            "atomic_mass": "40.078",
+            "period": "4",
+            "group": "2",
+            "phase-at-stp": "Solid",
+            "block": "s-block",
+            "element_type": "Alkaline Earth Metal"
+        },
+        "melting-point": "842°C (1115 K)",
+        "boiling-point": "1484°C (1757 K)",
+        "discovery-date": "1808",
+        "wiki": "https://en.wikipedia.org/wiki/Calcium",
+        "hints": {
+            "properties": [
+                "Essential for bones and teeth",
+                "Involved in muscle contraction",
+                "Found in dairy products"
+            ]
+        }
+    },
+    "Scandium": {
+        "name": "Scandium",
+        "symbol": "Sc",
+        "classic": {
+            "atomic_number": "21",
+            "atomic_mass": "44.956",
+            "period": "4",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "1541°C (1814 K)",
+        "boiling-point": "2836°C (3109 K)",
+        "discovery-date": "1879",
+        "wiki": "https://en.wikipedia.org/wiki/Scandium",
+        "hints": {
+            "properties": [
+                "Lightweight and strong",
+                "Used in alloys for aerospace",
+                "Relatively rare"
+            ]
+        }
+    },
+    "Titanium": {
+        "name": "Titanium",
+        "symbol": "Ti",
+        "classic": {
+            "atomic_number": "22",
+            "atomic_mass": "47.867",
+            "period": "4",
+            "group": "4",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "1668°C (1941 K)",
+        "boiling-point": "3287°C (3560 K)",
+        "discovery-date": "1791",
+        "wiki": "https://en.wikipedia.org/wiki/Titanium",
+        "hints": {
+            "properties": [
+                "Strong and corrosion-resistant",
+                "Used in prosthetics and aerospace",
+                "Biocompatible"
+            ]
+        }
+    },
+    "Vanadium": {
+        "name": "Vanadium",
+        "symbol": "V",
+        "classic": {
+            "atomic_number": "23",
+            "atomic_mass": "50.942",
+            "period": "4",
+            "group": "5",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "1910°C (2183 K)",
+        "boiling-point": "3407°C (3680 K)",
+        "discovery-date": "1801",
+        "wiki": "https://en.wikipedia.org/wiki/Vanadium",
+        "hints": {
+            "properties": [
+                "Used in alloys for strength",
+                "Can be used in batteries",
+                "Increases corrosion resistance of steel"
+            ]
+        }
+    },
+    "Chromium": {
+        "name": "Chromium",
+        "symbol": "Cr",
+        "classic": {
+            "atomic_number": "24",
+            "atomic_mass": "51.996",
+            "period": "4",
+            "group": "6",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "1907°C (2180 K)",
+        "boiling-point": "2671°C (2944 K)",
+        "discovery-date": "1797",
+        "wiki": "https://en.wikipedia.org/wiki/Chromium",
+        "hints": {
+            "properties": [
+                "Used in stainless steel",
+                "Shiny and hard",
+                "Used in electroplating"
+            ]
+        }
+    },
+    "Manganese": {
+        "name": "Manganese",
+        "symbol": "Mn",
+        "classic": {
+            "atomic_number": "25",
+            "atomic_mass": "54.938",
+            "period": "4",
+            "group": "7",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "1246°C (1519 K)",
+        "boiling-point": "2061°C (2334 K)",
+        "discovery-date": "1774",
+        "wiki": "https://en.wikipedia.org/wiki/Manganese",
+        "hints": {
+            "properties": [
+                "Used in steel production",
+                "Essential nutrient",
+                "Can be toxic in high concentrations"
+            ]
+        }
+    },
+    "Iron": {
+        "name": "Iron",
+        "symbol": "Fe",
+        "classic": {
+            "atomic_number": "26",
+            "atomic_mass": "55.845",
+            "period": "4",
+            "group": "8",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "1538°C (1811 K)",
+        "boiling-point": "2862°C (3135 K)",
+        "discovery-date": "Prehistoric",
+        "wiki": "https://en.wikipedia.org/wiki/Iron",
+        "hints": {
+            "properties": [
+                "Most abundant element in Earth",
+                "Essential for blood",
+                "Strong and ductile"
+            ]
+        }
+    },
+    "Cobalt": {
+        "name": "Cobalt",
+        "symbol": "Co",
+        "classic": {
+            "atomic_number": "27",
+            "atomic_mass": "58.933",
+            "period": "4",
+            "group": "9",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "1495°C (1768 K)",
+        "boiling-point": "2927°C (3200 K)",
+        "discovery-date": "1735",
+        "wiki": "https://en.wikipedia.org/wiki/Cobalt",
+        "hints": {
+            "properties": [
+                "Used in batteries and magnets",
+                "Component of vitamin B12",
+                "Can produce blue pigments"
+            ]
+        }
+    },
+    "Nickel": {
+        "name": "Nickel",
+        "symbol": "Ni",
+        "classic": {
+            "atomic_number": "28",
+            "atomic_mass": "58.693",
+            "period": "4",
+            "group": "10",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "1455°C (1728 K)",
+        "boiling-point": "2913°C (3186 K)",
+        "discovery-date": "1751",
+        "wiki": "https://en.wikipedia.org/wiki/Nickel",
+        "hints": {
+            "properties": [
+                "Corrosion-resistant",
+                "Used in stainless steel and batteries",
+                "Can cause allergic reactions"
+            ]
+        }
+    },
+    "Copper": {
+        "name": "Copper",
+        "symbol": "Cu",
+        "classic": {
+            "atomic_number": "29",
+            "atomic_mass": "63.546",
+            "period": "4",
+            "group": "11",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "1085°C (1358 K)",
+        "boiling-point": "2562°C (2835 K)",
+        "discovery-date": "Prehistoric",
+        "wiki": "https://en.wikipedia.org/wiki/Copper",
+        "hints": {
+            "properties": [
+                "Excellent conductor of electricity",
+                "Used in wiring and plumbing",
+                "Has a reddish color"
+            ]
+        }
+    },
+    "Zinc": {
+        "name": "Zinc",
+        "symbol": "Zn",
+        "classic": {
+            "atomic_number": "30",
+            "atomic_mass": "65.38",
+            "period": "4",
+            "group": "12",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "419.5°C (692.6 K)",
+        "boiling-point": "907°C (1180 K)",
+        "discovery-date": "Prehistoric",
+        "wiki": "https://en.wikipedia.org/wiki/Zinc",
+        "hints": {
+            "properties": [
+                "Used to galvanize steel",
+                "Essential for immune function",
+                "Can be found in sunscreens"
+            ]
+        }
+    },
+    "Gallium": {
+        "name": "Gallium",
+        "symbol": "Ga",
+        "classic": {
+            "atomic_number": "31",
+            "atomic_mass": "69.723",
+            "period": "4",
+            "group": "13",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Post-transition Metal"
+        },
+        "melting-point": "29.76°C (302.91 K)",
+        "boiling-point": "2204°C (2477 K)",
+        "discovery-date": "1875",
+        "wiki": "https://en.wikipedia.org/wiki/Gallium",
+        "hints": {
+            "properties": [
+                "Melts at near room temperature",
+                "Used in electronics (LEDs, semiconductors)",
+                "Found in some high temperature thermometers"
+            ]
+        }
+    }
+}
