@@ -33,7 +33,7 @@ export default function GameHeader() {
     return (
         <div className="mb-8 text-center max-w-xl mx-auto">
             <div className="flex items-center justify-center gap-2 mb-4">
-                <img src={Logo.src} alt="Logo" className="w-64" />
+                <img src={Logo.src} alt="Logo" className="w-72" />
             </div>
             {/* <div className="flex justify-center gap-4 mb-6 -mt-12">
                 <TooltipProvider>

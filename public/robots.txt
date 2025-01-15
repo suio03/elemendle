@@ -2,7 +2,7 @@
 User-agent: *
 Allow: *
 # Host
-Host: https://bleachdle.app/
+Host: https://elemendle.com/
 
 # Sitemaps
-Sitemap: https://bleachdle.app/sitemap.xml
+Sitemap: https://elemendle.com/sitemap.xml

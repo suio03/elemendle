@@ -119,7 +119,7 @@ const VictoryScreen = ({
                                 className="w-16 h-16 shrink-0"
                             />
                         </a>
-                        <h3 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text font-nacelle text-transparent text-4xl font-bold">{element.name}</h3>
+                        {/* <h3 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text font-nacelle text-transparent text-4xl font-bold">{element.name}</h3> */}
                     </div>
                 </div>
 

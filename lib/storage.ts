@@ -1,28 +1,61 @@
 import { ElementGameState, Element, type ElementStatistics } from "@/types/element";
-import elementsData from "@/data/atom.json";
+import { getCurrentUTCDay, isSameUTCDay } from "@/lib/utils";
 
-// Storage keys
+// Update storage keys
 const STORAGE_KEYS = {
     GAME_STATE: "element-guess-game",
     STATS: "element-guess-stats",
     HISTORY: "element-guess-history",
     USER_ID: "element-guess-uid",
-    LAST_ELEMENT: "element-guess-last-element"
+    CURRENT_GAME: "element-guess-current-game"
 } as const;
 
-const DAY_IN_MS = 86400000; // 24 hours in milliseconds
-
-// Initialize functions
+// Update initial game state to include game number
 export function getInitialGameState(): ElementGameState {
     return {
-        currentDay: "",
+        currentDay: getCurrentUTCDay(),
         dailyElement: null,
+        gameNumber: 0, // Add game number tracking
         guesses: [],
         gameStatus: "in-progress",
         startTime: null,
         hasStarted: false,
         statistics: getInitialStatistics()
     };
+}
+
+// Update history interface
+interface GameHistory {
+    date: string; // UTC date
+    element: string;
+    gameNumber: number;
+    guesses: number;
+    timeTaken: number;
+    won: boolean;
+}
+
+export function addToHistory(gameState: ElementGameState, timeTaken: number): void {
+    if (typeof window === "undefined") return;
+
+    const history = JSON.parse(localStorage.getItem(STORAGE_KEYS.HISTORY) || '[]') as GameHistory[];
+    
+    const newEntry: GameHistory = {
+        date: getCurrentUTCDay(),
+        element: gameState.dailyElement?.name || '',
+        gameNumber: gameState.gameNumber,
+        guesses: gameState.guesses.length,
+        timeTaken: timeTaken,
+        won: gameState.gameStatus === "won"
+    };
+
+    history.push(newEntry);
+    localStorage.setItem(STORAGE_KEYS.HISTORY, JSON.stringify(history));
+}
+
+// Add validation function
+export function validateGameState(state: ElementGameState, currentGameNumber: number): boolean {
+    return state.gameNumber === currentGameNumber && 
+           state.currentDay === getCurrentUTCDay();
 }
 
 export function getInitialStatistics(): ElementStatistics {
@@ -53,7 +86,14 @@ export function getStoredGameState(): ElementGameState {
     const stored = localStorage.getItem(STORAGE_KEYS.GAME_STATE);
     if (!stored) return getInitialGameState();
     
-    return JSON.parse(stored);
+    const state = JSON.parse(stored);
+    
+    // Validate the stored state's date
+    if (!isSameUTCDay(state.currentDay, getCurrentUTCDay())) {
+        return getInitialGameState();
+    }
+    
+    return state;
 }
 
 export function storeGameState(state: ElementGameState): void {
@@ -81,40 +121,9 @@ export function getOrCreateUserId(): string {
     return userId;
 }
 
-export function getDailyElement(): Element {
-    const elements = Object.values(elementsData);
-    const now = new Date();
-    const utcDate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
-    
-    let index = Math.floor(utcDate.getTime() / DAY_IN_MS) % elements.length;
-    
-    const lastElementIndex = localStorage.getItem(STORAGE_KEYS.LAST_ELEMENT);
-    
-    if (lastElementIndex && parseInt(lastElementIndex, 10) === index) {
-        index = (index + 1) % elements.length;
-    }
-    
-    localStorage.setItem(STORAGE_KEYS.LAST_ELEMENT, index.toString());
-    return elements[index];
-}
-
-export function isNewDay(storedDay: string): boolean {
-    const currentDay = new Date().toDateString();
-    return storedDay !== currentDay;
-}
-
 export function calculateTimeTaken(startTime: number | null, endTime: number): number {
     if (!startTime) return 0;
     return Math.floor((endTime - startTime) / 1000);
-}
-
-export function getPreviousElement(): Element | null {
-    const lastElementIndex = localStorage.getItem(STORAGE_KEYS.LAST_ELEMENT);
-    if (lastElementIndex) {
-        const elements = Object.values(elementsData);
-        return elements[parseInt(lastElementIndex, 10)];
-    }
-    return null;
 }
 
 export function storeStatistics(statistics: ReturnType<typeof getInitialStatistics>) {
@@ -130,9 +139,20 @@ export function updateStatistics(gameState: ElementGameState, timeTaken: number)
     const totalWins = Math.round(stats.winRate * (stats.gamesPlayed - 1));
     stats.winRate = (totalWins + (isWon ? 1 : 0)) / stats.gamesPlayed;
 
-    // Update streaks
+    // Update streaks - now considers UTC days for streak calculation
     if (isWon) {
-        stats.currentStreak += 1;
+        const lastPlayedDate = stats.lastPlayed ? new Date(stats.lastPlayed).toISOString().split('T')[0] : null;
+        const yesterdayUTC = new Date(Date.UTC(
+            new Date().getUTCFullYear(),
+            new Date().getUTCMonth(),
+            new Date().getUTCDate() - 1
+        )).toISOString().split('T')[0];
+
+        if (lastPlayedDate === yesterdayUTC) {
+            stats.currentStreak += 1;
+        } else if (!lastPlayedDate || lastPlayedDate < yesterdayUTC) {
+            stats.currentStreak = 1;
+        }
         stats.maxStreak = Math.max(stats.maxStreak, stats.currentStreak);
     } else {
         stats.currentStreak = 0;
@@ -160,31 +180,27 @@ export function updateStatistics(gameState: ElementGameState, timeTaken: number)
         }
     }
 
-    stats.lastPlayed = new Date().toISOString();
+    // Store last played in UTC
+    stats.lastPlayed = getCurrentUTCDay();
     storeStatistics(stats);
 }
 
-interface GameHistory {
-    date: string;
-    element: string;
-    guesses: number;
-    timeTaken: number;
-    won: boolean;
-}
+// Add new function to validate game state with API response
+export function validateAndUpdateGameState(
+    currentState: ElementGameState,
+    apiGameNumber: number,
+    apiElement: Element
+): ElementGameState {
+    // If game numbers don't match or it's a new day, reset the state
+    if (currentState.gameNumber !== apiGameNumber || 
+        !isSameUTCDay(currentState.currentDay, getCurrentUTCDay())) {
+        return {
+            ...getInitialGameState(),
+            gameNumber: apiGameNumber,
+            dailyElement: apiElement,
+            currentDay: getCurrentUTCDay()
+        };
+    }
 
-export function addToHistory(gameState: ElementGameState, timeTaken: number): void {
-    if (typeof window === "undefined") return;
-
-    const history = JSON.parse(localStorage.getItem(STORAGE_KEYS.HISTORY) || '[]') as GameHistory[];
-    
-    const newEntry: GameHistory = {
-        date: new Date().toISOString(),
-        element: gameState.dailyElement?.name || '',
-        guesses: gameState.guesses.length,
-        timeTaken: timeTaken,
-        won: gameState.gameStatus === "won"
-    };
-
-    history.push(newEntry);
-    localStorage.setItem(STORAGE_KEYS.HISTORY, JSON.stringify(history));
+    return currentState;
 }

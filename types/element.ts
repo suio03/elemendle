@@ -27,6 +27,7 @@ export interface Element {
 export interface ElementGameState {
     currentDay: string;
     dailyElement: Element | null;
+    gameNumber: number;
     guesses: ElementGuessResult[];
     gameStatus: "in-progress" | "won" | "lost";
     startTime: number | null;

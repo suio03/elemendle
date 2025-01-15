@@ -24,7 +24,7 @@ export default function ColorIndicator({ items, className }: ColorIndicatorProps
     const t = useTranslations('game-board.color-indicators')
     return (
         <div className={cn(
-            "rounded-xl border border-white/20 bg-black/30 backdrop-blur-sm p-6 my-12 max-w-2xl mx-auto",
+            "rounded-xl border border-white/20 bg-black/30 backdrop-blur-sm p-6 my-12 max-w-lg mx-auto",
             className
         )}>
             <div className="space-y-4 text-center">

@@ -8,7 +8,7 @@ const HowToPlay = () => {
     const t = useTranslations('how-to-play')
     return (
         <div id="how-to-play">
-            <div className="max-w-lg mx-auto space-y-6 bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] rounded-xl border border-[#9CCAD3]">
+            <div className="max-w-lg mx-auto space-y-6 p-2 bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] rounded-xl border border-[#9CCAD3]">
                 <h1 className="text-3xl font-bold text-[#9CCAD3] py-4 text-center">
                     {t('h1')}
                 </h1>

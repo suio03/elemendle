@@ -20,7 +20,7 @@ export async function generateMetadata({
     const t = await getTranslations({ locale, namespace: 'metaData' })
     const cookieStore = cookies()
     let pathName = cookieStore.get('x-pathname')?.value || '/'
-    const baseUrl = 'https://bleachdle.app'
+    const baseUrl = 'https://elemendle.com'
     const locales = ['ar', 'ch', 'es', 'fr', 'pt', 'ru', 'ko', 'jp', 'de', 'it', 'hi', 'nl']
     const localePath = locale === 'en' ? '' : `/${locale}`
     // Ensure correct formatting
