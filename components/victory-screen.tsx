@@ -49,6 +49,7 @@ interface VictoryScreenProps {
     streak: number
     isOneShot: boolean
     element: Element
+    isGameOver?: boolean
 }
 
 function formatTime(seconds: number): string {
@@ -66,7 +67,8 @@ const VictoryScreen = ({
     timeTaken = 0,
     streak = 1,
     isOneShot = true,
-    element
+    element,
+    isGameOver = false
 }: VictoryScreenProps) => {
     const t = useTranslations('victory')
     const [timeDigits, setTimeDigits] = useState({
@@ -98,17 +100,23 @@ const VictoryScreen = ({
         return () => clearInterval(timer)
     }, [])
 
-
     return (
-        <Card className="w-full max-w-lg mx-auto bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] text-white border-[#9CCAD3] border">
+        <Card className="w-full max-w-lg mx-auto bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] text-white border-[#9CCAD3] border mb-4">
             <CardContent className="my-6">
-                {/* Victory Title */}
+                {/* Title */}
                 <div className="text-center">
-                    <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-transparent text-5xl font-bold mb-8">{t('title')}</h2>
+                    <h2 className={`animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-transparent  font-bold mb-8 ${isGameOver ? 'text-red-600 text-3xl' : 'text-5xl'}`}>
+                        {isGameOver ? t('game-over') : t('title')}
+                    </h2>
                 </div>
 
-                {/* Character Result */}
+                {/* Element Result */}
                 <div className="text-center space-y-2">
+                    {isGameOver && (
+                        <p className="text-red-300 mb-4">
+                            {t('correct-answer')}: 
+                        </p>
+                    )}
                     <div className="flex items-center justify-center gap-4 pb-8">
                         <a href={element.wiki} target="_blank" rel="noopener noreferrer">
                             <ElementBox
@@ -119,7 +127,6 @@ const VictoryScreen = ({
                                 className="w-16 h-16 shrink-0"
                             />
                         </a>
-                        {/* <h3 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text font-nacelle text-transparent text-4xl font-bold">{element.name}</h3> */}
                     </div>
                 </div>
 

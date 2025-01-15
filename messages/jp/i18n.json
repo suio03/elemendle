@@ -1,259 +1,262 @@
 {
-    "metaData": {
-      "title": "Elemendle - 毎日の周期表パズル、あなたの知識を試そう",
-      "description": "毎日の周期表パズルで自分自身に挑戦してみましょう。元素を推測して、あなたの知識を試してください。",
-      "keywords": [
-        "Elemendle",
-        "元素当てゲーム",
-        "毎日の元素ゲーム"
-      ]
+  "metaData": {
+    "title": "Elemendle - 毎日の周期表パズル、あなたの知識を試そう",
+    "description": "毎日の周期表パズルで自分自身に挑戦してみましょう。元素を推測して、あなたの知識を試してください。",
+    "keywords": [
+      "Elemendle",
+      "元素当てゲーム",
+      "毎日の元素ゲーム"
+    ]
+  },
+  "header": {
+    "stats": {
+      "tooltip": "統計",
+      "play": "プレイしたゲーム",
+      "win-rate": "勝率",
+      "current-streak": "現在の連勝",
+      "max-streak": "最大連勝",
+      "time-stats": "時間統計",
+      "best-time": "最短時間",
+      "average-time": "平均時間",
+      "game-distribution": "ゲームの分布"
     },
-    "header": {
-      "stats": {
-        "tooltip": "統計",
-        "play": "プレイしたゲーム",
-        "win-rate": "勝率",
-        "current-streak": "現在の連勝",
-        "max-streak": "最大連勝",
-        "time-stats": "時間統計",
-        "best-time": "最短時間",
-        "average-time": "平均時間",
-        "game-distribution": "ゲームの分布"
-      },
-      "streak": "現在の連勝（毎日の連続勝利）",
-      "data-control": {
-        "tooltip": "データのインポート/エクスポート",
-        "name": "データの転送",
-        "btn01": "データのエクスポート",
-        "btn02": "データのインポート",
-        "description": "ゲームの統計データをエクスポートして、別のデバイスに転送します。"
-      },
-      "how-to": "遊び方？",
-      "language": "ゲームの言語を変更します。"
+    "streak": "現在の連勝（毎日の連続勝利）",
+    "data-control": {
+      "tooltip": "データのインポート/エクスポート",
+      "name": "データの転送",
+      "btn01": "データのエクスポート",
+      "btn02": "データのインポート",
+      "description": "ゲームの統計データをエクスポートして、別のデバイスに転送します。"
     },
-    "game-board": {
-      "title": "今日の元素を当ててみよう！",
-      "remaining-guesses": "残りの試行回数",
-      "input-placeholder": "元素名または記号を入力してください…",
-      "solved-count": "人々が既にこの元素を当てています！",
-      "yesterday-character": "昨日の元素は ",
-      "grid": {
-        "headers": {
-          "element": {
-            "label": "元素",
-            "description": "元素の名前（記号）"
-          },
-          "period": {
-            "label": "周期",
-            "description": "元素の周期"
-          },
-          "group": {
-            "label": "族",
-            "description": "元素の族"
-          },
-          "type": {
-            "label": "種類",
-            "description": "元素の種類"
-          },
-          "phase": {
-            "label": "状態（STP）",
-            "description": "STPにおける元素の状態"
-          },
-          "block": {
-            "label": "ブロック",
-            "description": "元素のブロック"
-          },
-          "mass": {
-            "label": "質量",
-            "description": "元素の原子質量"
-          },
-          "atomic": {
-            "label": "原子番号",
-            "description": "元素の原子番号"
-          }
+    "how-to": "遊び方？",
+    "language": "ゲームの言語を変更します。"
+  },
+  "game-board": {
+    "title": "今日の元素を当ててみよう！",
+    "remaining-guesses": "残りの試行回数",
+    "input-placeholder": "元素名または記号を入力してください…",
+    "solved-count": "人々が既にこの元素を当てています！",
+    "yesterday-character": "昨日の元素は ",
+    "grid": {
+      "headers": {
+        "element": {
+          "label": "元素",
+          "description": "元素の名前（記号）"
+        },
+        "period": {
+          "label": "周期",
+          "description": "元素の周期"
+        },
+        "group": {
+          "label": "族",
+          "description": "元素の族"
+        },
+        "type": {
+          "label": "種類",
+          "description": "元素の種類"
+        },
+        "phase": {
+          "label": "状態（STP）",
+          "description": "STPにおける元素の状態"
+        },
+        "block": {
+          "label": "ブロック",
+          "description": "元素のブロック"
+        },
+        "mass": {
+          "label": "質量",
+          "description": "元素の原子質量"
+        },
+        "atomic": {
+          "label": "原子番号",
+          "description": "元素の原子番号"
         }
-      },
-      "color-indicators": {
-        "title": "色のインジケーター",
-        "correct": {
-          "label": "正解",
-          "description": "推測が完全に一致"
-        },
-        "incorrect": {
-          "label": "不正解",
-          "description": "推測が一致しない"
-        },
-        "higher": {
-          "label": "高い",
-          "description": "正しい値は推測よりも高い"
-        },
-        "lower": {
-          "label": "低い",
-          "description": "正しい値は推測よりも低い"
-        }
-      },
-      "game-over": "ゲームオーバー！",
-      "correct-answer": "正解は"
-    },
-    "victory": {
-      "title": "勝利！",
-      "time-taken": "経過時間",
-      "next-element": "次の元素まで",
-      "attempts": "試行回数",
-      "your-guess": "あなたの推測は"
-    },
-    "how-to-play": {
-      "h1": "Elemendle - 毎日の周期表元素を当てよう",
-      "title": "遊び方？",
-      "description": "今日の周期表元素を当てよう - 24時間ごとに新しい元素",
-      "notes": "元素名または記号を入力してください。ゲームはその元素の性質を示し、あなたの推測がどのくらい近かったかを示します。",
-      "color-indicators": "色のインジケーター",
-      "correct": "推測が完全に一致",
-      "incorrect": "推測が一致しない",
-      "higher": "高い/低いインジケーター（数値の場合）",
-      "properties": "性質",
-      "period": {
-        "label": "周期",
-        "value": "1, 2, 3",
-        "description": "周期表における元素の周期とは、その元素が属する水平方向の行のことです"
-      },
-      "group": {
-        "label": "族",
-        "value": "1, 2, 3",
-        "description": "周期表における元素の族とは、その元素が属する垂直方向の列のことです"
-      },
-      "block": {
-        "label": "ブロック",
-        "value": "s, p, d, f",
-        "description": "周期表における元素のブロックとは、その元素が属する電子殻の種類のことです"
-      },
-      "phase": {
-        "label": "状態（STP）",
-        "value": "固体、液体、気体",
-        "description": "周期表における元素の状態とは、標準温度圧力下におけるその元素の物質の状態のことです"
-      },
-      "mass": {
-        "label": "原子質量",
-        "value": "1, 2, 3",
-        "description": "元素の原子質量とは、その元素のすべてのプロトンと中性子の総質量のことです"
-      },
-      "atomic": {
-        "label": "原子番号",
-        "value": "1, 2, 3",
-        "description": "元素の原子番号とは、その元素の原子核中のプロトンの数のことです"
-      },
-      "type": {
-        "label": "種類",
-        "value": "金属、非金属、半金属",
-        "description": "周期表における元素の種類とは、その元素が属するカテゴリーのことです"
       }
     },
-    "faq": {
-      "title": "Elemendleに関するよくある質問",
-      "questions": [
-        {
-          "question": "Elemendleをプレイするためにアカウントを作成する必要がありますか？",
-          "answer": "いいえ、Elemendleは完全に無料でプレイでき、ログインは必要ありません。あなたの進捗状況は、あなたのデバイスにローカルに保存されます。"
-        },
-        {
-          "question": "Elemendleでは、どのくらいの頻度で元素が変わりますか？",
-          "answer": "24時間ごとに、新しい元素を推測できます。毎日戻ってきて、新しいチャレンジに挑戦しましょう！"
-        },
-        {
-          "question": "進捗状況を別のデバイスに転送するにはどうすればよいですか？",
-          "answer": "エクスポート機能を使用してデータを保存し、新しいデバイスにインポートします。アカウントは必要ありません！"
-        },
-        {
-          "question": "Elemendleの色インジケーターは何を意味しますか？",
-          "answer": "緑は完全一致を示し、赤は不一致を示し、矢印は数値（高さなど）が高いか低いかを示します。"
-        },
-        {
-          "question": "Elemendleを最大限に活用するにはどうすればよいですか？",
-          "answer": "いくつかの試行の後、ヒントシステムを使用して元素を推測するのに役立てましょう。ヒントは、あなたを妨げるためではなく、助けるために設計されています。"
-        },
-        {
-          "question": "Elemendleの目的は何ですか？",
-          "answer": "Elemendleは、化学愛好家による、化学愛好家のためのゲームです。これは、周期表コミュニティを結びつけ、周期表を祝う方法です。"
-        },
-        {
-          "question": "将来的にプレイモードは増えますか？",
-          "answer": "はい、Elemendleにプレイモードを追加する作業中です。"
-        },
-        {
-          "question": "Elemendleにはモバイルバージョンがありますか？",
-          "answer": "現在、Elemendleはブラウザのあるすべてのデバイスで動作します。そのため、何もダウンロードする必要はありません。"
-        },
-        {
-          "question": "私のデータはどのように保存されますか？",
-          "answer": "あなたのデータはあなたのデバイスにローカルに保存されます。私たちはあなたからデータを収集しません。"
-        },
-        {
-          "question": "Elemendleゲームは無料ですか？",
-          "answer": "はい、Elemendleは完全に無料でプレイできます。"
-        },
-        {
-          "question": "このElemendleゲームは周期表に関連していますか？",
-          "answer": "いいえ、Elemendleは周期表と提携していません。ファンが作ったゲームです。"
-        },
-        {
-          "question": "Elemendleに関するフィードバックを提供できますか？",
-          "answer": "support@elemendle.appまでお問い合わせください。"
-        }
-      ]
+    "color-indicators": {
+      "title": "色のインジケーター",
+      "correct": {
+        "label": "正解",
+        "description": "推測が完全に一致"
+      },
+      "incorrect": {
+        "label": "不正解",
+        "description": "推測が一致しない"
+      },
+      "higher": {
+        "label": "高い",
+        "description": "正しい値は推測よりも高い"
+      },
+      "lower": {
+        "label": "低い",
+        "description": "正しい値は推測よりも低い"
+      }
     },
-    "game-tips": {
-      "title": "Elemendleをプレイするためのヒント",
-      "content": [
-        {
-          "title": "一般的な元素から始めましょう",
-          "description": "一度に複数の性質を理解するために、水素や酸素などのよく知られた元素から始めましょう。"
-        },
-        {
-          "title": "周期表の情報を使用しましょう",
-          "description": "可能性を狭めるために、元素の性質に注意を払いましょう。"
-        },
-        {
-          "title": "族の性質",
-          "description": "これらの性質は、関連する元素をグループ化する傾向があるため、状態と種類のヒントに注目しましょう。"
-        },
-        {
-          "title": "パターンを探しましょう",
-          "description": "より多くの情報に基づいた推測をするために、元素の性質のパターンに注意しましょう。たとえば、元素が金属であれば、それは金属である可能性が高いです。"
-        },
-        {
-          "title": "ヒントを使用しましょう",
-          "description": "いくつかの試行の後、ヒントシステムを使用することをためらわないでください。これは、あなたを助けるために設計されています！"
-        }
-      ]
+    "game-over": "ゲームオーバー！",
+    "correct-answer": "正解は",
+    "scroll-horizontal": "横にスクロールすると詳細情報が表示されます"
+  },
+  "victory": {
+    "title": "勝利！",
+    "time-taken": "経過時間",
+    "next-element": "次の元素まで",
+    "attempts": "試行回数",
+    "your-guess": "あなたの推測は",
+    "game-over": "もっと練習が必要",
+    "correct-answer": "正解"
+  },
+  "how-to-play": {
+    "h1": "Elemendle - 毎日の周期表元素を当てよう",
+    "title": "遊び方？",
+    "description": "今日の周期表元素を当てよう - 24時間ごとに新しい元素",
+    "notes": "元素名または記号を入力してください。ゲームはその元素の性質を示し、あなたの推測がどのくらい近かったかを示します。",
+    "color-indicators": "色のインジケーター",
+    "correct": "推測が完全に一致",
+    "incorrect": "推測が一致しない",
+    "higher": "高い/低いインジケーター（数値の場合）",
+    "properties": "性質",
+    "period": {
+      "label": "周期",
+      "value": "1, 2, 3",
+      "description": "周期表における元素の周期とは、その元素が属する水平方向の行のことです"
     },
-    "game-features": {
-      "title": "Elemendleの機能",
-      "content": [
-        {
-          "title": "性質に基づいたマッチング",
-          "description": "名前を推測する代わりに、周期、族、ブロック、種類、状態、質量、原子番号などの元素の性質を一致させましょう。"
-        },
-        {
-          "title": "包括的なデータベース",
-          "description": "すべての周期表から元素にアクセスできます"
-        },
-        {
-          "title": "時間制限なし",
-          "description": "あなた自身のペースでプレイしましょう - 正しい元素を見つけるために必要なだけ多くの試行を行いましょう。Elemendleは、化学愛好家による、化学愛好家のためのゲームです。"
-        },
-        {
-          "title": "便利なヒント",
-          "description": "いくつかの試行の後、難しい元素を助けるための戦略的なヒントを受け取ります。"
-        },
-        {
-          "title": "進捗状況の追跡",
-          "description": "統計を監視し、データをエクスポートして他のデバイスでプレイを続けましょう。"
-        }
-      ]
+    "group": {
+      "label": "族",
+      "value": "1, 2, 3",
+      "description": "周期表における元素の族とは、その元素が属する垂直方向の列のことです"
     },
-    "share": {
-      "title": "Elemendleを共有する",
-      "description": "{attempts}回の試行で{timeTaken}秒以内に#Elemendleの元素を見つけました",
-      "btn": "Twitterで共有"
+    "block": {
+      "label": "ブロック",
+      "value": "s, p, d, f",
+      "description": "周期表における元素のブロックとは、その元素が属する電子殻の種類のことです"
+    },
+    "phase": {
+      "label": "状態（STP）",
+      "value": "固体、液体、気体",
+      "description": "周期表における元素の状態とは、標準温度圧力下におけるその元素の物質の状態のことです"
+    },
+    "mass": {
+      "label": "原子質量",
+      "value": "1, 2, 3",
+      "description": "元素の原子質量とは、その元素のすべてのプロトンと中性子の総質量のことです"
+    },
+    "atomic": {
+      "label": "原子番号",
+      "value": "1, 2, 3",
+      "description": "元素の原子番号とは、その元素の原子核中のプロトンの数のことです"
+    },
+    "type": {
+      "label": "種類",
+      "value": "金属、非金属、半金属",
+      "description": "周期表における元素の種類とは、その元素が属するカテゴリーのことです"
     }
+  },
+  "faq": {
+    "title": "Elemendleに関するよくある質問",
+    "questions": [
+      {
+        "question": "Elemendleをプレイするためにアカウントを作成する必要がありますか？",
+        "answer": "いいえ、Elemendleは完全に無料でプレイでき、ログインは必要ありません。あなたの進捗状況は、あなたのデバイスにローカルに保存されます。"
+      },
+      {
+        "question": "Elemendleでは、どのくらいの頻度で元素が変わりますか？",
+        "answer": "24時間ごとに、新しい元素を推測できます。毎日戻ってきて、新しいチャレンジに挑戦しましょう！"
+      },
+      {
+        "question": "進捗状況を別のデバイスに転送するにはどうすればよいですか？",
+        "answer": "エクスポート機能を使用してデータを保存し、新しいデバイスにインポートします。アカウントは必要ありません！"
+      },
+      {
+        "question": "Elemendleの色インジケーターは何を意味しますか？",
+        "answer": "緑は完全一致を示し、赤は不一致を示し、矢印は数値（高さなど）が高いか低いかを示します。"
+      },
+      {
+        "question": "Elemendleを最大限に活用するにはどうすればよいですか？",
+        "answer": "いくつかの試行の後、ヒントシステムを使用して元素を推測するのに役立てましょう。ヒントは、あなたを妨げるためではなく、助けるために設計されています。"
+      },
+      {
+        "question": "Elemendleの目的は何ですか？",
+        "answer": "Elemendleは、化学愛好家による、化学愛好家のためのゲームです。これは、周期表コミュニティを結びつけ、周期表を祝う方法です。"
+      },
+      {
+        "question": "将来的にプレイモードは増えますか？",
+        "answer": "はい、Elemendleにプレイモードを追加する作業中です。"
+      },
+      {
+        "question": "Elemendleにはモバイルバージョンがありますか？",
+        "answer": "現在、Elemendleはブラウザのあるすべてのデバイスで動作します。そのため、何もダウンロードする必要はありません。"
+      },
+      {
+        "question": "私のデータはどのように保存されますか？",
+        "answer": "あなたのデータはあなたのデバイスにローカルに保存されます。私たちはあなたからデータを収集しません。"
+      },
+      {
+        "question": "Elemendleゲームは無料ですか？",
+        "answer": "はい、Elemendleは完全に無料でプレイできます。"
+      },
+      {
+        "question": "このElemendleゲームは周期表に関連していますか？",
+        "answer": "いいえ、Elemendleは周期表と提携していません。ファンが作ったゲームです。"
+      },
+      {
+        "question": "Elemendleに関するフィードバックを提供できますか？",
+        "answer": "support@elemendle.appまでお問い合わせください。"
+      }
+    ]
+  },
+  "game-tips": {
+    "title": "Elemendleをプレイするためのヒント",
+    "content": [
+      {
+        "title": "一般的な元素から始めましょう",
+        "description": "一度に複数の性質を理解するために、水素や酸素などのよく知られた元素から始めましょう。"
+      },
+      {
+        "title": "周期表の情報を使用しましょう",
+        "description": "可能性を狭めるために、元素の性質に注意を払いましょう。"
+      },
+      {
+        "title": "族の性質",
+        "description": "これらの性質は、関連する元素をグループ化する傾向があるため、状態と種類のヒントに注目しましょう。"
+      },
+      {
+        "title": "パターンを探しましょう",
+        "description": "より多くの情報に基づいた推測をするために、元素の性質のパターンに注意しましょう。たとえば、元素が金属であれば、それは金属である可能性が高いです。"
+      },
+      {
+        "title": "ヒントを使用しましょう",
+        "description": "いくつかの試行の後、ヒントシステムを使用することをためらわないでください。これは、あなたを助けるために設計されています！"
+      }
+    ]
+  },
+  "game-features": {
+    "title": "Elemendleの機能",
+    "content": [
+      {
+        "title": "性質に基づいたマッチング",
+        "description": "名前を推測する代わりに、周期、族、ブロック、種類、状態、質量、原子番号などの元素の性質を一致させましょう。"
+      },
+      {
+        "title": "包括的なデータベース",
+        "description": "すべての周期表から元素にアクセスできます"
+      },
+      {
+        "title": "時間制限なし",
+        "description": "あなた自身のペースでプレイしましょう - 正しい元素を見つけるために必要なだけ多くの試行を行いましょう。Elemendleは、化学愛好家による、化学愛好家のためのゲームです。"
+      },
+      {
+        "title": "便利なヒント",
+        "description": "いくつかの試行の後、難しい元素を助けるための戦略的なヒントを受け取ります。"
+      },
+      {
+        "title": "進捗状況の追跡",
+        "description": "統計を監視し、データをエクスポートして他のデバイスでプレイを続けましょう。"
+      }
+    ]
+  },
+  "share": {
+    "title": "Elemendleを共有する",
+    "description": "{attempts}回の試行で{timeTaken}秒以内に#Elemendleの元素を見つけました",
+    "btn": "Twitterで共有"
   }
+}

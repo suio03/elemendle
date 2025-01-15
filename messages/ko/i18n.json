@@ -1,259 +1,262 @@
 {
-    "metaData": {
-        "title": "Elemendle - 매일 주기율표 퍼즐, 당신의 지식을 시험해 보세요",
-        "description": "매일 주기율표 퍼즐로 자신에게 도전해 보세요. 원소를 추측하고 지식을 시험해 보세요.",
-        "keywords": [
-            "Elemendle",
-            "원소 추측 게임",
-            "매일 원소 게임"
-        ]
+  "metaData": {
+    "title": "Elemendle - 매일 주기율표 퍼즐, 당신의 지식을 시험해 보세요",
+    "description": "매일 주기율표 퍼즐로 자신에게 도전해 보세요. 원소를 추측하고 지식을 시험해 보세요.",
+    "keywords": [
+      "Elemendle",
+      "원소 추측 게임",
+      "매일 원소 게임"
+    ]
+  },
+  "header": {
+    "stats": {
+      "tooltip": "통계",
+      "play": "플레이한 게임",
+      "win-rate": "승률",
+      "current-streak": "현재 연승",
+      "max-streak": "최대 연승",
+      "time-stats": "시간 통계",
+      "best-time": "최고 기록",
+      "average-time": "평균 시간",
+      "game-distribution": "게임 분포"
     },
-    "header": {
-        "stats": {
-            "tooltip": "통계",
-            "play": "플레이한 게임",
-            "win-rate": "승률",
-            "current-streak": "현재 연승",
-            "max-streak": "최대 연승",
-            "time-stats": "시간 통계",
-            "best-time": "최고 기록",
-            "average-time": "평균 시간",
-            "game-distribution": "게임 분포"
-        },
-        "streak": "현재 연승(매일 연속 승리)",
-        "data-control": {
-            "tooltip": "데이터 가져오기/내보내기",
-            "name": "데이터 전송",
-            "btn01": "데이터 내보내기",
-            "btn02": "데이터 가져오기",
-            "description": "게임 통계를 다른 기기로 전송하기 위해 내보냅니다."
-        },
-        "how-to": "게임 방법?",
-        "language": "게임 언어 변경."
+    "streak": "현재 연승(매일 연속 승리)",
+    "data-control": {
+      "tooltip": "데이터 가져오기/내보내기",
+      "name": "데이터 전송",
+      "btn01": "데이터 내보내기",
+      "btn02": "데이터 가져오기",
+      "description": "게임 통계를 다른 기기로 전송하기 위해 내보냅니다."
     },
-    "game-board": {
-        "title": "오늘의 원소를 맞춰보세요!",
-        "remaining-guesses": "남은 횟수",
-        "input-placeholder": "원소 이름 또는 기호를 입력하세요...",
-        "solved-count": "명이 이미 이 원소를 맞혔습니다!",
-        "yesterday-character": "어제의 원소는 ",
-        "grid": {
-            "headers": {
-                "element": {
-                    "label": "원소",
-                    "description": "원소의 이름(기호)"
-                },
-                "period": {
-                    "label": "주기",
-                    "description": "원소의 주기"
-                },
-                "group": {
-                    "label": "족",
-                    "description": "원소의 족"
-                },
-                "type": {
-                    "label": "종류",
-                    "description": "원소의 종류"
-                },
-                "phase": {
-                    "label": "상태(STP)",
-                    "description": "STP에서 원소의 상태"
-                },
-                "block": {
-                    "label": "블록",
-                    "description": "원소의 블록"
-                },
-                "mass": {
-                    "label": "질량",
-                    "description": "원소의 원자 질량"
-                },
-                "atomic": {
-                    "label": "원자 번호",
-                    "description": "원소의 원자 번호"
-                }
-            }
+    "how-to": "게임 방법?",
+    "language": "게임 언어 변경."
+  },
+  "game-board": {
+    "title": "오늘의 원소를 맞춰보세요!",
+    "remaining-guesses": "남은 횟수",
+    "input-placeholder": "원소 이름 또는 기호를 입력하세요...",
+    "solved-count": "명이 이미 이 원소를 맞혔습니다!",
+    "yesterday-character": "어제의 원소는 ",
+    "grid": {
+      "headers": {
+        "element": {
+          "label": "원소",
+          "description": "원소의 이름(기호)"
         },
-        "color-indicators": {
-            "title": "색상 표시기",
-            "correct": {
-                "label": "정답",
-                "description": "추측이 정확히 일치"
-            },
-            "incorrect": {
-                "label": "오답",
-                "description": "추측이 일치하지 않음"
-            },
-            "higher": {
-                "label": "더 높음",
-                "description": "정답은 추측보다 높음"
-            },
-            "lower": {
-                "label": "더 낮음",
-                "description": "정답은 추측보다 낮음"
-            }
-        },
-        "game-over": "게임 오버!",
-        "correct-answer": "정답은"
-    },
-    "victory": {
-        "title": "승리!",
-        "time-taken": "걸린 시간",
-        "next-element": "다음 원소까지",
-        "attempts": "시도 횟수",
-        "your-guess": "당신의 추측은"
-    },
-    "how-to-play": {
-        "h1": "Elemendle - 매일 주기율표 맞추기",
-        "title": "게임 방법?",
-        "description": "오늘의 주기율표 원소를 맞춰보세요 - 24시간마다 새로운 원소",
-        "notes": "원소 이름이나 기호를 입력하세요. 게임은 원소의 성질을 보여주고 추측이 얼마나 가까웠는지 알려줍니다.",
-        "color-indicators": "색상 표시기",
-        "correct": "추측이 정확히 일치",
-        "incorrect": "추측이 일치하지 않음",
-        "higher": "높음/낮음 표시기(숫자 값의 경우)",
-        "properties": "성질",
         "period": {
-            "label": "주기",
-            "value": "1, 2, 3",
-            "description": "주기율표에서 원소의 주기는 원소가 속한 가로줄입니다"
+          "label": "주기",
+          "description": "원소의 주기"
         },
         "group": {
-            "label": "족",
-            "value": "1, 2, 3",
-            "description": "주기율표에서 원소의 족은 원소가 속한 세로줄입니다"
-        },
-        "block": {
-            "label": "블록",
-            "value": "s, p, d, f",
-            "description": "주기율표에서 원소의 블록은 원소가 속한 전자껍질의 유형입니다"
-        },
-        "phase": {
-            "label": "상태(STP)",
-            "value": "고체, 액체, 기체",
-            "description": "주기율표에서 원소의 상태는 표준 온도와 압력에서 원소가 속한 물질의 상태입니다"
-        },
-        "mass": {
-            "label": "원자 질량",
-            "value": "1, 2, 3",
-            "description": "원소의 원자 질량은 모든 양성자와 중성자의 총 질량입니다"
-        },
-        "atomic": {
-            "label": "원자 번호",
-            "value": "1, 2, 3",
-            "description": "원소의 원자 번호는 원자핵 속 양성자의 수입니다"
+          "label": "족",
+          "description": "원소의 족"
         },
         "type": {
-            "label": "종류",
-            "value": "금속, 비금속, 준금속",
-            "description": "주기율표에서 원소의 종류는 원소가 속한 범주입니다"
+          "label": "종류",
+          "description": "원소의 종류"
+        },
+        "phase": {
+          "label": "상태(STP)",
+          "description": "STP에서 원소의 상태"
+        },
+        "block": {
+          "label": "블록",
+          "description": "원소의 블록"
+        },
+        "mass": {
+          "label": "질량",
+          "description": "원소의 원자 질량"
+        },
+        "atomic": {
+          "label": "원자 번호",
+          "description": "원소의 원자 번호"
         }
+      }
     },
-    "faq": {
-        "title": "Elemendle에 대한 자주 묻는 질문",
-        "questions": [
-            {
-                "question": "Elemendle을 플레이하려면 계정을 만들어야 하나요?",
-                "answer": "아니요, Elemendle은 완전히 무료이며 로그인이 필요 없습니다. 진행 상황은 기기에 로컬로 저장됩니다."
-            },
-            {
-                "question": "Elemendle에서 원소는 얼마나 자주 바뀌나요?",
-                "answer": "24시간마다 새로운 원소를 추측할 수 있습니다. 매일 새로운 도전을 위해 돌아오세요!"
-            },
-            {
-                "question": "진행 상황을 다른 기기로 전송하려면 어떻게 해야 하나요?",
-                "answer": "내보내기 기능을 사용하여 데이터를 저장한 다음 새 기기로 가져옵니다. 계정이 필요 없습니다!"
-            },
-            {
-                "question": "Elemendle의 색상 표시기는 무엇을 의미하나요?",
-                "answer": "녹색은 정확한 일치를 나타내고, 빨간색은 일치하지 않음을 나타내며, 화살표는 숫자 값(높이 등)이 더 높거나 더 낮아야 함을 나타냅니다."
-            },
-            {
-                "question": "Elemendle을 최대한 활용하려면 어떻게 해야 하나요?",
-                "answer": "여러 번 시도한 후 힌트 시스템을 사용하여 원소를 추측하는 데 도움을 받으세요. 힌트는 방해하기 위해서가 아니라 도와주기 위해 설계되었습니다."
-            },
-            {
-                "question": "Elemendle의 목적은 무엇인가요?",
-                "answer": "Elemendle은 화학 애호가를 위한 화학 애호가가 만든 게임입니다. 주기율표 커뮤니티를 하나로 묶고 주기율표를 기념하는 방법입니다."
-            },
-            {
-                "question": "향후 더 많은 플레이 모드가 있을까요?",
-                "answer": "네, Elemendle에 더 많은 플레이 모드를 추가하기 위해 노력하고 있습니다."
-            },
-            {
-                "question": "Elemendle에는 모바일 버전이 있나요?",
-                "answer": "현재 Elemendle은 브라우저가 있는 모든 기기에서 작동합니다. 따라서 아무것도 다운로드할 필요가 없습니다."
-            },
-            {
-                "question": "내 데이터는 어떻게 저장되나요?",
-                "answer": "데이터는 기기에 로컬로 저장됩니다. 귀하의 데이터를 수집하지 않습니다."
-            },
-            {
-                "question": "Elemendle 게임은 무료인가요?",
-                "answer": "네, Elemendle은 완전히 무료입니다."
-            },
-            {
-                "question": "이 Elemendle 게임은 주기율표와 관련이 있나요?",
-                "answer": "아니요, Elemendle은 주기율표와 제휴하지 않았습니다. 팬이 만든 게임입니다."
-            },
-            {
-                "question": "Elemendle에 대한 피드백을 제공할 수 있나요?",
-                "answer": "support@elemendle.app로 문의해주세요."
-            }
-        ]
+    "color-indicators": {
+      "title": "색상 표시기",
+      "correct": {
+        "label": "정답",
+        "description": "추측이 정확히 일치"
+      },
+      "incorrect": {
+        "label": "오답",
+        "description": "추측이 일치하지 않음"
+      },
+      "higher": {
+        "label": "더 높음",
+        "description": "정답은 추측보다 높음"
+      },
+      "lower": {
+        "label": "더 낮음",
+        "description": "정답은 추측보다 낮음"
+      }
     },
-    "game-tips": {
-        "title": "Elemendle 플레이 팁",
-        "content": [
-            {
-                "title": "일반적인 원소부터 시작하세요",
-                "description": "한 번에 여러 가지 성질을 이해하려면 수소나 산소와 같은 잘 알려진 원소부터 시작하세요."
-            },
-            {
-                "title": "주기율표 정보를 활용하세요",
-                "description": "가능성을 좁히려면 원소의 성질에 주의하세요."
-            },
-            {
-                "title": "족의 성질",
-                "description": "이러한 성질은 관련된 원소들을 그룹화하는 경향이 있으므로 상과 종류 힌트에 집중하세요."
-            },
-            {
-                "title": "패턴을 찾아보세요",
-                "description": "더욱 정확한 추측을 하려면 원소의 성질 패턴에 유의하세요. 예를 들어, 원소가 금속이라면 금속일 가능성이 높습니다."
-            },
-            {
-                "title": "힌트를 활용하세요",
-                "description": "여러 번 시도한 후 주저하지 말고 힌트 시스템을 사용하세요. 이것은 도움을 주기 위해 설계되었습니다!"
-            }
-        ]
+    "game-over": "게임 오버!",
+    "correct-answer": "정답은",
+    "scroll-horizontal": "자세한 내용을 보려면 가로로 스크롤하세요."
+  },
+  "victory": {
+    "title": "승리!",
+    "time-taken": "걸린 시간",
+    "next-element": "다음 원소까지",
+    "attempts": "시도 횟수",
+    "your-guess": "당신의 추측은",
+    "game-over": "더 많은 실습이 필요함",
+    "correct-answer": "정답"
+  },
+  "how-to-play": {
+    "h1": "Elemendle - 매일 주기율표 맞추기",
+    "title": "게임 방법?",
+    "description": "오늘의 주기율표 원소를 맞춰보세요 - 24시간마다 새로운 원소",
+    "notes": "원소 이름이나 기호를 입력하세요. 게임은 원소의 성질을 보여주고 추측이 얼마나 가까웠는지 알려줍니다.",
+    "color-indicators": "색상 표시기",
+    "correct": "추측이 정확히 일치",
+    "incorrect": "추측이 일치하지 않음",
+    "higher": "높음/낮음 표시기(숫자 값의 경우)",
+    "properties": "성질",
+    "period": {
+      "label": "주기",
+      "value": "1, 2, 3",
+      "description": "주기율표에서 원소의 주기는 원소가 속한 가로줄입니다"
     },
-    "game-features": {
-        "title": "Elemendle 기능",
-        "content": [
-            {
-                "title": "성질 기반 매칭",
-                "description": "이름을 추측하는 대신 주기, 족, 블록, 종류, 상, 질량, 원자 번호와 같은 원소의 성질을 일치시켜 보세요."
-            },
-            {
-                "title": "종합적인 데이터베이스",
-                "description": "주기율표의 모든 원소에 액세스할 수 있습니다"
-            },
-            {
-                "title": "시간 제한 없음",
-                "description": "자신의 속도로 플레이하세요. 정답을 찾기 위해 필요한 만큼 시도해 보세요. Elemendle은 화학 애호가를 위한, 화학 애호가가 만든 게임입니다."
-            },
-            {
-                "title": "유용한 힌트",
-                "description": "여러 번 시도한 후 어려운 원소를 도와줄 전략적인 힌트를 받으세요."
-            },
-            {
-                "title": "진행 상황 추적",
-                "description": "통계를 모니터링하고 다른 기기에서 계속 플레이하려면 데이터를 내보내세요."
-            }
-        ]
+    "group": {
+      "label": "족",
+      "value": "1, 2, 3",
+      "description": "주기율표에서 원소의 족은 원소가 속한 세로줄입니다"
     },
-    "share": {
-        "title": "Elemendle 공유",
-        "description": "{attempts}번의 시도로 {timeTaken}초 안에 #Elemendle 원소를 찾았습니다",
-        "btn": "Twitter에서 공유"
+    "block": {
+      "label": "블록",
+      "value": "s, p, d, f",
+      "description": "주기율표에서 원소의 블록은 원소가 속한 전자껍질의 유형입니다"
+    },
+    "phase": {
+      "label": "상태(STP)",
+      "value": "고체, 액체, 기체",
+      "description": "주기율표에서 원소의 상태는 표준 온도와 압력에서 원소가 속한 물질의 상태입니다"
+    },
+    "mass": {
+      "label": "원자 질량",
+      "value": "1, 2, 3",
+      "description": "원소의 원자 질량은 모든 양성자와 중성자의 총 질량입니다"
+    },
+    "atomic": {
+      "label": "원자 번호",
+      "value": "1, 2, 3",
+      "description": "원소의 원자 번호는 원자핵 속 양성자의 수입니다"
+    },
+    "type": {
+      "label": "종류",
+      "value": "금속, 비금속, 준금속",
+      "description": "주기율표에서 원소의 종류는 원소가 속한 범주입니다"
     }
+  },
+  "faq": {
+    "title": "Elemendle에 대한 자주 묻는 질문",
+    "questions": [
+      {
+        "question": "Elemendle을 플레이하려면 계정을 만들어야 하나요?",
+        "answer": "아니요, Elemendle은 완전히 무료이며 로그인이 필요 없습니다. 진행 상황은 기기에 로컬로 저장됩니다."
+      },
+      {
+        "question": "Elemendle에서 원소는 얼마나 자주 바뀌나요?",
+        "answer": "24시간마다 새로운 원소를 추측할 수 있습니다. 매일 새로운 도전을 위해 돌아오세요!"
+      },
+      {
+        "question": "진행 상황을 다른 기기로 전송하려면 어떻게 해야 하나요?",
+        "answer": "내보내기 기능을 사용하여 데이터를 저장한 다음 새 기기로 가져옵니다. 계정이 필요 없습니다!"
+      },
+      {
+        "question": "Elemendle의 색상 표시기는 무엇을 의미하나요?",
+        "answer": "녹색은 정확한 일치를 나타내고, 빨간색은 일치하지 않음을 나타내며, 화살표는 숫자 값(높이 등)이 더 높거나 더 낮아야 함을 나타냅니다."
+      },
+      {
+        "question": "Elemendle을 최대한 활용하려면 어떻게 해야 하나요?",
+        "answer": "여러 번 시도한 후 힌트 시스템을 사용하여 원소를 추측하는 데 도움을 받으세요. 힌트는 방해하기 위해서가 아니라 도와주기 위해 설계되었습니다."
+      },
+      {
+        "question": "Elemendle의 목적은 무엇인가요?",
+        "answer": "Elemendle은 화학 애호가를 위한 화학 애호가가 만든 게임입니다. 주기율표 커뮤니티를 하나로 묶고 주기율표를 기념하는 방법입니다."
+      },
+      {
+        "question": "향후 더 많은 플레이 모드가 있을까요?",
+        "answer": "네, Elemendle에 더 많은 플레이 모드를 추가하기 위해 노력하고 있습니다."
+      },
+      {
+        "question": "Elemendle에는 모바일 버전이 있나요?",
+        "answer": "현재 Elemendle은 브라우저가 있는 모든 기기에서 작동합니다. 따라서 아무것도 다운로드할 필요가 없습니다."
+      },
+      {
+        "question": "내 데이터는 어떻게 저장되나요?",
+        "answer": "데이터는 기기에 로컬로 저장됩니다. 귀하의 데이터를 수집하지 않습니다."
+      },
+      {
+        "question": "Elemendle 게임은 무료인가요?",
+        "answer": "네, Elemendle은 완전히 무료입니다."
+      },
+      {
+        "question": "이 Elemendle 게임은 주기율표와 관련이 있나요?",
+        "answer": "아니요, Elemendle은 주기율표와 제휴하지 않았습니다. 팬이 만든 게임입니다."
+      },
+      {
+        "question": "Elemendle에 대한 피드백을 제공할 수 있나요?",
+        "answer": "support@elemendle.app로 문의해주세요."
+      }
+    ]
+  },
+  "game-tips": {
+    "title": "Elemendle 플레이 팁",
+    "content": [
+      {
+        "title": "일반적인 원소부터 시작하세요",
+        "description": "한 번에 여러 가지 성질을 이해하려면 수소나 산소와 같은 잘 알려진 원소부터 시작하세요."
+      },
+      {
+        "title": "주기율표 정보를 활용하세요",
+        "description": "가능성을 좁히려면 원소의 성질에 주의하세요."
+      },
+      {
+        "title": "족의 성질",
+        "description": "이러한 성질은 관련된 원소들을 그룹화하는 경향이 있으므로 상과 종류 힌트에 집중하세요."
+      },
+      {
+        "title": "패턴을 찾아보세요",
+        "description": "더욱 정확한 추측을 하려면 원소의 성질 패턴에 유의하세요. 예를 들어, 원소가 금속이라면 금속일 가능성이 높습니다."
+      },
+      {
+        "title": "힌트를 활용하세요",
+        "description": "여러 번 시도한 후 주저하지 말고 힌트 시스템을 사용하세요. 이것은 도움을 주기 위해 설계되었습니다!"
+      }
+    ]
+  },
+  "game-features": {
+    "title": "Elemendle 기능",
+    "content": [
+      {
+        "title": "성질 기반 매칭",
+        "description": "이름을 추측하는 대신 주기, 족, 블록, 종류, 상, 질량, 원자 번호와 같은 원소의 성질을 일치시켜 보세요."
+      },
+      {
+        "title": "종합적인 데이터베이스",
+        "description": "주기율표의 모든 원소에 액세스할 수 있습니다"
+      },
+      {
+        "title": "시간 제한 없음",
+        "description": "자신의 속도로 플레이하세요. 정답을 찾기 위해 필요한 만큼 시도해 보세요. Elemendle은 화학 애호가를 위한, 화학 애호가가 만든 게임입니다."
+      },
+      {
+        "title": "유용한 힌트",
+        "description": "여러 번 시도한 후 어려운 원소를 도와줄 전략적인 힌트를 받으세요."
+      },
+      {
+        "title": "진행 상황 추적",
+        "description": "통계를 모니터링하고 다른 기기에서 계속 플레이하려면 데이터를 내보내세요."
+      }
+    ]
+  },
+  "share": {
+    "title": "Elemendle 공유",
+    "description": "{attempts}번의 시도로 {timeTaken}초 안에 #Elemendle 원소를 찾았습니다",
+    "btn": "Twitter에서 공유"
+  }
 }

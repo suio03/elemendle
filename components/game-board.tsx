@@ -24,7 +24,10 @@ import ShareResult from "./share-result"
 import { useGameAPI } from '@/app/hooks/useGameAPI'
 import { useTranslations } from 'next-intl'
 import ElementBox from "@/components/element-box"
-const MAX_ATTEMPTS = 8
+import HintMessage from "./hint-message"
+import { motion, AnimatePresence } from "framer-motion"
+
+const MAX_ATTEMPTS = 9
 
 interface HeaderInfo {
     key: string
@@ -93,6 +96,7 @@ export default function GameBoard() {
     const [isConfettiActive, setIsConfettiActive] = useState(false)
     const [filteredElements, setFilteredElements] = useState<Element[]>([])
     const [currentHint, setCurrentHint] = useState<number | null>(null)
+    const [showHint, setShowHint] = useState(true)
 
     const colorItems = [
         {
@@ -237,60 +241,54 @@ export default function GameBoard() {
                 await incrementCompletions()
                 updateStatistics(newState, timeToSolve)
                 addToHistory(newState, timeToSolve)
-                toast.success("Congratulations!")
             } else if (isLost) {
                 updateStatistics(newState, timeToSolve)
-                toast.error("Game over")
             }
 
             setInput("")
             setShowSuggestions(false)
+            setShowHint(true)
 
             const nextHint = getCurrentHint(newGuesses.length)
             if (nextHint !== currentHint) {
                 setCurrentHint(nextHint)
-                if (nextHint !== null) {
-                    toast.success(`Hint: ${dailyGame.element.hints.properties[nextHint]}`, {
-                        duration: 5000
-                    })
-                }
             }
         } catch (error) {
             console.error('Error in handleGuess:', error)
         }
     }
     return (
-        <div className="w-full">
-            <div className="p-6 rounded-xl shadow-xl max-w-lg mx-auto bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] text-white border border-[#9CCAD3]">
-                {gameState.guesses.length >= MAX_ATTEMPTS || gameState.gameStatus === "lost" ? (
-                    <div className="text-center p-4 bg-red-950/50 rounded-xl mb-6">
-                        <p className="text-red-200 mb-2">{t('game-over')}</p>
-                        <p className="text-xl font-bold text-white">
-                            {t('correct-answer')}: <span className="text-green-400">{gameState.dailyElement?.name}</span>
-                        </p>
-                    </div>
-                ) : (
-                    <>
-                        <h2 className="text-2xl font-bold text-center mb-8 text-[#9CCAD3]">
-                            {t('title')}
-                        </h2>
-                        {isConfettiActive && (
-                            <ReactConfetti
-                                width={width}
-                                height={height}
-                                recycle={false}
-                                numberOfPieces={500}
-                                gravity={0.3}
-                            />
-                        )}
-                        {currentHint !== null && (
-                            <div className="mb-4 p-3 bg-blue-950/30 rounded-lg">
-                                <p className="text-blue-200 text-sm font-medium">
-                                    Hint {currentHint + 1}: {dailyGame.element.hints.properties[currentHint]}
-                                </p>
-                            </div>
-                        )}
-                        {gameState.guesses.length < MAX_ATTEMPTS ? (
+        <AnimatePresence>
+
+            <motion.div
+                initial={{ opacity: 1, x: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0, transition: { duration: 0.5 } }}
+                className="w-full"
+            >
+                {isConfettiActive && (
+                    <ReactConfetti
+                        width={width}
+                        height={height}
+                        recycle={false}
+                        numberOfPieces={500}
+                        gravity={0.3}
+                    />
+                )}
+                {gameState.gameStatus === "in-progress" && (
+                    <div className="p-6 rounded-xl shadow-xl max-w-lg mx-auto bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] text-white border border-[#9CCAD3]">
+                        <>
+                            <h2 className="text-2xl font-bold text-center mb-8 text-[#9CCAD3]">
+                                {t('title')}
+                            </h2>
+
+                            {currentHint !== null && showHint && (
+                                <HintMessage
+                                    hintNumber={currentHint + 1}
+                                    hintText={dailyGame.element.hints.properties[currentHint]}
+                                    onDismiss={() => setShowHint(false)}
+                                />
+                            )}
                             <div className="flex gap-2 mb-6">
                                 <div className="relative flex-1">
                                     <input
@@ -299,8 +297,7 @@ export default function GameBoard() {
                                         onChange={(e) => handleInput(e.target.value)}
                                         onKeyDown={(e) => e.key === "Enter" && handleGuess()}
                                         placeholder={t('input-placeholder')}
-                                        disabled={gameState.gameStatus !== "in-progress"}
-                                        className="w-full h-14 bg-[#CCCCCC]/20 text-[#9CCAD3] placeholder:text-[#9CCAD3]/50 rounded-xl px-4 border-0 disabled:opacity-50"
+                                        className="w-full h-14 bg-[#CCCCCC]/20 text-[#9CCAD3] placeholder:text-[#9CCAD3]/50 rounded-xl px-4 border-0"
                                     />
                                     {showSuggestions && input && filteredElements.length > 0 && (
                                         <div className="absolute w-full bg-[#2d2d2d] rounded-xl mt-1 z-50 shadow-lg border border-[#73B9FF]/30 p-2 space-y-2">
@@ -338,33 +335,15 @@ export default function GameBoard() {
                                     <SendHorizonal className="h-6 w-6" />
                                 </Button>
                             </div>
-                        ) : (
-                            <div className="text-center p-4 bg-red-950/50 rounded-xl mb-6">
-                                <p className="text-red-200 mb-2">{t('game-over')}</p>
-                                <p className="text-xl font-bold text-white">
-                                    {t('correct-answer')}: <span className="text-[#9CCAD3]">{gameState.dailyElement?.name}</span>
-                                </p>
-                            </div>
-                        )}
-
-                        {/* <div className="text-center text-white/90 text-lg font-medium">
-                            {isClient && gameState.gameStatus === "in-progress" && gameState.guesses.length < MAX_ATTEMPTS && (
-                                <p className="text-red-300">
-                                    {MAX_ATTEMPTS - gameState.guesses.length} {t('remaining-guesses')}
-                                </p>
-                            )}
-                        </div> */}
-                    </>
+                        </>
+                    </div>
                 )}
-            </div>
-            <p className="text-center text-white font-medium my-4">
-                <span className="text-red-300">{dailyGame.solved_count}</span> {t('solved-count', { count: dailyGame.solved_count })}
-            </p>
-            {
-                gameState.gameStatus === "in-progress" && (
-                    <div className="relative w-full flex justify-center">
-                        {gameState.guesses.length > 0 && (
-
+                <p className="text-center text-white font-medium my-4">
+                    <span className="text-red-300">{dailyGame.solved_count}</span> {t('solved-count', { count: dailyGame.solved_count })}
+                </p>
+                {
+                    gameState.gameStatus !== "won" && gameState.guesses.length > 0 && (
+                        <div className="relative w-full flex justify-center">
                             <ScrollArea className="w-full max-w-[700px] whitespace-nowrap rounded-lg">
                                 <div className="w-[700px]">
                                     <div className="p-4">
@@ -398,51 +377,62 @@ export default function GameBoard() {
                                                 />
                                             ))}
                                         </div>
-                                        )
                                     </div>
                                 </div>
                                 <ScrollBar orientation="horizontal" className="bg-red-950/40" />
                             </ScrollArea>
-                        )}
-                    </div>
-                )
-            }
-
-            {
-                gameState.guesses.length > 0 && (
-                    <div>
-                        <div className="mt-2 text-sm text-red-200 text-center md:hidden">
-                            Scroll horizontally to see more information
                         </div>
-                        <ColorIndicator items={colorItems} />
-                    </div>
-                )
-            }
+                    )
+                }
 
-            {dailyGame.yesterday && (
-                <div className="my-4 p-4 rounded-xl w-full max-w-lg mx-auto">
-                    <h3 className="font-semibold mb-2 text-white">
-                        {t('yesterday-character')} <span className="text-red-300">#{dailyGame.yesterday.game_number}</span> <span className="text-red-300 text-semibold text-2xl">{dailyGame.yesterday.element.name}</span>
-                    </h3>
-                </div>
-            )}
-            {
-                gameState.gameStatus === "won" && (
-                    <div>
+                {
+                    gameState.gameStatus === "in-progress" && gameState.guesses.length > 0 && (
+                        <div>
+                            <div className="mt-2 text-sm text-red-200 text-center md:hidden">
+                                {t('scroll-horizontal')}
+                            </div>
+                            <ColorIndicator items={colorItems} />
+                        </div>
+                    )
+                }
+
+                {dailyGame.yesterday && (
+                    <div className="my-4 p-4 rounded-xl w-full max-w-lg mx-auto">
+                        <h3 className="font-semibold mb-2 text-white text-center">
+                            {t('yesterday-character')} <span className="text-red-300">#{dailyGame.yesterday.game_number}</span> <span className="text-red-300 text-semibold text-2xl">{dailyGame.yesterday.element.name}</span>
+                        </h3>
+                    </div>
+                )}
+                {
+                    gameState.gameStatus === "won" && (
+                        <div>
+                            <VictoryScreen
+                                attempts={gameState.guesses.length}
+                                timeTaken={gameState.timeTaken || 0}
+                                streak={gameState.statistics.currentStreak}
+                                isOneShot={gameState.guesses.length === 1}
+                                element={gameState.dailyElement!}
+                            />
+                            <ShareResult
+                                attempts={gameState.guesses.length}
+                                timeTaken={gameState.timeTaken || 0}
+                            />
+                        </div>
+                    )
+                }
+                {
+                    gameState.gameStatus === "lost" && (
                         <VictoryScreen
                             attempts={gameState.guesses.length}
                             timeTaken={gameState.timeTaken || 0}
                             streak={gameState.statistics.currentStreak}
-                            isOneShot={gameState.guesses.length === 1}
+                            isOneShot={false}
                             element={gameState.dailyElement!}
+                            isGameOver={true}
                         />
-                        <ShareResult
-                            attempts={gameState.guesses.length}
-                            timeTaken={gameState.timeTaken || 0}
-                        />
-                    </div>
-                )
-            }
-        </div>
+                    )
+                }
+            </motion.div>
+        </AnimatePresence>
     )
 }

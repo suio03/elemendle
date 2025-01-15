@@ -9,7 +9,7 @@ import Footer from '@/components/footer'
 export const runtime = 'edge';
 export default function Home() {
     return (
-        <main className="min-h-screen relative">
+        <main className="min-h-screen relative p-4">
             <GameHeader />
             <GameBoard />
             <HowToPlay />

@@ -1,259 +1,262 @@
 {
-    "metaData": {
-      "title": "Elemendle - Il puzzle quotidiano della tavola periodica, metti alla prova le tue conoscenze",
-      "description": "Sfida te stesso con il puzzle quotidiano della tavola periodica. Indovinate l'elemento e mettete alla prova le vostre conoscenze.",
-      "keywords": [
-        "Elemendle",
-        "Gioco di indovinelli sugli elementi",
-        "Gioco quotidiano sugli elementi"
-      ]
+  "metaData": {
+    "title": "Elemendle - Il puzzle quotidiano della tavola periodica, metti alla prova le tue conoscenze",
+    "description": "Sfida te stesso con il puzzle quotidiano della tavola periodica. Indovinate l'elemento e mettete alla prova le vostre conoscenze.",
+    "keywords": [
+      "Elemendle",
+      "Gioco di indovinelli sugli elementi",
+      "Gioco quotidiano sugli elementi"
+    ]
+  },
+  "header": {
+    "stats": {
+      "tooltip": "Statistiche",
+      "play": "Partite giocate",
+      "win-rate": "Percentuale di vittorie",
+      "current-streak": "Serie attuale",
+      "max-streak": "Serie massima",
+      "time-stats": "Statistiche sui tempi",
+      "best-time": "Miglior tempo",
+      "average-time": "Tempo medio",
+      "game-distribution": "Distribuzione delle partite"
     },
-    "header": {
-      "stats": {
-        "tooltip": "Statistiche",
-        "play": "Partite giocate",
-        "win-rate": "Percentuale di vittorie",
-        "current-streak": "Serie attuale",
-        "max-streak": "Serie massima",
-        "time-stats": "Statistiche sui tempi",
-        "best-time": "Miglior tempo",
-        "average-time": "Tempo medio",
-        "game-distribution": "Distribuzione delle partite"
-      },
-      "streak": "Serie attuale (Vittorie consecutive giornaliere)",
-      "data-control": {
-        "tooltip": "Importa/Esporta i tuoi dati",
-        "name": "Trasferisci i tuoi dati",
-        "btn01": "Esporta dati",
-        "btn02": "Importa dati",
-        "description": "Esporta le tue statistiche di gioco per trasferirle su un altro dispositivo."
-      },
-      "how-to": "Come si gioca?",
-      "language": "Cambia la lingua del gioco."
+    "streak": "Serie attuale (Vittorie consecutive giornaliere)",
+    "data-control": {
+      "tooltip": "Importa/Esporta i tuoi dati",
+      "name": "Trasferisci i tuoi dati",
+      "btn01": "Esporta dati",
+      "btn02": "Importa dati",
+      "description": "Esporta le tue statistiche di gioco per trasferirle su un altro dispositivo."
     },
-    "game-board": {
-      "title": "INDOVINA L'ELEMENTO DI OGGI!",
-      "remaining-guesses": "tentativi rimanenti",
-      "input-placeholder": "Inserisci il nome o il simbolo dell'elemento...",
-      "solved-count": "persone hanno già indovinato questo elemento!",
-      "yesterday-character": "L'elemento di ieri era ",
-      "grid": {
-        "headers": {
-          "element": {
-            "label": "Elemento",
-            "description": "Il nome (simbolo) dell'elemento"
-          },
-          "period": {
-            "label": "Periodo",
-            "description": "Il periodo dell'elemento"
-          },
-          "group": {
-            "label": "Gruppo",
-            "description": "Il gruppo dell'elemento"
-          },
-          "type": {
-            "label": "Tipo",
-            "description": "Il tipo dell'elemento"
-          },
-          "phase": {
-            "label": "Fase (CNTP)",
-            "description": "La fase dell'elemento a CNTP"
-          },
-          "block": {
-            "label": "Blocco",
-            "description": "Il blocco dell'elemento"
-          },
-          "mass": {
-            "label": "Massa",
-            "description": "La massa atomica dell'elemento"
-          },
-          "atomic": {
-            "label": "Numero atomico",
-            "description": "Il numero atomico dell'elemento"
-          }
+    "how-to": "Come si gioca?",
+    "language": "Cambia la lingua del gioco."
+  },
+  "game-board": {
+    "title": "INDOVINA L'ELEMENTO DI OGGI!",
+    "remaining-guesses": "tentativi rimanenti",
+    "input-placeholder": "Inserisci il nome o il simbolo dell'elemento...",
+    "solved-count": "persone hanno già indovinato questo elemento!",
+    "yesterday-character": "L'elemento di ieri era ",
+    "grid": {
+      "headers": {
+        "element": {
+          "label": "Elemento",
+          "description": "Il nome (simbolo) dell'elemento"
+        },
+        "period": {
+          "label": "Periodo",
+          "description": "Il periodo dell'elemento"
+        },
+        "group": {
+          "label": "Gruppo",
+          "description": "Il gruppo dell'elemento"
+        },
+        "type": {
+          "label": "Tipo",
+          "description": "Il tipo dell'elemento"
+        },
+        "phase": {
+          "label": "Fase (CNTP)",
+          "description": "La fase dell'elemento a CNTP"
+        },
+        "block": {
+          "label": "Blocco",
+          "description": "Il blocco dell'elemento"
+        },
+        "mass": {
+          "label": "Massa",
+          "description": "La massa atomica dell'elemento"
+        },
+        "atomic": {
+          "label": "Numero atomico",
+          "description": "Il numero atomico dell'elemento"
         }
-      },
-      "color-indicators": {
-        "title": "Indicatori di colore",
-        "correct": {
-          "label": "Corretto",
-          "description": "L'ipotesi corrisponde esattamente"
-        },
-        "incorrect": {
-          "label": "Incorretto",
-          "description": "L'ipotesi non corrisponde"
-        },
-        "higher": {
-          "label": "Superiore",
-          "description": "Il valore corretto è superiore all'ipotesi"
-        },
-        "lower": {
-          "label": "Inferiore",
-          "description": "Il valore corretto è inferiore all'ipotesi"
-        }
-      },
-      "game-over": "Gioco terminato!",
-      "correct-answer": "La risposta corretta è"
-    },
-    "victory": {
-      "title": "Vittoria!",
-      "time-taken": "Tempo impiegato",
-      "next-element": "Elemento successivo tra",
-      "attempts": "Tentativi",
-      "your-guess": "Hai indovinato"
-    },
-    "how-to-play": {
-      "h1": "Elemendle - Indovinate l'elemento della tavola periodica giornaliera",
-      "title": "Come si gioca?",
-      "description": "Indovinate l'elemento della tavola periodica di oggi - Nuovo elemento ogni 24 ore",
-      "notes": "Digitate qualsiasi nome o simbolo di elemento. Il gioco rivelerà le sue proprietà e mostrerà quanto era vicina la vostra ipotesi.",
-      "color-indicators": "Indicatori di colore",
-      "correct": "L'ipotesi corrisponde esattamente",
-      "incorrect": "L'ipotesi non corrisponde",
-      "higher": "Indicatore superiore/inferiore (per i valori numerici)",
-      "properties": "Proprietà",
-      "period": {
-        "label": "Periodo",
-        "value": "1, 2, 3",
-        "description": "Il periodo di un elemento nella tavola periodica è la riga orizzontale a cui appartiene"
-      },
-      "group": {
-        "label": "Gruppo",
-        "value": "1, 2, 3",
-        "description": "Il gruppo di un elemento nella tavola periodica è la colonna verticale a cui appartiene"
-      },
-      "block": {
-        "label": "Blocco",
-        "value": "s, p, d, f",
-        "description": "Il blocco di un elemento nella tavola periodica è il tipo di guscio elettronico a cui appartiene"
-      },
-      "phase": {
-        "label": "Fase (CNTP)",
-        "value": "Solido, Liquido, Gas",
-        "description": "La fase di un elemento nella tavola periodica è lo stato della materia a cui appartiene a temperatura e pressione standard"
-      },
-      "mass": {
-        "label": "Massa atomica",
-        "value": "1, 2, 3",
-        "description": "La massa atomica di un elemento è la massa totale di tutti i suoi protoni e neutroni"
-      },
-      "atomic": {
-        "label": "Numero atomico",
-        "value": "1, 2, 3",
-        "description": "Il numero atomico di un elemento è il numero di protoni nel suo nucleo"
-      },
-      "type": {
-        "label": "Tipo",
-        "value": "Metallo, Non metallo, Metalloide",
-        "description": "Il tipo di un elemento nella tavola periodica è la categoria a cui appartiene"
       }
     },
-    "faq": {
-      "title": "Domande frequenti su Elemendle",
-      "questions": [
-        {
-          "question": "Devo creare un account per giocare a Elemendle?",
-          "answer": "No, Elemendle è completamente gratuito e non richiede alcun accesso. I tuoi progressi vengono salvati localmente sul tuo dispositivo."
-        },
-        {
-          "question": "Quanto spesso cambiano gli elementi su Elemendle?",
-          "answer": "Un nuovo elemento è disponibile da indovinare ogni 24 ore. Torna ogni giorno per una nuova sfida!"
-        },
-        {
-          "question": "Come trasferisco i miei progressi su un altro dispositivo?",
-          "answer": "Usa la funzione di esportazione per salvare i tuoi dati, quindi importali sul tuo nuovo dispositivo. Nessun account necessario!"
-        },
-        {
-          "question": "Cosa significano gli indicatori di colore su Elemendle?",
-          "answer": "Il verde indica una corrispondenza esatta, il rosso indica nessuna corrispondenza e le frecce mostrano se i valori numerici (come l'altezza) devono essere più alti o più bassi."
-        },
-        {
-          "question": "Come posso ottenere il massimo da Elemendle?",
-          "answer": "Usa il sistema di suggerimenti dopo diversi tentativi per aiutarti a indovinare l'elemento. I suggerimenti sono progettati per aiutarti, non per ostacolarti."
-        },
-        {
-          "question": "Qual è lo scopo di Elemendle?",
-          "answer": "Elemendle è un gioco per gli amanti della chimica, dagli amanti della chimica. È un modo per mantenere unita la community della tavola periodica e celebrare la tavola periodica."
-        },
-        {
-          "question": "Avrete più modalità di gioco in futuro?",
-          "answer": "Sì, stiamo lavorando all'aggiunta di più modalità di gioco a Elemendle."
-        },
-        {
-          "question": "Elemendle ha una versione mobile?",
-          "answer": "Attualmente, Elemendle funziona su tutti i dispositivi con un browser. Quindi, non è necessario scaricare nulla."
-        },
-        {
-          "question": "Come vengono memorizzati i miei dati?",
-          "answer": "I tuoi dati vengono memorizzati localmente sul tuo dispositivo. Non raccogliamo alcun dato da te."
-        },
-        {
-          "question": "Il gioco Elemendle è gratuito?",
-          "answer": "Sì, Elemendle è completamente gratuito."
-        },
-        {
-          "question": "Questo gioco Elemendle è associato alla tavola periodica?",
-          "answer": "No, Elemendle non è affiliato alla tavola periodica. È un gioco creato dai fan."
-        },
-        {
-          "question": "Posso fornire feedback su Elemendle?",
-          "answer": "Puoi contattarci all'indirizzo support@elemendle.app."
-        }
-      ]
+    "color-indicators": {
+      "title": "Indicatori di colore",
+      "correct": {
+        "label": "Corretto",
+        "description": "L'ipotesi corrisponde esattamente"
+      },
+      "incorrect": {
+        "label": "Incorretto",
+        "description": "L'ipotesi non corrisponde"
+      },
+      "higher": {
+        "label": "Superiore",
+        "description": "Il valore corretto è superiore all'ipotesi"
+      },
+      "lower": {
+        "label": "Inferiore",
+        "description": "Il valore corretto è inferiore all'ipotesi"
+      }
     },
-    "game-tips": {
-      "title": "Consigli per giocare a Elemendle",
-      "content": [
-        {
-          "title": "Inizia con gli elementi popolari",
-          "description": "Inizia con elementi ben noti come l'idrogeno o l'ossigeno per comprendere più proprietà contemporaneamente."
-        },
-        {
-          "title": "Utilizza le informazioni della tavola periodica",
-          "description": "Fai attenzione alle proprietà dell'elemento per restringere le possibilità."
-        },
-        {
-          "title": "Proprietà di gruppo",
-          "description": "Concentrati sugli indizi di fase e tipo, poiché spesso raggruppano elementi correlati."
-        },
-        {
-          "title": "Cerca i modelli",
-          "description": "Osserva i modelli nelle proprietà degli elementi per fare ipotesi più informate. Ad esempio, se un elemento è un metallo, è probabile che sia un metallo."
-        },
-        {
-          "title": "Utilizza i suggerimenti",
-          "description": "Non esitare a utilizzare il sistema di suggerimenti dopo diversi tentativi: è progettato per aiutarti!"
-        }
-      ]
+    "game-over": "Gioco terminato!",
+    "correct-answer": "La risposta corretta è",
+    "scroll-horizontal": "Scorri orizzontalmente per visualizzare ulteriori informazioni"
+  },
+  "victory": {
+    "title": "Vittoria!",
+    "time-taken": "Tempo impiegato",
+    "next-element": "Elemento successivo tra",
+    "attempts": "Tentativi",
+    "your-guess": "Hai indovinato",
+    "game-over": "Hai bisogno di più pratiche",
+    "correct-answer": "Risposta corretta"
+  },
+  "how-to-play": {
+    "h1": "Elemendle - Indovinate l'elemento della tavola periodica giornaliera",
+    "title": "Come si gioca?",
+    "description": "Indovinate l'elemento della tavola periodica di oggi - Nuovo elemento ogni 24 ore",
+    "notes": "Digitate qualsiasi nome o simbolo di elemento. Il gioco rivelerà le sue proprietà e mostrerà quanto era vicina la vostra ipotesi.",
+    "color-indicators": "Indicatori di colore",
+    "correct": "L'ipotesi corrisponde esattamente",
+    "incorrect": "L'ipotesi non corrisponde",
+    "higher": "Indicatore superiore/inferiore (per i valori numerici)",
+    "properties": "Proprietà",
+    "period": {
+      "label": "Periodo",
+      "value": "1, 2, 3",
+      "description": "Il periodo di un elemento nella tavola periodica è la riga orizzontale a cui appartiene"
     },
-    "game-features": {
-      "title": "Funzionalità di Elemendle",
-      "content": [
-        {
-          "title": "Abbinamento basato sulle proprietà",
-          "description": "Invece di indovinare i nomi, abbina le proprietà degli elementi come periodo, gruppo, blocco, tipo, fase, massa e numero atomico."
-        },
-        {
-          "title": "Database completo",
-          "description": "Accedi agli elementi di tutta la tavola periodica"
-        },
-        {
-          "title": "Nessun limite di tempo",
-          "description": "Gioca al tuo ritmo: fai quanti tentativi ti servono per trovare l'elemento giusto. Elemendle è un gioco per gli amanti della chimica, dagli amanti della chimica."
-        },
-        {
-          "title": "Suggerimenti utili",
-          "description": "Ricevi suggerimenti strategici dopo diversi tentativi per aiutarti con gli elementi difficili."
-        },
-        {
-          "title": "Tracciamento dei progressi",
-          "description": "Monitora le tue statistiche ed esporta i tuoi dati per continuare a giocare su altri dispositivi."
-        }
-      ]
+    "group": {
+      "label": "Gruppo",
+      "value": "1, 2, 3",
+      "description": "Il gruppo di un elemento nella tavola periodica è la colonna verticale a cui appartiene"
     },
-    "share": {
-      "title": "Condividi Elemendle",
-      "description": "Ho trovato l'elemento #Elemendle in {attempts} tentativi in {timeTaken}s",
-      "btn": "Condividi su Twitter"
+    "block": {
+      "label": "Blocco",
+      "value": "s, p, d, f",
+      "description": "Il blocco di un elemento nella tavola periodica è il tipo di guscio elettronico a cui appartiene"
+    },
+    "phase": {
+      "label": "Fase (CNTP)",
+      "value": "Solido, Liquido, Gas",
+      "description": "La fase di un elemento nella tavola periodica è lo stato della materia a cui appartiene a temperatura e pressione standard"
+    },
+    "mass": {
+      "label": "Massa atomica",
+      "value": "1, 2, 3",
+      "description": "La massa atomica di un elemento è la massa totale di tutti i suoi protoni e neutroni"
+    },
+    "atomic": {
+      "label": "Numero atomico",
+      "value": "1, 2, 3",
+      "description": "Il numero atomico di un elemento è il numero di protoni nel suo nucleo"
+    },
+    "type": {
+      "label": "Tipo",
+      "value": "Metallo, Non metallo, Metalloide",
+      "description": "Il tipo di un elemento nella tavola periodica è la categoria a cui appartiene"
     }
+  },
+  "faq": {
+    "title": "Domande frequenti su Elemendle",
+    "questions": [
+      {
+        "question": "Devo creare un account per giocare a Elemendle?",
+        "answer": "No, Elemendle è completamente gratuito e non richiede alcun accesso. I tuoi progressi vengono salvati localmente sul tuo dispositivo."
+      },
+      {
+        "question": "Quanto spesso cambiano gli elementi su Elemendle?",
+        "answer": "Un nuovo elemento è disponibile da indovinare ogni 24 ore. Torna ogni giorno per una nuova sfida!"
+      },
+      {
+        "question": "Come trasferisco i miei progressi su un altro dispositivo?",
+        "answer": "Usa la funzione di esportazione per salvare i tuoi dati, quindi importali sul tuo nuovo dispositivo. Nessun account necessario!"
+      },
+      {
+        "question": "Cosa significano gli indicatori di colore su Elemendle?",
+        "answer": "Il verde indica una corrispondenza esatta, il rosso indica nessuna corrispondenza e le frecce mostrano se i valori numerici (come l'altezza) devono essere più alti o più bassi."
+      },
+      {
+        "question": "Come posso ottenere il massimo da Elemendle?",
+        "answer": "Usa il sistema di suggerimenti dopo diversi tentativi per aiutarti a indovinare l'elemento. I suggerimenti sono progettati per aiutarti, non per ostacolarti."
+      },
+      {
+        "question": "Qual è lo scopo di Elemendle?",
+        "answer": "Elemendle è un gioco per gli amanti della chimica, dagli amanti della chimica. È un modo per mantenere unita la community della tavola periodica e celebrare la tavola periodica."
+      },
+      {
+        "question": "Avrete più modalità di gioco in futuro?",
+        "answer": "Sì, stiamo lavorando all'aggiunta di più modalità di gioco a Elemendle."
+      },
+      {
+        "question": "Elemendle ha una versione mobile?",
+        "answer": "Attualmente, Elemendle funziona su tutti i dispositivi con un browser. Quindi, non è necessario scaricare nulla."
+      },
+      {
+        "question": "Come vengono memorizzati i miei dati?",
+        "answer": "I tuoi dati vengono memorizzati localmente sul tuo dispositivo. Non raccogliamo alcun dato da te."
+      },
+      {
+        "question": "Il gioco Elemendle è gratuito?",
+        "answer": "Sì, Elemendle è completamente gratuito."
+      },
+      {
+        "question": "Questo gioco Elemendle è associato alla tavola periodica?",
+        "answer": "No, Elemendle non è affiliato alla tavola periodica. È un gioco creato dai fan."
+      },
+      {
+        "question": "Posso fornire feedback su Elemendle?",
+        "answer": "Puoi contattarci all'indirizzo support@elemendle.app."
+      }
+    ]
+  },
+  "game-tips": {
+    "title": "Consigli per giocare a Elemendle",
+    "content": [
+      {
+        "title": "Inizia con gli elementi popolari",
+        "description": "Inizia con elementi ben noti come l'idrogeno o l'ossigeno per comprendere più proprietà contemporaneamente."
+      },
+      {
+        "title": "Utilizza le informazioni della tavola periodica",
+        "description": "Fai attenzione alle proprietà dell'elemento per restringere le possibilità."
+      },
+      {
+        "title": "Proprietà di gruppo",
+        "description": "Concentrati sugli indizi di fase e tipo, poiché spesso raggruppano elementi correlati."
+      },
+      {
+        "title": "Cerca i modelli",
+        "description": "Osserva i modelli nelle proprietà degli elementi per fare ipotesi più informate. Ad esempio, se un elemento è un metallo, è probabile che sia un metallo."
+      },
+      {
+        "title": "Utilizza i suggerimenti",
+        "description": "Non esitare a utilizzare il sistema di suggerimenti dopo diversi tentativi: è progettato per aiutarti!"
+      }
+    ]
+  },
+  "game-features": {
+    "title": "Funzionalità di Elemendle",
+    "content": [
+      {
+        "title": "Abbinamento basato sulle proprietà",
+        "description": "Invece di indovinare i nomi, abbina le proprietà degli elementi come periodo, gruppo, blocco, tipo, fase, massa e numero atomico."
+      },
+      {
+        "title": "Database completo",
+        "description": "Accedi agli elementi di tutta la tavola periodica"
+      },
+      {
+        "title": "Nessun limite di tempo",
+        "description": "Gioca al tuo ritmo: fai quanti tentativi ti servono per trovare l'elemento giusto. Elemendle è un gioco per gli amanti della chimica, dagli amanti della chimica."
+      },
+      {
+        "title": "Suggerimenti utili",
+        "description": "Ricevi suggerimenti strategici dopo diversi tentativi per aiutarti con gli elementi difficili."
+      },
+      {
+        "title": "Tracciamento dei progressi",
+        "description": "Monitora le tue statistiche ed esporta i tuoi dati per continuare a giocare su altri dispositivi."
+      }
+    ]
+  },
+  "share": {
+    "title": "Condividi Elemendle",
+    "description": "Ho trovato l'elemento #Elemendle in {attempts} tentativi in {timeTaken}s",
+    "btn": "Condividi su Twitter"
   }
+}

@@ -1,259 +1,262 @@
 {
-    "metaData": {
-        "title": "Elemendle - Daily Periodic Table Puzzle, Test Your Knowledge",
-        "description": "Challenge yourself with daily periodic table puzzle. Guess the element and test your knowledge.",
-        "keywords": [
-            "Elemendle",
-            "Element guessing game",
-            "Daily Element game"
-        ]
+  "metaData": {
+    "title": "Elemendle - Daily Periodic Table Puzzle, Test Your Knowledge",
+    "description": "Challenge yourself with daily periodic table puzzle. Guess the element and test your knowledge.",
+    "keywords": [
+      "Elemendle",
+      "Element guessing game",
+      "Daily Element game"
+    ]
+  },
+  "header": {
+    "stats": {
+      "tooltip": "Statistics",
+      "play": "Games Played",
+      "win-rate": "Win Rate",
+      "current-streak": "Current Streak",
+      "max-streak": "Max Streak",
+      "time-stats": "Time Stats",
+      "best-time": "Best Time",
+      "average-time": "Average Time",
+      "game-distribution": "Game Distribution"
     },
-    "header": {
-        "stats": {
-            "tooltip": "Statistics",
-            "play": "Games Played",
-            "win-rate": "Win Rate",
-            "current-streak": "Current Streak",
-            "max-streak": "Max Streak",
-            "time-stats": "Time Stats",
-            "best-time": "Best Time",
-            "average-time": "Average Time",
-            "game-distribution": "Game Distribution"
-        },
-        "streak": "Current Streak (Daily Consecutive Wins)",
-        "data-control": {
-            "tooltip": "Import / Export Your Data",
-            "name": "Transfer Your Data",
-            "btn01": "Export Data",
-            "btn02": "Import Data",
-            "description": "Export your game statistics to transfer them to another device."
-        },
-        "how-to": "How to play?",
-        "language": "Change the language of the game."
+    "streak": "Current Streak (Daily Consecutive Wins)",
+    "data-control": {
+      "tooltip": "Import / Export Your Data",
+      "name": "Transfer Your Data",
+      "btn01": "Export Data",
+      "btn02": "Import Data",
+      "description": "Export your game statistics to transfer them to another device."
     },
-    "game-board": {
-        "title": "GUESS TODAY'S ELEMENT!",
-        "remaining-guesses": "guesses remaining",
-        "input-placeholder": "Enter element name or symbol...",
-        "solved-count": "people already guessed this element!",
-        "yesterday-character": "Yesterday's Element was ",
-        "grid": {
-            "headers": {
-                "element": {
-                    "label": "Element",
-                    "description": "The name(symbol) of the element"
-                },
-                "period": {
-                    "label": "Period",
-                    "description": "The period of the element"
-                },
-                "group": {
-                    "label": "Group",
-                    "description": "The group of the element"
-                },
-                "type": {
-                    "label": "Type",
-                    "description": "The type of the element"
-                },
-                "phase": {
-                    "label": "Phase(STP)",
-                    "description": "The phase of the element at STP"
-                },
-                "block": {
-                    "label": "Block",
-                    "description": "The block of the element"
-                },
-                "mass": {
-                    "label": "Mass",
-                    "description": "The atomic mass of the element"
-                },
-                "atomic": {
-                    "label": "Atomic",
-                    "description": "The atomic number of the element"
-                }
-            }
+    "how-to": "How to play?",
+    "language": "Change the language of the game."
+  },
+  "game-board": {
+    "title": "GUESS TODAY'S ELEMENT!",
+    "remaining-guesses": "guesses remaining",
+    "input-placeholder": "Enter element name or symbol...",
+    "solved-count": "people already guessed this element!",
+    "yesterday-character": "Yesterday's Element was ",
+    "grid": {
+      "headers": {
+        "element": {
+          "label": "Element",
+          "description": "The name(symbol) of the element"
         },
-        "color-indicators": {
-            "title": "Color Indicators",
-            "correct": {
-                "label": "Correct",
-                "description": "The guess matches exactly"
-            },
-            "incorrect": {
-                "label": "Incorrect",
-                "description": "The guess does not match"
-            },
-            "higher": {
-                "label": "Higher",
-                "description": "The correct value is higher than the guess"
-            },
-            "lower": {
-                "label": "Lower",
-                "description": "The correct value is lower than the guess"
-            }
-        },
-        "game-over": "Game Over!",
-        "correct-answer": "The correct answer is"
-    },
-    "victory": {
-        "title": "Victory!",
-        "time-taken": "Time Taken",
-        "next-element": "Next Element in",
-        "attempts": "Attempts",
-        "your-guess": "You Guessed"
-    },
-    "how-to-play": {
-        "h1": "Elemendle - Guess the Periodic Table daily",
-        "title": "How to play?",
-        "description": "Guess today's Periodic Table element - New element every 24h",
-        "notes": "Type any element name or symbol. The game will reveal its properties and show how close your guess was.",
-        "color-indicators": "Color Indicators",
-        "correct": "The guess matches exactly",
-        "incorrect": "The guess does not match",
-        "higher": "Higher/Lower indicator (for numeric values)",
-        "properties": "Properties",
         "period": {
-            "label": "Period",
-            "value": "1, 2, 3",
-            "description": "The period of an element in the periodic table is the horizontal row it belongs to"
+          "label": "Period",
+          "description": "The period of the element"
         },
         "group": {
-            "label": "Group",
-            "value": "1, 2, 3",
-            "description": "The group of an element in the periodic table is the vertical column it belongs to"
-        },
-        "block": {
-            "label": "Block",
-            "value": "s, p, d, f",
-            "description": "The block of an element in the periodic table is the type of electron shell it belongs to"
-        },
-        "phase": {
-            "label": "Phase(STP)",
-            "value": "Solid, Liquid, Gas",
-            "description": "The phase of an element in the periodic table is the state of matter it belongs to at standard temperature and pressure"
-        },
-        "mass": {
-            "label": "Atomic Mass",
-            "value": "1, 2, 3",
-            "description": "The atomic mass of an element is the total mass of all its protons and neutrons"
-        },
-        "atomic": {
-            "label": "Atomic Number",
-            "value": "1, 2, 3",
-            "description": "The atomic number of an element is the number of protons in its nucleus"
+          "label": "Group",
+          "description": "The group of the element"
         },
         "type": {
-            "label": "Type",
-            "value": "Metal, Nonmetal, Metalloid",
-            "description": "The type of an element in the periodic table is the category it belongs to"
+          "label": "Type",
+          "description": "The type of the element"
+        },
+        "phase": {
+          "label": "Phase(STP)",
+          "description": "The phase of the element at STP"
+        },
+        "block": {
+          "label": "Block",
+          "description": "The block of the element"
+        },
+        "mass": {
+          "label": "Mass",
+          "description": "The atomic mass of the element"
+        },
+        "atomic": {
+          "label": "Atomic",
+          "description": "The atomic number of the element"
         }
+      }
     },
-    "faq": {
-        "title": "Frequently Asked Questions about Elemendle",
-        "questions": [
-            {
-                "question": "Do I need to create an account to play Elemendle?",
-                "answer": "No, Elemendle is completely free to play without any login requirements. Your progress is saved locally on your device."
-            },
-            {
-                "question": "How often do elements change on Elemendle?",
-                "answer": "A new element is available to guess every 24 hours. Come back daily for a fresh challenge!"
-            },
-            {
-                "question": "How do I transfer my progress to another device?",
-                "answer": "Use the export feature to save your data, then import it on your new device. No account needed!"
-            },
-            {
-                "question": "What do the color indicators mean on Elemendle?",
-                "answer": "Green shows an exact match, red indicates no match, and arrows show if numeric values (like height) should be higher or lower."
-            },
-            {
-                "question": "How do I get the most out of Elemendle?",
-                "answer": "Use the hints system after several attempts to help you guess the element. The hints are designed to help you, not hinder you."
-            },
-            {
-                "question": "What is the purpose of Elemendle?",
-                "answer": "Elemendle is a game for the chemistry lovers, by the chemistry lovers. It is a way to keep the periodic table community together and to celebrate the periodic table."
-            },
-            {
-                "question": "Do you have more play modes in the future?",
-                "answer": "Yes, we are working on adding more play modes to Elemendle."
-            },
-            {
-                "question": "Does Elemendle have a mobile version?",
-                "answer": "Currently, Elemendle works across on all devices with a browser. So, you don't need to download anything."
-            },
-            {
-                "question": "How's my data stored?",
-                "answer": "Your data is stored locally on your device. We do not collect any data from you."
-            },
-            {
-                "question": "Does the Elemendle game free?",
-                "answer": "Yes, Elemendle is completely free to play."
-            },
-            {
-                "question": "Does this Elemendle game associated with the periodic table?",
-                "answer": "No, Elemendle is not affiliated with the periodic table. It is a fan-made game."
-            },
-            {
-                "question": "Can I provide some feedback about Elemendle?",
-                "answer": "You can contact us at support@elemendle.app."
-            }
-        ]
+    "color-indicators": {
+      "title": "Color Indicators",
+      "correct": {
+        "label": "Correct",
+        "description": "The guess matches exactly"
+      },
+      "incorrect": {
+        "label": "Incorrect",
+        "description": "The guess does not match"
+      },
+      "higher": {
+        "label": "Higher",
+        "description": "The correct value is higher than the guess"
+      },
+      "lower": {
+        "label": "Lower",
+        "description": "The correct value is lower than the guess"
+      }
     },
-    "game-tips": {
-        "title": "Tips for Playing Elemendle",
-        "content": [
-            {
-                "title": "Start with Popular Elements",
-                "description": "Begin with well-known elements like Hydrogen or Oxygen to understand multiple properties at once."
-            },
-            {
-                "title": "Use Periodic Table Information",
-                "description": "Pay attention to the element's properties to narrow down possibilities."
-            },
-            {
-                "title": "Group Properties",
-                "description": "Focus on phase and type hints as these often group related elements together."
-            },
-            {
-                "title": "Watch for Patterns",
-                "description": "Notice patterns in element properties to make more informed guesses. For example, if an element is a metal, it is likely to be a metal."
-            },
-            {
-                "title": "Use the Hints",
-                "description": "Don't hesitate to use the hints system after several attempts - it's designed to help!"
-            }
-        ]
+    "game-over": "Game Over!",
+    "correct-answer": "The correct answer is",
+    "scroll-horizontal": "Scroll horizontally to see more information"
+  },
+  "victory": {
+    "title": "Victory!",
+    "time-taken": "Time Taken",
+    "next-element": "Next Element in",
+    "attempts": "Attempts",
+    "your-guess": "You Guessed",
+    "game-over": "Need More Practices",
+    "correct-answer": "Correct Answer"
+  },
+  "how-to-play": {
+    "h1": "Elemendle - Guess the Periodic Table daily",
+    "title": "How to play?",
+    "description": "Guess today's Periodic Table element - New element every 24h",
+    "notes": "Type any element name or symbol. The game will reveal its properties and show how close your guess was.",
+    "color-indicators": "Color Indicators",
+    "correct": "The guess matches exactly",
+    "incorrect": "The guess does not match",
+    "higher": "Higher/Lower indicator (for numeric values)",
+    "properties": "Properties",
+    "period": {
+      "label": "Period",
+      "value": "1, 2, 3",
+      "description": "The period of an element in the periodic table is the horizontal row it belongs to"
     },
-    "game-features": {
-        "title": "Elemendle Features",
-        "content": [
-            {
-                "title": "Property-Based Matching",
-                "description": "Instead of guessing names, match element properties like period, group, block, type, phase, mass, and atomic number."
-            },
-            {
-                "title": "Comprehensive Database",
-                "description": "Access elements from all periodic table"
-            },
-            {
-                "title": "No Time Limits",
-                "description": "Play at your own pace - take as many attempts as you need to find the right element. Elemendle is a game for the chemistry lovers, by the chemistry lovers."
-            },
-            {
-                "title": "Helpful Hints",
-                "description": "Receive strategic hints after several attempts to help with challenging elements."
-            },
-            {
-                "title": "Progress Tracking",
-                "description": "Monitor your statistics and export your data to continue playing on other devices."
-            }
-        ]
+    "group": {
+      "label": "Group",
+      "value": "1, 2, 3",
+      "description": "The group of an element in the periodic table is the vertical column it belongs to"
     },
-    "share": {
-        "title": "Share Elemendle",
-        "description": "I found #Elemendle element in {attempts} attempts within {timeTaken}s",
-        "btn": "Share on Twitter"
+    "block": {
+      "label": "Block",
+      "value": "s, p, d, f",
+      "description": "The block of an element in the periodic table is the type of electron shell it belongs to"
+    },
+    "phase": {
+      "label": "Phase(STP)",
+      "value": "Solid, Liquid, Gas",
+      "description": "The phase of an element in the periodic table is the state of matter it belongs to at standard temperature and pressure"
+    },
+    "mass": {
+      "label": "Atomic Mass",
+      "value": "1, 2, 3",
+      "description": "The atomic mass of an element is the total mass of all its protons and neutrons"
+    },
+    "atomic": {
+      "label": "Atomic Number",
+      "value": "1, 2, 3",
+      "description": "The atomic number of an element is the number of protons in its nucleus"
+    },
+    "type": {
+      "label": "Type",
+      "value": "Metal, Nonmetal, Metalloid",
+      "description": "The type of an element in the periodic table is the category it belongs to"
     }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions about Elemendle",
+    "questions": [
+      {
+        "question": "Do I need to create an account to play Elemendle?",
+        "answer": "No, Elemendle is completely free to play without any login requirements. Your progress is saved locally on your device."
+      },
+      {
+        "question": "How often do elements change on Elemendle?",
+        "answer": "A new element is available to guess every 24 hours. Come back daily for a fresh challenge!"
+      },
+      {
+        "question": "How do I transfer my progress to another device?",
+        "answer": "Use the export feature to save your data, then import it on your new device. No account needed!"
+      },
+      {
+        "question": "What do the color indicators mean on Elemendle?",
+        "answer": "Green shows an exact match, red indicates no match, and arrows show if numeric values (like height) should be higher or lower."
+      },
+      {
+        "question": "How do I get the most out of Elemendle?",
+        "answer": "Use the hints system after several attempts to help you guess the element. The hints are designed to help you, not hinder you."
+      },
+      {
+        "question": "What is the purpose of Elemendle?",
+        "answer": "Elemendle is a game for the chemistry lovers, by the chemistry lovers. It is a way to keep the periodic table community together and to celebrate the periodic table."
+      },
+      {
+        "question": "Do you have more play modes in the future?",
+        "answer": "Yes, we are working on adding more play modes to Elemendle."
+      },
+      {
+        "question": "Does Elemendle have a mobile version?",
+        "answer": "Currently, Elemendle works across on all devices with a browser. So, you don't need to download anything."
+      },
+      {
+        "question": "How's my data stored?",
+        "answer": "Your data is stored locally on your device. We do not collect any data from you."
+      },
+      {
+        "question": "Does the Elemendle game free?",
+        "answer": "Yes, Elemendle is completely free to play."
+      },
+      {
+        "question": "Does this Elemendle game associated with the periodic table?",
+        "answer": "No, Elemendle is not affiliated with the periodic table. It is a fan-made game."
+      },
+      {
+        "question": "Can I provide some feedback about Elemendle?",
+        "answer": "You can contact us at support@elemendle.app."
+      }
+    ]
+  },
+  "game-tips": {
+    "title": "Tips for Playing Elemendle",
+    "content": [
+      {
+        "title": "Start with Popular Elements",
+        "description": "Begin with well-known elements like Hydrogen or Oxygen to understand multiple properties at once."
+      },
+      {
+        "title": "Use Periodic Table Information",
+        "description": "Pay attention to the element's properties to narrow down possibilities."
+      },
+      {
+        "title": "Group Properties",
+        "description": "Focus on phase and type hints as these often group related elements together."
+      },
+      {
+        "title": "Watch for Patterns",
+        "description": "Notice patterns in element properties to make more informed guesses. For example, if an element is a metal, it is likely to be a metal."
+      },
+      {
+        "title": "Use the Hints",
+        "description": "Don't hesitate to use the hints system after several attempts - it's designed to help!"
+      }
+    ]
+  },
+  "game-features": {
+    "title": "Elemendle Features",
+    "content": [
+      {
+        "title": "Property-Based Matching",
+        "description": "Instead of guessing names, match element properties like period, group, block, type, phase, mass, and atomic number."
+      },
+      {
+        "title": "Comprehensive Database",
+        "description": "Access elements from all periodic table"
+      },
+      {
+        "title": "No Time Limits",
+        "description": "Play at your own pace - take as many attempts as you need to find the right element. Elemendle is a game for the chemistry lovers, by the chemistry lovers."
+      },
+      {
+        "title": "Helpful Hints",
+        "description": "Receive strategic hints after several attempts to help with challenging elements."
+      },
+      {
+        "title": "Progress Tracking",
+        "description": "Monitor your statistics and export your data to continue playing on other devices."
+      }
+    ]
+  },
+  "share": {
+    "title": "Share Elemendle",
+    "description": "I found #Elemendle element in {attempts} attempts within {timeTaken}s",
+    "btn": "Share on Twitter"
+  }
 }

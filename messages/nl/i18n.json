@@ -1,259 +1,262 @@
 {
-    "metaData": {
-        "title": "Elemendle - Dagelijkse Periodiek Systeem Puzzel, Test Je Kennis",
-        "description": "Daag jezelf uit met een dagelijkse periodiek systeem puzzel. Raadt het element en test je kennis.",
-        "keywords": [
-            "Elemendle",
-            "Element raadspel",
-            "Dagelijks element spel"
-        ]
+  "metaData": {
+    "title": "Elemendle - Dagelijkse Periodiek Systeem Puzzel, Test Je Kennis",
+    "description": "Daag jezelf uit met een dagelijkse periodiek systeem puzzel. Raadt het element en test je kennis.",
+    "keywords": [
+      "Elemendle",
+      "Element raadspel",
+      "Dagelijks element spel"
+    ]
+  },
+  "header": {
+    "stats": {
+      "tooltip": "Statistieken",
+      "play": "Gespeelde Spellen",
+      "win-rate": "Winstpercentage",
+      "current-streak": "Huidige Streak",
+      "max-streak": "Maximaal Streak",
+      "time-stats": "Tijdsstatistieken",
+      "best-time": "Beste tijd",
+      "average-time": "Gemiddelde tijd",
+      "game-distribution": "Spelverdeling"
     },
-    "header": {
-        "stats": {
-            "tooltip": "Statistieken",
-            "play": "Gespeelde Spellen",
-            "win-rate": "Winstpercentage",
-            "current-streak": "Huidige Streak",
-            "max-streak": "Maximaal Streak",
-            "time-stats": "Tijdsstatistieken",
-            "best-time": "Beste tijd",
-            "average-time": "Gemiddelde tijd",
-            "game-distribution": "Spelverdeling"
-        },
-        "streak": "Huidige Streak (Dagelijkse opeenvolgende overwinningen)",
-        "data-control": {
-            "tooltip": "Importeer/Exporteer je gegevens",
-            "name": "Verplaats je gegevens",
-            "btn01": "Gegevens exporteren",
-            "btn02": "Gegevens importeren",
-            "description": "Exporteer je spelstatistieken om ze naar een ander apparaat over te zetten."
-        },
-        "how-to": "Hoe te spelen?",
-        "language": "Verander de taal van het spel."
+    "streak": "Huidige Streak (Dagelijkse opeenvolgende overwinningen)",
+    "data-control": {
+      "tooltip": "Importeer/Exporteer je gegevens",
+      "name": "Verplaats je gegevens",
+      "btn01": "Gegevens exporteren",
+      "btn02": "Gegevens importeren",
+      "description": "Exporteer je spelstatistieken om ze naar een ander apparaat over te zetten."
     },
-    "game-board": {
-        "title": "RAAD HET ELEMENT VAN VANDAAG!",
-        "remaining-guesses": "pogingen over",
-        "input-placeholder": "Voer elementnaam of symbool in...",
-        "solved-count": "mensen hebben dit element al geraden!",
-        "yesterday-character": "Het element van gisteren was ",
-        "grid": {
-            "headers": {
-                "element": {
-                    "label": "Element",
-                    "description": "De naam (symbool) van het element"
-                },
-                "period": {
-                    "label": "Periode",
-                    "description": "De periode van het element"
-                },
-                "group": {
-                    "label": "Groep",
-                    "description": "De groep van het element"
-                },
-                "type": {
-                    "label": "Type",
-                    "description": "Het type van het element"
-                },
-                "phase": {
-                    "label": "Fase (STP)",
-                    "description": "De fase van het element bij STP"
-                },
-                "block": {
-                    "label": "Blok",
-                    "description": "Het blok van het element"
-                },
-                "mass": {
-                    "label": "Massa",
-                    "description": "De atoommassa van het element"
-                },
-                "atomic": {
-                    "label": "Atoomnummer",
-                    "description": "Het atoomnummer van het element"
-                }
-            }
+    "how-to": "Hoe te spelen?",
+    "language": "Verander de taal van het spel."
+  },
+  "game-board": {
+    "title": "RAAD HET ELEMENT VAN VANDAAG!",
+    "remaining-guesses": "pogingen over",
+    "input-placeholder": "Voer elementnaam of symbool in...",
+    "solved-count": "mensen hebben dit element al geraden!",
+    "yesterday-character": "Het element van gisteren was ",
+    "grid": {
+      "headers": {
+        "element": {
+          "label": "Element",
+          "description": "De naam (symbool) van het element"
         },
-        "color-indicators": {
-            "title": "Kleurindicatoren",
-            "correct": {
-                "label": "Correct",
-                "description": "De gok komt exact overeen"
-            },
-            "incorrect": {
-                "label": "Incorrect",
-                "description": "De gok komt niet overeen"
-            },
-            "higher": {
-                "label": "Hoger",
-                "description": "De correcte waarde is hoger dan de gok"
-            },
-            "lower": {
-                "label": "Lager",
-                "description": "De correcte waarde is lager dan de gok"
-            }
-        },
-        "game-over": "Game Over!",
-        "correct-answer": "Het juiste antwoord is"
-    },
-    "victory": {
-        "title": "Gewonnen!",
-        "time-taken": "Tijd genomen",
-        "next-element": "Volgend element over",
-        "attempts": "Pogingen",
-        "your-guess": "Je gokte"
-    },
-    "how-to-play": {
-        "h1": "Elemendle - Raad het dagelijkse Periodiek Systeem element",
-        "title": "Hoe te spelen?",
-        "description": "Raad het element van het Periodiek Systeem van vandaag - Elke 24 uur een nieuw element",
-        "notes": "Typ een elementnaam of symbool. Het spel onthult de eigenschappen en laat zien hoe dicht je gok bij het antwoord was.",
-        "color-indicators": "Kleurindicatoren",
-        "correct": "De gok komt exact overeen",
-        "incorrect": "De gok komt niet overeen",
-        "higher": "Hoger/Lager indicator (voor numerieke waarden)",
-        "properties": "Eigenschappen",
         "period": {
-            "label": "Periode",
-            "value": "1, 2, 3",
-            "description": "De periode van een element in het periodiek systeem is de horizontale rij waartoe het behoort"
+          "label": "Periode",
+          "description": "De periode van het element"
         },
         "group": {
-            "label": "Groep",
-            "value": "1, 2, 3",
-            "description": "De groep van een element in het periodiek systeem is de verticale kolom waartoe het behoort"
-        },
-        "block": {
-            "label": "Blok",
-            "value": "s, p, d, f",
-            "description": "Het blok van een element in het periodiek systeem is het type elektronenschil waartoe het behoort"
-        },
-        "phase": {
-            "label": "Fase (STP)",
-            "value": "Vast, Vloeibaar, Gas",
-            "description": "De fase van een element in het periodiek systeem is de toestand van materie waartoe het behoort bij standaard temperatuur en druk"
-        },
-        "mass": {
-            "label": "Atoommassa",
-            "value": "1, 2, 3",
-            "description": "De atoommassa van een element is de totale massa van al zijn protonen en neutronen"
-        },
-        "atomic": {
-            "label": "Atoomnummer",
-            "value": "1, 2, 3",
-            "description": "Het atoomnummer van een element is het aantal protonen in zijn kern"
+          "label": "Groep",
+          "description": "De groep van het element"
         },
         "type": {
-            "label": "Type",
-            "value": "Metaal, Niet-metaal, Metalloïde",
-            "description": "Het type van een element in het periodiek systeem is de categorie waartoe het behoort"
+          "label": "Type",
+          "description": "Het type van het element"
+        },
+        "phase": {
+          "label": "Fase (STP)",
+          "description": "De fase van het element bij STP"
+        },
+        "block": {
+          "label": "Blok",
+          "description": "Het blok van het element"
+        },
+        "mass": {
+          "label": "Massa",
+          "description": "De atoommassa van het element"
+        },
+        "atomic": {
+          "label": "Atoomnummer",
+          "description": "Het atoomnummer van het element"
         }
+      }
     },
-    "faq": {
-        "title": "Veelgestelde vragen over Elemendle",
-        "questions": [
-            {
-                "question": "Moet ik een account aanmaken om Elemendle te spelen?",
-                "answer": "Nee, Elemendle is volledig gratis te spelen zonder inlogvereisten. Je voortgang wordt lokaal op je apparaat opgeslagen."
-            },
-            {
-                "question": "Hoe vaak veranderen de elementen op Elemendle?",
-                "answer": "Er is elke 24 uur een nieuw element te raden. Kom dagelijks terug voor een nieuwe uitdaging!"
-            },
-            {
-                "question": "Hoe breng ik mijn voortgang over naar een ander apparaat?",
-                "answer": "Gebruik de exportfunctie om je gegevens op te slaan en importeer ze vervolgens op je nieuwe apparaat. Geen account nodig!"
-            },
-            {
-                "question": "Wat betekenen de kleurindicatoren op Elemendle?",
-                "answer": "Groen geeft een exacte overeenkomst aan, rood geeft geen overeenkomst aan, en pijlen laten zien of numerieke waarden (zoals hoogte) hoger of lager moeten zijn."
-            },
-            {
-                "question": "Hoe haal ik het maximale uit Elemendle?",
-                "answer": "Gebruik het hintsysteem na verschillende pogingen om je te helpen het element te raden. De hints zijn ontworpen om je te helpen, niet om je te hinderen."
-            },
-            {
-                "question": "Wat is het doel van Elemendle?",
-                "answer": "Elemendle is een spel voor de liefhebbers van scheikunde, door de liefhebbers van scheikunde. Het is een manier om de periodiek systeemgemeenschap bij elkaar te houden en het periodiek systeem te vieren."
-            },
-            {
-                "question": "Zullen jullie in de toekomst meer spelmodi hebben?",
-                "answer": "Ja, we werken aan het toevoegen van meer spelmodi aan Elemendle."
-            },
-            {
-                "question": "Heeft Elemendle een mobiele versie?",
-                "answer": "Momenteel werkt Elemendle op alle apparaten met een browser. Je hoeft dus niets te downloaden."
-            },
-            {
-                "question": "Hoe worden mijn gegevens opgeslagen?",
-                "answer": "Je gegevens worden lokaal op je apparaat opgeslagen. We verzamelen geen gegevens van je."
-            },
-            {
-                "question": "Is het Elemendle spel gratis?",
-                "answer": "Ja, Elemendle is volledig gratis te spelen."
-            },
-            {
-                "question": "Is dit Elemendle spel geassocieerd met het periodiek systeem?",
-                "answer": "Nee, Elemendle is niet gelieerd aan het periodiek systeem. Het is een door fans gemaakt spel."
-            },
-            {
-                "question": "Kan ik feedback geven over Elemendle?",
-                "answer": "Je kunt contact met ons opnemen via support@elemendle.app."
-            }
-        ]
+    "color-indicators": {
+      "title": "Kleurindicatoren",
+      "correct": {
+        "label": "Correct",
+        "description": "De gok komt exact overeen"
+      },
+      "incorrect": {
+        "label": "Incorrect",
+        "description": "De gok komt niet overeen"
+      },
+      "higher": {
+        "label": "Hoger",
+        "description": "De correcte waarde is hoger dan de gok"
+      },
+      "lower": {
+        "label": "Lager",
+        "description": "De correcte waarde is lager dan de gok"
+      }
     },
-    "game-tips": {
-        "title": "Tips voor het spelen van Elemendle",
-        "content": [
-            {
-                "title": "Begin met populaire elementen",
-                "description": "Begin met bekende elementen zoals Waterstof of Zuurstof om meerdere eigenschappen tegelijk te begrijpen."
-            },
-            {
-                "title": "Gebruik informatie uit het Periodiek Systeem",
-                "description": "Let op de eigenschappen van het element om de mogelijkheden te verkleinen."
-            },
-            {
-                "title": "Groepseigenschappen",
-                "description": "Concentreer je op fase- en typehints, omdat deze vaak gerelateerde elementen groeperen."
-            },
-            {
-                "title": "Let op patronen",
-                "description": "Merk patronen op in de elementeneigenschappen om meer geïnformeerde gokken te doen. Bijvoorbeeld, als een element een metaal is, is het waarschijnlijk een metaal."
-            },
-            {
-                "title": "Gebruik de hints",
-                "description": "Aarzel niet om het hintsysteem te gebruiken na verschillende pogingen - het is ontworpen om te helpen!"
-            }
-        ]
+    "game-over": "Game Over!",
+    "correct-answer": "Het juiste antwoord is",
+    "scroll-horizontal": "Scroll horizontaal voor meer informatie"
+  },
+  "victory": {
+    "title": "Gewonnen!",
+    "time-taken": "Tijd genomen",
+    "next-element": "Volgend element over",
+    "attempts": "Pogingen",
+    "your-guess": "Je gokte",
+    "game-over": "Meer oefeningen nodig",
+    "correct-answer": "Correct antwoord"
+  },
+  "how-to-play": {
+    "h1": "Elemendle - Raad het dagelijkse Periodiek Systeem element",
+    "title": "Hoe te spelen?",
+    "description": "Raad het element van het Periodiek Systeem van vandaag - Elke 24 uur een nieuw element",
+    "notes": "Typ een elementnaam of symbool. Het spel onthult de eigenschappen en laat zien hoe dicht je gok bij het antwoord was.",
+    "color-indicators": "Kleurindicatoren",
+    "correct": "De gok komt exact overeen",
+    "incorrect": "De gok komt niet overeen",
+    "higher": "Hoger/Lager indicator (voor numerieke waarden)",
+    "properties": "Eigenschappen",
+    "period": {
+      "label": "Periode",
+      "value": "1, 2, 3",
+      "description": "De periode van een element in het periodiek systeem is de horizontale rij waartoe het behoort"
     },
-    "game-features": {
-        "title": "Elemendle Functies",
-        "content": [
-            {
-                "title": "Eigenschap-gebaseerde matching",
-                "description": "In plaats van namen te raden, match element eigenschappen zoals periode, groep, blok, type, fase, massa en atoomnummer."
-            },
-            {
-                "title": "Uitgebreide database",
-                "description": "Toegang tot elementen uit het hele periodiek systeem"
-            },
-            {
-                "title": "Geen tijdslimieten",
-                "description": "Speel in je eigen tempo - neem zoveel pogingen als je nodig hebt om het juiste element te vinden. Elemendle is een spel voor de liefhebbers van scheikunde, door de liefhebbers van scheikunde."
-            },
-            {
-                "title": "Handige hints",
-                "description": "Ontvang strategische hints na verschillende pogingen om te helpen bij uitdagende elementen."
-            },
-            {
-                "title": "Voortgang bijhouden",
-                "description": "Volg je statistieken en exporteer je gegevens om verder te spelen op andere apparaten."
-            }
-        ]
+    "group": {
+      "label": "Groep",
+      "value": "1, 2, 3",
+      "description": "De groep van een element in het periodiek systeem is de verticale kolom waartoe het behoort"
     },
-    "share": {
-        "title": "Elemendle delen",
-        "description": "Ik heb het #Elemendle element gevonden in {attempts} pogingen binnen {timeTaken}s",
-        "btn": "Delen op Twitter"
+    "block": {
+      "label": "Blok",
+      "value": "s, p, d, f",
+      "description": "Het blok van een element in het periodiek systeem is het type elektronenschil waartoe het behoort"
+    },
+    "phase": {
+      "label": "Fase (STP)",
+      "value": "Vast, Vloeibaar, Gas",
+      "description": "De fase van een element in het periodiek systeem is de toestand van materie waartoe het behoort bij standaard temperatuur en druk"
+    },
+    "mass": {
+      "label": "Atoommassa",
+      "value": "1, 2, 3",
+      "description": "De atoommassa van een element is de totale massa van al zijn protonen en neutronen"
+    },
+    "atomic": {
+      "label": "Atoomnummer",
+      "value": "1, 2, 3",
+      "description": "Het atoomnummer van een element is het aantal protonen in zijn kern"
+    },
+    "type": {
+      "label": "Type",
+      "value": "Metaal, Niet-metaal, Metalloïde",
+      "description": "Het type van een element in het periodiek systeem is de categorie waartoe het behoort"
     }
+  },
+  "faq": {
+    "title": "Veelgestelde vragen over Elemendle",
+    "questions": [
+      {
+        "question": "Moet ik een account aanmaken om Elemendle te spelen?",
+        "answer": "Nee, Elemendle is volledig gratis te spelen zonder inlogvereisten. Je voortgang wordt lokaal op je apparaat opgeslagen."
+      },
+      {
+        "question": "Hoe vaak veranderen de elementen op Elemendle?",
+        "answer": "Er is elke 24 uur een nieuw element te raden. Kom dagelijks terug voor een nieuwe uitdaging!"
+      },
+      {
+        "question": "Hoe breng ik mijn voortgang over naar een ander apparaat?",
+        "answer": "Gebruik de exportfunctie om je gegevens op te slaan en importeer ze vervolgens op je nieuwe apparaat. Geen account nodig!"
+      },
+      {
+        "question": "Wat betekenen de kleurindicatoren op Elemendle?",
+        "answer": "Groen geeft een exacte overeenkomst aan, rood geeft geen overeenkomst aan, en pijlen laten zien of numerieke waarden (zoals hoogte) hoger of lager moeten zijn."
+      },
+      {
+        "question": "Hoe haal ik het maximale uit Elemendle?",
+        "answer": "Gebruik het hintsysteem na verschillende pogingen om je te helpen het element te raden. De hints zijn ontworpen om je te helpen, niet om je te hinderen."
+      },
+      {
+        "question": "Wat is het doel van Elemendle?",
+        "answer": "Elemendle is een spel voor de liefhebbers van scheikunde, door de liefhebbers van scheikunde. Het is een manier om de periodiek systeemgemeenschap bij elkaar te houden en het periodiek systeem te vieren."
+      },
+      {
+        "question": "Zullen jullie in de toekomst meer spelmodi hebben?",
+        "answer": "Ja, we werken aan het toevoegen van meer spelmodi aan Elemendle."
+      },
+      {
+        "question": "Heeft Elemendle een mobiele versie?",
+        "answer": "Momenteel werkt Elemendle op alle apparaten met een browser. Je hoeft dus niets te downloaden."
+      },
+      {
+        "question": "Hoe worden mijn gegevens opgeslagen?",
+        "answer": "Je gegevens worden lokaal op je apparaat opgeslagen. We verzamelen geen gegevens van je."
+      },
+      {
+        "question": "Is het Elemendle spel gratis?",
+        "answer": "Ja, Elemendle is volledig gratis te spelen."
+      },
+      {
+        "question": "Is dit Elemendle spel geassocieerd met het periodiek systeem?",
+        "answer": "Nee, Elemendle is niet gelieerd aan het periodiek systeem. Het is een door fans gemaakt spel."
+      },
+      {
+        "question": "Kan ik feedback geven over Elemendle?",
+        "answer": "Je kunt contact met ons opnemen via support@elemendle.app."
+      }
+    ]
+  },
+  "game-tips": {
+    "title": "Tips voor het spelen van Elemendle",
+    "content": [
+      {
+        "title": "Begin met populaire elementen",
+        "description": "Begin met bekende elementen zoals Waterstof of Zuurstof om meerdere eigenschappen tegelijk te begrijpen."
+      },
+      {
+        "title": "Gebruik informatie uit het Periodiek Systeem",
+        "description": "Let op de eigenschappen van het element om de mogelijkheden te verkleinen."
+      },
+      {
+        "title": "Groepseigenschappen",
+        "description": "Concentreer je op fase- en typehints, omdat deze vaak gerelateerde elementen groeperen."
+      },
+      {
+        "title": "Let op patronen",
+        "description": "Merk patronen op in de elementeneigenschappen om meer geïnformeerde gokken te doen. Bijvoorbeeld, als een element een metaal is, is het waarschijnlijk een metaal."
+      },
+      {
+        "title": "Gebruik de hints",
+        "description": "Aarzel niet om het hintsysteem te gebruiken na verschillende pogingen - het is ontworpen om te helpen!"
+      }
+    ]
+  },
+  "game-features": {
+    "title": "Elemendle Functies",
+    "content": [
+      {
+        "title": "Eigenschap-gebaseerde matching",
+        "description": "In plaats van namen te raden, match element eigenschappen zoals periode, groep, blok, type, fase, massa en atoomnummer."
+      },
+      {
+        "title": "Uitgebreide database",
+        "description": "Toegang tot elementen uit het hele periodiek systeem"
+      },
+      {
+        "title": "Geen tijdslimieten",
+        "description": "Speel in je eigen tempo - neem zoveel pogingen als je nodig hebt om het juiste element te vinden. Elemendle is een spel voor de liefhebbers van scheikunde, door de liefhebbers van scheikunde."
+      },
+      {
+        "title": "Handige hints",
+        "description": "Ontvang strategische hints na verschillende pogingen om te helpen bij uitdagende elementen."
+      },
+      {
+        "title": "Voortgang bijhouden",
+        "description": "Volg je statistieken en exporteer je gegevens om verder te spelen op andere apparaten."
+      }
+    ]
+  },
+  "share": {
+    "title": "Elemendle delen",
+    "description": "Ik heb het #Elemendle element gevonden in {attempts} pogingen binnen {timeTaken}s",
+    "btn": "Delen op Twitter"
+  }
 }

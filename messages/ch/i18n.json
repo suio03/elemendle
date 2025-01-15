@@ -1,259 +1,262 @@
 {
-    "metaData": {
-      "title": "元素每日猜谜 - 元素周期表益智游戏，测试你的知识",
-      "description": "挑战自己，玩每日元素周期表益智游戏。猜出元素并测试你的知识。",
-      "keywords": [
-        "元素每日猜谜",
-        "元素猜谜游戏",
-        "每日元素游戏"
-      ]
+  "metaData": {
+    "title": "元素每日猜谜 - 元素周期表益智游戏，测试你的知识",
+    "description": "挑战自己，玩每日元素周期表益智游戏。猜出元素并测试你的知识。",
+    "keywords": [
+      "元素每日猜谜",
+      "元素猜谜游戏",
+      "每日元素游戏"
+    ]
+  },
+  "header": {
+    "stats": {
+      "tooltip": "统计数据",
+      "play": "已玩游戏数",
+      "win-rate": "胜率",
+      "current-streak": "当前连胜",
+      "max-streak": "最大连胜",
+      "time-stats": "时间统计",
+      "best-time": "最佳时间",
+      "average-time": "平均时间",
+      "game-distribution": "游戏分布"
     },
-    "header": {
-      "stats": {
-        "tooltip": "统计数据",
-        "play": "已玩游戏数",
-        "win-rate": "胜率",
-        "current-streak": "当前连胜",
-        "max-streak": "最大连胜",
-        "time-stats": "时间统计",
-        "best-time": "最佳时间",
-        "average-time": "平均时间",
-        "game-distribution": "游戏分布"
-      },
-      "streak": "当前连胜（每日连续获胜）",
-      "data-control": {
-        "tooltip": "导入/导出你的数据",
-        "name": "转移你的数据",
-        "btn01": "导出数据",
-        "btn02": "导入数据",
-        "description": "导出你的游戏统计数据以将其转移到另一台设备。"
-      },
-      "how-to": "如何游戏？",
-      "language": "更改游戏语言。"
+    "streak": "当前连胜（每日连续获胜）",
+    "data-control": {
+      "tooltip": "导入/导出你的数据",
+      "name": "转移你的数据",
+      "btn01": "导出数据",
+      "btn02": "导入数据",
+      "description": "导出你的游戏统计数据以将其转移到另一台设备。"
     },
-    "game-board": {
-      "title": "猜猜今天的元素！",
-      "remaining-guesses": "剩余猜测次数",
-      "input-placeholder": "输入元素名称或符号...",
-      "solved-count": "人已猜到这个元素！",
-      "yesterday-character": "昨天的元素是",
-      "grid": {
-        "headers": {
-          "element": {
-            "label": "元素",
-            "description": "元素的名称（符号）"
-          },
-          "period": {
-            "label": "周期",
-            "description": "元素的周期"
-          },
-          "group": {
-            "label": "族",
-            "description": "元素的族"
-          },
-          "type": {
-            "label": "类型",
-            "description": "元素的类型"
-          },
-          "phase": {
-            "label": "相态(STP)",
-            "description": "元素在标准温度和压力下的相态"
-          },
-          "block": {
-            "label": "区",
-            "description": "元素的区"
-          },
-          "mass": {
-            "label": "质量",
-            "description": "元素的原子质量"
-          },
-          "atomic": {
-            "label": "原子序数",
-            "description": "元素的原子序数"
-          }
+    "how-to": "如何游戏？",
+    "language": "更改游戏语言。"
+  },
+  "game-board": {
+    "title": "猜猜今天的元素！",
+    "remaining-guesses": "剩余猜测次数",
+    "input-placeholder": "输入元素名称或符号...",
+    "solved-count": "人已猜到这个元素！",
+    "yesterday-character": "昨天的元素是",
+    "grid": {
+      "headers": {
+        "element": {
+          "label": "元素",
+          "description": "元素的名称（符号）"
+        },
+        "period": {
+          "label": "周期",
+          "description": "元素的周期"
+        },
+        "group": {
+          "label": "族",
+          "description": "元素的族"
+        },
+        "type": {
+          "label": "类型",
+          "description": "元素的类型"
+        },
+        "phase": {
+          "label": "相态(STP)",
+          "description": "元素在标准温度和压力下的相态"
+        },
+        "block": {
+          "label": "区",
+          "description": "元素的区"
+        },
+        "mass": {
+          "label": "质量",
+          "description": "元素的原子质量"
+        },
+        "atomic": {
+          "label": "原子序数",
+          "description": "元素的原子序数"
         }
-      },
-      "color-indicators": {
-        "title": "颜色指示器",
-        "correct": {
-          "label": "正确",
-          "description": "猜测完全匹配"
-        },
-        "incorrect": {
-          "label": "错误",
-          "description": "猜测不匹配"
-        },
-        "higher": {
-          "label": "更高",
-          "description": "正确值高于猜测值"
-        },
-        "lower": {
-          "label": "更低",
-          "description": "正确值低于猜测值"
-        }
-      },
-      "game-over": "游戏结束！",
-      "correct-answer": "正确答案是"
-    },
-    "victory": {
-      "title": "胜利！",
-      "time-taken": "花费时间",
-      "next-element": "下一个元素在",
-      "attempts": "尝试次数",
-      "your-guess": "你猜的是"
-    },
-    "how-to-play": {
-      "h1": "元素每日猜谜 - 猜猜每日元素周期表元素",
-      "title": "如何游戏？",
-      "description": "猜猜今天的元素周期表元素 - 每24小时一个新元素",
-      "notes": "输入任何元素名称或符号。游戏将揭示其属性并显示你的猜测有多接近。",
-      "color-indicators": "颜色指示器",
-      "correct": "猜测完全匹配",
-      "incorrect": "猜测不匹配",
-      "higher": "高/低指示器（对于数值）",
-      "properties": "属性",
-      "period": {
-        "label": "周期",
-        "value": "1, 2, 3",
-        "description": "元素周期表中元素的周期是它所属的横行"
-      },
-      "group": {
-        "label": "族",
-        "value": "1, 2, 3",
-        "description": "元素周期表中元素的族是它所属的纵列"
-      },
-      "block": {
-        "label": "区",
-        "value": "s, p, d, f",
-        "description": "元素周期表中元素的区是它所属的电子壳层类型"
-      },
-      "phase": {
-        "label": "相态(STP)",
-        "value": "固态、液态、气态",
-        "description": "元素周期表中元素的相态是在标准温度和压力下它所属的物质状态"
-      },
-      "mass": {
-        "label": "原子质量",
-        "value": "1, 2, 3",
-        "description": "元素的原子质量是其所有质子和中子的总质量"
-      },
-      "atomic": {
-        "label": "原子序数",
-        "value": "1, 2, 3",
-        "description": "元素的原子序数是其原子核中质子的数量"
-      },
-      "type": {
-        "label": "类型",
-        "value": "金属、非金属、准金属",
-        "description": "元素周期表中元素的类型是它所属的类别"
       }
     },
-    "faq": {
-      "title": "关于元素每日猜谜的常见问题",
-      "questions": [
-        {
-          "question": "玩元素每日猜谜需要创建帐户吗？",
-          "answer": "不需要，元素每日猜谜完全免费玩，无需任何登录要求。你的进度保存在你的设备上。"
-        },
-        {
-          "question": "元素每日猜谜的元素多久更换一次？",
-          "answer": "每24小时可以猜测一个新元素。每天回来迎接新的挑战！"
-        },
-        {
-          "question": "如何将我的进度转移到另一台设备？",
-          "answer": "使用导出功能保存你的数据，然后在你的新设备上导入它。无需帐户！"
-        },
-        {
-          "question": "元素每日猜谜中的颜色指示器是什么意思？",
-          "answer": "绿色表示完全匹配，红色表示不匹配，箭头显示数值（如高度）是否应该更高或更低。"
-        },
-        {
-          "question": "如何充分利用元素每日猜谜？",
-          "answer": "尝试几次后使用提示系统来帮助你猜测元素。提示旨在帮助你，而不是阻碍你。"
-        },
-        {
-          "question": "元素每日猜谜的目的是什么？",
-          "answer": "元素每日猜谜是一款为化学爱好者打造的，由化学爱好者打造的游戏。它是一种让元素周期表社区团结起来并庆祝元素周期表的方式。"
-        },
-        {
-          "question": "将来会有更多游戏模式吗？",
-          "answer": "是的，我们正在努力为元素每日猜谜添加更多游戏模式。"
-        },
-        {
-          "question": "元素每日猜谜有移动版本吗？",
-          "answer": "目前，元素每日猜谜可在所有带有浏览器的设备上运行。因此，你无需下载任何内容。"
-        },
-        {
-          "question": "我的数据是如何存储的？",
-          "answer": "你的数据存储在你的设备上。我们不会收集你的任何数据。"
-        },
-        {
-          "question": "元素每日猜谜游戏免费吗？",
-          "answer": "是的，元素每日猜谜完全免费。"
-        },
-        {
-          "question": "这个元素每日猜谜游戏与元素周期表有关吗？",
-          "answer": "不，元素每日猜谜与元素周期表无关。它是一款粉丝制作的游戏。"
-        },
-        {
-          "question": "我可以提供一些关于元素每日猜谜的反馈吗？",
-          "answer": "你可以联系我们 support@elemendle.app。"
-        }
-      ]
+    "color-indicators": {
+      "title": "颜色指示器",
+      "correct": {
+        "label": "正确",
+        "description": "猜测完全匹配"
+      },
+      "incorrect": {
+        "label": "错误",
+        "description": "猜测不匹配"
+      },
+      "higher": {
+        "label": "更高",
+        "description": "正确值高于猜测值"
+      },
+      "lower": {
+        "label": "更低",
+        "description": "正确值低于猜测值"
+      }
     },
-    "game-tips": {
-      "title": "玩元素每日猜谜的技巧",
-      "content": [
-        {
-          "title": "从常见元素开始",
-          "description": "从众所周知的元素（如氢或氧）开始，以同时了解多种属性。"
-        },
-        {
-          "title": "使用元素周期表信息",
-          "description": "注意元素的属性以缩小可能性。"
-        },
-        {
-          "title": "族属性",
-          "description": "关注相态和类型提示，因为这些通常将相关的元素组合在一起。"
-        },
-        {
-          "title": "观察模式",
-          "description": "注意元素属性中的模式以做出更明智的猜测。例如，如果一种元素是金属，它很可能是一种金属。"
-        },
-        {
-          "title": "使用提示",
-          "description": "尝试几次后不要犹豫使用提示系统——它旨在提供帮助！"
-        }
-      ]
+    "game-over": "游戏结束！",
+    "correct-answer": "正确答案是",
+    "scroll-horizontal": "水平滚动以查看更多信息"
+  },
+  "victory": {
+    "title": "胜利！",
+    "time-taken": "花费时间",
+    "next-element": "下一个元素在",
+    "attempts": "尝试次数",
+    "your-guess": "你猜的是",
+    "game-over": "需要更多练习",
+    "correct-answer": "正确答案"
+  },
+  "how-to-play": {
+    "h1": "元素每日猜谜 - 猜猜每日元素周期表元素",
+    "title": "如何游戏？",
+    "description": "猜猜今天的元素周期表元素 - 每24小时一个新元素",
+    "notes": "输入任何元素名称或符号。游戏将揭示其属性并显示你的猜测有多接近。",
+    "color-indicators": "颜色指示器",
+    "correct": "猜测完全匹配",
+    "incorrect": "猜测不匹配",
+    "higher": "高/低指示器（对于数值）",
+    "properties": "属性",
+    "period": {
+      "label": "周期",
+      "value": "1, 2, 3",
+      "description": "元素周期表中元素的周期是它所属的横行"
     },
-    "game-features": {
-      "title": "元素每日猜谜功能",
-      "content": [
-        {
-          "title": "基于属性的匹配",
-          "description": "无需猜测名称，匹配元素属性，如周期、族、区、类型、相态、质量和原子序数。"
-        },
-        {
-          "title": "全面的数据库",
-          "description": "访问所有元素周期表中的元素"
-        },
-        {
-          "title": "无时间限制",
-          "description": "按照你自己的节奏玩——花尽可能多的尝试来找到正确的元素。元素每日猜谜是一款为化学爱好者打造的，由化学爱好者打造的游戏。"
-        },
-        {
-          "title": "有用的提示",
-          "description": "尝试几次后接收策略性提示以帮助处理具有挑战性的元素。"
-        },
-        {
-          "title": "进度跟踪",
-          "description": "监控你的统计数据并将你的数据导出到其他设备以继续游戏。"
-        }
-      ]
+    "group": {
+      "label": "族",
+      "value": "1, 2, 3",
+      "description": "元素周期表中元素的族是它所属的纵列"
     },
-    "share": {
-      "title": "分享元素每日猜谜",
-      "description": "我在{attempts}次尝试中在{timeTaken}秒内找到了#元素每日猜谜元素",
-      "btn": "在Twitter上分享"
+    "block": {
+      "label": "区",
+      "value": "s, p, d, f",
+      "description": "元素周期表中元素的区是它所属的电子壳层类型"
+    },
+    "phase": {
+      "label": "相态(STP)",
+      "value": "固态、液态、气态",
+      "description": "元素周期表中元素的相态是在标准温度和压力下它所属的物质状态"
+    },
+    "mass": {
+      "label": "原子质量",
+      "value": "1, 2, 3",
+      "description": "元素的原子质量是其所有质子和中子的总质量"
+    },
+    "atomic": {
+      "label": "原子序数",
+      "value": "1, 2, 3",
+      "description": "元素的原子序数是其原子核中质子的数量"
+    },
+    "type": {
+      "label": "类型",
+      "value": "金属、非金属、准金属",
+      "description": "元素周期表中元素的类型是它所属的类别"
     }
+  },
+  "faq": {
+    "title": "关于元素每日猜谜的常见问题",
+    "questions": [
+      {
+        "question": "玩元素每日猜谜需要创建帐户吗？",
+        "answer": "不需要，元素每日猜谜完全免费玩，无需任何登录要求。你的进度保存在你的设备上。"
+      },
+      {
+        "question": "元素每日猜谜的元素多久更换一次？",
+        "answer": "每24小时可以猜测一个新元素。每天回来迎接新的挑战！"
+      },
+      {
+        "question": "如何将我的进度转移到另一台设备？",
+        "answer": "使用导出功能保存你的数据，然后在你的新设备上导入它。无需帐户！"
+      },
+      {
+        "question": "元素每日猜谜中的颜色指示器是什么意思？",
+        "answer": "绿色表示完全匹配，红色表示不匹配，箭头显示数值（如高度）是否应该更高或更低。"
+      },
+      {
+        "question": "如何充分利用元素每日猜谜？",
+        "answer": "尝试几次后使用提示系统来帮助你猜测元素。提示旨在帮助你，而不是阻碍你。"
+      },
+      {
+        "question": "元素每日猜谜的目的是什么？",
+        "answer": "元素每日猜谜是一款为化学爱好者打造的，由化学爱好者打造的游戏。它是一种让元素周期表社区团结起来并庆祝元素周期表的方式。"
+      },
+      {
+        "question": "将来会有更多游戏模式吗？",
+        "answer": "是的，我们正在努力为元素每日猜谜添加更多游戏模式。"
+      },
+      {
+        "question": "元素每日猜谜有移动版本吗？",
+        "answer": "目前，元素每日猜谜可在所有带有浏览器的设备上运行。因此，你无需下载任何内容。"
+      },
+      {
+        "question": "我的数据是如何存储的？",
+        "answer": "你的数据存储在你的设备上。我们不会收集你的任何数据。"
+      },
+      {
+        "question": "元素每日猜谜游戏免费吗？",
+        "answer": "是的，元素每日猜谜完全免费。"
+      },
+      {
+        "question": "这个元素每日猜谜游戏与元素周期表有关吗？",
+        "answer": "不，元素每日猜谜与元素周期表无关。它是一款粉丝制作的游戏。"
+      },
+      {
+        "question": "我可以提供一些关于元素每日猜谜的反馈吗？",
+        "answer": "你可以联系我们 support@elemendle.app。"
+      }
+    ]
+  },
+  "game-tips": {
+    "title": "玩元素每日猜谜的技巧",
+    "content": [
+      {
+        "title": "从常见元素开始",
+        "description": "从众所周知的元素（如氢或氧）开始，以同时了解多种属性。"
+      },
+      {
+        "title": "使用元素周期表信息",
+        "description": "注意元素的属性以缩小可能性。"
+      },
+      {
+        "title": "族属性",
+        "description": "关注相态和类型提示，因为这些通常将相关的元素组合在一起。"
+      },
+      {
+        "title": "观察模式",
+        "description": "注意元素属性中的模式以做出更明智的猜测。例如，如果一种元素是金属，它很可能是一种金属。"
+      },
+      {
+        "title": "使用提示",
+        "description": "尝试几次后不要犹豫使用提示系统——它旨在提供帮助！"
+      }
+    ]
+  },
+  "game-features": {
+    "title": "元素每日猜谜功能",
+    "content": [
+      {
+        "title": "基于属性的匹配",
+        "description": "无需猜测名称，匹配元素属性，如周期、族、区、类型、相态、质量和原子序数。"
+      },
+      {
+        "title": "全面的数据库",
+        "description": "访问所有元素周期表中的元素"
+      },
+      {
+        "title": "无时间限制",
+        "description": "按照你自己的节奏玩——花尽可能多的尝试来找到正确的元素。元素每日猜谜是一款为化学爱好者打造的，由化学爱好者打造的游戏。"
+      },
+      {
+        "title": "有用的提示",
+        "description": "尝试几次后接收策略性提示以帮助处理具有挑战性的元素。"
+      },
+      {
+        "title": "进度跟踪",
+        "description": "监控你的统计数据并将你的数据导出到其他设备以继续游戏。"
+      }
+    ]
+  },
+  "share": {
+    "title": "分享元素每日猜谜",
+    "description": "我在{attempts}次尝试中在{timeTaken}秒内找到了#元素每日猜谜元素",
+    "btn": "在Twitter上分享"
   }
+}
