@@ -31,7 +31,7 @@ const ShareCard = ({ attempts, timeTaken }: ShareResultProps) => {
     }
 
     return (
-        <div className="flex justify-center items-center mt-12">
+        <div className="flex justify-center items-center mt-12 mb-4">
             <Card className="w-full max-w-lg bg-gradient-to-br from-blue-900 to-gray-900 text-white border-[#9CCAD3] border rounded-xl">
                 <CardContent className="p-8">
                     <div className="text-center space-y-6">
@@ -40,7 +40,7 @@ const ShareCard = ({ attempts, timeTaken }: ShareResultProps) => {
                         </p>    
 
                         <p className="text-lg text-gray-300">
-                            https://bleachdle.app
+                            https://elemendle.com
                         </p>
 
                         <Button 
