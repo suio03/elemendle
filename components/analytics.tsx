@@ -3,7 +3,7 @@ import Script from 'next/script'
 const Analytics = () => (
     <>
         {/* google analytics */}
-        <Script
+        {/* <Script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-QT9BM5YVSD"
         />
@@ -33,9 +33,9 @@ const Analytics = () => (
                 })(window, document, "clarity", "script", "pq42vqw88g");
         `
             }}
-        />
+        /> */}
         <Script
-            defer data-domain="bleachdle.app" src="https://actone.app/js/script.js"
+            defer data-domain="elemendle.com" src="https://actone.app/js/script.js"
         />
     </>
 )

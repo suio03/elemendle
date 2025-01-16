@@ -49,7 +49,7 @@ export default async function LocaleLayout({
     const messages = await getMessages()
     return (
         <html lang={locale}>
-            {/* <Analytics /> */}
+            <Analytics />
             <body className={inter.className}>
                 <NextIntlClientProvider messages={messages}>
                     <div className="fixed inset-0 bg-[url('/images/background.png')] bg-fixed bg-cover bg-center bg-no-repeat -z-20" />
