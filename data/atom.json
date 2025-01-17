@@ -9,7 +9,7 @@
             "group": "1",
             "phase-at-stp": "Gas",
             "block": "s-block",
-            "element_type": "Nonmetal"
+            "element_type": "ReactiveNonMetal"
         },
         "melting-point": "-259.16°C (14.00K)",
         "boiling-point": "-252.87°C (20.28 K)",
@@ -129,7 +129,7 @@
             "group": "14",
             "phase-at-stp": "Solid",
             "block": "p-block",
-            "element_type": "Nonmetal"
+            "element_type": "ReactiveNonMetal"
         },
         "melting-point": "3550°C (3823 K)",
         "boiling-point": "4000°C (4273 K)",
@@ -153,7 +153,7 @@
             "group": "15",
             "phase-at-stp": "Gas",
             "block": "p-block",
-            "element_type": "Nonmetal"
+            "element_type": "ReactiveNonMetal"
         },
         "melting-point": "-210.01°C (63.14 K)",
         "boiling-point": "-195.79°C (77.36 K)",
@@ -177,7 +177,7 @@
             "group": "16",
             "phase-at-stp": "Gas",
             "block": "p-block",
-            "element_type": "Nonmetal"
+            "element_type": "ReactiveNonMetal"
         },
         "melting-point": "-218.79°C (54.36 K)",
         "boiling-point": "-182.96°C (90.19 K)",
@@ -345,7 +345,7 @@
             "group": "15",
             "phase-at-stp": "Solid",
             "block": "p-block",
-            "element_type": "Nonmetal"
+            "element_type": "ReactiveNonMetal"
         },
         "melting-point": "44.15°C (317.30 K)",
         "boiling-point": "280.5°C (553.6 K)",
@@ -369,7 +369,7 @@
             "group": "16",
             "phase-at-stp": "Solid",
             "block": "p-block",
-            "element_type": "Nonmetal"
+            "element_type": "ReactiveNonMetal"
         },
         "melting-point": "115.21°C (388.36 K)",
         "boiling-point": "444.6°C (717.7 K)",
@@ -393,7 +393,7 @@
             "group": "17",
             "phase-at-stp": "Gas",
             "block": "p-block",
-            "element_type": "Halogen"
+            "element_type": "ReactiveNonMetal"
         },
         "melting-point": "-101.5°C (171.7 K)",
         "boiling-point": "-34.04°C (239.11 K)",
