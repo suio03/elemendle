@@ -742,5 +742,561 @@
                 "Found in some high temperature thermometers"
             ]
         }
+    },
+    "Germanium": {
+        "name": "Germanium",
+        "symbol": "Ge",
+        "classic": {
+            "atomic_number": "32",
+            "atomic_mass": "72.64",
+            "period": "4",
+            "group": "14",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Metalloid"
+        },
+        "melting-point": "938.25°C (1211.40 K)",
+        "boiling-point": "2833°C (3106 K)",
+        "discovery-date": "1886",
+        "wiki": "https://en.wikipedia.org/wiki/Germanium",
+        "hints": {
+            "properties": [
+                "Used in semiconductors and solar cells",
+                "Can be used in batteries",
+                "Found in some high temperature thermometers"
+            ]
+        },
+        "appearance": "grayish white"
+    },
+    "Arsenic": {
+        "name": "Arsenic",
+        "symbol": "As",
+        "classic": {
+            "atomic_number": "33",
+            "atomic_mass": "74.922",
+            "period": "4",
+            "group": "15",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Metalloid"
+        },
+        "melting-point": "816.85°C (1089.80 K)",
+        "boiling-point": "613°C (886 K)",
+        "discovery-date": "1250",
+        "wiki": "https://en.wikipedia.org/wiki/Arsenic",
+        "hints": {
+            "properties": [
+                "Historically used as both a medicine and a poison",
+                "Forms a yellow semiconductor when combined with gallium",
+                "Commonly found in pressure-treated wood as a preservative"
+            ]
+        },
+        "appearance": "metallic grey"
+    },
+    "Selenium": {
+        "name": "Selenium",
+        "symbol": "Se",
+        "classic": {
+            "atomic_number": "34",
+            "atomic_mass": "78.96",
+            "period": "4",
+            "group": "16",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "ReactiveNonMetal"
+        },
+        "melting-point": "220.85°C (494 K)",
+        "boiling-point": "684.85°C (958 K)",
+        "discovery-date": "1817",
+        "wiki": "https://en.wikipedia.org/wiki/Selenium",
+        "hints": {
+            "properties": [
+                "Essential trace element in human nutrition, found in Brazil nuts",
+                "Used in photovoltaic solar cells",
+                "Named after the Moon (Selene in Greek) due to its silvery-gray appearance"
+            ]
+        },
+        "appearance": "grey metallic-looking, red, and vitreous black"
+    },
+    "Bromine": {
+        "name": "Bromine",
+        "symbol": "Br",
+        "classic": {
+            "atomic_number": "35",
+            "atomic_mass": "79.904",
+            "period": "4",
+            "group": "17",
+            "phase-at-stp": "Liquid",
+            "block": "p-block",
+            "element_type": "ReactiveNonMetal"
+        },
+        "melting-point": "-7.2°C (265.95 K)",
+        "boiling-point": "58.8°C (331.95 K)",
+        "discovery-date": "1826",
+        "wiki": "https://en.wikipedia.org/wiki/Bromine",
+        "hints": {
+            "properties": [
+                "Reddish-brown liquid at room temperature",
+                "Used in flame retardants and water purification",
+                "Named from the Greek word 'bromos' meaning stench"
+            ]
+        },
+        "appearance": "reddish-brown"
+    },
+    "Krypton": {
+        "name": "Krypton",
+        "symbol": "Kr",
+        "classic": {
+            "atomic_number": "36",
+            "atomic_mass": "83.798",
+            "period": "4",
+            "group": "18",
+            "phase-at-stp": "Gas",
+            "block": "p-block",
+            "element_type": "Noble Gas"
+        },
+        "melting-point": "-157.35°C (115.79 K)",
+        "boiling-point": "-153.41°C (119.74 K)",
+        "discovery-date": "1898",
+        "wiki": "https://en.wikipedia.org/wiki/Krypton",
+        "hints": {
+            "properties": [
+                "Used in high-intensity lighting and photographic flashes",
+                "Named after the Greek word 'kryptos' meaning hidden",
+                "One of the noble gases that rarely forms compounds"
+            ]
+        }
+    },
+    "Rubidium": {
+        "name": "Rubidium",
+        "symbol": "Rb",
+        "classic": {
+            "atomic_number": "37",
+            "atomic_mass": "85.468",
+            "period": "5",
+            "group": "1",
+            "phase-at-stp": "Solid",
+            "block": "s-block",
+            "element_type": "Alkali Metal"
+        },
+        "melting-point": "312.45°C (585.60 K)",
+        "boiling-point": "688°C (961 K)",
+        "discovery-date": "1861",
+        "wiki": "https://en.wikipedia.org/wiki/Rubidium",
+        "hints": {
+            "properties": [
+                "Highly reactive alkali metal that ignites spontaneously in air",
+                "Used in atomic clocks for precise timekeeping",
+                "Purple-red flame color in flame tests"
+            ]
+        }
+    },
+    "Strontium": {
+        "name": "Strontium",
+        "symbol": "Sr",
+        "classic": {
+            "atomic_number": "38",
+            "atomic_mass": "87.62",
+            "period": "5",
+            "group": "2",
+            "phase-at-stp": "Solid",
+            "block": "s-block",
+            "element_type": "Alkaline Earth Metal"
+        },
+        "melting-point": "777°C (1050.15 K)",
+        "boiling-point": "1381.85°C (1655 K)",
+        "discovery-date": "1790",
+        "wiki": "https://en.wikipedia.org/wiki/Strontium",
+        "hints": {
+            "properties": [
+                "Gives fireworks their characteristic red color",
+                "Found in radioactive fallout from nuclear weapons testing",
+                "Used in glow-in-the-dark paints and clock dials historically"
+            ]
+        }
+    },
+    "Yttrium": {
+        "name": "Yttrium",
+        "symbol": "Y",
+        "classic": {
+            "atomic_number": "39",
+            "atomic_mass": "88.906",
+            "period": "5",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "1526°C (1799.15 K)",
+        "boiling-point": "3337.85°C (3611 K)",
+        "discovery-date": "1794",
+        "wiki": "https://en.wikipedia.org/wiki/Yttrium",
+        "hints": {
+            "properties": [
+                "Used to make red phosphors in color television tubes and LED displays",
+                "First discovered in a mineral from Ytterby, Sweden",
+                "Forms a superconducting compound YBa₂Cu₃O₇ used in high-temperature superconductors"
+            ]
+        }
+    },
+    "Zirconium": {
+        "name": "Zirconium",
+        "symbol": "Zr",
+        "classic": {
+            "atomic_number": "40",
+            "atomic_mass": "91.224",
+            "period": "5",
+            "group": "4",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "1854.85°C (2128 K)",
+        "boiling-point": "4408.85°C (4682 K)",
+        "discovery-date": "1789",
+        "wiki": "https://en.wikipedia.org/wiki/Zirconium",
+        "hints": {
+            "properties": [
+                "Used in nuclear reactor fuel rods due to low neutron absorption",
+                "Found in cubic zirconia, a diamond substitute in jewelry",
+                "Key component in high-temperature ceramics and refractories"
+            ]
+        }
+    },
+    "Niobium": {
+        "name": "Niobium",
+        "symbol": "Nb",
+        "classic": {
+            "atomic_number": "41",
+            "atomic_mass": "92.906",
+            "period": "5",
+            "group": "5",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "2477°C (2750.15 K)",
+        "boiling-point": "4927°C (5200.15 K)",
+        "discovery-date": "1801",
+        "wiki": "https://en.wikipedia.org/wiki/Niobium",
+        "hints": {
+            "properties": [
+                "Used in superalloys for jet engines and rockets",
+                "Named after Niobe, daughter of Tantalus in Greek mythology",
+                "Superconducting when cooled to extremely low temperatures"
+            ]
+        }
+    },
+    "Molybdenum": {
+        "name": "Molybdenum",
+        "symbol": "Mo",
+        "classic": {
+            "atomic_number": "42",
+            "atomic_mass": "95.950",
+            "period": "5",
+            "group": "6",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "2622.85°C (2896 K)",
+        "boiling-point": "4638.85°C (4912 K)",
+        "discovery-date": "1778",
+        "wiki": "https://en.wikipedia.org/wiki/Molybdenum",
+        "hints": {
+            "properties": [
+                "Essential trace element for nitrogen-fixing bacteria",
+                "Used to create super-strong steel alloys",
+                "Has the sixth-highest melting point of all elements"
+            ]
+        }
+    },
+    "Technetium": {
+        "name": "Technetium",
+        "symbol": "Tc",
+        "classic": {
+            "atomic_number": "43",
+            "atomic_mass": "98.906",
+            "period": "5",
+            "group": "7",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "2203.85°C (2477 K)",
+        "boiling-point": "4264.85°C (4538 K)",
+        "discovery-date": "1937",
+        "wiki": "https://en.wikipedia.org/wiki/Technetium",
+        "hints": {
+            "properties": [
+                "First artificially produced element",
+                "Used in nuclear medicine for diagnostic imaging",
+                "All isotopes are radioactive with no stable forms"
+            ]
+        }
+    },
+    "Ruthenium": {
+        "name": "Ruthenium",
+        "symbol": "Ru",
+        "classic": {
+            "atomic_number": "44",
+            "atomic_mass": "101.070",
+            "period": "5",
+            "group": "8",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "2334°C (2607.15 K)",
+        "boiling-point": "4150°C (4423.15 K)",
+        "discovery-date": "1844",
+        "wiki": "https://en.wikipedia.org/wiki/Ruthenium",
+        "hints": {
+            "properties": [
+                "Used as a catalyst in producing ammonia industrially",
+                "Belongs to the platinum group metals",
+                "Forms intensely colored compounds, often used in solar cell research"
+            ]
+        }
+    },
+    "Rhodium": {
+        "name": "Rhodium",
+        "symbol": "Rh",
+        "classic": {
+            "atomic_number": "45",
+            "atomic_mass": "102.91",
+            "period": "5",
+            "group": "9",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "1964°C (2237.15 K)",
+        "boiling-point": "3693.85°C (3970 K)",
+        "discovery-date": "1803",
+        "wiki": "https://en.wikipedia.org/wiki/Rhodium",
+        "hints": {
+            "properties": [
+                "Used as a catalyst in car catalytic converters",
+                "One of the most expensive precious metals",
+                "Named after the Greek word 'rhodon' meaning rose-colored"
+            ]
+        }
+    },
+    "Palladium": {
+        "name": "Palladium",
+        "symbol": "Pd",
+        "classic": {
+            "atomic_number": "46",
+            "atomic_mass": "106.42",
+            "period": "5",
+            "group": "10",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "1554.9°C (1828.05 K)",
+        "boiling-point": "2963°C (3236.15 K)",
+        "discovery-date": "1803",
+        "wiki": "https://en.wikipedia.org/wiki/Palladium",
+        "hints": {
+            "properties": [
+                "Essential catalyst in automotive catalytic converters",
+                "Named after the asteroid Pallas",
+                "Key metal used in hydrogen fuel cell technology"
+            ]
+        }
+    },
+    "Silver": {
+        "name": "Silver",
+        "symbol": "Ag",
+        "classic": {
+            "atomic_number": "47",
+            "atomic_mass": "107.87",
+            "period": "5",
+            "group": "11",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "961.78°C (1234.93 K)",
+        "boiling-point": "2162.00°C (2435.15 K)",
+        "discovery-date": "5000 BC",
+        "wiki": "https://en.wikipedia.org/wiki/Silver",
+        "hints": {
+            "properties": [
+                "Used in traditional photography film and development",
+                "Best electrical and thermal conductor of all metals",
+                "Ancient civilizations used it as currency before gold"
+            ]
+        }
+    },
+    "Cadmium": {
+        "name": "Cadmium",
+        "symbol": "Cd",
+        "classic": {
+            "atomic_number": "48",
+            "atomic_mass": "112.41",
+            "period": "5",
+            "group": "12",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "321.11°C (594.26 K)",
+        "boiling-point": "766.85°C (1040 K)",
+        "discovery-date": "1817",
+        "wiki": "https://en.wikipedia.org/wiki/Cadmium",
+        "hints": {
+            "properties": [
+                "Used in rechargeable nickel-cadmium batteries",
+                "Soft, silvery-white metal with a bluish tinge",
+                "Historically used as a pigment in yellow and orange paints"
+            ]
+        }
+    },
+    "Indium": {
+        "name": "Indium",
+        "symbol": "In",
+        "classic": {
+            "atomic_number": "49",
+            "atomic_mass": "114.82",
+            "period": "5",
+            "group": "13",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Post-Transition Metal"
+        },
+        "melting-point": "156.63°C (429.78 K)",
+        "boiling-point": "2072.00°C (2345.15 K)",
+        "discovery-date": "1863",
+        "wiki": "https://en.wikipedia.org/wiki/Indium",
+        "hints": {
+            "properties": [
+                "Used in LCD screens and touch-sensitive displays",
+                "Soft, silvery-white metal that's liquid near its melting point",
+                "Often found as a byproduct of zinc mining"
+            ]
+        }
+    },
+    "Tin": {
+        "name": "Tin",
+        "symbol": "Sn",
+        "classic": {
+            "atomic_number": "50",
+            "atomic_mass": "118.71",
+            "period": "5",
+            "group": "14",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Post-Transition Metal"
+        },
+        "melting-point": "231.93°C (505.08 K)",
+        "boiling-point": "2602.00°C (2875.15 K)",
+        "discovery-date": "35th century BC",
+        "wiki": "https://en.wikipedia.org/wiki/Tin",
+        "hints": {
+            "properties": [
+                "Used as a coating on steel cans to prevent corrosion",
+                "One of the earliest metals known to humanity, key component of bronze",
+                "Becomes a gray powder ('tin pest') when kept below 13.2°C"
+            ]
+        }
+    },
+    "Antimony": {
+        "name": "Antimony",
+        "symbol": "Sb",
+        "classic": {
+            "atomic_number": "51",
+            "atomic_mass": "121.76",
+            "period": "5",
+            "group": "15",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Metalloid"
+        },
+        "melting-point": "630.63°C (903.78 K)",
+        "boiling-point": "1586.85°C (1860 K)",
+        "discovery-date": "Before AD 815",
+        "wiki": "https://en.wikipedia.org/wiki/Antimony",
+        "hints": {
+            "properties": [
+                "Used in flame-retardant materials and semiconductors",
+                "Ancient Egyptians used its sulfide compound for black eye makeup",
+                "Forms a brittle, silvery-bluish metalloid that can be easily crushed into powder"
+            ]
+        }
+    },
+    "Tellurium": {
+        "name": "Tellurium",
+        "symbol": "Te",
+        "classic": {
+            "atomic_number": "52",
+            "atomic_mass": "127.60",
+            "period": "5",
+            "group": "16",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Metalloid"
+        },
+        "melting-point": "449.51°C (722.66 K)",
+        "boiling-point": "987.85°C (1261 K)",
+        "discovery-date": "1782",
+        "wiki": "https://en.wikipedia.org/wiki/Tellurium",
+        "hints": {
+            "properties": [
+                "Used to improve the machinability of steel and copper",
+                "Has both metallic and non-metallic properties (metalloid)",
+                "Essential trace element for many bacteria but toxic to humans"
+            ]
+        }
+    },
+    "Iodine": {
+        "name": "Iodine",
+        "symbol": "I",
+        "classic": {
+            "atomic_number": "53",
+            "atomic_mass": "126.90",
+            "period": "5",
+            "group": "17",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Nonmetal"
+        },
+        "melting-point": "113.71°C (386.86 K)",
+        "boiling-point": "184.3°C (457.45 K)",
+        "discovery-date": "1811",
+        "wiki": "https://en.wikipedia.org/wiki/Iodine",
+        "hints": {
+            "properties": [
+                "Purple vapor when heated",
+                "Essential for thyroid hormone production",
+                "Used as an antiseptic and water purifier"
+            ]
+        }
+    },
+    "Xenon": {
+        "name": "Xenon",
+        "symbol": "Xe",
+        "classic": {
+            "atomic_number": "54",
+            "atomic_mass": "131.29",
+            "period": "5",
+            "group": "18",
+            "phase-at-stp": "Gas",
+            "block": "p-block",
+            "element_type": "Noble Gas"
+        },
+        "melting-point": "-111.75°C (161.4 K)",
+        "boiling-point": "-108.12°C (165.03 K)",
+        "discovery-date": "1898",
+        "wiki": "https://en.wikipedia.org/wiki/Xenon",
+        "hints": {
+            "properties": [
+                "Found in camera flashes and high-intensity lamps",
+                "First noble gas found to form chemical compounds",
+                "Used in plasma displays and ion rocket engines"
+            ]
+        }
     }
 }
