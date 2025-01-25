@@ -201,7 +201,7 @@
             "group": "17",
             "phase-at-stp": "Gas",
             "block": "p-block",
-            "element_type": "Halogen"
+            "element_type": "ReactiveNonMetal"
         },
         "melting-point": "-219.67°C (53.48 K)",
         "boiling-point": "-188.11°C (85.04 K)",
@@ -729,7 +729,7 @@
             "group": "13",
             "phase-at-stp": "Solid",
             "block": "p-block",
-            "element_type": "Post-transition Metal"
+            "element_type": "Post-Transition Metal"
         },
         "melting-point": "29.76°C (302.91 K)",
         "boiling-point": "2204°C (2477 K)",
@@ -1296,6 +1296,1542 @@
                 "Found in camera flashes and high-intensity lamps",
                 "First noble gas found to form chemical compounds",
                 "Used in plasma displays and ion rocket engines"
+            ]
+        }
+    },
+    "Caesium": {
+        "name": "Caesium",
+        "symbol": "Cs",
+        "classic": {
+            "atomic_number": "55",
+            "atomic_mass": "132.91",
+            "period": "6",
+            "group": "1",
+            "phase-at-stp": "Solid",
+            "block": "s-block",
+            "element_type": "Alkali Metal"
+        },
+        "melting-point": "28.44°C (301.59 K)",
+        "boiling-point": "670.85°C (944.00 K)",
+        "discovery-date": "1860",
+        "wiki": "https://en.wikipedia.org/wiki/Caesium",
+        "hints": {
+            "properties": [
+                "Most reactive of all metals",
+                "Used in atomic clocks for precise timekeeping",
+                "Liquid at slightly above room temperature (28.5°C)"
+            ]
+        }
+    },
+    "Barium": {
+        "name": "Barium",
+        "symbol": "Ba",
+        "classic": {
+            "atomic_number": "56",
+            "atomic_mass": "137.33",
+            "period": "6",
+            "group": "2",
+            "phase-at-stp": "Solid",
+            "block": "s-block",
+            "element_type": "Alkaline Earth Metal"
+        },
+        "melting-point": "727.00°C (1000.15 K)",
+        "boiling-point": "1897.00°C (2170.15 K)",
+        "discovery-date": "1808",
+        "wiki": "https://en.wikipedia.org/wiki/Barium",
+        "hints": {
+            "properties": [
+                "Used in X-ray imaging as barium sulfate",
+                "Burns with a characteristic green flame",
+                "Reacts violently with water, forming barium hydroxide"
+            ]
+        }
+    },
+    "Lanthanum": {
+        "name": "Lanthanum",
+        "symbol": "La",
+        "classic": {
+            "atomic_number": "57",
+            "atomic_mass": "138.91",
+            "period": "6",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Lanthanide"
+        },
+        "melting-point": "920.00°C (1193.15 K)",
+        "boiling-point": "3463.85°C (3737.00 K)",
+        "discovery-date": "1839",
+        "wiki": "https://en.wikipedia.org/wiki/Lanthanum",
+        "hints": {
+            "properties": [
+                "Used in high-refractive-index optical glasses",
+                "Most abundant rare earth element in Earth's crust",
+                "Gives bright green color to fireworks"
+            ]
+        }
+    },
+    "Hafnium": {
+        "name": "Hafnium",
+        "symbol": "Hf",
+        "classic": {
+            "atomic_number": "72",
+            "atomic_mass": "178.49",
+            "period": "6",
+            "group": "4",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "2227.00°C (2500.15 K)",
+        "boiling-point": "4601.85°C (4875 K)",
+        "discovery-date": "1923",
+        "wiki": "https://en.wikipedia.org/wiki/Hafnium",
+        "hints": {
+            "properties": [
+                "Named after Copenhagen, where it was discovered",
+                "Often found in zirconium minerals and used in nuclear reactor control rods",
+                "Has one of the highest melting points among transition metals"
+            ]
+        }
+    },
+    "Tantalum": {
+        "name": "Tantalum",
+        "symbol": "Ta",
+        "classic": {
+            "atomic_number": "73",
+            "atomic_mass": "180.95",
+            "period": "6",
+            "group": "5",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "3019.85°C (3293.00 K)",
+        "boiling-point": "5456.85°C (5730.00 K)",
+        "discovery-date": "1802",
+        "wiki": "https://en.wikipedia.org/wiki/Tantalum",
+        "hints": {
+            "properties": [
+                "Used in surgical implants due to its biocompatibility",
+                "Critical component in electronic capacitors",
+                "Has the fourth highest melting point of all elements"
+            ]
+        }
+    },
+    "Tungsten": {
+        "name": "Tungsten",
+        "symbol": "W",
+        "classic": {
+            "atomic_number": "74",
+            "atomic_mass": "183.84",
+            "period": "6",
+            "group": "6",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "3422.00°C (3695.15 K)",
+        "boiling-point": "5555.00°C (5828.15 K)",
+        "discovery-date": "1783",
+        "wiki": "https://en.wikipedia.org/wiki/Tungsten",
+        "hints": {
+            "properties": [
+                "Has the highest melting point of all elements",
+                "Used in light bulb filaments",
+                "Named from Swedish 'tung sten' meaning 'heavy stone'"
+            ]
+        }
+    },
+    "Rhenium": {
+        "name": "Rhenium",
+        "symbol": "Re",
+        "classic": {
+            "atomic_number": "75",
+            "atomic_mass": "186.21",
+            "period": "6",
+            "group": "7",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "3181.85°C (3455.00 K)",
+        "boiling-point": "5596.85°C (5870.00 K)",
+        "discovery-date": "1925",
+        "wiki": "https://en.wikipedia.org/wiki/Rhenium",
+        "hints": {
+            "properties": [
+                "Used in filaments for mass spectrometers",
+                "Has the third-highest melting point of all elements",
+                "Often found naturally combined with molybdenum in minerals"
+            ]
+        }
+    },
+    "Osmium": {
+        "name": "Osmium",
+        "symbol": "Os",
+        "classic": {
+            "atomic_number": "76",
+            "atomic_mass": "190.23",
+            "period": "6",
+            "group": "8",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "3033.00°C (3306.15 K)",
+        "boiling-point": "5026.85°C (5300.00 K)",
+        "discovery-date": "1803",
+        "wiki": "https://en.wikipedia.org/wiki/Osmium",
+        "hints": {
+            "properties": [
+                "Densest naturally occurring element",
+                "Used in fountain pen tips and electrical contacts",
+                "Has a distinctive blue-gray metallic luster"
+            ]
+        }
+    },
+    "Iridium": {
+        "name": "Iridium",
+        "symbol": "Ir",
+        "classic": {
+            "atomic_number": "77",
+            "atomic_mass": "192.22",
+            "period": "6",
+            "group": "9",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "2446°C (2719.15 K)",
+        "boiling-point": "4428.00°C (4701.15 K)",
+        "discovery-date": "1803",
+        "wiki": "https://en.wikipedia.org/wiki/Iridium",
+        "hints": {
+            "properties": [
+                "Found in meteorites and linked to dinosaur extinction",
+                "One of the densest and most corrosion-resistant elements",
+                "Used in spark plugs and crucibles due to high melting point"
+            ]
+        }
+    },
+    "Platinum": {
+        "name": "Platinum",
+        "symbol": "Pt",
+        "classic": {
+            "atomic_number": "78",
+            "atomic_mass": "195.08",
+            "period": "6",
+            "group": "10",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "1768.3°C (2041.45 K)",
+        "boiling-point": "3825.00°C (4098.15 K)",
+        "discovery-date": "1735",
+        "wiki": "https://en.wikipedia.org/wiki/Platinum",
+        "hints": {
+            "properties": [
+                "Used as a catalyst in catalytic converters for vehicles",
+                "One of the least reactive metals, highly resistant to corrosion",
+                "Often used in jewelry and considered more valuable than gold"
+            ]
+        }
+    },
+    "Gold": {
+        "name": "Gold",
+        "symbol": "Au",
+        "classic": {
+            "atomic_number": "79",
+            "atomic_mass": "196.97",
+            "period": "6",
+            "group": "11",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "1064.18°C (1337.33 K)",
+        "boiling-point": "2836.00°C (3109.15 K)",
+        "discovery-date": "Before 6000 BC",
+        "wiki": "https://en.wikipedia.org/wiki/Gold",
+        "hints": {
+            "properties": [
+                "Used as a monetary standard throughout human history",
+                "Most malleable and ductile of all metals",
+                "Resistant to most acids and chemicals"
+            ]
+        }
+    },
+    "Mercury": {
+        "name": "Mercury",
+        "symbol": "Hg",
+        "classic": {
+            "atomic_number": "80",
+            "atomic_mass": "200.59",
+            "period": "6",
+            "group": "12",
+            "phase-at-stp": "Liquid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "-38.83°C (234.32 K)",
+        "boiling-point": "356.73°C (629.88 K)",
+        "discovery-date": "Before 1500 BC",
+        "wiki": "https://en.wikipedia.org/wiki/Mercury",
+        "hints": {
+            "properties": [
+                "Only metallic element that is liquid at room temperature",
+                "Historically used in thermometers and barometers",
+                "Named after the fastest-moving planet in our solar system"
+            ]
+        }
+    },
+    "Thallium": {
+        "name": "Thallium",
+        "symbol": "Tl",
+        "classic": {
+            "atomic_number": "81",
+            "atomic_mass": "204.38",
+            "period": "6",
+            "group": "13",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Post-Transition Metal"
+        },
+        "melting-point": "303.85°C (577.00 K)",
+        "boiling-point": "1472.85°C (1746.00 K)",
+        "discovery-date": "1861",
+        "wiki": "https://en.wikipedia.org/wiki/Thallium",
+        "hints": {
+            "properties": [
+                "Used historically in rat poisons due to its high toxicity",
+                "Soft enough to cut with a knife, with a bluish-white metallic luster",
+                "Found in trace amounts in the mineral pyrite, used in specialized glass"
+            ]
+        }
+    },
+    "Lead": {
+        "name": "Lead",
+        "symbol": "Pb",
+        "classic": {
+            "atomic_number": "82",
+            "atomic_mass": "207.20",
+            "period": "6",
+            "group": "14",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Post-Transition Metal"
+        },
+        "melting-point": "327.50°C (600.65 K)",
+        "boiling-point": "1749.00°C (2022.15 K)",
+        "discovery-date": "7000 BC",
+        "wiki": "https://en.wikipedia.org/wiki/Lead",
+        "hints": {
+            "properties": [
+                "Ancient Romans used me in their plumbing systems",
+                "I'm the heaviest stable element in the carbon family",
+                "My compounds were once common in house paint and gasoline"
+            ]
+        }
+    },
+    "Bismuth": {
+        "name": "Bismuth",
+        "symbol": "Bi",
+        "classic": {
+            "atomic_number": "83",
+            "atomic_mass": "208.98",
+            "period": "6",
+            "group": "15",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Post-Transition Metal"
+        },
+        "melting-point": "271.41°C (544.56 K)",
+        "boiling-point": "1564.00°C (1837.15 K)",
+        "discovery-date": "1753",
+        "wiki": "https://en.wikipedia.org/wiki/Bismuth",
+        "hints": {
+            "properties": [
+                "Used to create pearlescent pigments in cosmetics",
+                "The heaviest stable element on the periodic table",
+                "Main ingredient in Pepto-Bismol antacid medication"
+            ]
+        }
+    },
+    "Polonium": {
+        "name": "Polonium",
+        "symbol": "Po",
+        "classic": {
+            "atomic_number": "84",
+            "atomic_mass": "209.00",
+            "period": "6",
+            "group": "16",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Post-Transition Metal"
+        },
+        "melting-point": "253.85°C (527 K)",
+        "boiling-point": "962.00°C (1235.15 K)",
+        "discovery-date": "1898",
+        "wiki": "https://en.wikipedia.org/wiki/Polonium",
+        "hints": {
+            "properties": [
+                "Discovered by Marie Curie in 1898, named after her homeland",
+                "Extremely radioactive with no stable isotopes",
+                "Used in static eliminators and as an alpha particle source"
+            ]
+        }
+    },
+    "Astatine": {
+        "name": "Astatine",
+        "symbol": "At",
+        "classic": {
+            "atomic_number": "85",
+            "atomic_mass": "210.00",
+            "period": "6",
+            "group": "17",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Post-Transition Metal"
+        },
+        "melting-point": "301.85°C (575 K)",
+        "boiling-point": "336.85°C (610 K)",
+        "discovery-date": "1940",
+        "wiki": "https://en.wikipedia.org/wiki/Astatine",
+        "hints": {
+            "properties": [
+                "Rarest naturally occurring element on Earth",
+                "Most radioactive halogen",
+                "Has never been viewed directly due to its instability"
+            ]
+        }
+    },
+    "Radon": {
+        "name": "Radon",
+        "symbol": "Rn",
+        "classic": {
+            "atomic_number": "86",
+            "atomic_mass": "222.00",
+            "period": "6",
+            "group": "18",
+            "phase-at-stp": "Gas",
+            "block": "p-block",
+            "element_type": "Noble Gas"
+        },
+        "melting-point": "-71.15°C (202 K)",
+        "boiling-point": "-61.7°C (211.45 K)",
+        "discovery-date": "1900",
+        "wiki": "https://en.wikipedia.org/wiki/Radon",
+        "hints": {
+            "properties": [
+                "Radioactive noble gas that occurs naturally from uranium decay",
+                "Can accumulate in basements and pose health risks",
+                "Second heaviest gas under normal conditions after oganesson"
+            ]
+        }
+    },
+    "Francium": {
+        "name": "Francium",
+        "symbol": "Fr",
+        "classic": {
+            "atomic_number": "87",
+            "atomic_mass": "223.00",
+            "period": "7",
+            "group": "1",
+            "phase-at-stp": "Solid",
+            "block": "s-block",
+            "element_type": "Alkali Metal"
+        },
+        "melting-point": "27.00°C (300.15 K)",
+        "boiling-point": "677.00°C (950.15 K)",
+        "discovery-date": "1939",
+        "wiki": "https://en.wikipedia.org/wiki/Francium",
+        "hints": {
+            "properties": [
+                "Most unstable of all naturally occurring elements",
+                "Most reactive of all alkali metals",
+                "Discovered through analysis of actinium decay"
+            ]
+        }
+    },
+    "Radium": {
+        "name": "Radium",
+        "symbol": "Ra",
+        "classic": {
+            "atomic_number": "88",
+            "atomic_mass": "226.00",
+            "period": "7",
+            "group": "2",
+            "phase-at-stp": "Solid",
+            "block": "s-block",
+            "element_type": "Alkaline Earth Metal"
+        },
+        "melting-point": "696.00°C (969.15 K)",
+        "boiling-point": "1737.00°C (2010.15 K)",
+        "discovery-date": "1898",
+        "wiki": "https://en.wikipedia.org/wiki/Radium",
+        "hints": {
+            "properties": [
+                "Discovered by Marie and Pierre Curie in 1898",
+                "Historically used in glow-in-the-dark watch dials",
+                "Named from the Latin word 'radius' meaning ray"
+            ]
+        }
+    },
+    "Actinium": {
+        "name": "Actinium",
+        "symbol": "Ac",
+        "classic": {
+            "atomic_number": "89",
+            "atomic_mass": "227.00",
+            "period": "7",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Actinide"
+        },
+        "melting-point": "1050.00°C (1323.15 K)",
+        "boiling-point": "3196.85°C (3470.00 K)",
+        "discovery-date": "1899",
+        "wiki": "https://en.wikipedia.org/wiki/Actinium",
+        "hints": {
+            "properties": [
+                "First element in the actinide series",
+                "Glows blue in the dark due to radioactivity",
+                "Used in neutron sources when combined with beryllium"
+            ]
+        }
+    },
+    "Rutherfordium": {
+        "name": "Rutherfordium",
+        "symbol": "Rf",
+        "classic": {
+            "atomic_number": "104",
+            "atomic_mass": "267.00",
+            "period": "7",
+            "group": "4",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": "2126.85°C (2400 K)",
+        "boiling-point": "5526.85°C (5800 K)",
+        "discovery-date": "1964",
+        "wiki": "https://en.wikipedia.org/wiki/Rutherfordium",
+        "hints": {
+            "properties": [
+                "First synthesized in 1964 at the Joint Institute for Nuclear Research",
+                "Named after physicist Ernest Rutherford",
+                "Belongs to the group of transactinide elements with atomic number 104"
+            ]
+        }
+    },
+    "Dubnium": {
+        "name": "Dubnium",
+        "symbol": "Db",
+        "classic": {
+            "atomic_number": "105",
+            "atomic_mass": "262.00",
+            "period": "7",
+            "group": "5",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": null,
+        "boiling-point": null,
+        "discovery-date": "1967",
+        "wiki": "https://en.wikipedia.org/wiki/Dubnium",
+        "hints": {
+            "properties": [
+                "Named after the Joint Institute for Nuclear Research in Dubna, Russia",
+                "Synthetic element first created in 1968",
+                "Has a half-life of only about 28 hours at its most stable isotope"
+            ]
+        }
+    },
+    "Seaborgium": {
+        "name": "Seaborgium",
+        "symbol": "Sg",
+        "classic": {
+            "atomic_number": "106",
+            "atomic_mass": "269.00",
+            "period": "7",
+            "group": "6",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": null,
+        "boiling-point": null,
+        "discovery-date": "1974",
+        "wiki": "https://en.wikipedia.org/wiki/Seaborgium",
+        "hints": {
+            "properties": [
+                "Named after nuclear chemist Glenn Seaborg",
+                "First synthesized in 1974 in Berkeley, California",
+                "Most stable isotope has a half-life of about 43 seconds"
+            ]
+        }
+    },
+    "Bohrium": {
+        "name": "Bohrium",
+        "symbol": "Bh",
+        "classic": {
+            "atomic_number": "107",
+            "atomic_mass": "264.00",
+            "period": "7",
+            "group": "7",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": null,
+        "boiling-point": null,
+        "discovery-date": "1981",
+        "wiki": "https://en.wikipedia.org/wiki/Bohrium",
+        "hints": {
+            "properties": [
+                "Synthesized first in 1981 in Germany",
+                "Named after physicist Niels Bohr",
+                "Belongs to group 7 of transition metals"
+            ]
+        }
+    },
+    "Hassium": {
+        "name": "Hassium",
+        "symbol": "Hs",
+        "classic": {
+            "atomic_number": "108",
+            "atomic_mass": "269.00",
+            "period": "7",
+            "group": "8",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Transition Metal"
+        },
+        "melting-point": null,
+        "boiling-point": null,
+        "discovery-date": "1984",
+        "wiki": "https://en.wikipedia.org/wiki/Hassium",
+        "hints": {
+            "properties": [
+                "First synthesized in 1984 by German scientists",
+                "Named after the German state of Hesse (Hassium in Latin)",
+                "Most stable isotope has a half-life of about 10 seconds"
+            ]
+        }
+    },
+    "Meitnerium": {
+        "name": "Meitnerium",
+        "symbol": "Mt",
+        "classic": {
+            "atomic_number": "109",
+            "atomic_mass": "278.00",
+            "period": "7",
+            "group": "9",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Unknown"
+        },
+        "melting-point": null,
+        "boiling-point": null,
+        "discovery-date": "1982",
+        "wiki": "https://en.wikipedia.org/wiki/Meitnerium",
+        "hints": {
+            "properties": [
+                "Synthetic element first created in 1982 in Germany",
+                "Named after physicist Lise Meitner",
+                "Has an atomic number of 109"
+            ]
+        }
+    },
+    "Darmstadtium": {
+        "name": "Darmstadtium",
+        "symbol": "Ds",
+        "classic": {
+            "atomic_number": "110",
+            "atomic_mass": "281.00",
+            "period": "7",
+            "group": "10",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Unknown"
+        },
+        "melting-point": null,
+        "boiling-point": null,
+        "discovery-date": "1994",
+        "wiki": "https://en.wikipedia.org/wiki/Darmstadtium",
+        "hints": {
+            "properties": [
+                "Synthetic element first created in 1994 in Darmstadt, Germany",
+                "Has an atomic number of 110",
+                "Most stable isotope has a half-life of about 30 seconds"
+            ]
+        }
+    },
+    "Roentgenium": {
+        "name": "Roentgenium",
+        "symbol": "Rg",
+        "classic": {
+            "atomic_number": "111",
+            "atomic_mass": "282.00",
+            "period": "7",
+            "group": "11",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Unknown"
+        },
+        "melting-point": null,
+        "boiling-point": null,
+        "discovery-date": "1994",
+        "wiki": "https://en.wikipedia.org/wiki/Roentgenium",
+        "hints": {
+            "properties": [
+                "Named after Wilhelm Röntgen, discoverer of X-rays",
+                "Highly radioactive synthetic element first created in 1994",
+                "Most stable isotope has a half-life of only 3.6 seconds"
+            ]
+        }
+    },
+    "Copernicium": {
+        "name": "Copernicium",
+        "symbol": "Cn",
+        "classic": {
+            "atomic_number": "112",
+            "atomic_mass": "285.00",
+            "period": "7",
+            "group": "12",
+            "phase-at-stp": "Liquid",
+            "block": "d-block",
+            "element_type": "Unknown"
+        },
+        "melting-point": "10 ± 11 °C (283 ± 11 K)",
+        "boiling-point": "67 ± 10 °C (340 ± 10 K)",
+        "discovery-date": "1996",
+        "wiki": "https://en.wikipedia.org/wiki/Copernicium",
+        "hints": {
+            "properties": [
+                "Synthetic element named after astronomer Nicolaus Copernicus",
+                "Has a predicted boiling point near room temperature (357K)",
+                "Most stable isotope (Cn-285) has a half-life of about 29 seconds"
+            ]
+        }
+    },
+    "Nihonium": {
+        "name": "Nihonium",
+        "symbol": "Nh",
+        "classic": {
+            "atomic_number": "113",
+            "atomic_mass": "286.00",
+            "period": "7",
+            "group": "13",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Unknown"
+        },
+        "melting-point": "430 °C (700 K)",
+        "boiling-point": "1130 °C (1430 K)",
+        "discovery-date": "2003",
+        "wiki": "https://en.wikipedia.org/wiki/Nihonium",
+        "hints": {
+            "properties": [
+                "First discovered by scientists in Japan at RIKEN",
+                "Element 113 on the periodic table",
+                "Exists for less than a second before decaying"
+            ]
+        }
+    },
+    "Flerovium": {
+        "name": "Flerovium",
+        "symbol": "Fl",
+        "classic": {
+            "atomic_number": "114",
+            "atomic_mass": "289.00",
+            "period": "7",
+            "group": "14",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Unknown"
+        },
+        "melting-point": "11 ± 50 °C (284 ± 50 K)",
+        "boiling-point": null,
+        "discovery-date": "1998",
+        "wiki": "https://en.wikipedia.org/wiki/Flerovium",
+        "hints": {
+            "properties": [
+                "First synthesized in 1998 at Russia's Joint Institute for Nuclear Research",
+                "Most stable isotope has a half-life of about 2.6 seconds",
+                "Predicted to be unusually volatile for a Group 14 element due to relativistic effects"
+            ]
+        }
+    },
+    "Moscovium": {
+        "name": "Moscovium",
+        "symbol": "Mc",
+        "classic": {
+            "atomic_number": "115",
+            "atomic_mass": "289.00",
+            "period": "7",
+            "group": "15",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Unknown"
+        },
+        "melting-point": "400 °C (670 K)",
+        "boiling-point": "1100 °C (1400 K)",
+        "discovery-date": "2003",
+        "wiki": "https://en.wikipedia.org/wiki/Moscovium",
+        "hints": {
+            "properties": [
+                "First synthesized in 2003 in Dubna, Russia",
+                "Has an atomic number of 115",
+                "Most stable isotope has a half-life of about 650 milliseconds"
+            ]
+        }
+    },
+    "Livermorium": {
+        "name": "Livermorium",
+        "symbol": "Lv",
+        "classic": {
+            "atomic_number": "116",
+            "atomic_mass": "293.00",
+            "period": "7",
+            "group": "16",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Unknown"
+        },
+        "melting-point": "364–507 °C (637–780 K)",
+        "boiling-point": "762–862 °C (1035–1135 K)",
+        "discovery-date": "2000",
+        "wiki": "https://en.wikipedia.org/wiki/Livermorium",
+        "hints": {
+            "properties": [
+                "Created artificially in 2000 at the Joint Institute for Nuclear Research",
+                "Named after Lawrence Livermore National Laboratory",
+                "Heaviest known Group 16 element"
+            ]
+        }
+    },
+    "Tennessine": {
+        "name": "Tennessine",
+        "symbol": "Ts",
+        "classic": {
+            "atomic_number": "117",
+            "atomic_mass": "294.00",
+            "period": "7",
+            "group": "17",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Unknown"
+        },
+        "melting-point": "610 °C (883 K)",
+        "boiling-point": null,
+        "discovery-date": "2010",
+        "wiki": "https://en.wikipedia.org/wiki/Tennessine",
+        "hints": {
+            "properties": [
+                "Named after the U.S. state where it was first synthesized",
+                "One of the heaviest elements ever created, with atomic number 117",
+                "Expected to be a highly reactive halogen, though not enough atoms have been produced to confirm its properties"
+            ]
+        }
+    },
+    "Oganesson": {
+        "name": "Oganesson",
+        "symbol": "Og",
+        "classic": {
+            "atomic_number": "118",
+            "atomic_mass": "294.00",
+            "period": "7",
+            "group": "18",
+            "phase-at-stp": "Solid",
+            "block": "p-block",
+            "element_type": "Unknown"
+        },
+        "melting-point": null,
+        "boiling-point": null,
+        "discovery-date": "2002",
+        "wiki": "https://en.wikipedia.org/wiki/Oganesson",
+        "hints": {
+            "properties": [
+                "Named after nuclear physicist Yuri Oganessian",
+                "Heaviest known noble gas",
+                "First synthesized in 2002 at the Joint Institute for Nuclear Research"
+            ]
+        }
+    },
+    "Cerium": {
+        "name": "Cerium",
+        "symbol": "Ce",
+        "classic": {
+            "atomic_number": "58",
+            "atomic_mass": "140.12",
+            "period": "6",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Lanthanide"
+        },
+        "melting-point": "795 °C (1068 K)",
+        "boiling-point": "3257 °C (3530.15 K)",
+        "discovery-date": "1803",
+        "wiki": "https://en.wikipedia.org/wiki/Cerium",
+        "hints": {
+            "properties": [
+                "Used in self-cleaning ovens as cerium oxide",
+                "Historically used in gas lamp mantles for bright light",
+                "Most abundant of all rare earth elements in Earth's crust"
+            ]
+        }
+    },
+    "Praseodymium": {
+        "name": "Praseodymium",
+        "symbol": "Pr",
+        "classic": {
+            "atomic_number": "59",
+            "atomic_mass": "140.91",
+            "period": "6",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Lanthanide"
+        },
+        "melting-point": "930.85 °C (1204 K)",
+        "boiling-point": "3520 °C (3793.15 K)",
+        "discovery-date": "1885",
+        "wiki": "https://en.wikipedia.org/wiki/Praseodymium",
+        "hints": {
+            "properties": [
+                "Used in magnets for electric vehicles and wind turbines",
+                "Gives glass a yellowish-green tint",
+                "A rare earth element named from Greek words meaning 'green twin'"
+            ]
+        }
+    },
+    "Neodymium": {
+        "name": "Neodymium",
+        "symbol": "Nd",
+        "classic": {
+            "atomic_number": "60",
+            "atomic_mass": "144.24",
+            "period": "6",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Lanthanide"
+        },
+        "melting-point": "1020.85 °C (1294.15 K)",
+        "boiling-point": "3073.85 °C (3347 K)",
+        "discovery-date": "1885",
+        "wiki": "https://en.wikipedia.org/wiki/Neodymium",
+        "hints": {
+            "properties": [
+                "Used to make the world's strongest permanent magnets",
+                "Gives glass a purple-reddish tint when added",
+                "Found in headphones and hybrid car motors"
+            ]
+        }
+    },
+    "Promethium": {
+        "name": "Promethium",
+        "symbol": "Pm",
+        "classic": {
+            "atomic_number": "61",
+            "atomic_mass": "145.00",
+            "period": "6",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Lanthanide"
+        },
+        "melting-point": "1041.85 °C (1315 K)",
+        "boiling-point": "2999.85 °C (3273 K)",
+        "discovery-date": "1945",
+        "wiki": "https://en.wikipedia.org/wiki/Promethium",
+        "hints": {
+            "properties": [
+                "Only radioactive element in the lanthanide series that has no stable isotopes",
+                "First discovered in uranium fission products in 1945",
+                "Used in atomic batteries for space probes and satellites"
+            ]
+        }
+    },
+    "Samarium": {
+        "name": "Samarium",
+        "symbol": "Sm",
+        "classic": {
+            "atomic_number": "62",
+            "atomic_mass": "150.36",
+            "period": "6",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Lanthanide"
+        },
+        "melting-point": "1072 °C (1345 K)",
+        "boiling-point": "1793.85 °C (2067 K)",
+        "discovery-date": "1879",
+        "wiki": "https://en.wikipedia.org/wiki/Samarium",
+        "hints": {
+            "properties": [
+                "Used in powerful permanent magnets, especially samarium-cobalt magnets",
+                "Named after the mineral samarskite, itself named after Russian mining official Colonel Samarski",
+                "A rare earth element with a silvery-white metallic luster"
+            ]
+        }
+    },
+    "Europium": {
+        "name": "Europium",
+        "symbol": "Eu",
+        "classic": {
+            "atomic_number": "63",
+            "atomic_mass": "151.96",
+            "period": "6",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Lanthanide"
+        },
+        "melting-point": "826 °C (1099.15 K)",
+        "boiling-point": "1529 °C (1802.15 K)",
+        "discovery-date": "1901",
+        "wiki": "https://en.wikipedia.org/wiki/Europium",
+        "hints": {
+            "properties": [
+                "Used in red phosphors for TV screens and LED displays",
+                "Named after the continent of Europe",
+                "Glows bright red under ultraviolet light"
+            ]
+        }
+    },
+    "Gadolinium": {
+        "name": "Gadolinium",
+        "symbol": "Gd",
+        "classic": {
+            "atomic_number": "64",
+            "atomic_mass": "157.25",
+            "period": "6",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Lanthanide"
+        },
+        "melting-point": "1311.85 °C (1585 K)",
+        "boiling-point": "3271.85 °C (3545 K)",
+        "discovery-date": "1880",
+        "wiki": "https://en.wikipedia.org/wiki/Gadolinium",
+        "hints": {
+            "properties": [
+                "Used in MRI contrast agents to improve image quality",
+                "Has the highest neutron absorption cross-section of any stable element",
+                "Named after Finnish chemist Johan Gadolin"
+            ]
+        }
+    },
+    "Terbium": {
+        "name": "Terbium",
+        "symbol": "Tb",
+        "classic": {
+            "atomic_number": "65",
+            "atomic_mass": "158.93",
+            "period": "6",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Lanthanide"
+        },
+        "melting-point": "1355.85 °C (1629 K)",
+        "boiling-point": "3230 °C (3503.15 K)",
+        "discovery-date": "1843",
+        "wiki": "https://en.wikipedia.org/wiki/Terbium",
+        "hints": {
+            "properties": [
+                "Used in magnetic materials for high-tech devices",
+                "Emits a pale pink glow when oxidized",
+                "Named after Ytterby, a Swedish village"
+            ]
+        }
+    },
+    "Dysprosium": {
+        "name": "Dysprosium",
+        "symbol": "Dy",
+        "classic": {
+            "atomic_number": "66",
+            "atomic_mass": "162.50",
+            "period": "6",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Lanthanide"
+        },
+        "melting-point": "1411.85 °C (1685 K)",
+        "boiling-point": "2566.85 °C (2840 K)",
+        "discovery-date": "1886",
+        "wiki": "https://en.wikipedia.org/wiki/Dysprosium",
+        "hints": {
+            "properties": [
+                "Named from the Greek word 'dysprositos' meaning 'hard to get at'",
+                "Used in neodymium-iron-boron permanent magnets to improve their performance at high temperatures",
+                "Has one of the highest magnetic strengths of any element when cooled"
+            ]
+        }
+    },
+    "Holmium": {
+        "name": "Holmium",
+        "symbol": "Ho",
+        "classic": {
+            "atomic_number": "67",
+            "atomic_mass": "164.93",
+            "period": "6",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Lanthanide"
+        },
+        "melting-point": "1474 °C (1747.15 K)",
+        "boiling-point": "2694.85 °C (2968 K)",
+        "discovery-date": "1878",
+        "wiki": "https://en.wikipedia.org/wiki/Holmium",
+        "hints": {
+            "properties": [
+                "Named after Stockholm (Holmia in Latin), where it was discovered",
+                "Has one of the highest magnetic strengths of any naturally occurring element",
+                "Commonly used in magnetic resonance imaging (MRI) machines as contrast agents"
+            ]
+        }
+    },
+    "Erbium": {
+        "name": "Erbium",
+        "symbol": "Er",
+        "classic": {
+            "atomic_number": "68",
+            "atomic_mass": "167.26",
+            "period": "6",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Lanthanide"
+        },
+        "melting-point": "1528.85 °C (1802 K)",
+        "boiling-point": "2868 °C (3141.15 K)",
+        "discovery-date": "1843",
+        "wiki": "https://en.wikipedia.org/wiki/Erbium",
+        "hints": {
+            "properties": [
+                "Essential component in optical fiber amplifiers",
+                "Pink-colored rare earth element",
+                "Named after the Swedish town of Ytterby"
+            ]
+        }
+    },
+    "Thulium": {
+        "name": "Thulium",
+        "symbol": "Tm",
+        "classic": {
+            "atomic_number": "69",
+            "atomic_mass": "168.93",
+            "period": "6",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Lanthanide"
+        },
+        "melting-point": "1544.85 °C (1818 K)",
+        "boiling-point": "1950 °C (2223.15 K)",
+        "discovery-date": "1879",
+        "wiki": "https://en.wikipedia.org/wiki/Thulium",
+        "hints": {
+            "properties": [
+                "Rare earth element named after the ancient name for Scandinavia",
+                "Has the highest magnetic moment of any element in its pure metal form",
+                "Used in portable X-ray devices and laser technology"
+            ]
+        }
+    },
+    "Ytterbium": {
+        "name": "Ytterbium",
+        "symbol": "Yb",
+        "classic": {
+            "atomic_number": "70",
+            "atomic_mass": "173.04",
+            "period": "6",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Lanthanide"
+        },
+        "melting-point": "819 °C (1092.15 K)",
+        "boiling-point": "1195.85 °C (1469 K)",
+        "discovery-date": "1878",
+        "wiki": "https://en.wikipedia.org/wiki/Ytterbium",
+        "hints": {
+            "properties": [
+                "Silvery rare earth metal that tarnishes in air",
+                "Named after the Swedish village of Ytterby",
+                "Used in fiber-optic technology for signal amplification"
+            ]
+        }
+    },
+    "Lutetium": {
+        "name": "Lutetium",
+        "symbol": "Lu",
+        "classic": {
+            "atomic_number": "71",
+            "atomic_mass": "174.97",
+            "period": "6",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Lanthanide"
+        },
+        "melting-point": "1662.85 °C (1936 K)",
+        "boiling-point": "3402 °C (3675.15 K)",
+        "discovery-date": "1907",
+        "wiki": "https://en.wikipedia.org/wiki/Lutetium",
+        "hints": {
+            "properties": [
+                "Last lanthanide in the periodic table",
+                "Used in devices for Positron Emission Tomography (PET) scans",
+                "Has the highest density of all lanthanides"
+            ]
+        }
+    },
+    "Thorium": {
+        "name": "Thorium",
+        "symbol": "Th",
+        "classic": {
+            "atomic_number": "90",
+            "atomic_mass": "232.04",
+            "period": "7",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Actinide"
+        },
+        "melting-point": "1754.85 °C (2028 K)",
+        "boiling-point": "4786.85 °C (5060 K)",
+        "discovery-date": "1828",
+        "wiki": "https://en.wikipedia.org/wiki/Thorium",
+        "hints": {
+            "properties": [
+                "Named after Thor, the Norse god of thunder",
+                "Proposed alternative nuclear fuel to uranium",
+                "Radioactive metal with atomic number 90"
+            ]
+        }
+    },
+    "Protactinium": {
+        "name": "Protactinium",
+        "symbol": "Pa",
+        "classic": {
+            "atomic_number": "91",
+            "atomic_mass": "231.04",
+            "period": "7",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Actinide"
+        },
+        "melting-point": "1568 °C (1841.15 K)",
+        "boiling-point": "4000 °C (4273.15 K)",
+        "discovery-date": "1913",
+        "wiki": "https://en.wikipedia.org/wiki/Protactinium",
+        "hints": {
+            "properties": [
+                "Discovered in 1913 as a decay product of Uranium-235",
+                "Named from the Greek 'protos' meaning first, as it's the parent of Actinium",
+                "Has a half-life of 32,760 years in its most stable isotope Pa-231"
+            ]
+        }
+    },
+    "Uranium": {
+        "name": "Uranium",
+        "symbol": "U",
+        "classic": {
+            "atomic_number": "92",
+            "atomic_mass": "238.03",
+            "period": "7",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Actinide"
+        },
+        "melting-point": "1132.2 °C (1405.35 K)",
+        "boiling-point": "4131 °C (4404.15 K)",
+        "discovery-date": "1789",
+        "wiki": "https://en.wikipedia.org/wiki/Uranium",
+        "hints": {
+            "properties": [
+                "Primary fuel for nuclear power plants",
+                "Named after the planet Uranus",
+                "Naturally occurring isotope U-238 has a half-life of 4.5 billion years"
+            ]
+        }
+    },
+    "Neptunium": {
+        "name": "Neptunium",
+        "symbol": "Np",
+        "classic": {
+            "atomic_number": "93",
+            "atomic_mass": "237.05",
+            "period": "7",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Actinide"
+        },
+        "melting-point": "638.85 °C (912 K)",
+        "boiling-point": "3901.85 °C (4175 K)",
+        "discovery-date": "1940",
+        "wiki": "https://en.wikipedia.org/wiki/Neptunium",
+        "hints": {
+            "properties": [
+                "First synthetic transuranium element discovered",
+                "Named after the planet Neptune",
+                "Most commonly produced as a byproduct of nuclear reactors"
+            ]
+        }
+    },
+    "Plutonium": {
+        "name": "Plutonium",
+        "symbol": "Pu",
+        "classic": {
+            "atomic_number": "94",
+            "atomic_mass": "244",
+            "period": "7",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Actinide"
+        },
+        "melting-point": "639.4 °C (912.55 K)",
+        "boiling-point": "3231.85 °C (3505 K)",
+        "discovery-date": "1940",
+        "wiki": "https://en.wikipedia.org/wiki/Plutonium",
+        "hints": {
+            "properties": [
+                "First synthesized at Berkeley Lab in 1940",
+                "Named after the dwarf planet Pluto",
+                "Used as fuel in nuclear reactors and weapons"
+            ]
+        }
+    },
+    "Americium": {
+        "name": "Americium",
+        "symbol": "Am",
+        "classic": {
+            "atomic_number": "95",
+            "atomic_mass": "243",
+            "period": "7",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Actinide"
+        },
+        "melting-point": "1175.85 °C (1449 K)",
+        "boiling-point": "2606.85 °C (2880 K)",
+        "discovery-date": "1944",
+        "wiki": "https://en.wikipedia.org/wiki/Americium",
+        "hints": {
+            "properties": [
+                "Used in smoke detectors until the early 2000s",
+                "Synthetic element first produced at UC Berkeley in 1944",
+                "Named after the Americas, the first transuranium element to be named after a continent"
+            ]
+        }
+    },
+    "Curium": {
+        "name": "Curium",
+        "symbol": "Cm",
+        "classic": {
+            "atomic_number": "96",
+            "atomic_mass": "247",
+            "period": "7",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Actinide"
+        },
+        "melting-point": "1346.85 °C (1620 K)",
+        "boiling-point": "3109.85 °C (3383 K)",
+        "discovery-date": "1944",
+        "wiki": "https://en.wikipedia.org/wiki/Curium",
+        "hints": {
+            "properties": [
+                "Synthesized in 1944, named after Marie and Pierre Curie",
+                "Used as an alpha particle source in Alpha Particle X-ray Spectrometers on Mars rovers",
+                "All isotopes are radioactive with half-lives ranging from a few minutes to millions of years"
+            ]
+        }
+    },
+    "Berkelium": {
+        "name": "Berkelium",
+        "symbol": "Bk",
+        "classic": {
+            "atomic_number": "97",
+            "atomic_mass": "247",
+            "period": "7",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Actinide"
+        },
+        "melting-point": "984.85 °C (1258 K)",
+        "boiling-point": "2627 °C (2900.15 K)",
+        "discovery-date": "1949",
+        "wiki": "https://en.wikipedia.org/wiki/Berkelium",
+        "hints": {
+            "properties": [
+                "Synthetic actinide element first synthesized at UC Berkeley in 1949",
+                "Most stable isotope has a half-life of 330 days",
+                "Usually produced by bombarding americium with alpha particles"
+            ]
+        }
+    },
+    "Californium": {
+        "name": "Californium",
+        "symbol": "Cf",
+        "classic": {
+            "atomic_number": "98",
+            "atomic_mass": "251",
+            "period": "7",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Actinide"
+        },
+        "melting-point": "898.85 °C (1172 K)",
+        "boiling-point": "1472 °C (1745.15 K)",
+        "discovery-date": "1950",
+        "wiki": "https://en.wikipedia.org/wiki/Californium",
+        "hints": {
+            "properties": [
+                "Synthetic element first created at UC Berkeley in 1950",
+                "Used as a neutron source in portable metal detectors",
+                "Named after the state where it was discovered"
+            ]
+        }
+    },
+    "Einsteinium": {
+        "name": "Einsteinium",
+        "symbol": "Es",
+        "classic": {
+            "atomic_number": "99",
+            "atomic_mass": "252",
+            "period": "7",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Actinide"
+        },
+        "melting-point": "860 °C (1133.15 K)",
+        "boiling-point": "996 °C (1269 K)",
+        "discovery-date": "1952",
+        "wiki": "https://en.wikipedia.org/wiki/Einsteinium",
+        "hints": {
+            "properties": [
+                "Named after physicist Albert Einstein",
+                "First discovered in debris from hydrogen bomb test",
+                "Has never been observed in pure form due to radioactivity"
+            ]
+        }
+    },
+    "Fermium": {
+        "name": "Fermium",
+        "symbol": "Fm",
+        "classic": {
+            "atomic_number": "100",
+            "atomic_mass": "257",
+            "period": "7",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Actinide"
+        },
+        "melting-point": "1526.85 °C (1800 K)",
+        "boiling-point": null,
+        "discovery-date": "1953",
+        "wiki": "https://en.wikipedia.org/wiki/Fermium",
+        "hints": {
+            "properties": [
+                "Named after physicist Enrico Fermi",
+                "First discovered in debris from hydrogen bomb testing",
+                "Has never been observed in pure form due to rapid radioactive decay"
+            ]
+        }
+    },
+    "Mendelevium": {
+        "name": "Mendelevium",
+        "symbol": "Md",
+        "classic": {
+            "atomic_number": "101",
+            "atomic_mass": "258",
+            "period": "7",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Actinide"
+        },
+        "melting-point": "826.55 °C (1100 K)",
+        "boiling-point": null,
+        "discovery-date": "1955",
+        "wiki": "https://en.wikipedia.org/wiki/Mendelevium",
+        "hints": {
+            "properties": [
+                "Named after the creator of the periodic table, Dmitri Mendeleev",
+                "First synthesized in 1955 at UC Berkeley",
+                "Isotope 258Md has the longest half-life of 51.5 days"
+            ]
+        }
+    },
+    "Nobelium": {
+        "name": "Nobelium",
+        "symbol": "No",
+        "classic": {
+            "atomic_number": "102",
+            "atomic_mass": "259",
+            "period": "7",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "f-block",
+            "element_type": "Actinide"
+        },
+        "melting-point": "826.85 °C (1100 K)",
+        "boiling-point": null,
+        "discovery-date": "1958",
+        "wiki": "https://en.wikipedia.org/wiki/Nobelium",
+        "hints": {
+            "properties": [
+                "Named after Alfred Nobel and first synthesized in 1958",
+                "Has never been observed in its pure form due to its rapid decay",
+                "Artificially created transuranium element with atomic number 102"
+            ]
+        }
+    },
+    "Lawrencium": {
+        "name": "Lawrencium",
+        "symbol": "Lr",
+        "classic": {
+            "atomic_number": "103",
+            "atomic_mass": "262",
+            "period": "7",
+            "group": "3",
+            "phase-at-stp": "Solid",
+            "block": "d-block",
+            "element_type": "Actinide"
+        },
+        "melting-point": "1627 °C (1900.15 K)",
+        "boiling-point": null,
+        "discovery-date": "1961",
+        "wiki": "https://en.wikipedia.org/wiki/Lawrencium",
+        "hints": {
+            "properties": [
+                "First synthesized at UC Berkeley in 1961",
+                "Most stable isotope has half-life of about 53 hours",
+                "Expected to behave chemically like other actinides despite limited study"
             ]
         }
     }
