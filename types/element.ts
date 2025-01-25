@@ -14,9 +14,9 @@ export interface Element {
     name: string;
     symbol: string;
     classic: ElementClassic;
-    "melting-point": string;
-    "boiling-point": string;
-    "discovery-date": string;
+    "melting-point": string | null;
+    "boiling-point": string | null;
+    "discovery-date": string | null;
     wiki: string;
     hints: {
         properties: string[];
