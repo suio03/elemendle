@@ -18,6 +18,7 @@ import { DataTransferUI } from "./data-transfer-ui"
 import Data from "@/public/images/data.svg"
 import { useTranslations } from "next-intl"
 import LanSwitcher from '@/components/lan-switcher'
+import { useGameGuide } from '@/contexts/game-guide-context'
 
 export default function GameHeader() {
     const t = useTranslations('header')
@@ -25,6 +26,7 @@ export default function GameHeader() {
         currentStreak: 0,
     }))
     const [isDataModalOpen, setIsDataModalOpen] = useState(false)
+    const { toggleGuide } = useGameGuide()
 
     useEffect(() => {
         setStats(getStoredStatistics())
@@ -99,10 +101,7 @@ export default function GameHeader() {
                             <img
                                 src={Help.src}
                                 alt="Help"
-                                onClick={() => {
-                                    const howToPlay = document.getElementById('how-to-play')
-                                    howToPlay?.scrollIntoView({ behavior: 'smooth' })
-                                }}
+                                onClick={toggleGuide}
                                 className="w-8 transition-transform hover:scale-110 cursor-pointer"
                             />
                         </TooltipTrigger>
