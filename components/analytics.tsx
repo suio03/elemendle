@@ -3,9 +3,9 @@ import Script from 'next/script'
 const Analytics = () => (
     <>
         {/* google analytics */}
-        {/* <Script
+        <Script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=G-QT9BM5YVSD"
+            src="https://www.googletagmanager.com/gtag/js?id=G-ZD8C67DLYH"
         />
 
 
@@ -17,7 +17,7 @@ const Analytics = () => (
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
 
-                gtag('config', 'G-QT9BM5YVSD');
+                gtag('config', 'G-ZD8C67DLYH');
                 `,
             }}
         />
@@ -30,10 +30,10 @@ const Analytics = () => (
                     c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                     t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
                     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                })(window, document, "clarity", "script", "pq42vqw88g");
+                })(window, document, "clarity", "script", "qfrwrld0of");
         `
             }}
-        /> */}
+        />
         <Script
             defer data-domain="elemendle.com" src="https://actone.app/js/script.js"
         />
