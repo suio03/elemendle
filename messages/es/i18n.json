@@ -37,6 +37,11 @@
     "input-placeholder": "Introduce el nombre o símbolo del elemento...",
     "solved-count": "¡personas ya adivinaron este elemento!",
     "yesterday-character": "El elemento de ayer fue ",
+    "hints-toggle": {
+      "on": "Pistas: Activadas",
+      "off": "Pistas: Desactivadas",
+      "info": "Las pistas se desbloquean después de 5 intentos fallidos."
+    },
     "grid": {
       "headers": {
         "element": {

@@ -37,6 +37,11 @@
     "input-placeholder": "Voer elementnaam of symbool in...",
     "solved-count": "mensen hebben dit element al geraden!",
     "yesterday-character": "Het element van gisteren was ",
+    "hints-toggle": {
+      "on": "Hints: aan",
+      "off": "Hints: uit",
+      "info": "Hints worden ontgrendeld na 5 foutieve pogingen."
+    },
     "grid": {
       "headers": {
         "element": {

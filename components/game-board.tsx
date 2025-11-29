@@ -97,6 +97,7 @@ export default function GameBoard() {
     const [filteredElements, setFilteredElements] = useState<Element[]>([])
     const [currentHint, setCurrentHint] = useState<number | null>(null)
     const [showHint, setShowHint] = useState(true)
+    const [hintsEnabled, setHintsEnabled] = useState(true)
 
     const colorItems = [
         {
@@ -282,13 +283,31 @@ export default function GameBoard() {
                                 {t('title')}
                             </h2>
 
-                            {currentHint !== null && showHint && (
+                            {currentHint !== null && showHint && hintsEnabled && (
                                 <HintMessage
                                     hintNumber={currentHint + 1}
                                     hintText={dailyGame.element.hints.properties[currentHint]}
                                     onDismiss={() => setShowHint(false)}
                                 />
                             )}
+                            <div className="flex items-center justify-end mb-2 text-xs text-[#9CCAD3]/70">
+                                <TooltipProvider>
+                                    <Tooltip>
+                                        <TooltipTrigger asChild>
+                                            <button
+                                                type="button"
+                                                onClick={() => setHintsEnabled(prev => !prev)}
+                                                className="underline underline-offset-2 hover:text-[#9CCAD3]"
+                                            >
+                                                {hintsEnabled ? t('hints-toggle.on') : t('hints-toggle.off')}
+                                            </button>
+                                        </TooltipTrigger>
+                                        <TooltipContent>
+                                            <p>{t('hints-toggle.info')}</p>
+                                        </TooltipContent>
+                                    </Tooltip>
+                                </TooltipProvider>
+                            </div>
                             <div className="flex gap-2 mb-6">
                                 <div className="relative flex-1">
                                     <input
@@ -342,7 +361,7 @@ export default function GameBoard() {
                     <span className="text-red-300">{dailyGame.solved_count}</span> {t('solved-count', { count: dailyGame.solved_count })}
                 </p>
                 {
-                    gameState.gameStatus !== "won" && gameState.guesses.length > 0 && (
+                    (gameState.gameStatus === "in-progress" || gameState.gameStatus === "won") && gameState.guesses.length > 0 && (
                         <div className="relative w-full flex justify-center">
                             <ScrollArea className="w-full max-w-[700px] whitespace-nowrap rounded-lg">
                                 <div className="w-[700px]">

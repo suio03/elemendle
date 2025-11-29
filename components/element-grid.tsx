@@ -4,6 +4,8 @@ import { ElementGuessResult, Element } from "@/types/element"
 import ElementBox from "./element-box"
 import Arrow from "@/public/images/arrow.svg"
 import ArrowUp from "@/public/images/arrow-up.svg"
+import ArrowLeft from "@/public/images/arrow-left.svg"
+import ArrowRight from "@/public/images/arrow-right.svg"
 import { motion } from "framer-motion"
 
 interface ElementGridProps {
@@ -48,6 +50,22 @@ export default function ElementGrid({ guessResult, targetElement }: ElementGridP
                         header === "PERIOD" ? targetElement.classic.period :
                             targetElement.classic.group
             )
+            
+            // Determine arrow icon based on header type
+            let arrowSrc: string
+            if (header === "PERIOD") {
+                // For period: lower number = higher on table, so invert the logic
+                // If guess period is higher (e.g., 3) than target (e.g., 2), target is higher on table, show up arrow
+                arrowSrc = comparison.isHigher ? ArrowUp.src : Arrow.src
+            } else if (header === "GROUP") {
+                // For group: use left/right arrows
+                // If guess group is higher (e.g., 15) than target (e.g., 14), target is to the left, show left arrow
+                arrowSrc = comparison.isHigher ? ArrowLeft.src : ArrowRight.src
+            } else {
+                // For atomic number and atomic mass: keep original logic (down arrow when higher)
+                arrowSrc = comparison.isHigher ? Arrow.src : ArrowUp.src
+            }
+            
             return (
                 <div className="flex flex-col items-center justify-center relative h-full w-full">
                     <span className="relative z-10 font-semibold text-red-100">
@@ -55,7 +73,7 @@ export default function ElementGrid({ guessResult, targetElement }: ElementGridP
                     </span>
                     {!comparison.isMatch && (
                         <img
-                            src={comparison.isHigher ? Arrow.src : ArrowUp.src}
+                            src={arrowSrc}
                             alt="direction indicator"
                             className="w-16 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 opacity-50"
                         />

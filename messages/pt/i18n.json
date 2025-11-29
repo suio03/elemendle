@@ -37,6 +37,11 @@
     "input-placeholder": "Insira o nome ou símbolo do elemento...",
     "solved-count": "pessoas já adivinharam este elemento!",
     "yesterday-character": "O elemento de ontem foi ",
+    "hints-toggle": {
+      "on": "Dicas: Ativadas",
+      "off": "Dicas: Desativadas",
+      "info": "As dicas são desbloqueadas após 5 tentativas incorretas."
+    },
     "grid": {
       "headers": {
         "element": {

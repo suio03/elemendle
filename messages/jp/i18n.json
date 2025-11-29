@@ -37,6 +37,11 @@
     "input-placeholder": "元素名または記号を入力してください…",
     "solved-count": "人々が既にこの元素を当てています！",
     "yesterday-character": "昨日の元素は ",
+    "hints-toggle": {
+      "on": "ヒント：オン",
+      "off": "ヒント：オフ",
+      "info": "5回の不正解の後にヒントがアンロックされます。"
+    },
     "grid": {
       "headers": {
         "element": {

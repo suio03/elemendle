@@ -37,6 +37,11 @@
     "input-placeholder": "Entrez le nom ou le symbole de l'élément...",
     "solved-count": "personnes ont déjà deviné cet élément !",
     "yesterday-character": "L'élément d'hier était ",
+    "hints-toggle": {
+      "on": "Indices : activés",
+      "off": "Indices : désactivés",
+      "info": "Les indices se débloquent après 5 essais incorrects."
+    },
     "grid": {
       "headers": {
         "element": {

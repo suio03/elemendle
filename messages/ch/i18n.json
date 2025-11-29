@@ -37,6 +37,11 @@
     "input-placeholder": "输入元素名称或符号...",
     "solved-count": "人已猜到这个元素！",
     "yesterday-character": "昨天的元素是",
+    "hints-toggle": {
+      "on": "提示：开启",
+      "off": "提示：关闭",
+      "info": "提示会在5次错误猜测后解锁。"
+    },
     "grid": {
       "headers": {
         "element": {

@@ -37,6 +37,11 @@
     "input-placeholder": "Enter element name or symbol...",
     "solved-count": "people already guessed this element!",
     "yesterday-character": "Yesterday's Element was ",
+    "hints-toggle": {
+      "on": "Hints: On",
+      "off": "Hints: Off",
+      "info": "Hints unlock after 5 incorrect guesses."
+    },
     "grid": {
       "headers": {
         "element": {
@@ -221,7 +226,7 @@
       },
       {
         "title": "Watch for Patterns",
-        "description": "Notice patterns in element properties to make more informed guesses. For example, if an element is a metal, it is likely to be a metal."
+        "description": "Notice patterns in element properties to make more informed guesses. For example, elements in the same group often share similar properties, so recognizing one alkali metal can help you find others."
       },
       {
         "title": "Use the Hints",

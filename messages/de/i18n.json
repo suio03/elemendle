@@ -37,6 +37,11 @@
     "input-placeholder": "Elementname oder -symbol eingeben...",
     "solved-count": "Personen haben dieses Element bereits erraten!",
     "yesterday-character": "Das Element von gestern war ",
+    "hints-toggle": {
+      "on": "Hinweise: An",
+      "off": "Hinweise: Aus",
+      "info": "Hinweise werden nach 5 falschen Versuchen freigeschaltet."
+    },
     "grid": {
       "headers": {
         "element": {

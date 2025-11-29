@@ -37,6 +37,11 @@
     "input-placeholder": "원소 이름 또는 기호를 입력하세요...",
     "solved-count": "명이 이미 이 원소를 맞혔습니다!",
     "yesterday-character": "어제의 원소는 ",
+    "hints-toggle": {
+      "on": "힌트: 켜기",
+      "off": "힌트: 끄기",
+      "info": "5번의 잘못된 추측 후 힌트가 잠금 해제됩니다."
+    },
     "grid": {
       "headers": {
         "element": {

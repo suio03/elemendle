@@ -14,7 +14,7 @@ const ShareCard = ({ attempts, timeTaken }: ShareResultProps) => {
     const t = useTranslations('share')
     const { toast } = useToast()
     
-    const shareText = `I found #Bleachdle character in ${attempts} attempts (${timeTaken}s) ⚔️\n\nhttps://bleachdle.com`
+    const shareText = `${t('description', { attempts, timeTaken })}\n\nhttps://elemendle.com`
 
     const handleShare = async () => {
         // Copy to clipboard
