@@ -9,6 +9,7 @@
     ]
   },
   "header": {
+    "collection": "元素コレクション",
     "stats": {
       "tooltip": "統計",
       "play": "プレイしたゲーム",
@@ -26,13 +27,70 @@
       "name": "データの転送",
       "btn01": "データのエクスポート",
       "btn02": "データのインポート",
-      "description": "ゲームの統計データをエクスポートして、別のデバイスに転送します。"
+      "description": "デイリー履歴、進行中のゲーム、元素図鑑を別のデバイスへ転送します。",
+      "invalid-file": "有効な JSON ファイルを選択してください。",
+      "import-success": "Elemendle のデータをインポートしました。",
+      "import-failed": "このファイルには有効な Elemendle データがありません。",
+      "invalid-format": "選択したファイルを読み込めませんでした。",
+      "export-success": "Elemendle のデータをエクスポートしました。",
+      "export-failed": "データをエクスポートできませんでした。"
     },
     "how-to": "遊び方？",
     "language": "ゲームの言語を変更します。"
   },
   "game-board": {
     "title": "今日の元素を当ててみよう！",
+    "loading": "今日の元素を準備しています…",
+    "load-error": "今日のゲームを読み込めませんでした。しばらくしてから再試行してください。",
+    "invalid-guess": "有効な元素名または元素記号を入力してください。",
+    "already-guessed": "その元素はすでに予想済みです。",
+    "game-number": "デイリー #{number}",
+    "goal": "各属性の比較を手がかりに、9回以内で今日の元素を特定しましょう。",
+    "progress": "{used} / {total} 回",
+    "remaining": "残り {count} 回",
+    "complete": "完了",
+    "assist-on": "アシスト オン",
+    "assist-off": "アシスト オフ",
+    "assist-disabled-message": "アシストはオフです。ヒントが必要なときは上でオンにできます。",
+    "hints-title": "任意のヒント",
+    "hints-no-penalty": "ヒントを見てもスコア、連続記録、統計には影響しません。",
+    "next-hint": "次のヒントは第 {attempt} 回の予想後に解放されます。",
+    "all-hints-unlocked": "利用できるヒントはすべて解放されました。",
+    "reveal-hint": "ヒント {number} を見る",
+    "show-hint-again": "ヒント {number} をもう一度見る",
+    "hint-label": "ヒント {number}：",
+    "close-hint": "ヒント {number} を閉じる",
+    "candidates": {
+      "title": "候補コンパス",
+      "description": "すでに見た比較結果だけを使った推理マップを開きます。",
+      "assist-required": "推理マップを使うにはアシストをオンにしてください。",
+      "trail-label": "各予想後の候補数",
+      "initial-count": "開始時の候補は {count} 個",
+      "guess-count": "{guess} 回目の予想後は {count} 個",
+      "remaining-label": "すべての手がかりに一致",
+      "remaining-count": "候補 {count} 個",
+      "map-help": "明るいマスは候補、暗いマスは少なくとも一つの比較と矛盾します。",
+      "map-label": "スクロールできる候補元素周期表",
+      "map-summary": "{count} 個の候補元素を強調した周期表",
+      "candidate-element": "{element} は候補です",
+      "excluded-element": "{element} は除外されました",
+      "series": { "lanthanide": "ランタノイド", "actinide": "アクチノイド" }
+    },
+    "guess-history": "予想と属性の比較",
+    "guess-number": "予想 {number}",
+    "show-details": "その他の属性を表示",
+    "hide-details": "その他の属性を隠す",
+    "feedback-legend": "比較記号の説明",
+    "feedback": {
+      "exact": "完全一致",
+      "target-higher": "正解の値はより高い",
+      "target-lower": "正解の値はより低い",
+      "not-match": "一致しない"
+    },
+    "input-label": "元素名または元素記号",
+    "submit": "予想を送信",
+    "suggestion-details": "族 {group} · 周期 {period} · {phase}",
+    "yesterday-element": "昨日のデイリー #{gameNumber} は {element} でした。",
     "remaining-guesses": "残りの試行回数",
     "input-placeholder": "元素名または記号を入力してください…",
     "solved-count": "人々が既にこの元素を当てています！",
@@ -100,6 +158,114 @@
     "game-over": "ゲームオーバー！",
     "correct-answer": "正解は",
     "scroll-horizontal": "横にスクロールすると詳細情報が表示されます"
+  },
+  "practice": {
+    "mode-label": "ゲームモード",
+    "daily": "デイリー",
+    "practice": "練習",
+    "loading": "練習ラボを復元しています…",
+    "eyebrow": "無制限の化学ラボ",
+    "welcome-title": "周期表を練習しよう",
+    "welcome-description": "自分に合うペースを選び、いつでも元素の知識を磨けます。練習はデイリーの連続記録や統計に影響しません。",
+    "choose-difficulty": "難易度を選択",
+    "start": "練習を始める",
+    "back-to-challenges": "元素チャレンジ",
+    "local-note": "練習はこの端末に保存され、更新後も続けられます。",
+    "session-label": "練習 · {difficulty}",
+    "game-title": "謎の元素を見つけよう",
+    "game-goal": "属性を比較し、9回以内でローカルに選ばれた元素を特定しましょう。",
+    "difficulty": {
+      "label": "練習の難易度",
+      "easy": {
+        "title": "かんたん",
+        "description": "3、5、7回目の予想後にヒントが解放されます。"
+      },
+      "standard": {
+        "title": "標準",
+        "description": "デイリーと同じく5、7、8回目の予想後に解放されます。"
+      }
+    }
+  },
+  "challenge": {
+    "loading": "元素ラボを復元しています…", "eyebrow": "元素ラボ", "title": "表の先を考えよう。",
+    "description": "5つのクイック問題。手がかりを読み、規則を見つけ、答えの理由を学びます。デイリーの繰り返しではありません。",
+    "start-mixed": "ミックスチャレンジを開始", "five-questions": "5問", "choose-lab": "実験を選ぶ",
+    "choose-lab-description": "化学の直感を一つずつ鍛えよう。", "no-penalty": "ライフも連勝のプレッシャーもありません。学ぶだけです。", "start-lab": "この実験を開始",
+    "modes": {
+      "mixed": { "title": "ミックスチャレンジ", "description": "すべての実験を組み合わせた5問です。" },
+      "identity": { "title": "私は誰？", "description": "正確な属性から一つの元素を特定します。" },
+      "extreme": { "title": "元素の極値", "description": "最も重い、軽い、熱い、冷たい選択肢を探します。" },
+      "odd-one-out": { "title": "仲間外れ", "description": "指定された規則から外れる元素を見つけます。" }
+    },
+    "classic": { "title": "元の推理ゲームをお探しですか？", "description": "クラシック練習では、9回の属性比較とEasy・Standardのヒントを利用できます。", "action": "クラシック練習を開く" },
+    "exit": "チャレンジを終了", "question-count": "{total}問中 {current}問目", "think-first": "ゆっくり考えてください。間違いからも学べます。", "clue-number": "手がかり {number}",
+    "properties": {
+      "period": "周期", "group": "族", "block": "ブロック", "phase": "標準状態での相", "element-type": "元素の種類",
+      "atomic-number": "原子番号", "atomic-mass": "原子質量", "melting-point": "融点", "boiling-point": "沸点"
+    },
+    "questions": {
+      "identity": { "prompt": "この定義に合う元素は？", "instruction": "すべての手がかりは正確で、組み合わせると一つの元素になります。" },
+      "extreme": { "highest": "{property}が最も高い元素は？", "lowest": "{property}が最も低い元素は？" },
+      "odd-one-out": { "prompt": "{property}が異なる元素は？", "instruction": "3つは同じ値です。例外を見つけてください。" },
+      "choose-one": "4つの元素から1つ選んでください。"
+    },
+    "answer-label": "元素の答え", "answer-placeholder": "元素名または記号を入力…", "submit": "回答", "invalid-element": "有効な元素名または記号を選んでください。",
+    "feedback": { "correct": "正解です", "learning-moment": "覚えておきたいポイント", "learn-more": "{element}について詳しく見る" },
+    "explanations": { "identity": "{answer}だけが、この定義のすべての手がかりに一致します。", "extreme": "正解は{answer}で、{property}は{value}です。", "odd-one-out": "{answer}の{property}は「{answerValue}」、他の3つは「{commonValue}」です。" },
+    "continue": "続ける",
+    "result": {
+      "eyebrow": "実験完了", "title": "ラボノート完成",
+      "summary": { "strong": "鋭いパターン認識です。解説を確認して次のセットへ。", "steady": "いくつもの規則を見つけ、新しい知識も得ました。", "curious": "すべての答えが次回の手がかりになります。規則を復習して探索を続けましょう。" },
+      "score": "正解数", "time": "時間", "review": "今回わかったこと", "play-again": "別のセットに挑戦", "back-to-lab": "別の実験を選ぶ"
+    }
+  },
+  "result": {
+    "practice-next": "練習で探索を続ける", "practice-next-description": "新しい5問の元素チャレンジへ。", "view-collection": "元素コレクションを見る",
+    "new-discovery": "新しい元素を発見", "collection-updated": "コレクションを更新", "collection-count": "{count} / {total} 元素を発見",
+    "new-discovery-description": "{element}がコレクションに加わりました。", "collection-updated-description": "{element}のベスト記録を更新しました。",
+    "game-number": "デイリー #{number}",
+    "won-title": "元素を特定しました",
+    "lost-title": "チャレンジ完了",
+    "won-summary": "見事な推理です。結果と化学の豆知識を確認しましょう。",
+    "lost-summary": "9回の予想を使い切りました。正解と豆知識を確認できます。",
+    "performance": "今回の成績",
+    "attempts": "予想回数",
+    "time": "時間",
+    "streak": "連続記録",
+    "assist": "アシスト",
+    "assisted": "使用済み",
+    "no-hints": "ヒントなし",
+    "learn": "今日の元素",
+    "did-you-know": "知っていましたか？",
+    "fact-fallback": "元素カードを開くと詳細を確認できます。",
+    "next": "次は？",
+    "practice-coming-soon": "練習モード · 近日公開",
+    "practice-description": "無制限の元素練習は Release 3 で登場します。",
+    "share": "結果を共有",
+    "copied": "結果をクリップボードにコピーしました。",
+    "share-error": "結果を共有できませんでした。もう一度お試しください。",
+    "share-win": "Elemendle #{gameNumber} · {attempts}/9",
+    "share-loss": "Elemendle #{gameNumber} · {attempts}/9",
+    "practice-label": "練習 · {difficulty}",
+    "practice-won-title": "練習クリア",
+    "practice-lost-title": "ラウンド終了",
+    "practice-won-summary": "見事な推理です。元素を復習して、準備ができたら続けましょう。",
+    "practice-lost-summary": "今回は逃しましたが、比較するたびに周期表の直感が身につきます。",
+    "difficulty": "難易度",
+    "difficulty-easy": "かんたん",
+    "difficulty-standard": "標準",
+    "choose-next-difficulty": "次のラウンドの難易度",
+    "play-again": "別の元素を練習",
+    "practice-share-win": "Elemendle 練習 · {attempts}/9",
+    "practice-share-loss": "Elemendle 練習 · {attempts}/9",
+    "next-element": "次のデイリー元素まで {countdown}"
+  },
+  "collection": {
+    "loading": "元素アーカイブを開いています…", "eyebrow": "個人元素アーカイブ", "title": "あなたの周期的な発見。",
+    "description": "正解した元素は永久に記録されます。発見した元素と記録をいつでも確認できます。", "progress": "収集進度", "discovered-count": "{count} / {total} 元素を発見", "new-discoveries": "今回の新発見：{elements}", "view": "コレクションを見る",
+    "table-title": "周期表コレクション", "table-description": "発見した元素が周期表の正しい位置で輝きます。", "scroll-hint": "スワイプして表を見る", "recent": "最近の発見",
+    "element-label": "{element}を見る", "locked-label": "原子番号{number}は未発見", "sources": { "daily": "デイリー", "classic": "クラシック練習", "challenge": "元素チャレンジ" },
+    "detail": { "discovered-element": "発見した元素", "learn-more": "元素資料を開く", "first-source": "最初の発見場所", "first-date": "初回発見日", "best-attempts": "最少予想", "best-time": "ベストタイム" }
   },
   "victory": {
     "title": "勝利！",
@@ -193,7 +359,7 @@
       },
       {
         "question": "私のデータはどのように保存されますか？",
-        "answer": "あなたのデータはあなたのデバイスにローカルに保存されます。私たちはあなたからデータを収集しません。"
+        "answer": "ゲームの進行状況は端末内に保存されます。開始、完了、共有など、Cookieを使わない匿名のゲームイベントのみを収集します。答え、具体的な推測、自由入力、エクスポートデータ、永続的な識別子は収集しません。"
       },
       {
         "question": "Elemendleゲームは無料ですか？",

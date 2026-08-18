@@ -1,457 +1,149 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { useWindowSize } from 'react-use'
-import { Element, ElementGameState, ElementCategory } from "@/types/element"
-import { getStoredGameState, storeGameState, validateAndUpdateGameState, updateStatistics, addToHistory, calculateTimeTaken } from "@/lib/storage"
-import { compareElements, isWinningGuess, validateElementGuess } from "@/lib/element-game"
-import ElementGrid from "@/components/element-grid"
-import { toast } from "react-hot-toast"
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from "@/components/ui/tooltip"
-import elementsData from "@/data/atom.json"
-import { SendHorizonal } from "lucide-react"
-import { Button } from "./ui/button"
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
-import ColorIndicator from "./color-indicator"
-import VictoryScreen from "./victory-screen"
-import ReactConfetti from "react-confetti"
-import ShareResult from "./share-result"
+import { useCallback, useEffect, useRef } from 'react'
+import { useLocale, useTranslations } from 'next-intl'
 import { useGameAPI } from '@/app/hooks/useGameAPI'
-import { useTranslations } from 'next-intl'
-import ElementBox from "@/components/element-box"
-import HintMessage from "./hint-message"
-import { motion, AnimatePresence } from "framer-motion"
+import ElementGameSurface from '@/components/element-game-surface'
+import GameResult from '@/components/game-result'
+import { useProgression } from '@/hooks/use-progression'
+import { getDaysSinceLastPlay, trackEvent } from '@/lib/analytics'
+import { HINT_UNLOCK_ATTEMPTS } from '@/lib/game-rules'
+import { getDiscoveryOutcome, recordElementDiscovery } from '@/lib/progression'
+import {
+    addToHistory,
+    getStoredGameState,
+    storeGameState,
+    updateStatistics,
+    validateAndUpdateGameState
+} from '@/lib/storage'
+import type { Element, ElementGameState } from '@/types/element'
 
-const MAX_ATTEMPTS = 9
-
-interface HeaderInfo {
-    key: string
-    label: string
-    description: string
-}
-
-const HINTS_THRESHOLD = {
-    FIRST: 5,  // Show first hint after 5 incorrect guesses
-    SECOND: 7, // Show second hint after 7 incorrect guesses
-    THIRD: 8   // Show third hint at last attempt
+interface DailyGame {
+    element: Element
+    game_number: number
+    solved_count: number
+    yesterday?: {
+        game_number: number
+        element: Element
+    }
 }
 
 export default function GameBoard() {
     const t = useTranslations('game-board')
-
-    const headerInfo: HeaderInfo[] = [
-        {
-            key: "element",
-            label: t('grid.headers.element.label'),
-            description: t('grid.headers.element.description')
-        },
-        {
-            key: "period",
-            label: t('grid.headers.period.label'),
-            description: t('grid.headers.period.description')
-        },
-        {
-            key: "group",
-            label: t('grid.headers.group.label'),
-            description: t('grid.headers.group.description')
-        },
-        {
-            key: "block",
-            label: t('grid.headers.block.label'),
-            description: t('grid.headers.block.description')
-        },
-        {
-            key: "element_type",
-            label: t('grid.headers.type.label'),
-            description: t('grid.headers.type.description')
-        },
-        {
-            key: "phase",
-            label: t('grid.headers.phase.label'),
-            description: t('grid.headers.phase.description')
-        },
-        {
-            key: "atomic_number",
-            label: t('grid.headers.atomic.label'),
-            description: t('grid.headers.atomic.description')
-        },
-        {
-            key: "atomic_mass",
-            label: t('grid.headers.mass.label'),
-            description: t('grid.headers.mass.description')
-        }
-    ]
+    const locale = useLocale()
     const { dailyGame, isLoading, error, incrementCompletions } = useGameAPI()
-    const [gameState, setGameState] = useState<ElementGameState>(() => getStoredGameState())
-    const [input, setInput] = useState("")
-    const [showSuggestions, setShowSuggestions] = useState(false)
-    const [showResults, setShowResults] = useState(false)
-    const [isClient, setIsClient] = useState(false)
-    const { width, height } = useWindowSize()
-    const [isConfettiActive, setIsConfettiActive] = useState(false)
-    const [filteredElements, setFilteredElements] = useState<Element[]>([])
-    const [currentHint, setCurrentHint] = useState<number | null>(null)
-    const [showHint, setShowHint] = useState(true)
-    const [hintsEnabled, setHintsEnabled] = useState(true)
-
-    const colorItems = [
-        {
-            color: "bg-green-600",
-            label: t('color-indicators.correct.label'),
-            tooltip: t('color-indicators.correct.description')
-        },
-        {
-            color: "bg-red-600",
-            label: t('color-indicators.incorrect.label'),
-            tooltip: t('color-indicators.incorrect.description')
-        },
-        {
-            color: "bg-red-600",
-            label: t('color-indicators.higher.label'),
-            tooltip: t('color-indicators.higher.description')
-        },
-        {
-            color: "bg-red-600",
-            label: t('color-indicators.lower.label'),
-            tooltip: t('color-indicators.lower.description')
-        }
-    ]
+    const loadedGameRef = useRef<number | null>(null)
 
     useEffect(() => {
-        if (isLoading || !dailyGame) return
+        if (!dailyGame || loadedGameRef.current === dailyGame.game_number) return
 
-        const validatedState = validateAndUpdateGameState(
-            gameState,
-            dailyGame.game_number,
-            dailyGame.element
-        )
-
-        setGameState(validatedState)
-        storeGameState(validatedState)
-        setIsClient(true)
-    }, [isLoading, dailyGame])
+        loadedGameRef.current = dailyGame.game_number
+        trackEvent('game_loaded', {
+            locale,
+            mode: 'daily',
+            daysSinceLastPlay: getDaysSinceLastPlay()
+        })
+    }, [dailyGame, locale])
 
     if (isLoading) {
         return (
-            <div className="flex items-center justify-center min-h-[50vh]">
-                <div className="animate-pulse text-muted-foreground">
-                    Loading today&apos;s character...
-                </div>
+            <div className="flex min-h-[50vh] items-center justify-center" role="status">
+                <div className="animate-pulse text-[#C8E6EC] motion-reduce:animate-none">{t('loading')}</div>
             </div>
         )
     }
 
     if (error || !dailyGame) {
         return (
-            <div className="text-center text-destructive">
-                Failed to load game. Please try again later.
+            <div className="mx-auto my-12 max-w-lg rounded-xl border border-rose-300/30 bg-rose-950/70 p-5 text-center text-rose-100" role="alert">
+                {t('load-error')}
             </div>
         )
     }
 
-    if (!gameState) return null
-
-    const handleInput = (value: string) => {
-        setInput(value)
-        if (!value.length) {
-            setShowSuggestions(false)
-            setFilteredElements([])
-            return
-        }
-
-        const searchTerm = value.toLowerCase()
-        const filtered = Object.values(elementsData)
-            .filter(element => {
-                const nameMatch = element.name.toLowerCase().includes(searchTerm)
-                const symbolMatch = element.symbol.toLowerCase().includes(searchTerm)
-                const notAlreadyGuessed = !gameState.guesses.some(g => g.element.name === element.name)
-                return (nameMatch || symbolMatch) && notAlreadyGuessed
-            })
-            .slice(0, 5)
-
-        setFilteredElements(filtered)
-        setShowSuggestions(filtered.length > 0)
-
-        // Handle first input for game start
-        if (!gameState?.hasStarted && value.length === 1) {
-            const newState = {
-                ...gameState,
-                hasStarted: true,
-                startTime: Date.now()
-            }
-            setGameState(newState)
-            storeGameState(newState)
-        }
-    }
-
-    const handleElementSelect = (element: Element) => {
-        setInput(element.name)
-        setShowSuggestions(false)
-        handleGuess(element)
-    }
-
-    const getCurrentHint = (guessCount: number) => {
-        if (guessCount >= HINTS_THRESHOLD.THIRD) return 2  // Third hint (index 2)
-        if (guessCount >= HINTS_THRESHOLD.SECOND) return 1 // Second hint (index 1)
-        if (guessCount >= HINTS_THRESHOLD.FIRST) return 0  // First hint (index 0)
-        return null
-    }
-
-    const handleGuess = async (selectedElement?: Element) => {
-        if (!gameState.dailyElement || gameState.gameStatus !== "in-progress") return
-
-        const validatedElement = selectedElement || validateElementGuess(input, elementsData)
-        if (!validatedElement) {
-            toast.error("Invalid guess")
-            return
-        }
-
-        if (gameState.guesses.some(g => g.element.name === validatedElement.name)) {
-            toast.error("Already guessed")
-            return
-        }
-
-        try {
-            const guessResult = compareElements(validatedElement, gameState.dailyElement)
-            const newGuesses = [...gameState.guesses, guessResult]
-            const isWon = isWinningGuess(guessResult)
-            const isLost = newGuesses.length >= MAX_ATTEMPTS && !isWon
-
-            const endTime = Date.now()
-            const timeToSolve = calculateTimeTaken(gameState.startTime, endTime)
-
-            const newState: ElementGameState = {
-                ...gameState,
-                guesses: newGuesses,
-                gameStatus: isWon ? "won" : isLost ? "lost" : "in-progress",
-                endTime: isWon || isLost ? endTime : undefined,
-                timeTaken: isWon || isLost ? timeToSolve : undefined
-            }
-
-            setGameState(newState)
-            storeGameState(newState)
-
-            if (isWon) {
-                setIsConfettiActive(true)
-                setTimeout(() => setIsConfettiActive(false), 5000)
-                await incrementCompletions()
-                updateStatistics(newState, timeToSolve)
-                addToHistory(newState, timeToSolve)
-            } else if (isLost) {
-                updateStatistics(newState, timeToSolve)
-            }
-
-            setInput("")
-            setShowSuggestions(false)
-            setShowHint(true)
-
-            const nextHint = getCurrentHint(newGuesses.length)
-            if (nextHint !== currentHint) {
-                setCurrentHint(nextHint)
-            }
-        } catch (error) {
-            console.error('Error in handleGuess:', error)
-        }
-    }
     return (
-        <AnimatePresence>
+        <LoadedDailyGame
+            key={dailyGame.game_number}
+            dailyGame={dailyGame}
+            incrementCompletions={incrementCompletions}
+        />
+    )
+}
 
-            <motion.div
-                initial={{ opacity: 1, x: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0, transition: { duration: 0.5 } }}
-                className="w-full"
-            >
-                {isConfettiActive && (
-                    <ReactConfetti
-                        width={width}
-                        height={height}
-                        recycle={false}
-                        numberOfPieces={500}
-                        gravity={0.3}
-                    />
-                )}
-                {gameState.gameStatus === "in-progress" && (
-                    <div className="p-6 rounded-xl shadow-xl max-w-lg mx-auto bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] text-white border border-[#9CCAD3]">
-                        <>
-                            <h2 className="text-2xl font-bold text-center mb-8 text-[#9CCAD3]">
-                                {t('title')}
-                            </h2>
+function LoadedDailyGame({
+    dailyGame,
+    incrementCompletions
+}: {
+    dailyGame: DailyGame
+    incrementCompletions: () => Promise<void>
+}) {
+    const t = useTranslations('game-board')
+    const progression = useProgression()
+    const discoveryEventId = `daily:${dailyGame.game_number}`
+    const createInitialState = useCallback(() => validateAndUpdateGameState(
+        getStoredGameState(),
+        dailyGame.game_number,
+        dailyGame.element
+    ), [dailyGame.element, dailyGame.game_number])
+    const settleState = useCallback((state: ElementGameState, timeTaken: number) => {
+        const statistics = updateStatistics(state, timeTaken)
+        const settled = { ...state, statistics }
+        addToHistory(settled, timeTaken)
+        if (state.gameStatus === 'won') {
+            recordElementDiscovery({
+                eventId: discoveryEventId,
+                elementName: dailyGame.element.name,
+                source: 'daily',
+                attempts: state.guesses.length,
+                timeTaken
+            })
+        }
+        return settled
+    }, [dailyGame.element.name, discoveryEventId])
+    const handleWin = useCallback(() => {
+        void incrementCompletions()
+    }, [incrementCompletions])
 
-                            {currentHint !== null && showHint && hintsEnabled && (
-                                <HintMessage
-                                    hintNumber={currentHint + 1}
-                                    hintText={dailyGame.element.hints.properties[currentHint]}
-                                    onDismiss={() => setShowHint(false)}
-                                />
-                            )}
-                            <div className="flex items-center justify-end mb-2 text-xs text-[#9CCAD3]/70">
-                                <TooltipProvider>
-                                    <Tooltip>
-                                        <TooltipTrigger asChild>
-                                            <button
-                                                type="button"
-                                                onClick={() => setHintsEnabled(prev => !prev)}
-                                                className="underline underline-offset-2 hover:text-[#9CCAD3]"
-                                            >
-                                                {hintsEnabled ? t('hints-toggle.on') : t('hints-toggle.off')}
-                                            </button>
-                                        </TooltipTrigger>
-                                        <TooltipContent>
-                                            <p>{t('hints-toggle.info')}</p>
-                                        </TooltipContent>
-                                    </Tooltip>
-                                </TooltipProvider>
-                            </div>
-                            <div className="flex gap-2 mb-6">
-                                <div className="relative flex-1">
-                                    <input
-                                        type="text"
-                                        value={input}
-                                        onChange={(e) => handleInput(e.target.value)}
-                                        onKeyDown={(e) => e.key === "Enter" && handleGuess()}
-                                        placeholder={t('input-placeholder')}
-                                        className="w-full h-14 bg-[#CCCCCC]/20 text-[#9CCAD3] placeholder:text-[#9CCAD3]/50 rounded-xl px-4 border-0"
-                                    />
-                                    {showSuggestions && input && filteredElements.length > 0 && (
-                                        <div className="absolute w-full bg-[#2d2d2d] rounded-xl mt-1 z-50 shadow-lg border border-[#73B9FF]/30 p-2 space-y-2">
-                                            {filteredElements.map((element) => (
-                                                <button
-                                                    key={element.name}
-                                                    onClick={() => handleElementSelect(element)}
-                                                    className="w-full flex items-center gap-3 p-2 hover:bg-slate-900/50 cursor-pointer rounded-xl"
-                                                >
-                                                    <ElementBox
-                                                        number={element.classic.atomic_number}
-                                                        symbol={element.symbol}
-                                                        name={element.name}
-                                                        category={element.classic.element_type as ElementCategory}
-                                                        className="w-16 h-16 shrink-0"
-                                                    />
-                                                    <div className="flex flex-col items-start">
-                                                        <span className="font-medium text-[#9CCAD3]">
-                                                            {element.name} ({element.symbol})
-                                                        </span>
-                                                        <span className="text-sm text-[#9CCAD3]/70">
-                                                            Group {element.classic.group} • Period {element.classic.period} • {element.classic["phase-at-stp"]}
-                                                        </span>
-                                                    </div>
-                                                </button>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
-                                <Button
-                                    variant="default"
-                                    className="h-14 w-14 bg-[#73B9FF]/40 hover:bg-[#73B9FF]/60 text-white rounded-xl"
-                                    onClick={() => handleGuess()}
-                                >
-                                    <SendHorizonal className="h-6 w-6" />
-                                </Button>
-                            </div>
-                        </>
-                    </div>
-                )}
-                <p className="text-center text-white font-medium my-4">
-                    <span className="text-red-300">{dailyGame.solved_count}</span> {t('solved-count', { count: dailyGame.solved_count })}
+    return (
+        <ElementGameSurface
+            mode="daily"
+            targetElement={dailyGame.element}
+            createInitialState={createInitialState}
+            saveState={storeGameState}
+            settleState={settleState}
+            onWin={handleWin}
+            sessionLabel={t('game-number', { number: dailyGame.game_number })}
+            title={t('title')}
+            goal={t('goal')}
+            hintUnlockAttempts={HINT_UNLOCK_ATTEMPTS}
+            statusContent={(
+                <p className="my-4 text-center text-sm font-medium text-slate-300">
+                    <span className="font-bold text-rose-200">{dailyGame.solved_count}</span>{' '}
+                    {t('solved-count', { count: dailyGame.solved_count })}
                 </p>
-                {
-                    (gameState.gameStatus === "in-progress" || gameState.gameStatus === "won") && gameState.guesses.length > 0 && (
-                        <div className="relative w-full flex justify-center">
-                            <ScrollArea className="w-full max-w-[700px] whitespace-nowrap rounded-lg">
-                                <div className="w-[700px]">
-                                    <div className="p-4">
-                                        <div className="grid grid-cols-8 gap-2 mb-4">
-                                            {headerInfo.map((header) => (
-                                                <div
-                                                    key={header.key}
-                                                    className="text-sm font-semibold text-center text-white group relative border-b-2 pb-2"
-                                                    title={header.description}
-                                                >
-                                                    <TooltipProvider>
-                                                        <Tooltip>
-                                                            <TooltipTrigger>
-                                                                {header.label}
-                                                            </TooltipTrigger>
-                                                            <TooltipContent>
-                                                                <p>{header.description}</p>
-                                                            </TooltipContent>
-                                                        </Tooltip>
-                                                    </TooltipProvider>
-                                                </div>
-                                            ))}
-                                        </div>
-
-                                        <div className="space-y-4">
-                                            {gameState.guesses.map((guess, index) => (
-                                                <ElementGrid
-                                                    key={index}
-                                                    guessResult={guess}
-                                                    targetElement={gameState.dailyElement!}
-                                                />
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                                <ScrollBar orientation="horizontal" className="bg-red-950/40" />
-                            </ScrollArea>
-                        </div>
-                    )
-                }
-
-                {
-                    gameState.gameStatus === "in-progress" && gameState.guesses.length > 0 && (
-                        <div>
-                            <div className="mt-2 text-sm text-red-200 text-center md:hidden">
-                                {t('scroll-horizontal')}
-                            </div>
-                            <ColorIndicator items={colorItems} />
-                        </div>
-                    )
-                }
-
-                {dailyGame.yesterday && (
-                    <div className="my-4 p-4 rounded-xl w-full max-w-lg mx-auto">
-                        <h3 className="font-semibold mb-2 text-white text-center">
-                            {t('yesterday-character')} <span className="text-red-300">#{dailyGame.yesterday.game_number}</span> <span className="text-red-300 text-semibold text-2xl">{dailyGame.yesterday.element.name}</span>
-                        </h3>
-                    </div>
-                )}
-                {
-                    gameState.gameStatus === "won" && (
-                        <div>
-                            <VictoryScreen
-                                attempts={gameState.guesses.length}
-                                timeTaken={gameState.timeTaken || 0}
-                                streak={gameState.statistics.currentStreak}
-                                isOneShot={gameState.guesses.length === 1}
-                                element={gameState.dailyElement!}
-                            />
-                            <ShareResult
-                                attempts={gameState.guesses.length}
-                                timeTaken={gameState.timeTaken || 0}
-                            />
-                        </div>
-                    )
-                }
-                {
-                    gameState.gameStatus === "lost" && (
-                        <VictoryScreen
-                            attempts={gameState.guesses.length}
-                            timeTaken={gameState.timeTaken || 0}
-                            streak={gameState.statistics.currentStreak}
-                            isOneShot={false}
-                            element={gameState.dailyElement!}
-                            isGameOver={true}
-                        />
-                    )
-                }
-            </motion.div>
-        </AnimatePresence>
+            )}
+            footerContent={dailyGame.yesterday ? (
+                <div className="mx-auto my-5 w-full max-w-lg rounded-xl border border-white/10 bg-black/20 p-4 text-center text-sm text-slate-300">
+                    {t('yesterday-element', {
+                        gameNumber: dailyGame.yesterday.game_number,
+                        element: dailyGame.yesterday.element.name
+                    })}
+                </div>
+            ) : null}
+            renderResult={state => (
+                <GameResult
+                    mode="daily"
+                    result={state.gameStatus === 'won' ? 'won' : 'lost'}
+                    attempts={state.guesses.length}
+                    timeTaken={state.timeTaken || 0}
+                    assistUsed={state.revealedHints.length > 0 || state.candidateMapUsed}
+                    element={dailyGame.element}
+                    guesses={state.guesses}
+                    gameNumber={dailyGame.game_number}
+                    streak={state.statistics.currentStreak}
+                    discovery={progression ? getDiscoveryOutcome(progression, discoveryEventId, dailyGame.element.name) : null}
+                />
+            )}
+        />
     )
 }

@@ -9,6 +9,7 @@
     ]
   },
   "header": {
+    "collection": "Collection d'éléments",
     "stats": {
       "tooltip": "Statistiques",
       "play": "Parties jouées",
@@ -26,13 +27,70 @@
       "name": "Transférez vos données",
       "btn01": "Exporter les données",
       "btn02": "Importer les données",
-      "description": "Exportez vos statistiques de jeu pour les transférer sur un autre appareil."
+      "description": "Transférez votre historique Daily, vos parties en cours et votre collection sur un autre appareil.",
+      "invalid-file": "Sélectionnez un fichier JSON valide.",
+      "import-success": "Vos données Elemendle ont été importées.",
+      "import-failed": "Ce fichier ne contient pas de données Elemendle valides.",
+      "invalid-format": "Le fichier sélectionné n’a pas pu être lu.",
+      "export-success": "Vos données Elemendle ont été exportées.",
+      "export-failed": "Vos données n’ont pas pu être exportées."
     },
     "how-to": "Comment jouer ?",
     "language": "Changer la langue du jeu."
   },
   "game-board": {
     "title": "DEVINEZ L'ÉLÉMENT DU JOUR !",
+    "loading": "Préparation de l'élément du jour...",
+    "load-error": "Impossible de charger le jeu du jour. Réessayez dans un instant.",
+    "invalid-guess": "Saisissez un nom ou symbole d'élément valide.",
+    "already-guessed": "Vous avez déjà proposé cet élément.",
+    "game-number": "Défi #{number}",
+    "goal": "Utilisez chaque comparaison pour identifier l'élément du jour en neuf essais.",
+    "progress": "{used} / {total} essais",
+    "remaining": "{count} restants",
+    "complete": "Terminé",
+    "assist-on": "Aide activée",
+    "assist-off": "Aide désactivée",
+    "assist-disabled-message": "L'aide est désactivée. Activez-la ci-dessus lorsque vous souhaitez des indices.",
+    "hints-title": "Indices facultatifs",
+    "hints-no-penalty": "Les indices n'affectent ni votre score, ni votre série, ni vos statistiques.",
+    "next-hint": "Le prochain indice se débloque après l'essai {attempt}.",
+    "all-hints-unlocked": "Tous les indices disponibles sont débloqués.",
+    "reveal-hint": "Afficher l'indice {number}",
+    "show-hint-again": "Réafficher l'indice {number}",
+    "hint-label": "Indice {number} :",
+    "close-hint": "Fermer l'indice {number}",
+    "candidates": {
+      "title": "Boussole des candidats",
+      "description": "Ouvrez une carte de déduction fondée uniquement sur les indices déjà vus.",
+      "assist-required": "Activez l’aide pour utiliser la carte de déduction.",
+      "trail-label": "Nombre de candidats après chaque essai",
+      "initial-count": "{count} candidats au départ",
+      "guess-count": "{count} candidats après l’essai {guess}",
+      "remaining-label": "Compatibles avec tous les indices",
+      "remaining-count": "{count} candidats",
+      "map-help": "Les cases claires restent possibles ; les cases sombres contredisent au moins une comparaison.",
+      "map-label": "Tableau périodique défilant des candidats",
+      "map-summary": "Tableau périodique avec {count} éléments possibles en évidence",
+      "candidate-element": "{element} reste un candidat",
+      "excluded-element": "{element} est exclu",
+      "series": { "lanthanide": "Série des lanthanides", "actinide": "Série des actinides" }
+    },
+    "guess-history": "Vos essais et comparaisons de propriétés",
+    "guess-number": "Essai {number}",
+    "show-details": "Afficher plus de propriétés",
+    "hide-details": "Masquer les propriétés supplémentaires",
+    "feedback-legend": "Légende des symboles de comparaison",
+    "feedback": {
+      "exact": "Correspondance exacte",
+      "target-higher": "La valeur cible est plus élevée",
+      "target-lower": "La valeur cible est plus basse",
+      "not-match": "Ne correspond pas"
+    },
+    "input-label": "Nom ou symbole de l'élément",
+    "submit": "Valider l'essai",
+    "suggestion-details": "Groupe {group} · Période {period} · {phase}",
+    "yesterday-element": "Hier, le défi #{gameNumber} était {element}.",
     "remaining-guesses": "essais restants",
     "input-placeholder": "Entrez le nom ou le symbole de l'élément...",
     "solved-count": "personnes ont déjà deviné cet élément !",
@@ -100,6 +158,107 @@
     "game-over": "Jeu terminé !",
     "correct-answer": "La bonne réponse est",
     "scroll-horizontal": "Faites défiler horizontalement pour voir plus d'informations"
+  },
+  "practice": {
+    "mode-label": "Mode de jeu",
+    "daily": "Quotidien",
+    "practice": "Entraînement",
+    "loading": "Restauration de votre laboratoire d'entraînement...",
+    "eyebrow": "Laboratoire de chimie illimité",
+    "welcome-title": "Entraînez-vous au tableau périodique",
+    "welcome-description": "Choisissez votre rythme et aiguisez vos connaissances à tout moment. L'entraînement ne modifie ni votre série ni vos statistiques quotidiennes.",
+    "choose-difficulty": "Choisissez la difficulté",
+    "start": "Commencer l'entraînement",
+    "back-to-challenges": "Défis des éléments",
+    "local-note": "Votre partie reste sur cet appareil et reprend après un rafraîchissement.",
+    "session-label": "Entraînement · {difficulty}",
+    "game-title": "TROUVEZ L'ÉLÉMENT MYSTÈRE",
+    "game-goal": "Utilisez les comparaisons pour identifier un élément local en neuf essais.",
+    "difficulty": {
+      "label": "Difficulté d'entraînement",
+      "easy": {
+        "title": "Facile",
+        "description": "Les indices se débloquent après les essais 3, 5 et 7."
+      },
+      "standard": {
+        "title": "Standard",
+        "description": "Les indices suivent le rythme quotidien : essais 5, 7 et 8."
+      }
+    }
+  },
+  "challenge": {
+    "loading": "Restauration du laboratoire…", "eyebrow": "Laboratoire des éléments", "title": "Pensez au-delà du tableau.",
+    "description": "Cinq questions rapides. Lisez les indices, repérez les motifs et découvrez pourquoi chaque réponse fonctionne, sans répéter le Daily.",
+    "start-mixed": "Lancer le défi mixte", "five-questions": "5 questions", "choose-lab": "Choisir une expérience", "choose-lab-description": "Entraînez une intuition chimique à la fois.",
+    "no-penalty": "Pas de vies ni de pression de série. Apprenez simplement.", "start-lab": "Lancer cette expérience",
+    "modes": {
+      "mixed": { "title": "Défi mixte", "description": "Cinq questions mêlant toutes les expériences." },
+      "identity": { "title": "Qui suis-je ?", "description": "Associez des propriétés précises à un élément mystère." },
+      "extreme": { "title": "Élément extrême", "description": "Trouvez l'option la plus lourde, légère, chaude ou froide." },
+      "odd-one-out": { "title": "L'intrus", "description": "Repérez l'élément qui rompt le motif indiqué." }
+    },
+    "classic": { "title": "Vous cherchez le jeu de déduction original ?", "description": "Classic Practice conserve les neuf comparaisons et les indices Easy et Standard.", "action": "Ouvrir Classic Practice" },
+    "exit": "Quitter le défi", "question-count": "Question {current} sur {total}", "think-first": "Prenez votre temps : une erreur apprend aussi quelque chose.", "clue-number": "Indice {number}",
+    "properties": { "period": "période", "group": "groupe", "block": "bloc", "phase": "état à STP", "element-type": "type d'élément", "atomic-number": "numéro atomique", "atomic-mass": "masse atomique", "melting-point": "point de fusion", "boiling-point": "point d'ébullition" },
+    "questions": {
+      "identity": { "prompt": "Quel élément correspond à cette définition ?", "instruction": "Chaque indice est exact et leur ensemble désigne un seul élément." },
+      "extreme": { "highest": "Quel élément a la valeur de {property} la plus élevée ?", "lowest": "Quel élément a la valeur de {property} la plus basse ?" },
+      "odd-one-out": { "prompt": "Quel élément a une propriété {property} différente ?", "instruction": "Trois choix partagent la même valeur. Trouvez l'exception." },
+      "choose-one": "Choisissez l'un des quatre éléments."
+    },
+    "answer-label": "Réponse élément", "answer-placeholder": "Saisissez un élément ou un symbole…", "submit": "Répondre", "invalid-element": "Choisissez un nom ou symbole d'élément valide.",
+    "feedback": { "correct": "Exactement", "learning-moment": "Un point utile à retenir", "learn-more": "En savoir plus sur {element}" },
+    "explanations": { "identity": "{answer} est le seul élément correspondant à tous les indices.", "extreme": "{answer} est le bon extrême, avec {property} de {value}.", "odd-one-out": "{answer} a pour {property} « {answerValue} » ; les trois autres ont « {commonValue} »." },
+    "continue": "Continuer",
+    "result": { "eyebrow": "Expérience terminée", "title": "Notes de laboratoire prêtes", "summary": { "strong": "Excellente reconnaissance des motifs. Relisez les explications et essayez une autre série.", "steady": "Vous avez trouvé plusieurs motifs et en avez appris de nouveaux.", "curious": "Chaque réponse sera un indice la prochaine fois. Relisez les motifs et continuez à explorer." }, "score": "Bonnes réponses", "time": "Temps", "review": "Ce que cette manche a révélé", "play-again": "Essayer une autre série", "back-to-lab": "Choisir une autre expérience" }
+  },
+  "result": {
+    "practice-next": "Continuer dans Practice", "practice-next-description": "Essayez cinq nouveaux défis.", "view-collection": "Voir la collection d'éléments",
+    "new-discovery": "Nouvel élément découvert", "collection-updated": "Collection mise à jour", "collection-count": "{count} / {total} éléments découverts",
+    "new-discovery-description": "{element} a désormais une place permanente dans votre collection.", "collection-updated-description": "Votre meilleur score pour {element} a été mis à jour.",
+    "game-number": "Défi #{number}",
+    "won-title": "Élément identifié",
+    "lost-title": "Défi terminé",
+    "won-summary": "Belle déduction. Retrouvez ci-dessous votre résultat et un peu de chimie.",
+    "lost-summary": "Vous avez utilisé les neuf essais. Voici la réponse et un fait utile.",
+    "performance": "Votre performance",
+    "attempts": "Essais",
+    "time": "Temps",
+    "streak": "Série",
+    "assist": "Aide",
+    "assisted": "Utilisée",
+    "no-hints": "Sans indice",
+    "learn": "Découvrez l'élément du jour",
+    "did-you-know": "Le saviez-vous ?",
+    "fact-fallback": "Ouvrez la carte de l'élément pour en savoir plus.",
+    "next": "Et ensuite ?",
+    "practice-coming-soon": "Mode entraînement · Bientôt disponible",
+    "practice-description": "Les éléments illimités arriveront dans la version 3.",
+    "share": "Partager le résultat",
+    "copied": "Résultat copié dans le presse-papiers.",
+    "share-error": "Impossible de partager le résultat. Réessayez.",
+    "share-win": "Elemendle #{gameNumber} · {attempts}/9",
+    "share-loss": "Elemendle #{gameNumber} · {attempts}/9",
+    "practice-label": "Entraînement · {difficulty}",
+    "practice-won-title": "Entraînement réussi",
+    "practice-lost-title": "Partie terminée",
+    "practice-won-summary": "Belle déduction. Revoyez l'élément puis reprenez l'entraînement quand vous voulez.",
+    "practice-lost-summary": "Cet élément vous a échappé, mais chaque comparaison affine votre intuition.",
+    "difficulty": "Difficulté",
+    "difficulty-easy": "Facile",
+    "difficulty-standard": "Standard",
+    "choose-next-difficulty": "Difficulté de la prochaine partie",
+    "play-again": "Entraîner un autre élément",
+    "practice-share-win": "Entraînement Elemendle · {attempts}/9",
+    "practice-share-loss": "Entraînement Elemendle · {attempts}/9",
+    "next-element": "Prochain élément quotidien dans {countdown}"
+  },
+  "collection": {
+    "loading": "Ouverture de votre archive…", "eyebrow": "Archive personnelle", "title": "Vos découvertes périodiques.",
+    "description": "Les bonnes réponses révèlent les éléments définitivement. Retrouvez vos découvertes et leurs records.", "progress": "Progression de la collection", "discovered-count": "{count} / {total} éléments découverts", "new-discoveries": "Nouveaux cette manche : {elements}", "view": "Voir la collection",
+    "table-title": "Collection périodique", "table-description": "Les éléments découverts brillent à leur vraie position.", "scroll-hint": "Balayez pour explorer", "recent": "Découverts récemment",
+    "element-label": "Voir {element}", "locked-label": "Élément de numéro atomique {number} non découvert", "sources": { "daily": "Daily", "classic": "Classic Practice", "challenge": "Défi des éléments" },
+    "detail": { "discovered-element": "Élément découvert", "learn-more": "Ouvrir la référence", "first-source": "Trouvé d'abord dans", "first-date": "Première découverte", "best-attempts": "Meilleurs essais", "best-time": "Meilleur temps" }
   },
   "victory": {
     "title": "Victoire !",
@@ -193,7 +352,7 @@
       },
       {
         "question": "Comment mes données sont-elles stockées ?",
-        "answer": "Vos données sont stockées localement sur votre appareil. Nous ne collectons aucune donnée vous concernant."
+        "answer": "Votre progression reste sur votre appareil. Nous collectons uniquement des événements de jeu anonymes et sans cookies, comme les démarrages, les parties terminées et les partages. Nous ne collectons jamais les réponses, les propositions, le texte libre, les données exportées ni les identifiants persistants."
       },
       {
         "question": "Le jeu Elemendle est-il gratuit ?",

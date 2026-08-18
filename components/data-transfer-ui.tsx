@@ -2,7 +2,7 @@
 
 import { useState, useRef } from 'react'
 import { Button } from '@/components/ui/button'
-import { Download, Upload } from 'lucide-react'
+import { DatabaseBackup, Download, Upload } from 'lucide-react'
 import { toast } from 'react-hot-toast'
 import { downloadGameData, importGameData } from '@/lib/data-transfer'
 import {
@@ -25,7 +25,7 @@ export function DataTransferUI({ open, onOpenChange }: {
         if (!file) return
 
         if (!file.name.endsWith('.json')) {
-            toast.error('Please select a valid JSON file')
+            toast.error(t('invalid-file'))
             return
         }
 
@@ -33,14 +33,14 @@ export function DataTransferUI({ open, onOpenChange }: {
         try {
             const success = await importGameData(file)
             if (success) {
-                toast.success('Game data imported successfully!')
+                toast.success(t('import-success'))
                 window.location.reload()
             } else {
-                toast.error('Failed to import game data. Invalid format.')
+                toast.error(t('import-failed'))
             }
         } catch (error) {
             console.error('Import error:', error)
-            toast.error(error instanceof Error ? error.message : 'Invalid file format')
+            toast.error(t('invalid-format'))
         } finally {
             setIsImporting(false)
             if (fileInputRef.current) {
@@ -52,26 +52,33 @@ export function DataTransferUI({ open, onOpenChange }: {
     const handleExport = () => {
         try {
             downloadGameData()
-            toast.success('Game data exported successfully!')
-        } catch (error) {
-            toast.error('Failed to export game data')
+            toast.success(t('export-success'))
+        } catch {
+            toast.error(t('export-failed'))
         }
     }
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
-            <DialogContent className="bg-gradient-to-br from-red-950 to-gray-900 border-red-800">
+            <DialogContent className="overflow-hidden border-[#9CCAD3]/35 bg-gradient-to-br from-[#101820] to-[#1C2730] text-white shadow-2xl sm:max-w-md">
                 <DialogHeader>
-                    <DialogTitle className="text-pink-200/90">{t('name')}</DialogTitle>
+                    <DialogTitle className="flex items-center gap-3 text-[#D7EEF2]">
+                        <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-200/20 bg-cyan-300/10 text-cyan-100">
+                            <DatabaseBackup className="h-5 w-5" aria-hidden="true" />
+                        </span>
+                        {t('name')}
+                    </DialogTitle>
                 </DialogHeader>
-                <div className="flex flex-col gap-4 items-center">
-                    <div className="flex gap-4">
+                <div className="mt-2 space-y-5">
+                    <p className="text-sm leading-relaxed text-slate-300">
+                        {t('description')}
+                    </p>
+                    <div className="grid gap-3 sm:grid-cols-2">
                         <Button
                             onClick={handleExport}
-                            className="bg-red-900/50 hover:bg-red-800/50 text-white"
-                            size="sm"
+                            className="h-12 justify-center rounded-xl bg-[#73B9FF] font-bold text-[#071319] hover:bg-[#8BC8E4]"
                         >
-                            <Download className="w-4 h-4 mr-2" />
+                            <Download className="mr-2 h-4 w-4" aria-hidden="true" />
                             {t('btn01')}
                         </Button>
                         <div className="relative">
@@ -82,23 +89,21 @@ export function DataTransferUI({ open, onOpenChange }: {
                                 accept=".json"
                                 className="hidden"
                                 disabled={isImporting}
+                                aria-label={t('btn02')}
                             />
                             <Button
                                 onClick={() => fileInputRef.current?.click()}
-                                className="bg-red-900/50 hover:bg-red-800/50 text-white"
-                                size="sm"
+                                variant="outline"
+                                className="h-12 w-full justify-center rounded-xl border-[#9CCAD3]/35 bg-white/5 font-bold text-[#C8E6EC] hover:bg-white/10 hover:text-white"
                                 disabled={isImporting}
                             >
-                                <Upload className="w-4 h-4 mr-2" />
+                                <Upload className="mr-2 h-4 w-4" aria-hidden="true" />
                                 {t('btn02')}
                             </Button>
                         </div>
                     </div>
-                    <p className="text-sm text-red-200/70 text-center">
-                        {t('description')}
-                    </p>
                 </div>
             </DialogContent>
         </Dialog>
     )
-} 
+}

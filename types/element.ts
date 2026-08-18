@@ -23,18 +23,29 @@ export interface Element {
     };
 }
 
-// Game state for element guessing
-export interface ElementGameState {
-    currentDay: string;
-    dailyElement: Element | null;
-    gameNumber: number;
+export type GameMode = 'daily' | 'practice';
+
+// Shared state for one element-guessing session
+export interface ElementGameSessionState {
     guesses: ElementGuessResult[];
     gameStatus: "in-progress" | "won" | "lost";
     startTime: number | null;
     timeTaken?: number;
     hasStarted: boolean;
+    hintsEnabled: boolean;
+    revealedHints: number[];
+    dismissedHints: number[];
+    candidateMapEnabled: boolean;
+    candidateMapUsed: boolean;
     endTime?: number;
     statistics: ElementStatistics;
+}
+
+// Daily game state, persisted separately from practice
+export interface ElementGameState extends ElementGameSessionState {
+    currentDay: string;
+    dailyElement: Element | null;
+    gameNumber: number;
 }
 
 // Result of an element guess with numeric comparisons
@@ -66,6 +77,7 @@ export interface ElementGuessResult {
 // Statistics for element game
 export interface ElementStatistics {
     gamesPlayed: number;
+    totalWins: number;
     winRate: number;
     currentStreak: number;
     maxStreak: number;
@@ -78,10 +90,29 @@ export interface ElementStatistics {
         6: number;
         7: number;
         8: number;
+        9: number;
     };
     bestTime: number | null;
     averageTime: number | null;
     lastPlayed: string | null;
+    settledGames: string[];
+}
+
+export interface GameHistory {
+    id: string;
+    mode: "daily";
+    date: string;
+    element: string;
+    gameNumber: number;
+    guesses: number;
+    timeTaken: number;
+    won: boolean;
+}
+
+export interface StatisticsLedger {
+    version: 1;
+    baseline: ElementStatistics;
+    settlements: GameHistory[];
 }
 
 // Element categories for visual representation

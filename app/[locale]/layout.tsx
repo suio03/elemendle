@@ -12,13 +12,14 @@ const inter = Inter({ subsets: ['latin'] })
 
 type Props = {
     children: ReactNode
-    params: { locale: string }
+    params: Promise<{ locale: string }>
 }
 export async function generateMetadata({
-    params: { locale }
+    params
 }: Omit<Props, 'children'>) {
+    const { locale } = await params
     const t = await getTranslations({ locale, namespace: 'metaData' })
-    const cookieStore = cookies()
+    const cookieStore = await cookies()
     let pathName = cookieStore.get('x-pathname')?.value || '/'
     const baseUrl = 'https://elemendle.com'
     const locales = ['ar', 'ch', 'es', 'fr', 'pt', 'ru', 'ko', 'jp', 'de', 'it', 'hi', 'nl']
@@ -44,13 +45,14 @@ export async function generateMetadata({
 }
 export default async function LocaleLayout({
     children,
-    params: { locale }
+    params
 }: Props) {
+    const { locale } = await params
     const messages = await getMessages()
     return (
         <html lang={locale}>
-            {/* <Analytics /> */}
             <body className={inter.className}>
+                <Analytics />
                 <NextIntlClientProvider messages={messages}>
                     <div className="fixed inset-0 bg-[url('/images/background.png')] bg-fixed bg-cover bg-center bg-no-repeat -z-20" />
                     <div className="relative min-h-screen">

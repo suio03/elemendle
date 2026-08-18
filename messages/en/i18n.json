@@ -9,6 +9,7 @@
     ]
   },
   "header": {
+    "collection": "Element collection",
     "stats": {
       "tooltip": "Statistics",
       "play": "Games Played",
@@ -26,13 +27,70 @@
       "name": "Transfer Your Data",
       "btn01": "Export Data",
       "btn02": "Import Data",
-      "description": "Export your game statistics to transfer them to another device."
+      "description": "Export your Daily history, active games, and element collection to another device.",
+      "invalid-file": "Select a valid JSON file.",
+      "import-success": "Your Elemendle data was imported.",
+      "import-failed": "This file does not contain valid Elemendle data.",
+      "invalid-format": "The selected file could not be read.",
+      "export-success": "Your Elemendle data was exported.",
+      "export-failed": "Your data could not be exported."
     },
     "how-to": "How to play?",
     "language": "Change the language of the game."
   },
   "game-board": {
     "title": "GUESS TODAY'S ELEMENT!",
+    "loading": "Preparing today's element...",
+    "load-error": "Today's game could not be loaded. Please try again shortly.",
+    "invalid-guess": "Enter a valid element name or symbol.",
+    "already-guessed": "You already guessed that element.",
+    "game-number": "Daily #{number}",
+    "goal": "Use each comparison to identify today's periodic-table element in nine guesses.",
+    "progress": "{used} / {total} guesses",
+    "remaining": "{count} remaining",
+    "complete": "Complete",
+    "assist-on": "Assist on",
+    "assist-off": "Assist off",
+    "assist-disabled-message": "Assist is off. Turn it on above whenever you want hints.",
+    "hints-title": "Optional hints",
+    "hints-no-penalty": "Hints are here to help. Revealing one does not affect your score, streak, or statistics.",
+    "next-hint": "The next hint unlocks after guess {attempt}.",
+    "all-hints-unlocked": "All available hints are unlocked.",
+    "reveal-hint": "Reveal hint {number}",
+    "show-hint-again": "Show hint {number} again",
+    "hint-label": "Hint {number}:",
+    "close-hint": "Close hint {number}",
+    "candidates": {
+      "title": "Candidate compass",
+      "description": "Open a deduction map based only on feedback you have already seen.",
+      "assist-required": "Turn Assist on to use the deduction map.",
+      "trail-label": "Candidate count after each guess",
+      "initial-count": "{count} starting candidates",
+      "guess-count": "{count} candidates after guess {guess}",
+      "remaining-label": "Consistent with every clue",
+      "remaining-count": "{count} candidates",
+      "map-help": "Bright cells remain possible; dim cells conflict with at least one comparison.",
+      "map-label": "Scrollable candidate periodic table",
+      "map-summary": "Periodic table with {count} possible elements highlighted",
+      "candidate-element": "{element} remains a candidate",
+      "excluded-element": "{element} is excluded",
+      "series": { "lanthanide": "Lanthanide series", "actinide": "Actinide series" }
+    },
+    "guess-history": "Your guesses and property comparisons",
+    "guess-number": "Guess {number}",
+    "show-details": "Show more properties",
+    "hide-details": "Hide extra properties",
+    "feedback-legend": "Comparison symbol legend",
+    "feedback": {
+      "exact": "Exact match",
+      "target-higher": "Target value is higher",
+      "target-lower": "Target value is lower",
+      "not-match": "Does not match"
+    },
+    "input-label": "Element name or symbol",
+    "submit": "Submit guess",
+    "suggestion-details": "Group {group} · Period {period} · {phase}",
+    "yesterday-element": "Yesterday, Daily #{gameNumber} was {element}.",
     "remaining-guesses": "guesses remaining",
     "input-placeholder": "Enter element name or symbol...",
     "solved-count": "people already guessed this element!",
@@ -100,6 +158,198 @@
     "game-over": "Game Over!",
     "correct-answer": "The correct answer is",
     "scroll-horizontal": "Scroll horizontally to see more information"
+  },
+  "practice": {
+    "mode-label": "Game mode",
+    "daily": "Daily",
+    "practice": "Practice",
+    "loading": "Restoring your practice lab...",
+    "eyebrow": "Unlimited chemistry lab",
+    "welcome-title": "Practice the periodic table",
+    "welcome-description": "Pick a pace, sharpen your element instincts, and play whenever you want. Practice never changes your Daily streak or statistics.",
+    "choose-difficulty": "Choose your difficulty",
+    "start": "Start practice",
+    "back-to-challenges": "Element challenges",
+    "local-note": "Your practice round stays on this device and can be resumed after a refresh.",
+    "session-label": "Practice · {difficulty}",
+    "game-title": "FIND THE MYSTERY ELEMENT",
+    "game-goal": "Use property comparisons to identify a locally selected element in nine guesses.",
+    "difficulty": {
+      "label": "Practice difficulty",
+      "easy": {
+        "title": "Easy",
+        "description": "Hints unlock after guesses 3, 5, and 7."
+      },
+      "standard": {
+        "title": "Standard",
+        "description": "Daily-style hints unlock after guesses 5, 7, and 8."
+      }
+    }
+  },
+  "challenge": {
+    "loading": "Restoring your element lab...",
+    "eyebrow": "Element Lab",
+    "title": "Think beyond the grid.",
+    "description": "Five quick questions. Read clues, spot patterns, and learn why each answer works—without repeating the Daily game.",
+    "start-mixed": "Start mixed challenge",
+    "five-questions": "5 questions",
+    "choose-lab": "Choose an experiment",
+    "choose-lab-description": "Train one chemistry instinct at a time.",
+    "no-penalty": "No lives. No streak pressure. Just learn.",
+    "start-lab": "Start this lab",
+    "modes": {
+      "mixed": {
+        "title": "Mixed challenge",
+        "description": "A five-question blend of every experiment."
+      },
+      "identity": {
+        "title": "Who am I?",
+        "description": "Match a precise set of properties to one mystery element."
+      },
+      "extreme": {
+        "title": "Extreme element",
+        "description": "Find the heaviest, lightest, hottest, or coldest option."
+      },
+      "odd-one-out": {
+        "title": "Odd one out",
+        "description": "Spot the one element that breaks a stated pattern."
+      }
+    },
+    "classic": {
+      "title": "Looking for the original deduction game?",
+      "description": "Classic Practice keeps the nine-guess property comparison format, with Easy and Standard hints.",
+      "action": "Open Classic Practice"
+    },
+    "exit": "Exit challenge",
+    "question-count": "Question {current} of {total}",
+    "think-first": "Take your time—wrong answers still teach you something.",
+    "clue-number": "Clue {number}",
+    "properties": {
+      "period": "period",
+      "group": "group",
+      "block": "block",
+      "phase": "phase at STP",
+      "element-type": "element type",
+      "atomic-number": "atomic number",
+      "atomic-mass": "atomic mass",
+      "melting-point": "melting point",
+      "boiling-point": "boiling point"
+    },
+    "questions": {
+      "identity": {
+        "prompt": "Which element matches this definition?",
+        "instruction": "Every clue is exact, and together they point to one element."
+      },
+      "extreme": {
+        "highest": "Which element has the highest {property}?",
+        "lowest": "Which element has the lowest {property}?"
+      },
+      "odd-one-out": {
+        "prompt": "Which element has a different {property}?",
+        "instruction": "Three choices share the same value. Find the exception."
+      },
+      "choose-one": "Choose one of the four elements."
+    },
+    "answer-label": "Element answer",
+    "answer-placeholder": "Enter an element name or symbol...",
+    "submit": "Answer",
+    "invalid-element": "Choose a valid element name or symbol.",
+    "feedback": {
+      "correct": "Exactly right",
+      "learning-moment": "A useful one to remember",
+      "learn-more": "Learn more about {element}"
+    },
+    "explanations": {
+      "identity": "{answer} is the only element that matches every clue in this definition.",
+      "extreme": "{answer} is the correct extreme here, with {property}: {value}.",
+      "odd-one-out": "{answer} has {property} “{answerValue}”; the other three are “{commonValue}”."
+    },
+    "continue": "Continue",
+    "result": {
+      "eyebrow": "Experiment complete",
+      "title": "Lab notes ready",
+      "summary": {
+        "strong": "Sharp pattern recognition. Review the explanations, then try another set.",
+        "steady": "You found several patterns and picked up a few new ones along the way.",
+        "curious": "Every answer is now a clue for next time. Review the patterns and keep exploring."
+      },
+      "score": "Correct answers",
+      "time": "Time",
+      "review": "What this round revealed",
+      "play-again": "Try another set",
+      "back-to-lab": "Choose another experiment"
+    }
+  },
+  "result": {
+    "game-number": "Daily #{number}",
+    "won-title": "Element identified",
+    "lost-title": "Challenge complete",
+    "won-summary": "Nice deduction. Your daily result and a little chemistry are below.",
+    "lost-summary": "You used all nine guesses. The answer and a useful fact are below.",
+    "performance": "Your performance",
+    "attempts": "Attempts",
+    "time": "Time",
+    "streak": "Streak",
+    "assist": "Assist",
+    "assisted": "Used",
+    "no-hints": "No hints",
+    "learn": "Meet today's element",
+    "did-you-know": "Did you know?",
+    "fact-fallback": "Open the element card to learn more about this element.",
+    "next": "What next?",
+    "practice-coming-soon": "Practice mode · Coming soon",
+    "practice-description": "Unlimited elements arrive in Release 3.",
+    "practice-next": "Keep exploring in Practice",
+    "practice-next-description": "Try five fresh element challenges.",
+    "view-collection": "View element collection",
+    "new-discovery": "New element discovered",
+    "collection-updated": "Collection updated",
+    "collection-count": "{count} / {total} elements discovered",
+    "new-discovery-description": "{element} now has a permanent place in your collection.",
+    "collection-updated-description": "Your best record for {element} has been updated.",
+    "share": "Share result",
+    "copied": "Result copied to your clipboard.",
+    "share-error": "The result could not be shared. Please try again.",
+    "share-win": "Elemendle #{gameNumber} · {attempts}/9",
+    "share-loss": "Elemendle #{gameNumber} · {attempts}/9",
+    "practice-label": "Practice · {difficulty}",
+    "practice-won-title": "Practice solved",
+    "practice-lost-title": "Round complete",
+    "practice-won-summary": "Well reasoned. Review the element, then keep training when you are ready.",
+    "practice-lost-summary": "This element escaped you, but every comparison builds periodic-table intuition.",
+    "difficulty": "Difficulty",
+    "difficulty-easy": "Easy",
+    "difficulty-standard": "Standard",
+    "choose-next-difficulty": "Difficulty for the next round",
+    "play-again": "Practice another element",
+    "practice-share-win": "Elemendle Practice · {attempts}/9",
+    "practice-share-loss": "Elemendle Practice · {attempts}/9",
+    "next-element": "Next daily element in {countdown}"
+  },
+  "collection": {
+    "loading": "Opening your element archive…",
+    "eyebrow": "Personal element archive",
+    "title": "Your periodic discoveries.",
+    "description": "Correct answers reveal elements permanently. Return to inspect what you have found and the records attached to each discovery.",
+    "progress": "Collection progress",
+    "discovered-count": "{count} / {total} elements discovered",
+    "new-discoveries": "New this round: {elements}",
+    "view": "View collection",
+    "table-title": "Periodic collection",
+    "table-description": "Discovered elements glow in their true periodic-table positions.",
+    "scroll-hint": "Swipe to explore the table",
+    "recent": "Recently discovered",
+    "element-label": "View {element}",
+    "locked-label": "Undiscovered element at atomic number {number}",
+    "sources": { "daily": "Daily", "classic": "Classic Practice", "challenge": "Element Challenge" },
+    "detail": {
+      "discovered-element": "Discovered element",
+      "learn-more": "Open element reference",
+      "first-source": "First found in",
+      "first-date": "First discovered",
+      "best-attempts": "Best guesses",
+      "best-time": "Best time"
+    }
   },
   "victory": {
     "title": "Victory!",
@@ -193,7 +443,7 @@
       },
       {
         "question": "How's my data stored?",
-        "answer": "Your data is stored locally on your device. We do not collect any data from you."
+        "answer": "Your game progress stays on your device. We collect only anonymous, cookieless gameplay events such as starts, completions, and shares. We never collect answers, guesses, free text, exported data, or persistent identifiers."
       },
       {
         "question": "Does the Elemendle game free?",

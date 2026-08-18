@@ -9,6 +9,7 @@
     ]
   },
   "header": {
+    "collection": "원소 컬렉션",
     "stats": {
       "tooltip": "통계",
       "play": "플레이한 게임",
@@ -26,13 +27,70 @@
       "name": "데이터 전송",
       "btn01": "데이터 내보내기",
       "btn02": "데이터 가져오기",
-      "description": "게임 통계를 다른 기기로 전송하기 위해 내보냅니다."
+      "description": "일일 기록, 진행 중인 게임, 원소 도감을 다른 기기로 전송합니다.",
+      "invalid-file": "올바른 JSON 파일을 선택하세요.",
+      "import-success": "Elemendle 데이터를 가져왔습니다.",
+      "import-failed": "이 파일에는 올바른 Elemendle 데이터가 없습니다.",
+      "invalid-format": "선택한 파일을 읽을 수 없습니다.",
+      "export-success": "Elemendle 데이터를 내보냈습니다.",
+      "export-failed": "데이터를 내보낼 수 없습니다."
     },
     "how-to": "게임 방법?",
     "language": "게임 언어 변경."
   },
   "game-board": {
     "title": "오늘의 원소를 맞춰보세요!",
+    "loading": "오늘의 원소를 준비하고 있습니다…",
+    "load-error": "오늘의 게임을 불러오지 못했습니다. 잠시 후 다시 시도하세요.",
+    "invalid-guess": "올바른 원소 이름 또는 기호를 입력하세요.",
+    "already-guessed": "이미 추측한 원소입니다.",
+    "game-number": "데일리 #{number}",
+    "goal": "속성 비교를 활용해 아홉 번 안에 오늘의 원소를 찾아보세요.",
+    "progress": "{used} / {total}회 추측",
+    "remaining": "{count}회 남음",
+    "complete": "완료",
+    "assist-on": "도움 켜짐",
+    "assist-off": "도움 꺼짐",
+    "assist-disabled-message": "도움 기능이 꺼져 있습니다. 힌트가 필요하면 위에서 켜세요.",
+    "hints-title": "선택 힌트",
+    "hints-no-penalty": "힌트를 봐도 점수, 연속 기록 또는 통계에 영향을 주지 않습니다.",
+    "next-hint": "다음 힌트는 {attempt}번째 추측 후 열립니다.",
+    "all-hints-unlocked": "사용 가능한 힌트가 모두 열렸습니다.",
+    "reveal-hint": "힌트 {number} 보기",
+    "show-hint-again": "힌트 {number} 다시 보기",
+    "hint-label": "힌트 {number}:",
+    "close-hint": "힌트 {number} 닫기",
+    "candidates": {
+      "title": "후보 나침반",
+      "description": "이미 확인한 비교 결과만으로 만든 추론 지도를 엽니다.",
+      "assist-required": "추론 지도를 사용하려면 도움을 켜세요.",
+      "trail-label": "각 추측 후 후보 수",
+      "initial-count": "시작 후보 {count}개",
+      "guess-count": "{guess}번째 추측 후 후보 {count}개",
+      "remaining-label": "모든 단서와 일치",
+      "remaining-count": "후보 {count}개",
+      "map-help": "밝은 칸은 가능한 후보이며, 어두운 칸은 하나 이상의 비교와 맞지 않습니다.",
+      "map-label": "스크롤 가능한 후보 원소 주기율표",
+      "map-summary": "가능한 원소 {count}개가 강조된 주기율표",
+      "candidate-element": "{element}은(는) 후보입니다",
+      "excluded-element": "{element}은(는) 제외되었습니다",
+      "series": { "lanthanide": "란타넘족", "actinide": "악티늄족" }
+    },
+    "guess-history": "추측 및 속성 비교",
+    "guess-number": "추측 {number}",
+    "show-details": "속성 더 보기",
+    "hide-details": "추가 속성 숨기기",
+    "feedback-legend": "비교 기호 안내",
+    "feedback": {
+      "exact": "정확히 일치",
+      "target-higher": "정답 값이 더 높음",
+      "target-lower": "정답 값이 더 낮음",
+      "not-match": "일치하지 않음"
+    },
+    "input-label": "원소 이름 또는 기호",
+    "submit": "추측 제출",
+    "suggestion-details": "족 {group} · 주기 {period} · {phase}",
+    "yesterday-element": "어제 데일리 #{gameNumber}의 정답은 {element}였습니다.",
     "remaining-guesses": "남은 횟수",
     "input-placeholder": "원소 이름 또는 기호를 입력하세요...",
     "solved-count": "명이 이미 이 원소를 맞혔습니다!",
@@ -100,6 +158,114 @@
     "game-over": "게임 오버!",
     "correct-answer": "정답은",
     "scroll-horizontal": "자세한 내용을 보려면 가로로 스크롤하세요."
+  },
+  "practice": {
+    "mode-label": "게임 모드",
+    "daily": "데일리",
+    "practice": "연습",
+    "loading": "연습 실험실을 복원하고 있습니다…",
+    "eyebrow": "무제한 화학 실험실",
+    "welcome-title": "주기율표 연습",
+    "welcome-description": "원하는 속도를 선택해 언제든 원소 감각을 키워 보세요. 연습은 데일리 연속 기록이나 통계에 영향을 주지 않습니다.",
+    "choose-difficulty": "난이도 선택",
+    "start": "연습 시작",
+    "back-to-challenges": "원소 챌린지",
+    "local-note": "연습 라운드는 이 기기에 저장되며 새로고침 후에도 이어할 수 있습니다.",
+    "session-label": "연습 · {difficulty}",
+    "game-title": "숨은 원소 찾기",
+    "game-goal": "속성 비교를 활용해 아홉 번 안에 로컬에서 선택된 원소를 찾으세요.",
+    "difficulty": {
+      "label": "연습 난이도",
+      "easy": {
+        "title": "쉬움",
+        "description": "3, 5, 7번째 추측 후 힌트가 열립니다."
+      },
+      "standard": {
+        "title": "표준",
+        "description": "데일리처럼 5, 7, 8번째 추측 후 힌트가 열립니다."
+      }
+    }
+  },
+  "challenge": {
+    "loading": "원소 실험실을 복원하는 중…", "eyebrow": "원소 실험실", "title": "표 너머로 생각하세요.",
+    "description": "다섯 개의 빠른 문제입니다. 단서를 읽고 패턴을 찾으며, 데일리 게임을 반복하지 않고 각 답의 이유를 배웁니다.",
+    "start-mixed": "혼합 챌린지 시작", "five-questions": "5문제", "choose-lab": "실험 선택", "choose-lab-description": "한 번에 하나의 화학 감각을 훈련하세요.",
+    "no-penalty": "생명도 연승 압박도 없습니다. 배우기만 하면 됩니다.", "start-lab": "이 실험 시작",
+    "modes": {
+      "mixed": { "title": "혼합 챌린지", "description": "모든 실험을 섞은 다섯 문제입니다." },
+      "identity": { "title": "나는 누구일까요?", "description": "정확한 속성으로 하나의 미지 원소를 찾습니다." },
+      "extreme": { "title": "극한의 원소", "description": "가장 무겁거나 가볍고, 뜨겁거나 차가운 선택지를 찾습니다." },
+      "odd-one-out": { "title": "다른 하나", "description": "주어진 패턴을 벗어나는 원소를 찾습니다." }
+    },
+    "classic": { "title": "기존 추리 게임을 찾으시나요?", "description": "클래식 연습은 9번의 속성 비교와 Easy·Standard 힌트를 유지합니다.", "action": "클래식 연습 열기" },
+    "exit": "챌린지 나가기", "question-count": "{total}문제 중 {current}번", "think-first": "천천히 생각하세요. 오답에서도 배울 수 있습니다.", "clue-number": "단서 {number}",
+    "properties": {
+      "period": "주기", "group": "족", "block": "블록", "phase": "표준 상태의 상", "element-type": "원소 유형",
+      "atomic-number": "원자 번호", "atomic-mass": "원자량", "melting-point": "녹는점", "boiling-point": "끓는점"
+    },
+    "questions": {
+      "identity": { "prompt": "이 정의에 맞는 원소는 무엇인가요?", "instruction": "모든 단서는 정확하며 함께 하나의 원소를 가리킵니다." },
+      "extreme": { "highest": "{property}이 가장 높은 원소는?", "lowest": "{property}이 가장 낮은 원소는?" },
+      "odd-one-out": { "prompt": "{property}이 다른 원소는?", "instruction": "세 선택지는 같은 값을 가집니다. 예외를 찾으세요." },
+      "choose-one": "네 원소 중 하나를 선택하세요."
+    },
+    "answer-label": "원소 답", "answer-placeholder": "원소 이름 또는 기호 입력…", "submit": "답하기", "invalid-element": "올바른 원소 이름이나 기호를 선택하세요.",
+    "feedback": { "correct": "정확합니다", "learning-moment": "기억해 둘 만한 지식", "learn-more": "{element} 더 알아보기" },
+    "explanations": { "identity": "{answer}만이 이 정의의 모든 단서와 일치합니다.", "extreme": "정답은 {answer}이며, {property}은 {value}입니다.", "odd-one-out": "{answer}의 {property}은 “{answerValue}”이고 나머지 셋은 “{commonValue}”입니다." },
+    "continue": "계속",
+    "result": {
+      "eyebrow": "실험 완료", "title": "실험 노트 준비 완료",
+      "summary": { "strong": "패턴을 날카롭게 찾아냈습니다. 설명을 검토하고 다음 세트에 도전하세요.", "steady": "여러 패턴을 찾았고 새로운 지식도 얻었습니다.", "curious": "모든 답은 다음 도전의 단서가 됩니다. 패턴을 검토하고 계속 탐색하세요." },
+      "score": "정답", "time": "시간", "review": "이번 라운드에서 배운 것", "play-again": "다른 세트 도전", "back-to-lab": "다른 실험 선택"
+    }
+  },
+  "result": {
+    "practice-next": "연습에서 계속 탐색", "practice-next-description": "새로운 원소 문제 다섯 개에 도전하세요.", "view-collection": "원소 컬렉션 보기",
+    "new-discovery": "새 원소 발견", "collection-updated": "컬렉션 업데이트", "collection-count": "원소 {count} / {total}개 발견",
+    "new-discovery-description": "{element}이 컬렉션에 영구 추가되었습니다.", "collection-updated-description": "{element}의 최고 기록이 갱신되었습니다.",
+    "game-number": "데일리 #{number}",
+    "won-title": "원소를 찾았습니다",
+    "lost-title": "도전 완료",
+    "won-summary": "멋진 추리입니다. 아래에서 결과와 화학 지식을 확인하세요.",
+    "lost-summary": "아홉 번의 추측을 모두 사용했습니다. 정답과 유용한 정보를 확인하세요.",
+    "performance": "이번 결과",
+    "attempts": "추측 횟수",
+    "time": "시간",
+    "streak": "연속 기록",
+    "assist": "도움",
+    "assisted": "사용함",
+    "no-hints": "힌트 없음",
+    "learn": "오늘의 원소 알아보기",
+    "did-you-know": "알고 계셨나요?",
+    "fact-fallback": "원소 카드를 열어 자세히 알아보세요.",
+    "next": "다음은 무엇인가요?",
+    "practice-coming-soon": "연습 모드 · 출시 예정",
+    "practice-description": "무제한 원소 연습은 Release 3에서 제공됩니다.",
+    "share": "결과 공유",
+    "copied": "결과를 클립보드에 복사했습니다.",
+    "share-error": "결과를 공유하지 못했습니다. 다시 시도하세요.",
+    "share-win": "Elemendle #{gameNumber} · {attempts}/9",
+    "share-loss": "Elemendle #{gameNumber} · {attempts}/9",
+    "practice-label": "연습 · {difficulty}",
+    "practice-won-title": "연습 성공",
+    "practice-lost-title": "라운드 완료",
+    "practice-won-summary": "멋진 추리입니다. 원소를 복습하고 준비되면 계속 연습하세요.",
+    "practice-lost-summary": "이번에는 놓쳤지만, 비교할 때마다 주기율표 감각이 자랍니다.",
+    "difficulty": "난이도",
+    "difficulty-easy": "쉬움",
+    "difficulty-standard": "표준",
+    "choose-next-difficulty": "다음 라운드 난이도",
+    "play-again": "다른 원소 연습",
+    "practice-share-win": "Elemendle 연습 · {attempts}/9",
+    "practice-share-loss": "Elemendle 연습 · {attempts}/9",
+    "next-element": "다음 데일리 원소까지 {countdown}"
+  },
+  "collection": {
+    "loading": "원소 보관함을 여는 중…", "eyebrow": "개인 원소 보관함", "title": "나의 주기율표 발견.",
+    "description": "정답을 맞히면 원소가 영구적으로 공개됩니다. 발견한 원소와 기록을 언제든 확인하세요.", "progress": "수집 진행도", "discovered-count": "원소 {count} / {total}개 발견", "new-discoveries": "이번 라운드의 새 발견: {elements}", "view": "컬렉션 보기",
+    "table-title": "주기율표 컬렉션", "table-description": "발견한 원소가 실제 주기율표 위치에서 빛납니다.", "scroll-hint": "밀어서 표 탐색", "recent": "최근 발견",
+    "element-label": "{element} 보기", "locked-label": "원자 번호 {number} 미발견", "sources": { "daily": "데일리", "classic": "클래식 연습", "challenge": "원소 챌린지" },
+    "detail": { "discovered-element": "발견한 원소", "learn-more": "원소 자료 열기", "first-source": "첫 발견", "first-date": "최초 발견일", "best-attempts": "최소 추측", "best-time": "최고 시간" }
   },
   "victory": {
     "title": "승리!",
@@ -193,7 +359,7 @@
       },
       {
         "question": "내 데이터는 어떻게 저장되나요?",
-        "answer": "데이터는 기기에 로컬로 저장됩니다. 귀하의 데이터를 수집하지 않습니다."
+        "answer": "게임 진행 상황은 기기에만 저장됩니다. 시작, 완료, 공유와 같은 익명의 쿠키 없는 게임 이벤트만 수집합니다. 정답, 구체적인 추측, 자유 입력, 내보낸 데이터 또는 영구 식별자는 수집하지 않습니다."
       },
       {
         "question": "Elemendle 게임은 무료인가요?",

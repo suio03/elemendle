@@ -9,17 +9,23 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
-import { UserStatistics } from "@/types/game"
-import { getStoredStatistics } from "@/lib/storage"
+import type { ElementStatistics } from '@/types/element'
+import { getStoredStatistics, STATISTICS_UPDATED_EVENT } from "@/lib/storage"
 import Stats from '@/public/images/stats.svg'
 import { useTranslations } from "next-intl"
 
 export default function StatsModal() {
     const t = useTranslations('header')
-    const [statistics, setStatistics] = useState<UserStatistics | null>(null)
+    const [statistics, setStatistics] = useState<ElementStatistics | null>(null)
 
     useEffect(() => {
         setStatistics(getStoredStatistics())
+
+        const handleStatisticsUpdate = (event: Event) => {
+            setStatistics((event as CustomEvent<ElementStatistics>).detail)
+        }
+        window.addEventListener(STATISTICS_UPDATED_EVENT, handleStatisticsUpdate)
+        return () => window.removeEventListener(STATISTICS_UPDATED_EVENT, handleStatisticsUpdate)
     }, [])
 
     if (!statistics) return null
@@ -42,9 +48,13 @@ export default function StatsModal() {
                     <TooltipProvider>
                         <Tooltip>
                             <TooltipTrigger asChild>
-                                <div className="w-8 transition-transform hover:scale-110 cursor-pointer -mr-3">
-                                    <img src={Stats.src} alt="Stats" className="w-8 mt-2" />
-                                </div>
+                                <button
+                                    type="button"
+                                    aria-label={t('stats.tooltip')}
+                                    className="w-8 rounded-md transition-transform hover:scale-110 -mr-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9CCAD3]"
+                                >
+                                    <img src={Stats.src} alt="" className="w-8 mt-2" />
+                                </button>
                             </TooltipTrigger>
                             <TooltipContent className="text-[#9CCAD3] bg-black border-0">
                                 <p>{t('stats.tooltip')}</p>
@@ -55,7 +65,7 @@ export default function StatsModal() {
             </DialogTrigger>
             <DialogContent className="bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] text-white border-[#73B9FF]">
                 <DialogHeader>
-                    <DialogTitle className="text-2xl font-bold text-center">Statistics</DialogTitle>
+                    <DialogTitle className="text-2xl font-bold text-center">{t('stats.tooltip')}</DialogTitle>
                 </DialogHeader>
                 <div className="space-y-6">
                     {/* Stats Grid */}

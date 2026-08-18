@@ -9,6 +9,7 @@
     ]
   },
   "header": {
+    "collection": "Colección de elementos",
     "stats": {
       "tooltip": "Estadísticas",
       "play": "Partidas jugadas",
@@ -26,13 +27,70 @@
       "name": "Transfiere tus datos",
       "btn01": "Exportar datos",
       "btn02": "Importar datos",
-      "description": "Exporta tus estadísticas de juego para transferirlas a otro dispositivo."
+      "description": "Transfiere tu historial diario, partidas activas y colección de elementos a otro dispositivo.",
+      "invalid-file": "Selecciona un archivo JSON válido.",
+      "import-success": "Tus datos de Elemendle se han importado.",
+      "import-failed": "Este archivo no contiene datos válidos de Elemendle.",
+      "invalid-format": "No se pudo leer el archivo seleccionado.",
+      "export-success": "Tus datos de Elemendle se han exportado.",
+      "export-failed": "No se pudieron exportar tus datos."
     },
     "how-to": "¿Cómo jugar?",
     "language": "Cambiar el idioma del juego."
   },
   "game-board": {
     "title": "¡ADIVINA EL ELEMENTO DE HOY!",
+    "loading": "Preparando el elemento de hoy...",
+    "load-error": "No se pudo cargar el juego de hoy. Inténtalo de nuevo en breve.",
+    "invalid-guess": "Introduce un nombre o símbolo de elemento válido.",
+    "already-guessed": "Ya has probado ese elemento.",
+    "game-number": "Diario #{number}",
+    "goal": "Usa cada comparación para identificar el elemento de hoy en nueve intentos.",
+    "progress": "{used} / {total} intentos",
+    "remaining": "Quedan {count}",
+    "complete": "Completado",
+    "assist-on": "Ayuda activada",
+    "assist-off": "Ayuda desactivada",
+    "assist-disabled-message": "La ayuda está desactivada. Actívala arriba cuando quieras pistas.",
+    "hints-title": "Pistas opcionales",
+    "hints-no-penalty": "Las pistas no afectan tu puntuación, racha ni estadísticas.",
+    "next-hint": "La siguiente pista se desbloquea después del intento {attempt}.",
+    "all-hints-unlocked": "Todas las pistas disponibles están desbloqueadas.",
+    "reveal-hint": "Mostrar pista {number}",
+    "show-hint-again": "Volver a mostrar la pista {number}",
+    "hint-label": "Pista {number}:",
+    "close-hint": "Cerrar pista {number}",
+    "candidates": {
+      "title": "Brújula de candidatos",
+      "description": "Abre un mapa deductivo basado solo en las pistas que ya has visto.",
+      "assist-required": "Activa la ayuda para usar el mapa deductivo.",
+      "trail-label": "Número de candidatos tras cada intento",
+      "initial-count": "{count} candidatos iniciales",
+      "guess-count": "{count} candidatos tras el intento {guess}",
+      "remaining-label": "Coinciden con todas las pistas",
+      "remaining-count": "{count} candidatos",
+      "map-help": "Las casillas claras siguen siendo posibles; las oscuras contradicen alguna comparación.",
+      "map-label": "Tabla periódica desplazable de candidatos",
+      "map-summary": "Tabla periódica con {count} elementos posibles resaltados",
+      "candidate-element": "{element} sigue siendo candidato",
+      "excluded-element": "{element} está descartado",
+      "series": { "lanthanide": "Serie de los lantánidos", "actinide": "Serie de los actínidos" }
+    },
+    "guess-history": "Tus intentos y comparaciones de propiedades",
+    "guess-number": "Intento {number}",
+    "show-details": "Mostrar más propiedades",
+    "hide-details": "Ocultar propiedades adicionales",
+    "feedback-legend": "Leyenda de símbolos de comparación",
+    "feedback": {
+      "exact": "Coincidencia exacta",
+      "target-higher": "El valor objetivo es mayor",
+      "target-lower": "El valor objetivo es menor",
+      "not-match": "No coincide"
+    },
+    "input-label": "Nombre o símbolo del elemento",
+    "submit": "Enviar intento",
+    "suggestion-details": "Grupo {group} · Período {period} · {phase}",
+    "yesterday-element": "Ayer, el Diario #{gameNumber} fue {element}.",
     "remaining-guesses": "intentos restantes",
     "input-placeholder": "Introduce el nombre o símbolo del elemento...",
     "solved-count": "¡personas ya adivinaron este elemento!",
@@ -100,6 +158,107 @@
     "game-over": "¡Juego terminado!",
     "correct-answer": "La respuesta correcta es",
     "scroll-horizontal": "Desplácese horizontalmente para ver más información"
+  },
+  "practice": {
+    "mode-label": "Modo de juego",
+    "daily": "Diario",
+    "practice": "Práctica",
+    "loading": "Restaurando tu laboratorio de práctica...",
+    "eyebrow": "Laboratorio de química ilimitado",
+    "welcome-title": "Practica la tabla periódica",
+    "welcome-description": "Elige tu ritmo y entrena tus conocimientos cuando quieras. La práctica no cambia tu racha ni tus estadísticas diarias.",
+    "choose-difficulty": "Elige la dificultad",
+    "start": "Empezar práctica",
+    "back-to-challenges": "Retos de elementos",
+    "local-note": "La ronda se guarda en este dispositivo y continúa después de actualizar la página.",
+    "session-label": "Práctica · {difficulty}",
+    "game-title": "ENCUENTRA EL ELEMENTO MISTERIOSO",
+    "game-goal": "Usa las comparaciones para identificar un elemento local en nueve intentos.",
+    "difficulty": {
+      "label": "Dificultad de práctica",
+      "easy": {
+        "title": "Fácil",
+        "description": "Las pistas se desbloquean tras los intentos 3, 5 y 7."
+      },
+      "standard": {
+        "title": "Estándar",
+        "description": "Las pistas siguen el ritmo diario: intentos 5, 7 y 8."
+      }
+    }
+  },
+  "challenge": {
+    "loading": "Restaurando tu laboratorio…", "eyebrow": "Laboratorio de elementos", "title": "Piensa más allá de la tabla.",
+    "description": "Cinco preguntas rápidas. Lee pistas, detecta patrones y aprende por qué funciona cada respuesta, sin repetir el Daily.",
+    "start-mixed": "Iniciar reto mixto", "five-questions": "5 preguntas", "choose-lab": "Elige un experimento", "choose-lab-description": "Entrena un instinto químico cada vez.",
+    "no-penalty": "Sin vidas ni presión por rachas. Solo aprende.", "start-lab": "Iniciar este experimento",
+    "modes": {
+      "mixed": { "title": "Reto mixto", "description": "Cinco preguntas que combinan todos los experimentos." },
+      "identity": { "title": "¿Quién soy?", "description": "Relaciona propiedades precisas con un elemento misterioso." },
+      "extreme": { "title": "Elemento extremo", "description": "Encuentra la opción más pesada, ligera, caliente o fría." },
+      "odd-one-out": { "title": "El diferente", "description": "Detecta el elemento que rompe el patrón indicado." }
+    },
+    "classic": { "title": "¿Buscas el juego de deducción original?", "description": "Classic Practice conserva las nueve comparaciones y las pistas Easy y Standard.", "action": "Abrir Classic Practice" },
+    "exit": "Salir del reto", "question-count": "Pregunta {current} de {total}", "think-first": "Tómate tu tiempo: también se aprende al fallar.", "clue-number": "Pista {number}",
+    "properties": { "period": "período", "group": "grupo", "block": "bloque", "phase": "fase en STP", "element-type": "tipo de elemento", "atomic-number": "número atómico", "atomic-mass": "masa atómica", "melting-point": "punto de fusión", "boiling-point": "punto de ebullición" },
+    "questions": {
+      "identity": { "prompt": "¿Qué elemento coincide con esta definición?", "instruction": "Cada pista es exacta y juntas señalan un solo elemento." },
+      "extreme": { "highest": "¿Qué elemento tiene el mayor {property}?", "lowest": "¿Qué elemento tiene el menor {property}?" },
+      "odd-one-out": { "prompt": "¿Qué elemento tiene un {property} diferente?", "instruction": "Tres opciones comparten el mismo valor. Encuentra la excepción." },
+      "choose-one": "Elige uno de los cuatro elementos."
+    },
+    "answer-label": "Respuesta de elemento", "answer-placeholder": "Escribe un elemento o símbolo…", "submit": "Responder", "invalid-element": "Elige un nombre o símbolo de elemento válido.",
+    "feedback": { "correct": "Exactamente", "learning-moment": "Un dato útil para recordar", "learn-more": "Más sobre {element}" },
+    "explanations": { "identity": "{answer} es el único elemento que coincide con todas las pistas.", "extreme": "{answer} es el extremo correcto, con {property} de {value}.", "odd-one-out": "{answer} tiene {property} «{answerValue}»; los otros tres tienen «{commonValue}»." },
+    "continue": "Continuar",
+    "result": { "eyebrow": "Experimento completado", "title": "Notas de laboratorio listas", "summary": { "strong": "Gran detección de patrones. Revisa las explicaciones y prueba otra serie.", "steady": "Encontraste varios patrones y aprendiste otros por el camino.", "curious": "Cada respuesta será una pista la próxima vez. Revisa los patrones y sigue explorando." }, "score": "Respuestas correctas", "time": "Tiempo", "review": "Lo revelado en esta ronda", "play-again": "Probar otra serie", "back-to-lab": "Elegir otro experimento" }
+  },
+  "result": {
+    "practice-next": "Seguir explorando en Practice", "practice-next-description": "Prueba cinco retos nuevos.", "view-collection": "Ver colección de elementos",
+    "new-discovery": "Nuevo elemento descubierto", "collection-updated": "Colección actualizada", "collection-count": "{count} / {total} elementos descubiertos",
+    "new-discovery-description": "{element} ya ocupa un lugar permanente en tu colección.", "collection-updated-description": "Se actualizó tu mejor marca de {element}.",
+    "game-number": "Diario #{number}",
+    "won-title": "Elemento identificado",
+    "lost-title": "Desafío completado",
+    "won-summary": "Buena deducción. Aquí tienes tu resultado y un poco de química.",
+    "lost-summary": "Has usado los nueve intentos. Aquí tienes la respuesta y un dato útil.",
+    "performance": "Tu resultado",
+    "attempts": "Intentos",
+    "time": "Tiempo",
+    "streak": "Racha",
+    "assist": "Ayuda",
+    "assisted": "Usada",
+    "no-hints": "Sin pistas",
+    "learn": "Conoce el elemento de hoy",
+    "did-you-know": "¿Sabías que...?",
+    "fact-fallback": "Abre la tarjeta del elemento para saber más.",
+    "next": "¿Qué sigue?",
+    "practice-coming-soon": "Modo práctica · Próximamente",
+    "practice-description": "Los elementos ilimitados llegarán en la versión 3.",
+    "share": "Compartir resultado",
+    "copied": "Resultado copiado al portapapeles.",
+    "share-error": "No se pudo compartir el resultado. Inténtalo de nuevo.",
+    "share-win": "Elemendle #{gameNumber} · {attempts}/9",
+    "share-loss": "Elemendle #{gameNumber} · {attempts}/9",
+    "practice-label": "Práctica · {difficulty}",
+    "practice-won-title": "Práctica resuelta",
+    "practice-lost-title": "Ronda completada",
+    "practice-won-summary": "Buena deducción. Repasa el elemento y sigue entrenando cuando quieras.",
+    "practice-lost-summary": "Este elemento se escapó, pero cada comparación mejora tu intuición periódica.",
+    "difficulty": "Dificultad",
+    "difficulty-easy": "Fácil",
+    "difficulty-standard": "Estándar",
+    "choose-next-difficulty": "Dificultad de la próxima ronda",
+    "play-again": "Practicar otro elemento",
+    "practice-share-win": "Práctica de Elemendle · {attempts}/9",
+    "practice-share-loss": "Práctica de Elemendle · {attempts}/9",
+    "next-element": "Siguiente elemento diario en {countdown}"
+  },
+  "collection": {
+    "loading": "Abriendo tu archivo de elementos…", "eyebrow": "Archivo personal de elementos", "title": "Tus descubrimientos periódicos.",
+    "description": "Las respuestas correctas revelan elementos para siempre. Consulta tus hallazgos y sus marcas cuando quieras.", "progress": "Progreso de colección", "discovered-count": "{count} / {total} elementos descubiertos", "new-discoveries": "Nuevos esta ronda: {elements}", "view": "Ver colección",
+    "table-title": "Colección periódica", "table-description": "Los elementos descubiertos brillan en su posición real.", "scroll-hint": "Desliza para explorar", "recent": "Descubiertos recientemente",
+    "element-label": "Ver {element}", "locked-label": "Elemento de número atómico {number} sin descubrir", "sources": { "daily": "Daily", "classic": "Classic Practice", "challenge": "Reto de elementos" },
+    "detail": { "discovered-element": "Elemento descubierto", "learn-more": "Abrir referencia", "first-source": "Descubierto primero en", "first-date": "Primer descubrimiento", "best-attempts": "Mejores intentos", "best-time": "Mejor tiempo" }
   },
   "victory": {
     "title": "¡Victoria!",
@@ -193,7 +352,7 @@
       },
       {
         "question": "¿Cómo se almacenan mis datos?",
-        "answer": "Tus datos se almacenan localmente en tu dispositivo. No recopilamos ningún dato tuyo."
+        "answer": "Tu progreso se guarda en tu dispositivo. Solo recopilamos eventos de juego anónimos y sin cookies, como inicios, partidas completadas y acciones de compartir. Nunca recopilamos respuestas, intentos concretos, texto libre, datos exportados ni identificadores persistentes."
       },
       {
         "question": "¿Es gratuito el juego Elemendle?",

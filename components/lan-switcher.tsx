@@ -35,9 +35,10 @@ const languages = [
 
 interface LanSwitcherProps {
     trigger?: React.ReactNode
+    label?: string
 }
 
-const LanSwitcher = forwardRef<HTMLButtonElement, LanSwitcherProps>(({ trigger }, ref) => {
+const LanSwitcher = forwardRef<HTMLButtonElement, LanSwitcherProps>(({ trigger, label }, ref) => {
     const pathname = usePathname()
     const pathItems = pathname.split('/').filter(item => item !== '')
     // Default locale
@@ -68,7 +69,11 @@ const LanSwitcher = forwardRef<HTMLButtonElement, LanSwitcherProps>(({ trigger }
     }
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger className="focus:outline-none">
+            <DropdownMenuTrigger
+                ref={ref}
+                aria-label={label}
+                className="rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9CCAD3]"
+            >
                 {trigger || (
                     <div className="flex items-center gap-2 rounded-md hover:bg-accent hover:text-accent-foreground">
                         <LanguageIcon className="w-6 h-6" />
