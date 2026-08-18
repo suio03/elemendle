@@ -2,15 +2,17 @@
 
 ## Project Structure & Module Organization
 
-This is a Next.js/TypeScript app for the Elemendle periodic-table guessing game. App Router pages and layouts live in `app/`, including localized routes under `app/[locale]/` and API/client helpers under `app/api/` and `app/hooks/`. Reusable React components are in `components/`; generated shadcn-style primitives are in `components/ui/`. Game logic and storage helpers live in `lib/`, shared types in `types/`, React context in `contexts/`, and static element data in `data/atom.json`. Translation files are organized by locale in `messages/`, while public assets, robots, and sitemap files are in `public/`.
+This is a Next.js/TypeScript app for the Elemendle periodic-table guessing game. App Router pages and layouts live in `app/`, with localized routes under `app/[locale]/`. Reusable React components are in `components/` and UI primitives in `components/ui/`. Game logic and storage helpers live in `lib/`, shared types in `types/`, React context in `contexts/`, and static element data in `data/atom.json`. Translation files are organized by locale in `messages/`; public assets are in `public/`.
 
 ## Build, Test, and Development Commands
 
 - `npm install`: install dependencies from `package-lock.json`.
 - `npm run dev`: start the local Next.js development server.
 - `npm run build`: create a production build and run Next.js compile-time checks.
+- `npm run build:cloudflare`: generate the deployable OpenNext Worker bundle.
 - `npm run start`: serve the production build locally after `npm run build`.
 - `npm run lint`: run the Next.js ESLint configuration.
+- `npm test`: run the Vitest suite once.
 
 ## Coding Style & Naming Conventions
 
@@ -18,7 +20,7 @@ Use TypeScript and React functional components. Keep strict type safety intact (
 
 ## Testing Guidelines
 
-There is no configured JavaScript test runner or coverage threshold in `package.json`. For changes, run `npm run lint` and `npm run build` as the baseline verification. If adding tests later, colocate focused specs near the code or introduce a clear `tests/` structure, and name files with `.test.ts` or `.test.tsx`.
+Vitest covers the game rules, challenges, persistence, analytics, progression, and data transfer. Keep focused specs beside their modules with the `.test.ts` suffix. Run `npm test`, `npm run lint`, and `npm run build` for normal changes; deployment changes must also pass `npm run build:cloudflare`.
 
 ## Commit & Pull Request Guidelines
 
@@ -26,4 +28,4 @@ Recent commits use short, direct messages such as `fix type error` and `add more
 
 ## Security & Configuration Tips
 
-Keep secrets out of git. Local environment values belong in `.env`, and deployment-specific settings should stay in the hosting platform. Be careful when changing `messages/`, `middleware.ts`, or locale routes because they affect public routing and SEO-visible pages.
+Keep secrets out of git. Local environment values belong in `.env`, and deployment-specific settings should stay in the hosting platform. Use the Node version pinned in `.node-version`. Treat `wrangler.jsonc`, `open-next.config.ts`, `middleware.ts`, and locale routes as deployment-sensitive because they affect Cloudflare routing and public URLs.
