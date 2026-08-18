@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1] - 2026-08-18
+
+### Fixed
+
+- Migrated Cloudflare deployment from the deprecated `next-on-pages` adapter to the Next.js 16-compatible OpenNext Workers adapter.
+- Pinned the Cloudflare build runtime to Node.js 22 and restored locale middleware compatibility for Workers builds.
+- Added reproducible Worker build, preview, deployment, routing, and dry-run configuration.
+
 ## [0.1.0] - 2026-08-18
 
 ### Added

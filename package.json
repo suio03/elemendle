@@ -1,11 +1,18 @@
 {
     "name": "elemendle",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "private": true,
+    "engines": {
+        "node": ">=22.13.0"
+    },
     "scripts": {
         "dev": "next dev",
         "build": "next build",
+        "build:cloudflare": "opennextjs-cloudflare build",
         "start": "next start",
+        "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+        "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+        "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
         "lint": "eslint .",
         "test": "vitest run"
     },
@@ -13,6 +20,7 @@
         "@headlessui/react": "^2.2.0",
         "@heroicons/react": "^2.2.0",
         "@hookform/resolvers": "^3.9.0",
+        "@opennextjs/cloudflare": "^1.20.2",
         "@radix-ui/react-accordion": "^1.2.0",
         "@radix-ui/react-alert-dialog": "^1.1.1",
         "@radix-ui/react-aspect-ratio": "^1.1.0",
@@ -75,6 +83,7 @@
         "tailwindcss-animate": "^1.0.7",
         "typescript": "^5.9.3",
         "vite": "^6.4.3",
-        "vitest": "^4.1.10"
+        "vitest": "^4.1.10",
+        "wrangler": "^4.123.0"
     }
 }

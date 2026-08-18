@@ -3,7 +3,6 @@ import GameBoard from '@/components/game-board'
 import Footer from '@/components/footer'
 import { GameGuideProvider } from '@/contexts/game-guide-context'
 import { GuideSection } from '@/components/guide-section'
-export const runtime = 'edge';
 export default function Home() {
     return (
         <GameGuideProvider>

@@ -4,8 +4,6 @@ import GameHeader from '@/components/game-header'
 import { GuideSection } from '@/components/guide-section'
 import { GameGuideProvider } from '@/contexts/game-guide-context'
 
-export const runtime = 'edge'
-
 export default function ClassicPracticePage() {
     return (
         <GameGuideProvider>
