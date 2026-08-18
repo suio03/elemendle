@@ -6,8 +6,8 @@
   "compatibility_flags": ["nodejs_compat"],
   "routes": [
     {
-      "pattern": "elemendle.com/*",
-      "zone_name": "elemendle.com"
+      "pattern": "elemendle.com",
+      "custom_domain": true
     }
   ],
   "assets": {
