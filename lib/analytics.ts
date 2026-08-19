@@ -74,6 +74,20 @@ export function trackEvent<EventName extends keyof AnalyticsEvents>(
     gtag('event', eventName, properties)
 }
 
+export function trackPageView(pathname: string): void {
+    if (typeof window === 'undefined') return
+
+    window.dataLayer = window.dataLayer || []
+    const gtag = window.gtag || function gtag(...args: unknown[]) {
+        window.dataLayer?.push(args)
+    }
+    gtag('event', 'page_view', {
+        page_location: window.location.href,
+        page_path: pathname,
+        page_title: document.title
+    })
+}
+
 export function getDaysSinceLastPlay(today = getCurrentUTCDay()): number | undefined {
     if (typeof window === 'undefined') return undefined
 

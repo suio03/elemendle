@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { getDaysSinceLastPlay, markGamePlayed, trackEvent } from '@/lib/analytics'
+import { getDaysSinceLastPlay, markGamePlayed, trackEvent, trackPageView } from '@/lib/analytics'
 
 describe('anonymous analytics helpers', () => {
     beforeEach(() => {
@@ -24,6 +24,21 @@ describe('anonymous analytics helpers', () => {
         expect(gtag).toHaveBeenCalledWith('event', 'guess_submitted', {
             mode: 'daily',
             attemptNumber: 3
+        })
+    })
+
+    it('tracks a page view with the current page metadata', () => {
+        const gtag = vi.fn()
+        window.gtag = gtag
+        document.title = 'Elemendle Practice'
+        window.history.replaceState({}, '', '/practice')
+
+        trackPageView('/practice')
+
+        expect(gtag).toHaveBeenCalledWith('event', 'page_view', {
+            page_location: 'http://localhost:3000/practice',
+            page_path: '/practice',
+            page_title: 'Elemendle Practice'
         })
     })
 })
