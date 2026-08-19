@@ -2,7 +2,7 @@
 
 import Script from 'next/script'
 import { usePathname } from 'next/navigation'
-import { useCallback, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { trackPageView } from '@/lib/analytics'
 
 const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-ZD8C67DLYH'
@@ -11,19 +11,14 @@ const plausibleScriptUrl = process.env.NEXT_PUBLIC_PLAUSIBLE_SCRIPT_URL || 'http
 
 const Analytics = () => {
     const pathname = usePathname()
-    const isGoogleAnalyticsReady = useRef(false)
-    const lastTrackedPath = useRef<string | null>(null)
+    const lastTrackedPath = useRef(pathname)
 
-    const trackCurrentPage = useCallback(() => {
-        if (!isGoogleAnalyticsReady.current || lastTrackedPath.current === pathname) return
+    useEffect(() => {
+        if (lastTrackedPath.current === pathname) return
 
         trackPageView(pathname)
         lastTrackedPath.current = pathname
     }, [pathname])
-
-    useEffect(() => {
-        trackCurrentPage()
-    }, [trackCurrentPage])
 
     return (
         <>
@@ -53,10 +48,6 @@ const Analytics = () => {
             <Script
                 id="anonymous-google-analytics"
                 strategy="afterInteractive"
-                onReady={() => {
-                    isGoogleAnalyticsReady.current = true
-                    trackCurrentPage()
-                }}
                 dangerouslySetInnerHTML={{
                     __html: `
                         gtag('js', new Date());
@@ -64,6 +55,11 @@ const Analytics = () => {
                             send_page_view: false,
                             allow_google_signals: false,
                             allow_ad_personalization_signals: false
+                        });
+                        gtag('event', 'page_view', {
+                            page_location: window.location.href,
+                            page_path: window.location.pathname,
+                            page_title: document.title
                         });
                     `
                 }}
