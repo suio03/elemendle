@@ -6,6 +6,7 @@ import { cookies } from 'next/headers'
 import { NextIntlClientProvider } from 'next-intl'
 import { Toaster } from "react-hot-toast"
 import Analytics from '@/components/analytics'
+import FeedbackWidget from '@/components/feedback-widget'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -60,6 +61,7 @@ export default async function LocaleLayout({
                                 -z-10" />
                         {children}
                     </div>
+                    <FeedbackWidget />
                     <Toaster
                         toastOptions={{
                             duration: 3000,

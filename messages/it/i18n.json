@@ -347,7 +347,7 @@
       },
       {
         "question": "Come vengono memorizzati i miei dati?",
-        "answer": "I progressi di gioco restano sul tuo dispositivo. Raccogliamo solo eventi di gioco anonimi e senza cookie, come avvii, completamenti e condivisioni. Non raccogliamo mai risposte, tentativi specifici, testo libero, dati esportati o identificatori persistenti."
+        "answer": "I progressi restano sul tuo dispositivo. Le statistiche di gioco usano eventi anonimi senza cookie ed escludono risposte, tentativi, testo libero, dati esportati e identificatori persistenti. Se invii un suggerimento, il testo e la pagina attuale vengono trasmessi al nostro team tramite Discord. Un cookie di 10 minuti limita gli invii ripetuti."
       },
       {
         "question": "Il gioco Elemendle è gratuito?",
@@ -359,7 +359,7 @@
       },
       {
         "question": "Posso fornire feedback su Elemendle?",
-        "answer": "Puoi contattarci all'indirizzo support@elemendle.app."
+        "answer": "Usa il pulsante dei suggerimenti in basso a destra per proporre funzioni o miglioramenti. Non serve accedere."
       }
     ]
   },
@@ -417,5 +417,21 @@
     "title": "Condividi Elemendle",
     "description": "Ho trovato l'elemento #Elemendle in {attempts} tentativi in {timeTaken}s",
     "btn": "Condividi su Twitter"
+  },
+  "Feedback": {
+    "launcher": "Proponi un’idea",
+    "title": "Aiutaci a migliorare Elemendle",
+    "helper": "Quale funzione vorresti? Cosa possiamo migliorare? Raccontaci le tue idee.",
+    "label": "Il tuo suggerimento",
+    "placeholder": "Mi piacerebbe poter…",
+    "limits": "10–1000 caratteri",
+    "privacy": "Il tuo suggerimento e la pagina attuale vengono inviati al team di Elemendle tramite Discord. Non servono account o e-mail.",
+    "close": "Chiudi",
+    "send": "Invia suggerimento",
+    "sending": "Invio…",
+    "success": "Grazie! Il tuo suggerimento è stato inviato.",
+    "error": "Invio non riuscito. Il testo è conservato; riprova più tardi.",
+    "cooldown": "Attendi 10 minuti tra un suggerimento e l’altro.",
+    "invalid": "Usa da 10 a 1000 caratteri, al massimo un link ed evita lunghe ripetizioni di caratteri."
   }
 }

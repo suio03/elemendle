@@ -352,7 +352,7 @@
       },
       {
         "question": "¿Cómo se almacenan mis datos?",
-        "answer": "Tu progreso se guarda en tu dispositivo. Solo recopilamos eventos de juego anónimos y sin cookies, como inicios, partidas completadas y acciones de compartir. Nunca recopilamos respuestas, intentos concretos, texto libre, datos exportados ni identificadores persistentes."
+        "answer": "Tu progreso se guarda en tu dispositivo. Las estadísticas del juego usan eventos anónimos sin cookies y no incluyen respuestas, intentos, texto libre, datos exportados ni identificadores persistentes. Si envías una sugerencia, su texto y la página actual llegan a nuestro equipo a través de Discord. Una cookie de 10 minutos limita los envíos repetidos."
       },
       {
         "question": "¿Es gratuito el juego Elemendle?",
@@ -364,7 +364,7 @@
       },
       {
         "question": "¿Puedo proporcionar alguna opinión sobre Elemendle?",
-        "answer": "Puedes contactarnos en support@elemendle.app."
+        "answer": "Usa el botón de sugerencias de la esquina inferior derecha para proponer funciones o mejoras. No necesitas iniciar sesión."
       }
     ]
   },
@@ -422,5 +422,21 @@
     "title": "Comparte Elemendle",
     "description": "Encontré el elemento #Elemendle en {attempts} intentos en {timeTaken}s",
     "btn": "Compartir en Twitter"
+  },
+  "Feedback": {
+    "launcher": "Sugerir una idea",
+    "title": "Ayúdanos a mejorar Elemendle",
+    "helper": "¿Qué función te gustaría? ¿Qué podemos mejorar? Nos encantaría saberlo.",
+    "label": "Tu sugerencia",
+    "placeholder": "Me gustaría poder…",
+    "limits": "10–1000 caracteres",
+    "privacy": "Tu sugerencia y la página actual se envían al equipo de Elemendle a través de Discord. No necesitas cuenta ni correo electrónico.",
+    "close": "Cerrar",
+    "send": "Enviar sugerencia",
+    "sending": "Enviando…",
+    "success": "¡Gracias! Tu sugerencia se ha enviado.",
+    "error": "No se pudo enviar. Tu texto se conserva; inténtalo de nuevo más tarde.",
+    "cooldown": "Espera 10 minutos entre sugerencias.",
+    "invalid": "Usa entre 10 y 1000 caracteres, como máximo un enlace y evita repetir caracteres muchas veces."
   }
 }

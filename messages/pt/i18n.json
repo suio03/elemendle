@@ -347,7 +347,7 @@
       },
       {
         "question": "Como meus dados são armazenados?",
-        "answer": "Seu progresso no jogo permanece no dispositivo. Coletamos apenas eventos de jogo anônimos e sem cookies, como inícios, conclusões e compartilhamentos. Nunca coletamos respostas, palpites específicos, texto livre, dados exportados ou identificadores persistentes."
+        "answer": "O progresso fica no seu dispositivo. A análise do jogo usa eventos anónimos sem cookies e exclui respostas, tentativas, texto livre, dados exportados e identificadores persistentes. Se enviar uma sugestão, o texto e a página atual são enviados à nossa equipa pelo Discord. Um cookie de 10 minutos limita envios repetidos."
       },
       {
         "question": "O jogo Elemendle é gratuito?",
@@ -359,7 +359,7 @@
       },
       {
         "question": "Posso fornecer algum feedback sobre Elemendle?",
-        "answer": "Você pode entrar em contato conosco em support@elemendle.app."
+        "answer": "Use o botão de sugestões no canto inferior direito para propor funções ou melhorias. Não é necessário iniciar sessão."
       }
     ]
   },
@@ -417,5 +417,21 @@
     "title": "Compartilhe Elemendle",
     "description": "Encontrei o elemento #Elemendle em {attempts} tentativas em {timeTaken}s",
     "btn": "Compartilhar no Twitter"
+  },
+  "Feedback": {
+    "launcher": "Sugerir uma ideia",
+    "title": "Ajude a melhorar o Elemendle",
+    "helper": "Que função gostaria de ter? O que podemos melhorar? Queremos saber a sua opinião.",
+    "label": "A sua sugestão",
+    "placeholder": "Gostaria de poder…",
+    "limits": "10–1000 caracteres",
+    "privacy": "A sua sugestão e a página atual são enviadas à equipa do Elemendle pelo Discord. Não é necessário ter conta ou e-mail.",
+    "close": "Fechar",
+    "send": "Enviar sugestão",
+    "sending": "A enviar…",
+    "success": "Obrigado! A sua sugestão foi enviada.",
+    "error": "Não foi possível enviar. O texto foi mantido; tente novamente mais tarde.",
+    "cooldown": "Aguarde 10 minutos entre sugestões.",
+    "invalid": "Use entre 10 e 1000 caracteres, no máximo um link, e evite repetições longas de caracteres."
   }
 }

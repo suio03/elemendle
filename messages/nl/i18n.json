@@ -347,7 +347,7 @@
       },
       {
         "question": "Hoe worden mijn gegevens opgeslagen?",
-        "answer": "Je spelvoortgang blijft op je apparaat. We verzamelen alleen anonieme, cookieloze spelgebeurtenissen, zoals starts, voltooide spellen en deelacties. We verzamelen nooit antwoorden, concrete pogingen, vrije tekst, geëxporteerde gegevens of permanente identificatoren."
+        "answer": "Je voortgang blijft op je apparaat. Spelstatistieken gebruiken anonieme gebeurtenissen zonder cookies en bevatten geen antwoorden, pogingen, vrije tekst, geëxporteerde gegevens of blijvende identificatoren. Als je een suggestie verstuurt, worden de tekst en huidige pagina via Discord naar ons team gestuurd. Een cookie van 10 minuten beperkt herhaalde inzendingen."
       },
       {
         "question": "Is het Elemendle spel gratis?",
@@ -359,7 +359,7 @@
       },
       {
         "question": "Kan ik feedback geven over Elemendle?",
-        "answer": "Je kunt contact met ons opnemen via support@elemendle.app."
+        "answer": "Gebruik de suggestieknop rechtsonder om een functie of verbetering voor te stellen. Inloggen is niet nodig."
       }
     ]
   },
@@ -417,5 +417,21 @@
     "title": "Elemendle delen",
     "description": "Ik heb het #Elemendle element gevonden in {attempts} pogingen binnen {timeTaken}s",
     "btn": "Delen op Twitter"
+  },
+  "Feedback": {
+    "launcher": "Stel een idee voor",
+    "title": "Help Elemendle verbeteren",
+    "helper": "Welke functie mis je? Wat kunnen we verbeteren? Laat het ons weten.",
+    "label": "Je suggestie",
+    "placeholder": "Ik zou graag…",
+    "limits": "10–1000 tekens",
+    "privacy": "Je suggestie en de huidige pagina worden via Discord naar het Elemendle-team gestuurd. Geen account of e-mailadres nodig.",
+    "close": "Sluiten",
+    "send": "Suggestie versturen",
+    "sending": "Versturen…",
+    "success": "Bedankt! Je suggestie is verstuurd.",
+    "error": "Versturen is mislukt. Je tekst blijft staan; probeer het later opnieuw.",
+    "cooldown": "Wacht 10 minuten tussen suggesties.",
+    "invalid": "Gebruik 10–1000 tekens, maximaal één link en vermijd lange herhalingen van tekens."
   }
 }

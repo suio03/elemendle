@@ -1,0 +1,66 @@
+.article {
+    @apply overflow-hidden rounded-3xl border border-[#9CCAD3]/25 bg-[#0D151C]/95 text-slate-200 shadow-2xl;
+}
+
+.article p, .article li {
+    @apply text-base leading-7;
+    overflow-wrap: break-word;
+}
+
+.article a {
+    @apply text-[#9CCAD3] underline decoration-[#9CCAD3]/40 underline-offset-4 transition hover:text-white;
+}
+
+.article a:focus-visible, .article summary:focus-visible {
+    outline: 2px solid #73B9FF;
+    outline-offset: 5px;
+    border-radius: 4px;
+}
+
+.article strong { @apply font-semibold text-white; }
+.article h2 { @apply text-2xl font-semibold leading-tight tracking-tight text-white sm:text-3xl; }
+.article ul { @apply list-disc space-y-3 pl-5; }
+.article ol { @apply list-decimal space-y-3 pl-5; }
+.article li::marker { color: #9CCAD3; }
+.article section { scroll-margin-top: 24px; }
+
+.hero { @apply border-b border-[#9CCAD3]/20 px-5 py-10 sm:px-12 sm:py-14; }
+.hero h1 { @apply my-6 max-w-3xl text-4xl font-bold leading-[1.12] tracking-tight text-white sm:text-6xl; }
+.hero h1 span { @apply block text-[#9CCAD3]; }
+.article .eyebrow { @apply text-xs font-semibold tracking-[0.16em] text-[#9CCAD3]; }
+.intro { @apply max-w-2xl space-y-4; }
+.article .meta { @apply mt-8 flex flex-wrap gap-x-3 gap-y-1 text-xs text-slate-400; }
+.before { @apply space-y-5 px-5 py-8 sm:px-12; }
+.before p { @apply text-sm text-slate-400; }
+.contents { @apply border-y border-[#9CCAD3]/20 bg-[#17242E]/70 px-5 py-7 sm:px-12; }
+.contents > p { @apply mb-4 text-xs font-semibold tracking-widest text-slate-400; }
+.contents ol { @apply grid list-none gap-3 space-y-0 p-0 md:grid-cols-3; }
+.contents li a { @apply flex h-full flex-col gap-2 rounded-xl border border-[#9CCAD3]/25 p-4 no-underline hover:border-[#9CCAD3]; }
+.contents li span { @apply text-xs font-medium; }
+.contents li strong { @apply text-base leading-6; }
+.contents li span:last-child { @apply mt-auto text-lg; }
+.article .methodLink { @apply mt-5 inline-flex min-h-11 items-center text-sm; }
+.section { @apply px-5 pb-2 pt-10 sm:px-12; }
+.sectionHeading { @apply mb-8 flex items-start gap-4; }
+.sectionHeading > span { @apply flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-[#9CCAD3]/40 font-mono text-lg text-[#9CCAD3]; }
+.sectionHeading p { @apply mb-1 text-xs font-semibold uppercase tracking-widest text-[#9CCAD3]; }
+.riddle { @apply mb-5 overflow-hidden rounded-xl border border-[#9CCAD3]/20 bg-[#101D27]; }
+.riddle h3 { @apply px-5 pt-5 text-xs font-semibold uppercase tracking-widest text-[#9CCAD3] sm:px-6; }
+.riddle h3 span { @apply ml-1 font-mono; }
+.article .question { @apply px-5 pb-6 pt-3 text-lg leading-8 text-white sm:px-6; }
+.riddle summary { @apply relative flex min-h-14 cursor-pointer list-none items-center gap-3 border-t border-[#9CCAD3]/20 px-5 py-4 text-sm font-semibold text-[#B9DCE3] transition hover:bg-white/5 sm:px-6; }
+.riddle summary::-webkit-details-marker { display: none; }
+.plus { @apply ml-auto text-xl font-normal; }
+.riddle details[open] .plus { transform: rotate(45deg); }
+.answer { @apply space-y-5 border-t border-[#9CCAD3]/15 bg-[#0B141C] px-5 py-6 sm:px-6; }
+.answer > p:first-child { @apply border-l-2 border-[#73B9FF] pl-4 text-lg; }
+.answer > p:last-child { @apply text-sm leading-7 text-slate-300; }
+.method { @apply mx-5 mb-8 mt-10 space-y-5 rounded-xl border border-[#9CCAD3]/30 p-5 sm:mx-12 sm:p-7; }
+.cta { @apply space-y-5 border-y border-[#9CCAD3]/20 bg-[#1A2D3A] px-5 py-9 sm:px-12; }
+.references { @apply space-y-4 px-5 py-8 sm:px-12; }
+.references h2 { @apply text-lg; }
+.references p { @apply text-sm leading-6 text-slate-400; }
+
+@media (prefers-reduced-motion: reduce) {
+    .article a, .article summary { transition: none; }
+}

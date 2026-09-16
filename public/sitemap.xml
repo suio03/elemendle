@@ -11,4 +11,7 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://elemendle.com/learn/periodic-table-riddles</loc>
+    </url>
 </urlset>

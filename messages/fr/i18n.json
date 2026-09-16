@@ -352,7 +352,7 @@
       },
       {
         "question": "Comment mes données sont-elles stockées ?",
-        "answer": "Votre progression reste sur votre appareil. Nous collectons uniquement des événements de jeu anonymes et sans cookies, comme les démarrages, les parties terminées et les partages. Nous ne collectons jamais les réponses, les propositions, le texte libre, les données exportées ni les identifiants persistants."
+        "answer": "Votre progression reste sur votre appareil. Les statistiques de jeu utilisent des événements anonymes sans cookies et excluent les réponses, les essais, le texte libre, les données exportées et les identifiants persistants. Si vous envoyez une suggestion, son texte et la page actuelle sont transmis à notre équipe via Discord. Un cookie de 10 minutes limite les envois répétés."
       },
       {
         "question": "Le jeu Elemendle est-il gratuit ?",
@@ -364,7 +364,7 @@
       },
       {
         "question": "Puis-je fournir des commentaires sur Elemendle ?",
-        "answer": "Vous pouvez nous contacter à support@elemendle.app."
+        "answer": "Utilisez le bouton de suggestion en bas à droite pour proposer une fonctionnalité ou une amélioration. Aucune connexion nécessaire."
       }
     ]
   },
@@ -422,5 +422,21 @@
     "title": "Partager Elemendle",
     "description": "J'ai trouvé l'élément #Elemendle en {attempts} tentatives en {timeTaken}s",
     "btn": "Partager sur Twitter"
+  },
+  "Feedback": {
+    "launcher": "Proposer une idée",
+    "title": "Améliorons Elemendle ensemble",
+    "helper": "Une fonctionnalité à ajouter ? Un point à améliorer ? Vos idées nous intéressent.",
+    "label": "Votre suggestion",
+    "placeholder": "J’aimerais pouvoir…",
+    "limits": "10 à 1000 caractères",
+    "privacy": "Votre suggestion et la page actuelle sont envoyées à l’équipe Elemendle via Discord. Aucun compte ni e-mail requis.",
+    "close": "Fermer",
+    "send": "Envoyer la suggestion",
+    "sending": "Envoi…",
+    "success": "Merci ! Votre suggestion a été envoyée.",
+    "error": "L’envoi a échoué. Votre texte est conservé ; réessayez plus tard.",
+    "cooldown": "Veuillez attendre 10 minutes entre deux suggestions.",
+    "invalid": "Utilisez 10 à 1000 caractères, au maximum un lien, sans longues répétitions de caractères."
   }
 }

@@ -8,6 +8,7 @@ export default defineConfig({
         }
     },
     test: {
+        server: { deps: { inline: ['next-intl'] } },
         environment: 'jsdom',
         clearMocks: true
     }

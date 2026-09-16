@@ -352,7 +352,7 @@
       },
       {
         "question": "Wie werden meine Daten gespeichert?",
-        "answer": "Dein Spielfortschritt bleibt auf deinem Gerät. Wir erfassen nur anonyme, cookielose Spielereignisse wie Starts, Abschlüsse und Freigaben. Antworten, konkrete Tipps, Freitext, exportierte Daten oder dauerhafte Kennungen erfassen wir nicht."
+        "answer": "Dein Spielfortschritt bleibt auf deinem Gerät. Die Spielanalyse nutzt anonyme Ereignisse ohne Cookies und erfasst keine Antworten, Versuche, Freitexte, exportierten Daten oder dauerhaften Kennungen. Wenn du einen Vorschlag sendest, werden sein Text und die aktuelle Seite über Discord an unser Team übermittelt. Ein Cookie mit 10 Minuten Laufzeit begrenzt wiederholte Einsendungen."
       },
       {
         "question": "Ist das Elemendle-Spiel kostenlos?",
@@ -364,7 +364,7 @@
       },
       {
         "question": "Kann ich Feedback zu Elemendle geben?",
-        "answer": "Du kannst uns unter support@elemendle.app kontaktieren."
+        "answer": "Über den Vorschlagsbutton unten rechts kannst du Funktionsideen und Verbesserungswünsche senden. Keine Anmeldung nötig."
       }
     ]
   },
@@ -422,5 +422,21 @@
     "title": "Elemendle teilen",
     "description": "Ich habe das #Elemendle-Element in {attempts} Versuchen innerhalb von {timeTaken} Sekunden gefunden",
     "btn": "Auf Twitter teilen"
+  },
+  "Feedback": {
+    "launcher": "Idee vorschlagen",
+    "title": "Elemendle mitgestalten",
+    "helper": "Welche Funktion fehlt dir? Was können wir verbessern? Wir freuen uns auf deine Ideen.",
+    "label": "Dein Vorschlag",
+    "placeholder": "Ich würde mir wünschen…",
+    "limits": "10–1000 Zeichen",
+    "privacy": "Dein Vorschlag und die aktuelle Seite werden über Discord an das Elemendle-Team gesendet. Kein Konto und keine E-Mail nötig.",
+    "close": "Schließen",
+    "send": "Vorschlag senden",
+    "sending": "Wird gesendet…",
+    "success": "Danke! Dein Vorschlag wurde gesendet.",
+    "error": "Senden fehlgeschlagen. Dein Text bleibt erhalten. Bitte versuche es später erneut.",
+    "cooldown": "Bitte warte 10 Minuten zwischen Vorschlägen.",
+    "invalid": "Verwende 10–1000 Zeichen, höchstens einen Link und keine langen Zeichenwiederholungen."
   }
 }

@@ -443,7 +443,7 @@
       },
       {
         "question": "How's my data stored?",
-        "answer": "Your game progress stays on your device. We collect only anonymous, cookieless gameplay events such as starts, completions, and shares. We never collect answers, guesses, free text, exported data, or persistent identifiers."
+        "answer": "Your game progress stays on your device. Gameplay analytics use anonymous, cookieless events and exclude answers, guesses, free text, exported data, and persistent identifiers. If you submit a suggestion, its text and current page are sent to our team via Discord. A 10-minute cookie limits repeat submissions."
       },
       {
         "question": "Does the Elemendle game free?",
@@ -455,7 +455,7 @@
       },
       {
         "question": "Can I provide some feedback about Elemendle?",
-        "answer": "You can contact us at support@elemendle.app."
+        "answer": "Use the suggestion button in the bottom-right corner to share a feature idea or tell us what could be improved. No login is needed."
       }
     ]
   },
@@ -513,5 +513,21 @@
     "title": "Share Elemendle",
     "description": "I found #Elemendle element in {attempts} attempts within {timeTaken}s",
     "btn": "Share on Twitter"
+  },
+  "Feedback": {
+    "launcher": "Suggest an idea",
+    "title": "Help shape Elemendle",
+    "helper": "A feature you would like? Something we could improve? We would love to hear it.",
+    "label": "Your suggestion",
+    "placeholder": "I would love to see…",
+    "limits": "10–1000 characters",
+    "privacy": "Your suggestion and current page are sent to the Elemendle team via Discord. No account or email needed.",
+    "close": "Close",
+    "send": "Send suggestion",
+    "sending": "Sending…",
+    "success": "Thank you! Your suggestion has been sent.",
+    "error": "Could not send your suggestion. Your text is still here; please try again later.",
+    "cooldown": "Please wait 10 minutes between suggestions.",
+    "invalid": "Use 10–1000 characters, at most one link, and avoid long repeated characters."
   }
 }
