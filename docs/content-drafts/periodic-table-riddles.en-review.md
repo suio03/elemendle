@@ -1,5 +1,7 @@
 # English riddles: editorial review record
 
+> 2026-09-25 更新：用户已授权 Learn 与谜题全文翻译并发布。本文中“仅英文”“跳转英文”“翻译暂缓”描述为此前阶段记录；当前语言策略见 [翻译计划](../content-localization-plan.md)。第二阶段仍暂缓。
+
 Status: **done — content review and local implementation checks complete.** Publication and translation are deferred by the user.
 
 Content version: `en-v1`

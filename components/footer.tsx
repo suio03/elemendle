@@ -1,14 +1,19 @@
 import React from 'react'
 import { Github } from 'lucide-react'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
+import { useLearningCopy } from '@/lib/learning-copy'
 
 const Footer = () => {
+    const t = useLearningCopy()
     const currentYear = new Date().getFullYear()
 
     return (
         <div className="w-full flex flex-col items-center gap-4 py-8">
-            <Link href="/learn/periodic-table-riddles" hrefLang="en" lang="en" className="inline-flex min-h-11 items-center rounded px-2 text-sm text-[#B9DCE3] underline underline-offset-4 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#73B9FF]">
-                Periodic Table Riddles &amp; Answers (English)
+            <Link href="/learn/periodic-table-riddles" className="inline-flex min-h-11 items-center rounded px-2 text-sm text-[#B9DCE3] underline underline-offset-4 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#73B9FF]">
+                {t('Periodic Table Riddles & Answers')}
+            </Link>
+            <Link href="/learn" className="inline-flex min-h-11 items-center rounded px-2 text-sm text-[#B9DCE3] underline underline-offset-4 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#73B9FF]">
+                {t('Learn the Periodic Table')}
             </Link>
             {/* Social Icons Row */}
             <div className="flex items-center justify-center gap-4">

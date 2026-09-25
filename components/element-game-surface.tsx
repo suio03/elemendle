@@ -1,5 +1,9 @@
 "use client"
 
+import { useLearningCopy } from '@/lib/learning-copy'
+
+import { Link as LearningLink } from '@/i18n/routing'
+
 import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
 import { CircleHelp, SendHorizontal, X } from 'lucide-react'
 import { useTranslations } from 'next-intl'
@@ -57,6 +61,7 @@ export default function ElementGameSurface<State extends ElementGameSessionState
     footerContent,
     renderResult
 }: ElementGameSurfaceProps<State>) {
+    const learningT = useLearningCopy()
     const t = useTranslations('game-board')
     const shouldReduceMotion = useReducedMotion()
     const { width, height } = useViewportSize()
@@ -148,6 +153,10 @@ export default function ElementGameSurface<State extends ElementGameSessionState
                 isComplete={gameState.gameStatus !== 'in-progress'}
                 onToggleHints={setHintsEnabled}
             />
+
+            <div className="mb-4 text-center">
+                <LearningLink href="/properties" className="inline-flex min-h-11 items-center rounded px-3 text-sm text-[#B9DCE3] underline underline-offset-4 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#73B9FF]">{learningT('Understand the clues →')}</LearningLink>
+            </div>
 
             {gameState.guesses.length > 0 ? (
                 <section aria-label={t('guess-history')}>

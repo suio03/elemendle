@@ -1,4 +1,6 @@
 'use client'
+
+import { useLearningCopy } from '@/lib/learning-copy'
 import {
     Tooltip,
     TooltipContent,
@@ -19,9 +21,10 @@ import { useTranslations } from "next-intl"
 import LanSwitcher from '@/components/lan-switcher'
 import { useGameGuide } from '@/contexts/game-guide-context'
 import { Link, usePathname } from '@/i18n/routing'
-import { CalendarDays, Dices, LibraryBig } from 'lucide-react'
+import { BookOpen, CalendarDays, Dices, LibraryBig } from 'lucide-react'
 
 export default function GameHeader() {
+    const learningT = useLearningCopy()
     const t = useTranslations('header')
     const practiceT = useTranslations('practice')
     const [stats, setStats] = useState<Pick<ElementStatistics, 'currentStreak'>>({
@@ -50,7 +53,7 @@ export default function GameHeader() {
             </div>
             <nav
                 aria-label={practiceT('mode-label')}
-                className="mx-auto mb-3 flex w-fit rounded-xl border border-[#9CCAD3]/40 bg-[#10171D]/90 p-1 shadow-lg backdrop-blur-md"
+                className="mx-auto mb-3 flex w-fit max-w-full flex-wrap justify-center rounded-xl border border-[#9CCAD3]/40 bg-[#10171D]/90 p-1 shadow-lg backdrop-blur-md"
             >
                 <Link
                     href="/"
@@ -67,6 +70,9 @@ export default function GameHeader() {
                 >
                     <Dices className="h-4 w-4" aria-hidden="true" />
                     {practiceT('practice')}
+                </Link>
+                <Link href="/learn" className="inline-flex min-h-10 items-center gap-2 rounded-lg px-3 text-sm font-semibold text-[#B9DCE3] transition hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#73B9FF]">
+                    <BookOpen className="h-4 w-4" aria-hidden="true" />{learningT('Learn')}
                 </Link>
             </nav>
             <DataTransferUI open={isDataModalOpen} onOpenChange={setIsDataModalOpen} />

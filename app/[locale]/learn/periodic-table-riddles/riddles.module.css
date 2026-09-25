@@ -19,8 +19,8 @@
 
 .article strong { @apply font-semibold text-white; }
 .article h2 { @apply text-2xl font-semibold leading-tight tracking-tight text-white sm:text-3xl; }
-.article ul { @apply list-disc space-y-3 pl-5; }
-.article ol { @apply list-decimal space-y-3 pl-5; }
+.article ul { @apply list-disc space-y-3 ps-5; }
+.article ol { @apply list-decimal space-y-3 ps-5; }
 .article li::marker { color: #9CCAD3; }
 .article section { scroll-margin-top: 24px; }
 
@@ -46,14 +46,14 @@
 .sectionHeading p { @apply mb-1 text-xs font-semibold uppercase tracking-widest text-[#9CCAD3]; }
 .riddle { @apply mb-5 overflow-hidden rounded-xl border border-[#9CCAD3]/20 bg-[#101D27]; }
 .riddle h3 { @apply px-5 pt-5 text-xs font-semibold uppercase tracking-widest text-[#9CCAD3] sm:px-6; }
-.riddle h3 span { @apply ml-1 font-mono; }
+.riddle h3 span { @apply ms-1 font-mono; }
 .article .question { @apply px-5 pb-6 pt-3 text-lg leading-8 text-white sm:px-6; }
 .riddle summary { @apply relative flex min-h-14 cursor-pointer list-none items-center gap-3 border-t border-[#9CCAD3]/20 px-5 py-4 text-sm font-semibold text-[#B9DCE3] transition hover:bg-white/5 sm:px-6; }
 .riddle summary::-webkit-details-marker { display: none; }
-.plus { @apply ml-auto text-xl font-normal; }
+.plus { @apply ms-auto text-xl font-normal; }
 .riddle details[open] .plus { transform: rotate(45deg); }
 .answer { @apply space-y-5 border-t border-[#9CCAD3]/15 bg-[#0B141C] px-5 py-6 sm:px-6; }
-.answer > p:first-child { @apply border-l-2 border-[#73B9FF] pl-4 text-lg; }
+.answer > p:first-child { @apply border-s-2 border-[#73B9FF] ps-4 text-lg; }
 .answer > p:last-child { @apply text-sm leading-7 text-slate-300; }
 .method { @apply mx-5 mb-8 mt-10 space-y-5 rounded-xl border border-[#9CCAD3]/30 p-5 sm:mx-12 sm:p-7; }
 .cta { @apply space-y-5 border-y border-[#9CCAD3]/20 bg-[#1A2D3A] px-5 py-9 sm:px-12; }

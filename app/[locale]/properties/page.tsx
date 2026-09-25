@@ -1,11 +1,42 @@
-import React from 'react'
+import { getLearningCopy } from '@/lib/learning-copy-server'
+import { Link } from '@/i18n/routing'
+import LearnShell from '@/components/learn/learn-shell'
+import LessonQuiz from '@/components/learn/lesson-quiz'
+import styles from '@/components/learn/learn.module.css'
+import { learnMetadata, type LearnPageProps } from '@/lib/learn-metadata'
 
-const page = () => {
-  return (
-    <div>
-      <h1>Properties</h1>
-    </div>
-  )
+export async function generateMetadata({ params }: LearnPageProps) {
+    return learnMetadata('/properties', 'How to Read Periodic Table Clues', 'Understand Elemendle’s arrows, atomic number, group, period, block, type and phase. Follow a worked example and try a three-question quiz.', (await params).locale)
 }
+export default async function PropertiesPage({ params }: LearnPageProps) {
+    const t = await getLearningCopy()
 
-export default page
+    return <LearnShell>
+        <header className={styles.hero}><p className={styles.eyebrow}>{t("Lesson 01 · Read the clues")}</p><h1>{t("Every guess")}<br /><span>{t("tells you something.")}</span></h1><p>{t("You do not need to memorise the whole table. Learn what each clue means, then combine the clues to narrow your next guess.")}</p><div className={styles.meta}><span>{t("About 5 minutes")}</span><span>{t("One worked example")}</span><span>{t("3-question check")}</span></div></header>
+        <nav className={styles.section} aria-label={t("In this guide")}><div className="flex flex-wrap gap-x-6 gap-y-3 text-sm"><a href="#feedback">{t("Read the feedback")}</a><a href="#atomic-number">{t("Numbers")}</a><a href="#position">{t("Position")}</a><a href="#categories">{t("Categories")}</a><a href="#example">{t("Worked example")}</a><a href="#quick-check">{t("Quick check")}</a></div></nav>
+        <section id="feedback" className={styles.section}><h2>{t("Start with the direction.")}</h2><p>{t.rich("In Elemendle, the arrow tells you where the <tag0>answer’s value</tag0> is relative to your guess. It does not tell you whether your guess was good or bad.", {tag0: chunks => <strong>{chunks}</strong>})}</p>
+            <div className="grid gap-3 sm:grid-cols-3">{[['✓', 'Exact match', 'Keep this property.', 'border-emerald-300/30 bg-emerald-400/10'], ['↑', 'Target is higher', 'Look for a larger value.', 'border-rose-300/30 bg-rose-400/10'], ['↓', 'Target is lower', 'Look for a smaller value.', 'border-rose-300/30 bg-rose-400/10']].map(([symbol, label, detail, color]) => <div key={t(label)} className={`rounded-xl border p-5 ${color}`}><span className="text-3xl font-bold text-white">{symbol}</span><h3 className="mt-3">{t(label)}</h3><p className="mt-2 text-sm">{t(detail)}</p></div>)}</div>
+            <p>{t("Block, type and phase have no higher or lower direction: they either match or differ. A matching property is one useful clue, not necessarily a solved puzzle.")}</p>
+        </section>
+        <section id="atomic-number" className={styles.section}><h2>{t("Two numbers, two different ideas.")}</h2>
+            <h3>{t("Atomic number: the element’s identity")}</h3><p>{t("Atomic number counts the protons in an atom’s nucleus. Carbon has 6; oxygen has 8. The table follows increasing atomic number.")}</p><p className={styles.note}>{t("Game example: you guess oxygen (8) and see ↑ for atomic number. Keep elements numbered above 8. A later ↓ from calcium (20) would narrow that to 9–19.")}</p>
+            <h3>{t("Atomic mass: not another name for atomic number")}</h3><p>{t("For many elements, the decimal mass on a periodic table reflects the relative abundances of their isotopes. It is not a proton count. Some radioactive elements are shown with a representative isotope’s mass number instead.")}</p><p>{t("In the game, compare the displayed mass values separately. Do not assume mass always increases with atomic number: argon is number 18 but has a greater standard atomic weight than potassium, number 19.")}</p>
+        </section>
+        <section id="position" className={styles.section}><h2>{t("Find the row and the column.")}</h2><p>{t.rich("A <tag0>period</tag0> is a horizontal row. A <tag1>group</tag1> is a vertical column, numbered 1–18. Elements in a group often share chemical characteristics.", {tag0: chunks => <strong>{chunks}</strong>, tag1: chunks => <strong>{chunks}</strong>})}</p>
+            <figure className="rounded-xl border border-[#9CCAD3]/25 bg-[#101D27] p-5"><div dir="ltr" className="grid grid-cols-3 gap-2 text-center text-sm"><span aria-hidden="true" /><span className="py-2 text-[#9CCAD3]">{t("Group 1 ↓")}</span><span className="py-2 text-[#9CCAD3]">{t("Group 2 ↓")}</span><span className="self-center text-slate-400">{t("Period 3 →")}</span><span className="rounded-lg border border-white/15 p-4 font-semibold">{t("Na")}<br /><span className="text-xs font-normal">{t("Sodium")}</span></span><span className="rounded-lg border border-[#9CCAD3]/40 p-4 font-semibold">{t("Mg")}<br /><span className="text-xs font-normal">{t("Magnesium")}</span></span><span className="self-center text-slate-400">{t("Period 4 →")}</span><span className="rounded-lg border border-white/15 p-4 font-semibold">K<br /><span className="text-xs font-normal">{t("Potassium")}</span></span><span className="rounded-lg border border-[#73B9FF] bg-[#73B9FF]/10 p-4 font-semibold">{t("Ca")}<br /><span className="text-xs font-normal">{t("Calcium")}</span></span></div><figcaption className="mt-4 text-xs leading-6 text-slate-400">{t("A small slice of the table: magnesium and calcium share a column; potassium and calcium share a row.")}</figcaption></figure>
+            <p>{t("For a numeric group or period clue, ↑ means a larger group or period number. A period increase moves down the table. Use the numbers rather than interpreting ↑ as “move upward on the page”.")}</p>
+        </section>
+        <section id="categories" className={styles.section}><h2>{t("Use categories to cut down the list.")}</h2>
+            <div className="space-y-5"><div><h3>{t("Block")}</h3><p>{t("The s, p, d and f blocks describe regions associated with electron subshells. In this game, a block match keeps that region in play. Block and group are different labels; helium is in group 18 but belongs to the s block.")}</p></div><div><h3>{t("Element type")}</h3><p>{t("Labels such as alkali metal, alkaline earth metal and noble gas describe categories. Magnesium and calcium are both alkaline earth metals. A type match helps you recognise a family, but you still need other clues.")}</p></div><div><h3>{t("Phase")}</h3><p>{t("Phase tells you whether the element is listed as solid, liquid or gas at the game’s reference conditions (STP). Temperature and pressure matter; a phase label is not a claim that a substance always stays in that state.")}</p></div></div>
+            <p className={styles.note}>{t("If a property is shown as unknown or has no numeric group, do not invent a value. Use the remaining clues. A classification in the game is a clue from its dataset, not a complete account of an element’s chemistry.")}</p>
+        </section>
+        <section id="example" className={styles.section}><p className={styles.eyebrow}>{t("A fixed practice example")}</p><h2>{t("From magnesium to calcium.")}</h2><p>{t("Imagine the hidden answer is calcium and you guess magnesium. This teaching example is independent of today’s puzzle.")}</p>
+            <div className={styles.tableWrap}><table className={styles.table}><caption>{t("Feedback compares your magnesium guess with the fixed calcium target.")}</caption><thead><tr><th scope="col">{t("Clue")}</th><th scope="col">{t("Your guess: Mg")}</th><th scope="col">{t("Feedback")}</th></tr></thead><tbody>{[['Atomic number', '12', '↑ Target higher (Ca: 20)'], ['Period', '3', '↑ Target higher (Ca: 4)'], ['Group', '2', '✓ Exact'], ['Block', 's', '✓ Exact'], ['Type', 'Alkaline earth metal', '✓ Exact'], ['Phase', 'Solid', '✓ Exact']].map(row => <tr key={row[0]}>{row.map((cell, i) => i === 0 ? <th scope="row" key={cell}>{t(cell)}</th> : <td key={cell}>{t(cell)}</td>)}</tr>)}</tbody></table></div>
+            <ol><li>{t("Keep group 2 elements: that column matches.")}</li><li>{t("Look beyond period 3 and atomic number 12.")}</li><li>{t("Calcium fits those conditions, making it a sensible next guess. Heavier group 2 elements can also fit these clues, so the row alone does not prove calcium is the answer.")}</li></ol>
+            <details><summary>{t("Try one before the quiz: what if magnesium’s period showed ↓?")}</summary><p>{t("The target would have a period number below 3. If group 2 still matched, beryllium in period 2 would fit those two clues.")}</p></details>
+        </section>
+        <section id="quick-check" className={styles.section}><h2>{t("Your turn: read three clues.")}</h2><p>{t("Choose an answer, then check the reasoning. Nothing here changes your daily score or streak.")}</p><LessonQuiz lesson="clues" /></section>
+        <section className={styles.section}><h2>{t("Build your element vocabulary.")}</h2><p>{t("Want to recognise more of the names behind the clues? Start with hydrogen through calcium.")}</p><Link href="/learn/first-20-elements" className={styles.button}>{t("Meet the first 20 elements →")}</Link></section>
+        <section className={styles.section}><h2>{t("Sources & further reading")}</h2><ul className="text-sm"><li>{t.rich("<tag0>OpenStax: how the periodic table is organised</tag0>", {tag0: chunks => <a href="https://openstax.org/books/chemistry-2e/pages/2-5-the-periodic-table">{chunks}</a>})}</li><li>{t.rich("<tag0>American Chemical Society: atomic number and atomic mass</tag0>", {tag0: chunks => <a href="https://www.acs.org/middleschoolchemistry/lessonplans/chapter4/lesson2.html">{chunks}</a>})}</li><li>{t.rich("<tag0>Royal Society of Chemistry: element data, blocks and physical states</tag0>", {tag0: chunks => <a href="https://periodic-table.rsc.org/">{chunks}</a>})}</li></ul><p className="text-sm text-slate-400">{t("Original examples and questions by Elemendle. Game feedback descriptions follow Elemendle’s comparison rules.")}</p></section>
+    </LearnShell>
+}

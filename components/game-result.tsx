@@ -1,5 +1,9 @@
 "use client"
 
+import { useLearningCopy } from '@/lib/learning-copy'
+
+import { Link as LearningLink } from '@/i18n/routing'
+
 import { useEffect, useState } from 'react'
 import { BookOpen, Check, Clock3, Flame, Gauge, LibraryBig, Lightbulb, RotateCcw, Share2, Sparkles, Trophy } from 'lucide-react'
 import { useTranslations } from 'next-intl'
@@ -66,6 +70,7 @@ export default function GameResult({
     onPlayAgain,
     discovery
 }: GameResultProps) {
+    const learningT = useLearningCopy()
     const t = useTranslations('result')
     const [countdown, setCountdown] = useState(getTimeUntilNextGame)
     const won = result === 'won'
@@ -170,6 +175,7 @@ export default function GameResult({
 
                 <div>
                     <h3 className="mb-3 text-sm font-bold uppercase tracking-[0.16em] text-[#9CCAD3]">{t('learn')}</h3>
+                    <LearningLink href="/properties" className="mb-3 inline-flex min-h-11 items-center rounded text-sm text-[#B9DCE3] underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#73B9FF]">{learningT('Read the clues & try a quick check →')}</LearningLink>
                     <div className="flex flex-col gap-4 rounded-2xl border border-[#9CCAD3]/20 bg-[#73B9FF]/[0.07] p-4 sm:flex-row sm:items-center">
                         <a
                             href={element.wiki}

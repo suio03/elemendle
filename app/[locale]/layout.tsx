@@ -51,7 +51,7 @@ export default async function LocaleLayout({
     const { locale } = await params
     const messages = await getMessages()
     return (
-        <html lang={locale}>
+        <html lang={locale === 'ch' ? 'zh-Hans' : locale === 'jp' ? 'ja' : locale}>
             <body className={inter.className}>
                 <Analytics />
                 <NextIntlClientProvider messages={messages}>

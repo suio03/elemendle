@@ -1,0 +1,44 @@
+.shell { @apply mx-auto max-w-5xl px-4 pb-8 pt-6 text-slate-200 sm:px-8 sm:pt-10; }
+.nav { @apply mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-[#9CCAD3]/25 pb-5; }
+.nav a { @apply inline-flex min-h-11 items-center rounded px-2 text-sm text-[#B9DCE3] hover:text-white; }
+.nav .brand { @apply px-0 text-xl font-bold tracking-tight; }
+.article { @apply overflow-hidden rounded-3xl border border-[#9CCAD3]/25 bg-[#0D151C]/95 shadow-2xl; }
+.hero { @apply border-b border-[#9CCAD3]/20 px-5 py-10 sm:px-10 sm:py-14; }
+.eyebrow { @apply mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#9CCAD3]; }
+.hero h1 { @apply max-w-3xl text-4xl font-bold leading-[1.12] tracking-tight text-white sm:text-6xl; }
+.hero h1 span { @apply text-[#9CCAD3]; }
+.hero > p:last-of-type { @apply mt-6 max-w-2xl text-base leading-7 text-slate-300; }
+.meta { @apply mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs text-slate-400; }
+.section { @apply scroll-mt-6 space-y-5 border-b border-[#9CCAD3]/15 px-5 py-8 sm:px-10 sm:py-10; }
+.section h2 { @apply text-2xl font-semibold tracking-tight text-white sm:text-3xl; }
+.section h3 { @apply text-lg font-semibold text-white; }
+.section p, .section li { @apply leading-7; }
+.section p { @apply max-w-3xl; }
+.section strong { @apply font-semibold text-white; }
+.section a:not(.button) { @apply text-[#B9DCE3] underline decoration-[#9CCAD3]/40 underline-offset-4 hover:text-white; }
+.section ul, .section ol { @apply space-y-3 ps-5; }
+.section ul { @apply list-disc; }
+.section ol { @apply list-decimal; }
+.section li::marker { @apply text-[#9CCAD3]; }
+.cards { @apply grid gap-4 md:grid-cols-2; }
+.card { @apply block rounded-2xl border border-[#9CCAD3]/25 bg-[#101D27] p-6 transition hover:border-[#9CCAD3]/70; }
+.card h2 { @apply mt-4 text-2xl font-semibold text-white; }
+.card p { @apply mt-3 text-sm leading-6 text-slate-300; }
+.card .number { @apply font-mono text-sm text-[#9CCAD3]; }
+.card .go { @apply mt-7 inline-flex min-h-11 items-center text-sm font-semibold text-[#B9DCE3]; }
+.button { @apply inline-flex min-h-11 items-center justify-center rounded-lg bg-[#73B9FF] px-5 py-3 text-sm font-semibold text-[#071319] no-underline hover:bg-[#9BCEFF]; }
+.note { @apply rounded-xl border-l-2 border-[#9CCAD3] bg-[#17242E] p-5 text-sm leading-7; }
+.tableWrap { @apply overflow-x-auto rounded-xl border border-[#9CCAD3]/25; }
+.table { @apply w-full text-start text-sm; }
+.table th { @apply bg-[#17242E] px-4 py-3 font-semibold text-[#B9DCE3]; }
+.table td { @apply border-t border-[#9CCAD3]/15 px-4 py-3; }
+.table caption { @apply p-4 text-start text-sm text-slate-400; caption-side: bottom; }
+.shell a:focus-visible, .shell button:focus-visible, .shell summary:focus-visible, .shell input:focus-visible { outline: 2px solid #73B9FF; outline-offset: 4px; }
+.shell summary { @apply cursor-pointer py-3 font-semibold text-[#B9DCE3]; }
+.shell section { scroll-margin-top: 24px; }
+@media (prefers-reduced-motion: reduce) { .shell * { transition: none !important; scroll-behavior: auto !important; } }
+
+/* Arabic joins letters naturally; the Latin editorial tracking should not spread them. */
+.shell[dir='rtl'] * {
+    letter-spacing: normal;
+}

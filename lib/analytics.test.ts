@@ -6,6 +6,7 @@ describe('anonymous analytics helpers', () => {
         localStorage.clear()
         window.dataLayer = []
         window.gtag = undefined
+        window.plausible = undefined
     })
 
     it('stores only a local play date for return-day aggregation', () => {
@@ -40,5 +41,47 @@ describe('anonymous analytics helpers', () => {
             page_path: '/practice',
             page_title: 'Elemendle Practice'
         })
+    })
+
+    it('sends custom events and properties to Plausible as well as GA', () => {
+        window.plausible = vi.fn(() => {})
+        window.gtag = vi.fn()
+
+        trackEvent('game_started', { locale: 'en', mode: 'daily' })
+
+        expect(window.plausible).toHaveBeenCalledExactlyOnceWith('game_started', {
+            props: { locale: 'en', mode: 'daily' }
+        })
+        expect(window.gtag).toHaveBeenCalledExactlyOnceWith('event', 'game_started', {
+            locale: 'en', mode: 'daily'
+        })
+    })
+
+    it('preserves early events in the queue consumed by the Plausible tracker', () => {
+        trackEvent('game_loaded', { locale: 'en', mode: 'daily' })
+        trackEvent('game_started', { locale: 'en', mode: 'daily' })
+
+        expect(window.plausible?.q).toEqual([
+            ['game_loaded', { props: { locale: 'en', mode: 'daily' } }],
+            ['game_started', { props: { locale: 'en', mode: 'daily' } }]
+        ])
+    })
+
+    it('isolates provider failures from gameplay and the other provider', () => {
+        window.plausible = vi.fn(() => { throw new Error('blocked') })
+        window.gtag = vi.fn()
+        expect(() => trackEvent('guess_submitted', { mode: 'daily', attemptNumber: 1 })).not.toThrow()
+        expect(window.gtag).toHaveBeenCalledOnce()
+
+        window.plausible = vi.fn(() => {})
+        window.gtag = vi.fn(() => { throw new Error('blocked') })
+        expect(() => trackEvent('guess_submitted', { mode: 'daily', attemptNumber: 2 })).not.toThrow()
+        expect(window.plausible).toHaveBeenCalledOnce()
+    })
+
+    it('leaves Plausible pageviews to its automatic tracker', () => {
+        window.plausible = vi.fn(() => {})
+        trackPageView('/practice')
+        expect(window.plausible).not.toHaveBeenCalled()
     })
 })

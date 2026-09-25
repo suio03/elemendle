@@ -1,21 +1,17 @@
 import createMiddleware from 'next-intl/middleware'
 import { routing } from './i18n/routing'
-import { NextResponse, type NextRequest } from 'next/server'
+import { type NextRequest } from 'next/server'
 
 const localizedMiddleware = createMiddleware(routing)
-const englishArticleMiddleware = createMiddleware({ ...routing, localeDetection: false, alternateLinks: false })
+const learningMiddleware = createMiddleware({ ...routing, localeDetection: false, alternateLinks: false })
 
 export default function middleware(request: NextRequest) {
-    // A shared English article URL must not negotiate into an unpublished translation.
+    // Learning URLs keep their explicit language, including unprefixed English links.
     const pathname = request.nextUrl.pathname.replace(/\/$/, '')
-    const articlePath = '/learn/periodic-table-riddles'
-    if (routing.locales.some(locale => locale !== 'en' && pathname === `/${locale}${articlePath}`)) {
-        const url = request.nextUrl.clone()
-        url.pathname = articlePath
-        return NextResponse.redirect(url)
-    }
-    if (pathname === '/learn/periodic-table-riddles' || pathname === '/en/learn/periodic-table-riddles') {
-        return englishArticleMiddleware(request)
+    const learningPaths = ['/learn', '/properties', '/learn/first-20-elements', '/learn/periodic-table-riddles']
+    const articlePath = learningPaths.find(path => pathname === path || routing.locales.some(locale => pathname === `/${locale}${path}`))
+    if (articlePath) {
+        return learningMiddleware(request)
     }
     return localizedMiddleware(request)
 }

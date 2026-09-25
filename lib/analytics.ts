@@ -5,6 +5,9 @@ type GameMode = 'daily' | 'practice'
 type GameResult = 'won' | 'lost'
 
 interface AnalyticsEvents {
+    learn_quiz_started: { lesson: 'clues' | 'first-20' }
+    learn_quiz_answered: { lesson: 'clues' | 'first-20'; question: number; correct: boolean }
+    learn_quiz_completed: { lesson: 'clues' | 'first-20'; correctAnswers: number; total: number }
     game_loaded: {
         locale: string
         mode: GameMode
@@ -52,10 +55,17 @@ interface AnalyticsEvents {
     }
 }
 
+type PlausibleOptions = { props: Record<string, string | number | boolean | undefined> }
+type PlausibleTracker = {
+    (eventName: string, options: PlausibleOptions): void
+    q?: [string, PlausibleOptions][]
+}
+
 declare global {
     interface Window {
         dataLayer?: unknown[]
         gtag?: (...args: unknown[]) => void
+        plausible?: PlausibleTracker
     }
 }
 
@@ -67,11 +77,29 @@ export function trackEvent<EventName extends keyof AnalyticsEvents>(
 ): void {
     if (typeof window === 'undefined') return
 
-    window.dataLayer = window.dataLayer || []
-    const gtag = window.gtag || function gtag(...args: unknown[]) {
-        window.dataLayer?.push(args)
+    // Preserve early events until the asynchronously loaded Plausible script drains q.
+    try {
+        if (!window.plausible) {
+            const queuedTracker: PlausibleTracker = (name, options) => {
+                queuedTracker.q?.push([name, options])
+            }
+            queuedTracker.q = []
+            window.plausible = queuedTracker
+        }
+        window.plausible(eventName, { props: properties })
+    } catch {
+        // Analytics must not interrupt gameplay or the other analytics provider.
     }
-    gtag('event', eventName, properties)
+
+    try {
+        window.dataLayer = window.dataLayer || []
+        const gtag = window.gtag || function gtag(...args: unknown[]) {
+            window.dataLayer?.push(args)
+        }
+        gtag('event', eventName, properties)
+    } catch {
+        // A blocked or failing provider must not affect game state updates.
+    }
 }
 
 export function trackPageView(pathname: string): void {
