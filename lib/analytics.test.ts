@@ -7,6 +7,7 @@ describe('anonymous analytics helpers', () => {
         window.dataLayer = []
         window.gtag = undefined
         window.plausible = undefined
+        window.recount = undefined
     })
 
     it('stores only a local play date for return-day aggregation', () => {
@@ -55,6 +56,18 @@ describe('anonymous analytics helpers', () => {
         expect(window.gtag).toHaveBeenCalledExactlyOnceWith('event', 'game_started', {
             locale: 'en', mode: 'daily'
         })
+    })
+
+    it('mirrors custom events and properties to Recount', () => {
+        window.plausible = vi.fn(() => {})
+        window.recount = vi.fn(() => {})
+
+        trackEvent('game_started', { locale: 'en', mode: 'daily' })
+
+        expect(window.recount).toHaveBeenCalledExactlyOnceWith('game_started', {
+            props: { locale: 'en', mode: 'daily' }
+        })
+        expect(window.plausible).toHaveBeenCalledOnce()
     })
 
     it('preserves early events in the queue consumed by the Plausible tracker', () => {

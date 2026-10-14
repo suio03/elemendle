@@ -347,7 +347,7 @@
       },
       {
         "question": "Come vengono memorizzati i miei dati?",
-        "answer": "I progressi restano sul tuo dispositivo. Le statistiche di gioco usano eventi anonimi senza cookie ed escludono risposte, tentativi, testo libero, dati esportati e identificatori persistenti. Se invii un suggerimento, il testo e la pagina attuale vengono trasmessi al nostro team tramite Discord. Un cookie di 10 minuti limita gli invii ripetuti."
+        "answer": "I progressi restano sul tuo dispositivo. Gli eventi delle statistiche di gioco escludono risposte, tentativi, testo libero e dati esportati. Usiamo anche Recount, un servizio di analisi self-hosted gestito dal proprietario del sito, che imposta due cookie di prima parte (rc_vid, un ID visitatore conservato per circa 1 anno, e rc_sid, un ID di sessione di 30 minuti) usati solo per le statistiche e per l’attribuzione degli acquisti. Questi dati non vengono condivisi con terze parti. Se invii un suggerimento, il testo e la pagina attuale vengono trasmessi al nostro team tramite Discord. Un cookie di 10 minuti limita gli invii ripetuti."
       },
       {
         "question": "Il gioco Elemendle è gratuito?",

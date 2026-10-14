@@ -347,7 +347,7 @@
       },
       {
         "question": "Hoe worden mijn gegevens opgeslagen?",
-        "answer": "Je voortgang blijft op je apparaat. Spelstatistieken gebruiken anonieme gebeurtenissen zonder cookies en bevatten geen antwoorden, pogingen, vrije tekst, geëxporteerde gegevens of blijvende identificatoren. Als je een suggestie verstuurt, worden de tekst en huidige pagina via Discord naar ons team gestuurd. Een cookie van 10 minuten beperkt herhaalde inzendingen."
+        "answer": "Je voortgang blijft op je apparaat. Gebeurtenissen voor spelstatistieken bevatten geen antwoorden, pogingen, vrije tekst of geëxporteerde gegevens. We gebruiken ook Recount, een zelfgehoste analysedienst die door de eigenaar van de site wordt beheerd. Deze plaatst twee first-party cookies (rc_vid, een bezoekers-ID die ongeveer 1 jaar blijft bestaan, en rc_sid, een sessie-ID van 30 minuten) die alleen worden gebruikt voor statistieken en het toeschrijven van aankopen. Deze gegevens worden niet met derden gedeeld. Als je een suggestie verstuurt, worden de tekst en huidige pagina via Discord naar ons team gestuurd. Een cookie van 10 minuten beperkt herhaalde inzendingen."
       },
       {
         "question": "Is het Elemendle spel gratis?",

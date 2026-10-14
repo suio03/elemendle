@@ -352,7 +352,7 @@
       },
       {
         "question": "Wie werden meine Daten gespeichert?",
-        "answer": "Dein Spielfortschritt bleibt auf deinem Gerät. Die Spielanalyse nutzt anonyme Ereignisse ohne Cookies und erfasst keine Antworten, Versuche, Freitexte, exportierten Daten oder dauerhaften Kennungen. Wenn du einen Vorschlag sendest, werden sein Text und die aktuelle Seite über Discord an unser Team übermittelt. Ein Cookie mit 10 Minuten Laufzeit begrenzt wiederholte Einsendungen."
+        "answer": "Dein Spielfortschritt bleibt auf deinem Gerät. Die Ereignisse der Spielanalyse enthalten keine Antworten, Versuche, Freitexte oder exportierten Daten. Außerdem nutzen wir Recount, einen selbst gehosteten Analysedienst, der vom Betreiber der Website betrieben wird. Er setzt zwei First-Party-Cookies (rc_vid, eine Besucher-ID mit etwa 1 Jahr Laufzeit, und rc_sid, eine Sitzungs-ID mit 30 Minuten Laufzeit), die nur für Analysen und die Zuordnung von Käufen verwendet werden. Diese Daten werden nicht an Dritte weitergegeben. Wenn du einen Vorschlag sendest, werden sein Text und die aktuelle Seite über Discord an unser Team übermittelt. Ein Cookie mit 10 Minuten Laufzeit begrenzt wiederholte Einsendungen."
       },
       {
         "question": "Ist das Elemendle-Spiel kostenlos?",
