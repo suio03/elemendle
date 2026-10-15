@@ -15,6 +15,14 @@ const Footer = () => {
             <Link href="/learn" className="inline-flex min-h-11 items-center rounded px-2 text-sm text-[#B9DCE3] underline underline-offset-4 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#73B9FF]">
                 {t('Learn the Periodic Table')}
             </Link>
+            {/* Our other games */}
+            <div className="flex flex-col items-center gap-1 text-center text-sm">
+                <span className="font-semibold text-white">{t('More daily games')}</span>
+                <a href="https://dailyredgame.app/" className="inline-flex min-h-11 items-center rounded px-2 text-[#B9DCE3] underline underline-offset-4 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#73B9FF]">
+                    Daily Red Pokémon Game
+                </a>
+                <span className="text-[#B9DCE3]">{t('Play today’s Pokémon battle vs RED')}</span>
+            </div>
             {/* Social Icons Row */}
             <div className="flex items-center justify-center gap-4">
                 <a href="https://github.com/suio03/elemendle" target="_blank" rel="noopener noreferrer">
