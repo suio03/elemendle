@@ -1,0 +1,14 @@
+[
+  { "id": "hydrogen", "formula": "H2", "atoms": { "H": 2 }, "level": "easy" },
+  { "id": "oxygen", "formula": "O2", "atoms": { "O": 2 }, "level": "easy" },
+  { "id": "water", "formula": "H2O", "atoms": { "H": 2, "O": 1 }, "level": "easy" },
+  { "id": "carbon-dioxide", "formula": "CO2", "atoms": { "C": 1, "O": 2 }, "level": "easy" },
+  { "id": "carbon-monoxide", "formula": "CO", "atoms": { "C": 1, "O": 1 }, "level": "easy" },
+  { "id": "methane", "formula": "CH4", "atoms": { "C": 1, "H": 4 }, "level": "easy" },
+  { "id": "nitrogen", "formula": "N2", "atoms": { "N": 2 }, "level": "standard" },
+  { "id": "ammonia", "formula": "NH3", "atoms": { "N": 1, "H": 3 }, "level": "standard" },
+  { "id": "nitrous-oxide", "formula": "N2O", "atoms": { "N": 2, "O": 1 }, "level": "standard" },
+  { "id": "nitric-oxide", "formula": "NO", "atoms": { "N": 1, "O": 1 }, "level": "standard" },
+  { "id": "nitrogen-dioxide", "formula": "NO2", "atoms": { "N": 1, "O": 2 }, "level": "standard" },
+  { "id": "hydrogen-peroxide", "formula": "H2O2", "atoms": { "H": 2, "O": 2 }, "level": "standard" }
+]

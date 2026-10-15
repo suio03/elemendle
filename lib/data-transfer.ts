@@ -1,3 +1,5 @@
+import type { MoleculeData } from '@/types/molecule-orders'
+import { getStoredMoleculeData, normalizeMoleculeData, storeMoleculeData, mergeMoleculeData } from '@/lib/molecule-storage'
 import type { ElementGameState, ElementStatistics, GameHistory, StatisticsLedger } from '@/types/element'
 import type { ChallengeData, ChallengeSession } from '@/types/challenge'
 import type { PracticeData, PracticeGameState } from '@/types/practice'
@@ -71,6 +73,7 @@ interface ExportDataV2 {
 }
 
 interface ExportDataV3 {
+    moleculeOrders?: MoleculeData
     version: '3.0.0'
     schemaVersion: typeof STORAGE_SCHEMA_VERSION
     exportedAt: string
@@ -120,7 +123,8 @@ export function exportGameData(): string {
         currentGame: toExportedGameState(getStoredGameState()),
         classicPractice: getStoredPracticeData(),
         challenges: getStoredChallengeData(),
-        progression: getStoredProgressionData()
+        progression: getStoredProgressionData(),
+        moleculeOrders: getStoredMoleculeData()
     }
 
     return JSON.stringify(exportData)
@@ -250,6 +254,12 @@ function importV3Data(data: UnknownRecord): boolean {
     if (isValidProgressionSection(data.progression)) {
         const imported = normalizeProgressionData(data.progression)
         storeProgressionData(mergeProgressionData(getStoredProgressionData(), imported))
+        importedSection = true
+    }
+
+    if (isRecord(data.moleculeOrders) && data.moleculeOrders.version === 1) {
+        const imported = normalizeMoleculeData(data.moleculeOrders)
+        storeMoleculeData(mergeMoleculeData(getStoredMoleculeData(), imported))
         importedSection = true
     }
 

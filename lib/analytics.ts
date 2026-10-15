@@ -8,6 +8,39 @@ interface AnalyticsEvents {
     learn_quiz_started: { lesson: 'clues' | 'first-20' }
     learn_quiz_answered: { lesson: 'clues' | 'first-20'; question: number; correct: boolean }
     learn_quiz_completed: { lesson: 'clues' | 'first-20'; correctAnswers: number; total: number }
+    molecule_learning_checked: { sessionId: string; stage: 'learn' | 'practice' | 'compare' | 'explore'; question: number; correct: boolean; hintUsed: boolean; attempt: number }
+    molecule_learning_stage: { sessionId: string; stage: 'learn' | 'practice' | 'compare' | 'explore' }
+    molecule_learning_hint: { sessionId: string; question: number }
+
+    molecule_exploration_kept: { sessionId: string; retained: number }
+    molecule_exploration_dismantled: { sessionId: string; retained: number }
+    molecule_exploration_started: { sessionId: string }
+    molecule_exploration_checked: { sessionId: string; matched: boolean; newDiscoveries: number }
+    molecule_exploration_completed: { sessionId: string; checks: number }
+    molecule_exploration_hint: { sessionId: string }
+    molecule_exploration_recycled: { sessionId: string }
+
+    molecule_opened: { locale: string }
+    molecule_started: {
+        sessionId: string
+        difficulty: 'easy' | 'standard' | 'tutorial'
+        source: 'start' | 'replay' | 'tutorial'
+    }
+    molecule_round_completed: {
+        sessionId: string
+        difficulty: 'easy' | 'standard' | 'tutorial'
+        round: number
+        builds: number
+        undos: number
+    }
+    molecule_completed: {
+        sessionId: string
+        difficulty: 'easy' | 'standard' | 'tutorial'
+        undos: number
+    }
+    molecule_undo: { sessionId: string; round: number }
+    molecule_exited: { sessionId: string; round: number }
+
     game_loaded: {
         locale: string
         mode: GameMode

@@ -7,7 +7,6 @@ import {
     Check,
     CircleDot,
     Clock3,
-    Dices,
     FlaskConical,
     Lightbulb,
     ListFilter,
@@ -130,6 +129,7 @@ export default function PracticeBoard() {
 
 function ChallengeLobby({ onStart }: { onStart: (mode: ChallengeMode) => void }) {
     const t = useTranslations('challenge')
+    const hubT = useTranslations('practice-hub')
     const modes: Exclude<ChallengeMode, 'mixed'>[] = ['identity', 'extreme', 'odd-one-out']
 
     return (
@@ -138,6 +138,9 @@ function ChallengeLobby({ onStart }: { onStart: (mode: ChallengeMode) => void })
                 <div className="absolute -right-20 -top-28 h-72 w-72 rounded-full border-[42px] border-[#73B9FF]/10" />
                 <div className="absolute -bottom-20 right-24 h-44 w-44 rounded-full bg-amber-300/10 blur-3xl" />
                 <div className="relative max-w-2xl">
+                    <Link href="/practice" className="mb-5 inline-flex min-h-10 items-center gap-2 rounded-lg text-sm text-slate-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#73B9FF]">
+                        <ArrowLeft className="h-4 w-4" aria-hidden="true" />{hubT('back')}
+                    </Link>
                     <div className="mb-5 flex items-center gap-3">
                         <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[#9CCAD3]/30 bg-[#73B9FF]/10 text-[#C8E6EC] shadow-[0_0_35px_rgba(115,185,255,0.16)]">
                             <FlaskConical className="h-6 w-6" aria-hidden="true" />
@@ -147,7 +150,7 @@ function ChallengeLobby({ onStart }: { onStart: (mode: ChallengeMode) => void })
                         </span>
                     </div>
                     <h1 className="max-w-xl text-4xl font-black tracking-[-0.035em] text-white sm:text-6xl">
-                        {t('title')}
+                        {hubT('challenge-title')}
                     </h1>
                     <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">{t('description')}</p>
                     <Button
@@ -195,19 +198,6 @@ function ChallengeLobby({ onStart }: { onStart: (mode: ChallengeMode) => void })
                         )
                     })}
                 </div>
-
-                <div className="mt-5 flex flex-col gap-4 rounded-2xl border border-dashed border-white/15 bg-black/15 p-4 sm:flex-row sm:items-center sm:justify-between">
-                    <div className="flex items-start gap-3">
-                        <Dices className="mt-0.5 h-5 w-5 shrink-0 text-slate-400" aria-hidden="true" />
-                        <div>
-                            <p className="font-semibold text-slate-200">{t('classic.title')}</p>
-                            <p className="mt-1 text-xs leading-relaxed text-slate-500">{t('classic.description')}</p>
-                        </div>
-                    </div>
-                    <Button asChild variant="outline" className="shrink-0 border-white/15 bg-transparent text-slate-300 hover:bg-white/5 hover:text-white">
-                        <Link href="/practice/classic">{t('classic.action')}</Link>
-                    </Button>
-                </div>
             </div>
         </section>
     )
@@ -223,6 +213,7 @@ function ChallengeRound({
     onExit: () => void
 }) {
     const t = useTranslations('challenge')
+    const hubT = useTranslations('practice-hub')
     const question = session.questions[session.currentQuestionIndex]
     const answer = session.answers.find(item => item.questionId === question.id)
     const Icon = MODE_ICONS[question.kind]
@@ -262,7 +253,7 @@ function ChallengeRound({
     return (
         <section className="mx-auto w-full max-w-4xl overflow-hidden rounded-[2rem] border border-[#9CCAD3]/40 bg-[#0B141B]/95 text-white shadow-2xl backdrop-blur-xl">
             <header className="border-b border-white/10 px-5 py-5 sm:px-8">
-                <div className="flex items-center justify-between gap-4">
+                <div className="flex flex-wrap items-center justify-between gap-4">
                     <button
                         type="button"
                         onClick={onExit}
@@ -271,6 +262,7 @@ function ChallengeRound({
                         <ArrowLeft className="h-4 w-4" aria-hidden="true" />
                         {t('exit')}
                     </button>
+                    <Link href="/practice" className="rounded-lg px-2 py-2 text-xs text-slate-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#73B9FF]">{hubT('back')}</Link>
                     <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#9CCAD3]">
                         {t('question-count', { current: session.currentQuestionIndex + 1, total: session.questions.length })}
                     </p>

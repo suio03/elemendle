@@ -76,7 +76,7 @@ export default function GameHeader() {
                 </Link>
             </nav>
             <DataTransferUI open={isDataModalOpen} onOpenChange={setIsDataModalOpen} />
-            <div className="mx-auto mb-4 flex max-w-sm justify-center gap-x-4 rounded-xl border border-[#9CCAD3] bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] p-2">
+            <div className="mx-auto mb-4 flex max-w-sm items-center justify-center gap-x-4 rounded-xl border border-[#9CCAD3] bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] p-2">
                 <StatsModal />
                 <TooltipProvider>
                     <Tooltip>
@@ -84,7 +84,7 @@ export default function GameHeader() {
                             <div
                                 role="status"
                                 aria-label={`${t('streak')}: ${stats.currentStreak}`}
-                                className="flex items-center gap-2 pb-2"
+                                className="flex items-center gap-2"
                             >
                                 <div className="relative transition-transform hover:scale-110">
                                     <img src={Streak.src} alt="Streak" className="w-10" />
@@ -101,8 +101,8 @@ export default function GameHeader() {
 
                     <Tooltip>
                         <TooltipTrigger asChild>
-                            <Link href="/collection" aria-label={t('collection')} className="flex h-9 w-9 items-center justify-center rounded-md text-[#E5E5E5] transition hover:scale-110 hover:text-[#9CCAD3] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9CCAD3]">
-                                <LibraryBig className="h-7 w-7" aria-hidden="true" />
+                            <Link href="/collection" aria-label={t('collection')} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-[#E5E5E5] transition hover:scale-110 hover:text-[#9CCAD3] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#9CCAD3]">
+                                <LibraryBig className="h-8 w-8" aria-hidden="true" />
                             </Link>
                         </TooltipTrigger>
                         <TooltipContent className="border-[#73B9FF]/30 bg-[#1a1a1a] text-[#9CCAD3]"><p>{t('collection')}</p></TooltipContent>

@@ -29,3 +29,13 @@ Recent commits use short, direct messages such as `fix type error` and `add more
 ## Security & Configuration Tips
 
 Keep secrets out of git. Local environment values belong in `.env`, and deployment-specific settings should stay in the hosting platform. Use the Node version pinned in `.node-version`. Treat `wrangler.jsonc`, `open-next.config.ts`, `middleware.ts`, and locale routes as deployment-sensitive because they affect Cloudflare routing and public URLs.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
