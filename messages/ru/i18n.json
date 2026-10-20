@@ -250,7 +250,7 @@
   },
   "collection": {
     "loading": "Открываем архив элементов…", "eyebrow": "Личный архив", "title": "Ваши периодические открытия.",
-    "description": "Верные ответы навсегда открывают элементы. Возвращайтесь к находкам и рекордам.", "progress": "Прогресс коллекции", "discovered-count": "Открыто {count} / {total} элементов", "new-discoveries": "Новые в этом раунде: {elements}", "view": "Открыть коллекцию",
+    "description": "Верные ответы навсегда открывают элементы. Возвращайтесь к находкам и рекордам.", "progress": "Прогресс коллекции", "discovered-count": "Открыто {count} / {total} элементов", "new-discoveries": "Новые в этом раунде: {elements}", "mastered": "Вы освоили {elements}.", "mastered-count": "Освоено: {count}", "mastered-element-label": "Открыть {element} (освоен)", "mastered-description": "Откройте элемент {count} раз, чтобы освоить его и получить золотую рамку.", "view": "Открыть коллекцию",
     "table-title": "Периодическая коллекция", "table-description": "Открытые элементы светятся на своих местах.", "scroll-hint": "Проведите, чтобы изучить", "recent": "Недавние открытия",
     "element-label": "Открыть {element}", "locked-label": "Элемент с атомным номером {number} не открыт", "sources": { "daily": "Daily", "classic": "Classic Practice", "challenge": "Испытание элементов" },
     "detail": { "discovered-element": "Открытый элемент", "learn-more": "Открыть справку", "first-source": "Впервые найден в", "first-date": "Первое открытие", "best-attempts": "Лучшие попытки", "best-time": "Лучшее время" }

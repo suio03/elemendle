@@ -13,6 +13,7 @@ import type {
 export const PROGRESSION_STORAGE_KEY = 'elemendle-progression-v2'
 export const LEGACY_PROGRESSION_STORAGE_KEY = 'elemendle-progression-v1'
 export const PROGRESSION_UPDATED_EVENT = 'elemendle:progression-updated'
+export const MASTERY_THRESHOLD = 10
 const VERSION = 2
 const SOURCES: DiscoverySource[] = ['daily', 'classic', 'challenge']
 const ELEMENT_NAMES = new Set(Object.values(elementsData).map(element => element.name))
@@ -324,6 +325,14 @@ export function mergeProgressionData(
         events,
         discoveries: buildDiscoveries(baselineDiscoveries, events, legacyEventIds)
     }
+}
+
+export function isMastered(discovery: ElementDiscovery | undefined): boolean {
+    return (discovery?.successCount ?? 0) >= MASTERY_THRESHOLD
+}
+
+export function getMasteredCount(data: ProgressionData): number {
+    return Object.values(data.discoveries).filter(isMastered).length
 }
 
 export function getPeriodicPositions(): PeriodicPosition[] {

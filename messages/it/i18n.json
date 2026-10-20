@@ -250,7 +250,7 @@
   },
   "collection": {
     "loading": "Apertura archivio elementi…", "eyebrow": "Archivio personale", "title": "Le tue scoperte periodiche.",
-    "description": "Le risposte corrette rivelano gli elementi per sempre. Consulta scoperte e record quando vuoi.", "progress": "Progresso collezione", "discovered-count": "{count} / {total} elementi scoperti", "new-discoveries": "Nuovi in questo turno: {elements}", "view": "Vedi collezione",
+    "description": "Le risposte corrette rivelano gli elementi per sempre. Consulta scoperte e record quando vuoi.", "progress": "Progresso collezione", "discovered-count": "{count} / {total} elementi scoperti", "new-discoveries": "Nuovi in questo turno: {elements}", "mastered": "Hai padroneggiato {elements}.", "mastered-count": "{count} padroneggiati", "mastered-element-label": "Vedi {element} (padroneggiato)", "mastered-description": "Scopri un elemento {count} volte per padroneggiarlo e ottenere un bordo dorato.", "view": "Vedi collezione",
     "table-title": "Collezione periodica", "table-description": "Gli elementi scoperti brillano nella loro vera posizione.", "scroll-hint": "Scorri per esplorare", "recent": "Scoperti di recente",
     "element-label": "Vedi {element}", "locked-label": "Elemento con numero atomico {number} non scoperto", "sources": { "daily": "Daily", "classic": "Classic Practice", "challenge": "Sfida elementi" },
     "detail": { "discovered-element": "Elemento scoperto", "learn-more": "Apri riferimento", "first-source": "Scoperto prima in", "first-date": "Prima scoperta", "best-attempts": "Migliori tentativi", "best-time": "Miglior tempo" }

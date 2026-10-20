@@ -250,7 +250,7 @@
   },
   "collection": {
     "loading": "Elementenarchief openen…", "eyebrow": "Persoonlijk archief", "title": "Jouw periodieke ontdekkingen.",
-    "description": "Goede antwoorden onthullen elementen voorgoed. Bekijk je vondsten en records wanneer je wilt.", "progress": "Collectievoortgang", "discovered-count": "{count} / {total} elementen ontdekt", "new-discoveries": "Nieuw deze ronde: {elements}", "view": "Collectie bekijken",
+    "description": "Goede antwoorden onthullen elementen voorgoed. Bekijk je vondsten en records wanneer je wilt.", "progress": "Collectievoortgang", "discovered-count": "{count} / {total} elementen ontdekt", "new-discoveries": "Nieuw deze ronde: {elements}", "mastered": "Je beheerst nu {elements}.", "mastered-count": "{count} beheerst", "mastered-element-label": "{element} bekijken (beheerst)", "mastered-description": "Ontdek een element {count} keer om het te beheersen en een gouden rand te verdienen.", "view": "Collectie bekijken",
     "table-title": "Periodieke collectie", "table-description": "Ontdekte elementen lichten op hun echte positie op.", "scroll-hint": "Veeg om te verkennen", "recent": "Recent ontdekt",
     "element-label": "{element} bekijken", "locked-label": "Element met atoomnummer {number} niet ontdekt", "sources": { "daily": "Daily", "classic": "Classic Practice", "challenge": "Elementuitdaging" },
     "detail": { "discovered-element": "Ontdekt element", "learn-more": "Referentie openen", "first-source": "Eerst gevonden in", "first-date": "Eerste ontdekking", "best-attempts": "Beste pogingen", "best-time": "Beste tijd" }

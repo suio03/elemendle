@@ -262,7 +262,7 @@
   },
   "collection": {
     "loading": "元素アーカイブを開いています…", "eyebrow": "個人元素アーカイブ", "title": "あなたの周期的な発見。",
-    "description": "正解した元素は永久に記録されます。発見した元素と記録をいつでも確認できます。", "progress": "収集進度", "discovered-count": "{count} / {total} 元素を発見", "new-discoveries": "今回の新発見：{elements}", "view": "コレクションを見る",
+    "description": "正解した元素は永久に記録されます。発見した元素と記録をいつでも確認できます。", "progress": "収集進度", "discovered-count": "{count} / {total} 元素を発見", "new-discoveries": "今回の新発見：{elements}", "mastered": "{elements}をマスターしました。", "mastered-count": "{count} 個マスター", "mastered-element-label": "{element}を見る（マスター済み）", "mastered-description": "同じ元素を{count}回発見するとマスターになり、金色の枠が付きます。", "view": "コレクションを見る",
     "table-title": "周期表コレクション", "table-description": "発見した元素が周期表の正しい位置で輝きます。", "scroll-hint": "スワイプして表を見る", "recent": "最近の発見",
     "element-label": "{element}を見る", "locked-label": "原子番号{number}は未発見", "sources": { "daily": "デイリー", "classic": "クラシック練習", "challenge": "元素チャレンジ" },
     "detail": { "discovered-element": "発見した元素", "learn-more": "元素資料を開く", "first-source": "最初の発見場所", "first-date": "初回発見日", "best-attempts": "最少予想", "best-time": "ベストタイム" }

@@ -250,7 +250,7 @@
   },
   "collection": {
     "loading": "तत्व संग्रह खोल रहे हैं…", "eyebrow": "निजी तत्व संग्रह", "title": "आपकी आवर्त खोजें।",
-    "description": "सही उत्तर तत्वों को हमेशा के लिए प्रकट करते हैं। अपनी खोजें और रिकॉर्ड कभी भी देखें।", "progress": "संग्रह प्रगति", "discovered-count": "{count} / {total} तत्व मिले", "new-discoveries": "इस दौर में नए: {elements}", "view": "संग्रह देखें",
+    "description": "सही उत्तर तत्वों को हमेशा के लिए प्रकट करते हैं। अपनी खोजें और रिकॉर्ड कभी भी देखें।", "progress": "संग्रह प्रगति", "discovered-count": "{count} / {total} तत्व मिले", "new-discoveries": "इस दौर में नए: {elements}", "mastered": "आपने {elements} में महारत हासिल कर ली।", "mastered-count": "{count} में महारत", "mastered-element-label": "{element} देखें (महारत हासिल)", "mastered-description": "किसी तत्व को {count} बार खोजें ताकि उसमें महारत मिले और सुनहरा बॉर्डर मिले।", "view": "संग्रह देखें",
     "table-title": "आवर्त संग्रह", "table-description": "खोजे गए तत्व सही स्थान पर चमकते हैं।", "scroll-hint": "तालिका देखने के लिए स्वाइप करें", "recent": "हाल की खोजें",
     "element-label": "{element} देखें", "locked-label": "परमाणु क्रमांक {number} का तत्व अभी नहीं मिला", "sources": { "daily": "Daily", "classic": "Classic Practice", "challenge": "तत्व चुनौती" },
     "detail": { "discovered-element": "खोजा गया तत्व", "learn-more": "तत्व संदर्भ खोलें", "first-source": "पहली बार यहाँ मिला", "first-date": "पहली खोज", "best-attempts": "सबसे कम अनुमान", "best-time": "सर्वश्रेष्ठ समय" }

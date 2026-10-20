@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { applyDiscovery, getInitialProgressionData, getPeriodicPositions, getStoredProgressionData, mergeProgressionData, normalizeProgressionData, PROGRESSION_STORAGE_KEY, recordElementDiscovery } from '@/lib/progression'
+import { applyDiscovery, getInitialProgressionData, getMasteredCount, getPeriodicPositions, getStoredProgressionData, mergeProgressionData, isMastered, MASTERY_THRESHOLD, normalizeProgressionData, PROGRESSION_STORAGE_KEY, recordElementDiscovery } from '@/lib/progression'
 
 describe('element progression', () => {
     beforeEach(() => localStorage.clear())
@@ -9,6 +9,18 @@ describe('element progression', () => {
         const duplicate = applyDiscovery(first.data, { eventId: 'daily:1', elementName: 'Oxygen', source: 'daily', attempts: 3, timeTaken: 20 })
         expect(first.outcome.isNew).toBe(true)
         expect(duplicate.data.discoveries.Oxygen.successCount).toBe(1)
+    })
+
+    it('masters an element after ten successful discoveries', () => {
+        let data = getInitialProgressionData()
+        for (let index = 1; index < MASTERY_THRESHOLD; index++) {
+            data = applyDiscovery(data, { eventId: `classic:${index}`, elementName: 'Neon', source: 'classic' }).data
+        }
+        expect(isMastered(data.discoveries.Neon)).toBe(false)
+        expect(getMasteredCount(data)).toBe(0)
+        const tenth = applyDiscovery(data, { eventId: 'daily:10', elementName: 'Neon', source: 'daily' })
+        expect(isMastered(tenth.outcome.discovery)).toBe(true)
+        expect(getMasteredCount(tenth.data)).toBe(1)
     })
 
     it('combines sources while preserving best performance', () => {

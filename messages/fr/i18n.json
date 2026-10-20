@@ -255,7 +255,7 @@
   },
   "collection": {
     "loading": "Ouverture de votre archive…", "eyebrow": "Archive personnelle", "title": "Vos découvertes périodiques.",
-    "description": "Les bonnes réponses révèlent les éléments définitivement. Retrouvez vos découvertes et leurs records.", "progress": "Progression de la collection", "discovered-count": "{count} / {total} éléments découverts", "new-discoveries": "Nouveaux cette manche : {elements}", "view": "Voir la collection",
+    "description": "Les bonnes réponses révèlent les éléments définitivement. Retrouvez vos découvertes et leurs records.", "progress": "Progression de la collection", "discovered-count": "{count} / {total} éléments découverts", "new-discoveries": "Nouveaux cette manche : {elements}", "mastered": "Vous maîtrisez {elements}.", "mastered-count": "{count} maîtrisés", "mastered-element-label": "Voir {element} (maîtrisé)", "mastered-description": "Découvrez un élément {count} fois pour le maîtriser et obtenir un contour doré.", "view": "Voir la collection",
     "table-title": "Collection périodique", "table-description": "Les éléments découverts brillent à leur vraie position.", "scroll-hint": "Balayez pour explorer", "recent": "Découverts récemment",
     "element-label": "Voir {element}", "locked-label": "Élément de numéro atomique {number} non découvert", "sources": { "daily": "Daily", "classic": "Classic Practice", "challenge": "Défi des éléments" },
     "detail": { "discovered-element": "Élément découvert", "learn-more": "Ouvrir la référence", "first-source": "Trouvé d'abord dans", "first-date": "Première découverte", "best-attempts": "Meilleurs essais", "best-time": "Meilleur temps" }

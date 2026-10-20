@@ -5,7 +5,7 @@ import { Check, Clock3, FlaskConical, LibraryBig, LockKeyhole, Sparkles, Trophy 
 import { useLocale, useTranslations } from 'next-intl'
 import elementsData from '@/data/atom.json'
 import { useProgression } from '@/hooks/use-progression'
-import { getPeriodicPositions } from '@/lib/progression'
+import { getMasteredCount, getPeriodicPositions, isMastered, MASTERY_THRESHOLD } from '@/lib/progression'
 import { trackEvent } from '@/lib/analytics'
 import type { Element } from '@/types/element'
 
@@ -20,6 +20,7 @@ export default function CollectionBoard() {
     const hasTrackedOpen = useRef(false)
     const elementByNumber = useMemo(() => new Map(ELEMENTS.map(element => [Number(element.classic.atomic_number), element])), [])
     const discoveredCount = progression ? Object.keys(progression.discoveries).length : 0
+    const masteredCount = progression ? getMasteredCount(progression) : 0
     const selected = selectedName ? ELEMENTS.find(element => element.name === selectedName) : undefined
     const selectedDiscovery = selectedName ? progression?.discoveries[selectedName] : undefined
     const recent = progression
@@ -57,9 +58,11 @@ export default function CollectionBoard() {
                             </div>
                             <Sparkles className="h-6 w-6 text-amber-200" aria-hidden="true" />
                         </div>
-                        <div className="mt-3 h-2 overflow-hidden rounded-full bg-white/10">
+                        <div className="relative mt-3 h-2 overflow-hidden rounded-full bg-white/10">
                             <div className="h-full rounded-full bg-gradient-to-r from-[#73B9FF] to-emerald-300" style={{ width: `${(discoveredCount / 118) * 100}%` }} />
+                            <div className="absolute inset-y-0 left-0 rounded-full bg-amber-300" style={{ width: `${(masteredCount / 118) * 100}%` }} />
                         </div>
+                        <p className="mt-2 text-xs font-semibold text-amber-200">{t('mastered-count', { count: masteredCount })}</p>
                     </div>
                 </div>
             </header>
@@ -89,7 +92,7 @@ export default function CollectionBoard() {
 
                 <div>
                     <div className="mb-3 flex flex-wrap items-end justify-between gap-3">
-                        <div><h2 className="text-lg font-bold">{t('table-title')}</h2><p className="mt-1 text-xs text-slate-500">{t('table-description')}</p></div>
+                        <div><h2 className="text-lg font-bold">{t('table-title')}</h2><p className="mt-1 text-xs text-slate-500">{t('table-description')} {t('mastered-description', { count: MASTERY_THRESHOLD })}</p></div>
                         <p className="text-xs text-slate-500 sm:hidden">{t('scroll-hint')}</p>
                     </div>
                     <div className="overflow-x-auto rounded-2xl border border-white/10 bg-black/20 p-3 [scrollbar-color:#4b6570_transparent]">
@@ -101,15 +104,16 @@ export default function CollectionBoard() {
                                 )
                                 const element = elementByNumber.get(position.atomicNumber!)!
                                 const discovery = progression.discoveries[element.name]
+                                const mastered = isMastered(discovery)
                                 return (
                                     <button
                                         key={element.name}
                                         type="button"
                                         disabled={!discovery}
                                         onClick={() => setSelectedName(element.name)}
-                                        aria-label={discovery ? t('element-label', { element: element.name }) : t('locked-label', { number: element.classic.atomic_number })}
+                                        aria-label={discovery ? t(mastered ? 'mastered-element-label' : 'element-label', { element: element.name }) : t('locked-label', { number: element.classic.atomic_number })}
                                         style={{ gridColumn: position.column, gridRow: position.row }}
-                                        className={`relative flex min-w-0 flex-col rounded-lg border p-1 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#73B9FF] ${discovery ? 'border-[#73B9FF]/30 bg-gradient-to-br from-[#244D57] to-[#172C38] hover:-translate-y-0.5 hover:border-emerald-200/50' : 'cursor-default border-white/[0.06] bg-white/[0.025] text-slate-700'}`}
+                                        className={`relative flex min-w-0 flex-col rounded-lg border p-1 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#73B9FF] ${mastered ? 'border-amber-300 bg-gradient-to-br from-[#244D57] to-[#172C38] shadow-[0_0_12px_rgba(252,211,77,0.25)] hover:-translate-y-0.5' : discovery ? 'border-[#73B9FF]/30 bg-gradient-to-br from-[#244D57] to-[#172C38] hover:-translate-y-0.5 hover:border-emerald-200/50' : 'cursor-default border-white/[0.06] bg-white/[0.025] text-slate-700'}`}
                                     >
                                         <span className="text-[8px]">{element.classic.atomic_number}</span>
                                         <span className={`self-center text-lg font-black ${discovery ? 'text-white' : 'text-slate-700'}`}>{discovery ? element.symbol : '·'}</span>

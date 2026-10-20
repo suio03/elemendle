@@ -10,6 +10,7 @@ import {
     FlaskConical,
     Lightbulb,
     ListFilter,
+    Medal,
     Play,
     RotateCcw,
     Scale,
@@ -37,7 +38,7 @@ import {
 } from '@/lib/challenge-storage'
 import { trackEvent } from '@/lib/analytics'
 import { useProgression } from '@/hooks/use-progression'
-import { recordElementDiscovery } from '@/lib/progression'
+import { isMastered, recordElementDiscovery } from '@/lib/progression'
 import type { Element, ElementCategory } from '@/types/element'
 import type {
     ChallengeAnswer,
@@ -601,6 +602,10 @@ function ChallengeResult({
         return answer?.isCorrect && discovery?.firstEventId === `challenge:${session.id}:${question.id}`
     }) : []
     const discoveredCount = progression ? Object.keys(progression.discoveries).length : 0
+    const masteredNames = progression ? Array.from(new Set(session.questions.filter(question => {
+        const answer = session.answers.find(item => item.questionId === question.id)
+        return answer?.isCorrect && isMastered(progression.discoveries[question.answerElementName])
+    }).map(question => question.answerElementName))) : []
 
     return (
         <section className="mx-auto w-full max-w-4xl overflow-hidden rounded-[2rem] border border-[#9CCAD3]/40 bg-[#0B141B]/95 text-white shadow-2xl backdrop-blur-xl">
@@ -635,6 +640,7 @@ function ChallengeResult({
                         <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-100">{collectionT('progress')}</p>
                         <p className="mt-2 text-lg font-black">{collectionT('discovered-count', { count: discoveredCount, total: 118 })}</p>
                         {newDiscoveries.length > 0 ? <p className="mt-1 text-sm text-slate-300">{collectionT('new-discoveries', { elements: newDiscoveries.map(question => question.answerElementName).join(', ') })}</p> : null}
+                        {masteredNames.length > 0 ? <p className="mt-2 flex items-center gap-1.5 text-sm font-bold text-amber-200"><Medal className="h-4 w-4 shrink-0" aria-hidden="true" />{collectionT('mastered', { elements: masteredNames.join(', ') })}</p> : null}
                     </div>
                 ) : null}
 

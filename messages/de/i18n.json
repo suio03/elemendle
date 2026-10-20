@@ -255,7 +255,7 @@
   },
   "collection": {
     "loading": "Elementarchiv wird geöffnet…", "eyebrow": "Persönliches Elementarchiv", "title": "Deine periodischen Entdeckungen.",
-    "description": "Richtige Antworten enthüllen Elemente dauerhaft. Prüfe jederzeit deine Funde und Rekorde.", "progress": "Sammlungsfortschritt", "discovered-count": "{count} / {total} Elemente entdeckt", "new-discoveries": "Neu in dieser Runde: {elements}", "view": "Sammlung ansehen",
+    "description": "Richtige Antworten enthüllen Elemente dauerhaft. Prüfe jederzeit deine Funde und Rekorde.", "progress": "Sammlungsfortschritt", "discovered-count": "{count} / {total} Elemente entdeckt", "new-discoveries": "Neu in dieser Runde: {elements}", "mastered": "Du beherrschst jetzt {elements}.", "mastered-count": "{count} gemeistert", "mastered-element-label": "{element} ansehen (gemeistert)", "mastered-description": "Entdecke ein Element {count}-mal, um es zu meistern und einen goldenen Rahmen zu erhalten.", "view": "Sammlung ansehen",
     "table-title": "Periodische Sammlung", "table-description": "Entdeckte Elemente leuchten an ihrer echten Position.", "scroll-hint": "Wischen, um die Tabelle zu erkunden", "recent": "Kürzlich entdeckt",
     "element-label": "{element} ansehen", "locked-label": "Element mit Ordnungszahl {number} unentdeckt", "sources": { "daily": "Daily", "classic": "Classic Practice", "challenge": "Element-Challenge" },
     "detail": { "discovered-element": "Entdecktes Element", "learn-more": "Elementreferenz öffnen", "first-source": "Zuerst gefunden in", "first-date": "Erste Entdeckung", "best-attempts": "Beste Versuche", "best-time": "Beste Zeit" }

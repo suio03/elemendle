@@ -5,7 +5,7 @@ import { useLearningCopy } from '@/lib/learning-copy'
 import { Link as LearningLink } from '@/i18n/routing'
 
 import { useEffect, useState } from 'react'
-import { BookOpen, Check, Clock3, Flame, Gauge, LibraryBig, Lightbulb, RotateCcw, Share2, Sparkles, Trophy } from 'lucide-react'
+import { BookOpen, Check, Clock3, Flame, Gauge, LibraryBig, Lightbulb, Medal, RotateCcw, Share2, Sparkles, Trophy } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { toast } from 'react-hot-toast'
 import ElementBox from '@/components/element-box'
@@ -14,6 +14,7 @@ import { Link } from '@/i18n/routing'
 import PracticeDifficultyPicker from '@/components/practice-difficulty-picker'
 import { getShareGrid } from '@/lib/game-rules'
 import { trackEvent } from '@/lib/analytics'
+import { isMastered } from '@/lib/progression'
 import type { Element, ElementCategory, ElementGuessResult, GameMode } from '@/types/element'
 import type { PracticeDifficulty } from '@/types/practice'
 import type { DiscoveryOutcome } from '@/types/progression'
@@ -72,6 +73,7 @@ export default function GameResult({
 }: GameResultProps) {
     const learningT = useLearningCopy()
     const t = useTranslations('result')
+    const collectionT = useTranslations('collection')
     const [countdown, setCountdown] = useState(getTimeUntilNextGame)
     const won = result === 'won'
     const isPractice = mode === 'practice'
@@ -168,6 +170,9 @@ export default function GameResult({
                                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-100">{t(discovery.isNew ? 'new-discovery' : 'collection-updated')}</p>
                                 <p className="mt-1 text-lg font-black">{t('collection-count', { count: discovery.discoveredCount, total: 118 })}</p>
                                 <p className="mt-1 text-xs leading-relaxed text-slate-400">{t(discovery.isNew ? 'new-discovery-description' : 'collection-updated-description', { element: element.name })}</p>
+                                {isMastered(discovery.discovery) ? (
+                                    <p className="mt-2 flex items-center gap-1.5 text-sm font-bold text-amber-200"><Medal className="h-4 w-4 shrink-0" aria-hidden="true" />{collectionT('mastered', { elements: element.name })}</p>
+                                ) : null}
                             </div>
                         </div>
                     </div>

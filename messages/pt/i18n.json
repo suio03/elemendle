@@ -250,7 +250,7 @@
   },
   "collection": {
     "loading": "Abrindo arquivo de elementos…", "eyebrow": "Arquivo pessoal", "title": "Suas descobertas periódicas.",
-    "description": "Respostas corretas revelam elementos para sempre. Consulte descobertas e recordes quando quiser.", "progress": "Progresso da coleção", "discovered-count": "{count} / {total} elementos descobertos", "new-discoveries": "Novos nesta rodada: {elements}", "view": "Ver coleção",
+    "description": "Respostas corretas revelam elementos para sempre. Consulte descobertas e recordes quando quiser.", "progress": "Progresso da coleção", "discovered-count": "{count} / {total} elementos descobertos", "new-discoveries": "Novos nesta rodada: {elements}", "mastered": "Você dominou {elements}.", "mastered-count": "{count} dominados", "mastered-element-label": "Ver {element} (dominado)", "mastered-description": "Descubra um elemento {count} vezes para dominá-lo e ganhar uma borda dourada.", "view": "Ver coleção",
     "table-title": "Coleção periódica", "table-description": "Elementos descobertos brilham na posição real.", "scroll-hint": "Deslize para explorar", "recent": "Descobertos recentemente",
     "element-label": "Ver {element}", "locked-label": "Elemento de número atômico {number} não descoberto", "sources": { "daily": "Daily", "classic": "Classic Practice", "challenge": "Desafio de elementos" },
     "detail": { "discovered-element": "Elemento descoberto", "learn-more": "Abrir referência", "first-source": "Descoberto primeiro em", "first-date": "Primeira descoberta", "best-attempts": "Melhores tentativas", "best-time": "Melhor tempo" }

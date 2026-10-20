@@ -250,7 +250,7 @@
   },
   "collection": {
     "loading": "جارٍ فتح أرشيف العناصر…", "eyebrow": "أرشيف العناصر الشخصي", "title": "اكتشافاتك الدورية.",
-    "description": "تكشف الإجابات الصحيحة العناصر بصورة دائمة. عد لمراجعة اكتشافاتك وسجلاتها.", "progress": "تقدم المجموعة", "discovered-count": "تم اكتشاف {count} / {total} عنصرًا", "new-discoveries": "جديد هذه الجولة: {elements}", "view": "عرض المجموعة",
+    "description": "تكشف الإجابات الصحيحة العناصر بصورة دائمة. عد لمراجعة اكتشافاتك وسجلاتها.", "progress": "تقدم المجموعة", "discovered-count": "تم اكتشاف {count} / {total} عنصرًا", "new-discoveries": "جديد هذه الجولة: {elements}", "mastered": "لقد أتقنت {elements}.", "mastered-count": "تم إتقان {count}", "mastered-element-label": "عرض {element} (متقن)", "mastered-description": "اكتشف العنصر {count} مرات لإتقانه والحصول على إطار ذهبي.", "view": "عرض المجموعة",
     "table-title": "المجموعة الدورية", "table-description": "تضيء العناصر المكتشفة في مواضعها الصحيحة.", "scroll-hint": "اسحب لاستكشاف الجدول", "recent": "اكتُشف مؤخرًا",
     "element-label": "عرض {element}", "locked-label": "العنصر ذو العدد الذري {number} غير مكتشف", "sources": { "daily": "اليومي", "classic": "التدريب الكلاسيكي", "challenge": "تحدي العناصر" },
     "detail": { "discovered-element": "عنصر مكتشف", "learn-more": "فتح مرجع العنصر", "first-source": "اكتُشف أولًا في", "first-date": "أول اكتشاف", "best-attempts": "أفضل المحاولات", "best-time": "أفضل وقت" }
