@@ -94,17 +94,11 @@ type PlausibleTracker = {
     q?: [string, PlausibleOptions][]
 }
 
-type RecountTracker = {
-    (eventName: string, options: PlausibleOptions): void
-    q?: unknown[]
-}
-
 declare global {
     interface Window {
         dataLayer?: unknown[]
         gtag?: (...args: unknown[]) => void
         plausible?: PlausibleTracker
-        recount?: RecountTracker
     }
 }
 
@@ -128,12 +122,6 @@ export function trackEvent<EventName extends keyof AnalyticsEvents>(
         window.plausible(eventName, { props: properties })
     } catch {
         // Analytics must not interrupt gameplay or the other analytics provider.
-    }
-
-    try {
-        window.recount?.(eventName, { props: properties })
-    } catch {
-        // Recount runs alongside Plausible and must not affect it or gameplay.
     }
 
     try {

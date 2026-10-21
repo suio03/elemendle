@@ -38,7 +38,6 @@ const Analytics = () => {
                         });
                         gtag('set', 'ads_data_redaction', true);
                         gtag('set', 'url_passthrough', false);
-                        window.recount=window.recount||function(){(window.recount.q=window.recount.q||[]).push(arguments)};
                     `
                 }}
             />
@@ -83,13 +82,6 @@ const Analytics = () => {
                 defer
                 data-domain="elemendle.com"
                 src={plausibleScriptUrl}
-                strategy="afterInteractive"
-            />
-            <Script
-                id="recount-analytics"
-                defer
-                data-site="elemendle.com"
-                src="https://recount.tools/js/script.js"
                 strategy="afterInteractive"
             />
         </>

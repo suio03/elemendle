@@ -352,7 +352,7 @@
       },
       {
         "question": "Comment mes données sont-elles stockées ?",
-        "answer": "Votre progression reste sur votre appareil. Les événements de statistiques de jeu excluent les réponses, les essais, le texte libre et les données exportées. Nous utilisons aussi Recount, un service d’analyse auto-hébergé exploité par le propriétaire du site, qui dépose deux cookies propriétaires (rc_vid, un identifiant de visiteur conservé environ 1 an, et rc_sid, un identifiant de session de 30 minutes) utilisés uniquement pour les statistiques et l’attribution des achats. Ces données ne sont pas partagées avec des tiers. Si vous envoyez une suggestion, son texte et la page actuelle sont transmis à notre équipe via Discord. Un cookie de 10 minutes limite les envois répétés."
+        "answer": "Votre progression reste sur votre appareil. Les statistiques de jeu utilisent des événements anonymes sans cookies et excluent les réponses, les essais, le texte libre, les données exportées et les identifiants persistants. Si vous envoyez une suggestion, son texte et la page actuelle sont transmis à notre équipe via Discord. Un cookie de 10 minutes limite les envois répétés."
       },
       {
         "question": "Le jeu Elemendle est-il gratuit ?",

@@ -447,7 +447,7 @@
       },
       {
         "question": "How's my data stored?",
-        "answer": "Your game progress stays on your device. Gameplay analytics events exclude answers, guesses, free text, and exported data. We also use Recount, a self-hosted analytics service operated by the site owner, which sets two first-party cookies (rc_vid, a visitor ID kept for about 1 year, and rc_sid, a 30-minute session ID) used only for analytics and attributing purchases. This data is not shared with third parties. If you submit a suggestion, its text and current page are sent to our team via Discord. A 10-minute cookie limits repeat submissions."
+        "answer": "Your game progress stays on your device. Gameplay analytics use anonymous, cookieless events and exclude answers, guesses, free text, exported data, and persistent identifiers. If you submit a suggestion, its text and current page are sent to our team via Discord. A 10-minute cookie limits repeat submissions."
       },
       {
         "question": "Does the Elemendle game free?",
